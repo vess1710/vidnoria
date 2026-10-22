@@ -17,9 +17,66 @@ export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
 
+const SEO_KEYWORDS: Record<Locale, string[]> = {
+  tr: [
+    'video indir',
+    'ücretsiz video indir',
+    'youtube video indir',
+    'youtube mp3 indir',
+    'youtube mp3 dönüştürücü',
+    'youtube mp4 indir',
+    'instagram video indir',
+    'instagram reels indir',
+    'tiktok video indir',
+    'tiktok filigransız video indir',
+    'twitter video indir',
+    'x video indir',
+    'facebook video indir',
+    'online video indirici',
+    'müzik indir',
+    'mp3 dönüştürücü',
+    'hd video indir',
+    '4k video indir',
+    'programsız video indir',
+    'vidnoria',
+  ],
+  en: [
+    'video downloader',
+    'free video downloader',
+    'online video downloader',
+    'youtube video downloader',
+    'youtube to mp3',
+    'youtube to mp4',
+    'instagram video downloader',
+    'instagram reels downloader',
+    'tiktok video downloader',
+    'tiktok downloader without watermark',
+    'twitter video downloader',
+    'facebook video downloader',
+    'mp3 converter',
+    'hd video download',
+    '4k video downloader',
+    'vidnoria',
+  ],
+  ar: [
+    'تحميل فيديو',
+    'تنزيل فيديو مجانا',
+    'تحميل فيديو من يوتيوب',
+    'تحويل يوتيوب الى mp3',
+    'تحميل مقاطع انستقرام',
+    'تحميل ريلز انستقرام',
+    'تحميل فيديو تيك توك بدون علامة مائية',
+    'تحميل فيديو تويتر',
+    'تحميل فيديو فيسبوك',
+    'تحميل mp4',
+    'تحميل mp3',
+    'فيدنوريا',
+  ],
+};
+
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  const locale = lang as Locale;
+  const locale = (locales.includes(lang as Locale) ? lang : 'tr') as Locale;
   const dict = await getTranslations(locale);
   const t = createTranslator(dict);
 
@@ -29,18 +86,32 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       template: `%s | Vidnoria`,
     },
     description: t('seo.homeDescription'),
+    keywords: SEO_KEYWORDS[locale] || SEO_KEYWORDS.tr,
     metadataBase: new URL('https://vidnoria.com'),
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
     alternates: {
-      canonical: `/${locale}`,
+      canonical: `https://vidnoria.com/${locale}`,
       languages: {
-        'tr': '/tr',
-        'en': '/en',
-        'ar': '/ar',
+        'tr': 'https://vidnoria.com/tr',
+        'en': 'https://vidnoria.com/en',
+        'ar': 'https://vidnoria.com/ar',
+        'x-default': 'https://vidnoria.com/tr',
       },
     },
     openGraph: {
       title: t('seo.homeTitle'),
       description: t('seo.homeDescription'),
+      url: `https://vidnoria.com/${locale}`,
       siteName: 'Vidnoria',
       locale: locale === 'ar' ? 'ar_SA' : locale === 'tr' ? 'tr_TR' : 'en_US',
       type: 'website',
@@ -62,10 +133,31 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
 
   const locale = lang as Locale;
   const dict = await getTranslations(locale);
+  const t = createTranslator(dict);
   const dir = getDirection(locale);
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Vidnoria',
+    url: `https://vidnoria.com/${locale}`,
+    description: t('seo.homeDescription'),
+    applicationCategory: 'MultimediaApplication',
+    operatingSystem: 'All',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    inLanguage: ['tr', 'en', 'ar'],
+  };
 
   return (
     <I18nProvider lang={locale} dict={dict}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <HtmlDirSync />
       <div dir={dir} className="flex flex-col min-h-screen">
         <Header />
