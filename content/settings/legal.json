@@ -1,0 +1,267 @@
+{
+  "pages": {
+    "privacy": {
+      "title": {
+        "tr": "Gizlilik Politikası",
+        "en": "Privacy Policy",
+        "ar": "سياسة الخصوصية"
+      },
+      "lastUpdated": "2026-10-22",
+      "slug": "privacy",
+      "sections": [
+        {
+          "id": "data-collection",
+          "title": {
+            "tr": "Veri Toplama",
+            "en": "Data Collection",
+            "ar": "جمع البيانات"
+          },
+          "content": {
+            "tr": "Vidnoria, kullanıcılarından minimum düzeyde veri toplar. Video indirme işlemi sırasında girilen URL'ler geçici olarak işlenir ve kaydedilmez. Kişisel bilgi talep etmiyoruz ve herhangi bir kullanıcı hesabı sistemi bulunmamaktadır.",
+            "en": "Vidnoria collects minimal data from its users. URLs entered during the video download process are processed temporarily and are not stored. We do not request personal information and there is no user account system.",
+            "ar": "تجمع فيدنوريا الحد الأدنى من البيانات من مستخدميها. تتم معالجة الروابط المُدخلة أثناء عملية تحميل الفيديو مؤقتًا ولا يتم تخزينها. لا نطلب معلومات شخصية ولا يوجد نظام حسابات مستخدمين."
+          }
+        },
+        {
+          "id": "cookies",
+          "title": {
+            "tr": "Çerezler",
+            "en": "Cookies",
+            "ar": "ملفات تعريف الارتباط"
+          },
+          "content": {
+            "tr": "Sitemiz, dil tercihi ve tema ayarları gibi temel işlevler için çerezler kullanabilir. Üçüncü taraf analiz araçları (etkinleştirildiğinde) da çerez kullanabilir. Çerez tercihlerinizi tarayıcı ayarlarınızdan yönetebilirsiniz.",
+            "en": "Our site may use cookies for basic functions such as language preference and theme settings. Third-party analytics tools (when enabled) may also use cookies. You can manage your cookie preferences through your browser settings.",
+            "ar": "قد يستخدم موقعنا ملفات تعريف الارتباط للوظائف الأساسية مثل تفضيل اللغة وإعدادات السمة. قد تستخدم أدوات التحليل التابعة لجهات خارجية (عند تفعيلها) ملفات تعريف الارتباط أيضًا. يمكنك إدارة تفضيلات ملفات تعريف الارتباط من خلال إعدادات متصفحك."
+          }
+        },
+        {
+          "id": "third-party",
+          "title": {
+            "tr": "Üçüncü Taraf Hizmetleri",
+            "en": "Third-Party Services",
+            "ar": "خدمات الطرف الثالث"
+          },
+          "content": {
+            "tr": "Vidnoria, video meta verilerini almak için üçüncü taraf platformların genel API'lerini veya herkese açık bilgilerini kullanabilir. Bu platformların kendi gizlilik politikaları geçerlidir. Reklamlar etkinleştirildiğinde, reklam ağları kendi çerezlerini ve izleme teknolojilerini kullanabilir.",
+            "en": "Vidnoria may use public APIs or publicly available information from third-party platforms to retrieve video metadata. These platforms have their own privacy policies. When ads are enabled, ad networks may use their own cookies and tracking technologies.",
+            "ar": "قد تستخدم فيدنوريا واجهات برمجة التطبيقات العامة أو المعلومات المتاحة للعموم من منصات الطرف الثالث لاسترداد بيانات الفيديو الوصفية. تمتلك هذه المنصات سياسات خصوصية خاصة بها. عند تفعيل الإعلانات، قد تستخدم شبكات الإعلانات ملفات تعريف الارتباط وتقنيات التتبع الخاصة بها."
+          }
+        },
+        {
+          "id": "data-security",
+          "title": {
+            "tr": "Veri Güvenliği",
+            "en": "Data Security",
+            "ar": "أمان البيانات"
+          },
+          "content": {
+            "tr": "Sitemiz HTTPS şifreleme protokolü ile korunmaktadır. İndirilen dosyalar doğrudan sunucudan cihazınıza aktarılır. Geçici dosyalar otomatik olarak temizlenir.",
+            "en": "Our site is protected by HTTPS encryption protocol. Downloaded files are transferred directly from the server to your device. Temporary files are automatically cleaned up.",
+            "ar": "موقعنا محمي ببروتوكول تشفير HTTPS. يتم نقل الملفات المحملة مباشرة من الخادم إلى جهازك. يتم تنظيف الملفات المؤقتة تلقائيًا."
+          }
+        }
+      ]
+    },
+    "terms": {
+      "title": {
+        "tr": "Kullanım Şartları",
+        "en": "Terms of Service",
+        "ar": "شروط الاستخدام"
+      },
+      "lastUpdated": "2026-10-22",
+      "slug": "terms",
+      "sections": [
+        {
+          "id": "acceptance",
+          "title": {
+            "tr": "Şartların Kabulü",
+            "en": "Acceptance of Terms",
+            "ar": "قبول الشروط"
+          },
+          "content": {
+            "tr": "Vidnoria'yı kullanarak bu kullanım şartlarını kabul etmiş olursunuz. Bu şartları kabul etmiyorsanız lütfen sitemizi kullanmayın.",
+            "en": "By using Vidnoria, you agree to these terms of service. If you do not accept these terms, please do not use our site.",
+            "ar": "باستخدام فيدنوريا، فإنك توافق على شروط الاستخدام هذه. إذا لم تقبل هذه الشروط، يرجى عدم استخدام موقعنا."
+          }
+        },
+        {
+          "id": "permitted-use",
+          "title": {
+            "tr": "İzin Verilen Kullanım",
+            "en": "Permitted Use",
+            "ar": "الاستخدام المسموح"
+          },
+          "content": {
+            "tr": "Vidnoria yalnızca kişisel ve yasal amaçlar için kullanılmalıdır. Telif hakkı ile korunan içeriklerin izinsiz indirilmesi, dağıtılması veya ticari amaçlarla kullanılması kesinlikle yasaktır. Kullanıcılar, indirdikleri içeriklerin yasal sorumluluğunu üstlenirler.",
+            "en": "Vidnoria should only be used for personal and lawful purposes. Unauthorized downloading, distribution or commercial use of copyrighted content is strictly prohibited. Users assume legal responsibility for the content they download.",
+            "ar": "يجب استخدام فيدنوريا فقط للأغراض الشخصية والقانونية. يُحظر تمامًا التحميل غير المصرح به أو التوزيع أو الاستخدام التجاري للمحتوى المحمي بحقوق النشر. يتحمل المستخدمون المسؤولية القانونية عن المحتوى الذي يقومون بتحميله."
+          }
+        },
+        {
+          "id": "service-availability",
+          "title": {
+            "tr": "Hizmet Kullanılabilirliği",
+            "en": "Service Availability",
+            "ar": "توفر الخدمة"
+          },
+          "content": {
+            "tr": "Vidnoria, hizmeti kesintisiz veya hatasız olarak sunma garantisi vermez. Bakım, güncelleme veya teknik sorunlar nedeniyle hizmet geçici olarak kullanılamaz olabilir. Desteklenen platformlardaki değişiklikler, indirme özelliklerini etkileyebilir.",
+            "en": "Vidnoria does not guarantee uninterrupted or error-free service. The service may be temporarily unavailable due to maintenance, updates or technical issues. Changes in supported platforms may affect download capabilities.",
+            "ar": "لا تضمن فيدنوريا خدمة مستمرة أو خالية من الأخطاء. قد تكون الخدمة غير متاحة مؤقتًا بسبب الصيانة أو التحديثات أو المشكلات التقنية. قد تؤثر التغييرات في المنصات المدعومة على إمكانيات التحميل."
+          }
+        },
+        {
+          "id": "limitation-liability",
+          "title": {
+            "tr": "Sorumluluk Sınırlaması",
+            "en": "Limitation of Liability",
+            "ar": "تحديد المسؤولية"
+          },
+          "content": {
+            "tr": "Vidnoria, hizmetin kullanımından kaynaklanan doğrudan veya dolaylı zararlardan sorumlu tutulamaz. İndirilen içeriklerin kalitesi, orijinal kaynağa bağlıdır ve garanti edilmez.",
+            "en": "Vidnoria cannot be held responsible for direct or indirect damages arising from the use of the service. The quality of downloaded content depends on the original source and is not guaranteed.",
+            "ar": "لا يمكن تحميل فيدنوريا مسؤولية الأضرار المباشرة أو غير المباشرة الناتجة عن استخدام الخدمة. تعتمد جودة المحتوى المحمل على المصدر الأصلي وغير مضمونة."
+          }
+        }
+      ]
+    },
+    "copyright": {
+      "title": {
+        "tr": "Telif Hakkı Politikası",
+        "en": "Copyright Policy",
+        "ar": "سياسة حقوق النشر"
+      },
+      "lastUpdated": "2026-10-22",
+      "slug": "copyright",
+      "sections": [
+        {
+          "id": "respect-copyright",
+          "title": {
+            "tr": "Telif Haklarına Saygı",
+            "en": "Respect for Copyright",
+            "ar": "احترام حقوق النشر"
+          },
+          "content": {
+            "tr": "Vidnoria, fikri mülkiyet haklarına saygı gösterir. Platformumuz, herhangi bir içeriği barındırmaz veya depolamaz. Yalnızca kullanıcıların belirttikleri URL'lerdeki herkese açık içeriklerin indirilmesini kolaylaştıran bir araç olarak hizmet vermektedir.",
+            "en": "Vidnoria respects intellectual property rights. Our platform does not host or store any content. It merely serves as a tool that facilitates downloading publicly available content from URLs specified by users.",
+            "ar": "تحترم فيدنوريا حقوق الملكية الفكرية. منصتنا لا تستضيف أو تخزن أي محتوى. إنها تعمل فقط كأداة تسهل تحميل المحتوى المتاح للعموم من الروابط التي يحددها المستخدمون."
+          }
+        },
+        {
+          "id": "dmca",
+          "title": {
+            "tr": "DMCA Talepleri",
+            "en": "DMCA Requests",
+            "ar": "طلبات DMCA"
+          },
+          "content": {
+            "tr": "Telif hakkı ihlali bildirimi göndermek istiyorsanız, lütfen iletişim sayfamız üzerinden bize ulaşın. Bildiriminizde şu bilgileri eklemelisiniz: telif hakkı sahibinin bilgileri, ihlal edilen eserin tanımı, ihlal içeren URL ve iletişim bilgileriniz.",
+            "en": "If you wish to submit a copyright infringement notice, please contact us through our contact page. Your notice should include: information about the copyright holder, description of the work being infringed, the URL containing the infringement, and your contact information.",
+            "ar": "إذا كنت ترغب في تقديم إشعار بانتهاك حقوق النشر، يرجى الاتصال بنا عبر صفحة الاتصال الخاصة بنا. يجب أن يتضمن إشعارك: معلومات عن صاحب حقوق النشر، ووصف العمل المنتهك، والرابط الذي يحتوي على الانتهاك، ومعلومات الاتصال الخاصة بك."
+          }
+        },
+        {
+          "id": "user-responsibility",
+          "title": {
+            "tr": "Kullanıcı Sorumluluğu",
+            "en": "User Responsibility",
+            "ar": "مسؤولية المستخدم"
+          },
+          "content": {
+            "tr": "Kullanıcılar, indirdikleri içeriklerin telif haklarına uygunluğundan tamamen sorumludur. Vidnoria, kullanıcıların yasa dışı amaçlarla hizmeti kullanmasından sorumlu değildir.",
+            "en": "Users are fully responsible for the copyright compliance of the content they download. Vidnoria is not responsible for users using the service for illegal purposes.",
+            "ar": "المستخدمون مسؤولون بالكامل عن الامتثال لحقوق النشر للمحتوى الذي يقومون بتحميله. فيدنوريا غير مسؤولة عن استخدام المستخدمين للخدمة لأغراض غير قانونية."
+          }
+        }
+      ]
+    },
+    "disclaimer": {
+      "title": {
+        "tr": "Sorumluluk Reddi",
+        "en": "Disclaimer",
+        "ar": "إخلاء المسؤولية"
+      },
+      "lastUpdated": "2026-10-22",
+      "slug": "disclaimer",
+      "sections": [
+        {
+          "id": "general-disclaimer",
+          "title": {
+            "tr": "Genel Sorumluluk Reddi",
+            "en": "General Disclaimer",
+            "ar": "إخلاء المسؤولية العام"
+          },
+          "content": {
+            "tr": "Vidnoria 'olduğu gibi' sunulmaktadır. Herhangi bir açık veya zımni garanti verilmemektedir. Hizmetin kullanımından doğan tüm riskler kullanıcıya aittir. Vidnoria, üçüncü taraf platformların hizmet değişikliklerinden kaynaklanabilecek sorunlardan sorumlu değildir.",
+            "en": "Vidnoria is provided 'as is'. No express or implied warranties are given. All risks arising from the use of the service are borne by the user. Vidnoria is not responsible for issues that may arise from service changes of third-party platforms.",
+            "ar": "يتم تقديم فيدنوريا 'كما هي'. لا يتم تقديم أي ضمانات صريحة أو ضمنية. يتحمل المستخدم جميع المخاطر الناتجة عن استخدام الخدمة. فيدنوريا غير مسؤولة عن المشكلات التي قد تنشأ من تغييرات خدمة منصات الطرف الثالث."
+          }
+        },
+        {
+          "id": "content-accuracy",
+          "title": {
+            "tr": "İçerik Doğruluğu",
+            "en": "Content Accuracy",
+            "ar": "دقة المحتوى"
+          },
+          "content": {
+            "tr": "Vidnoria, blog yazıları ve rehberlerdeki bilgilerin doğruluğunu sağlamak için çaba gösterir, ancak bunların her zaman güncel ve hatasız olacağını garanti etmez. Özellikle üçüncü taraf platformlarla ilgili bilgiler zaman içinde değişebilir.",
+            "en": "Vidnoria strives to ensure the accuracy of information in blog posts and guides, but does not guarantee that they will always be current and error-free. In particular, information related to third-party platforms may change over time.",
+            "ar": "تسعى فيدنوريا لضمان دقة المعلومات في منشورات المدونة والأدلة، لكنها لا تضمن أنها ستكون دائمًا محدثة وخالية من الأخطاء. بشكل خاص، قد تتغير المعلومات المتعلقة بمنصات الطرف الثالث بمرور الوقت."
+          }
+        }
+      ]
+    },
+    "cookies": {
+      "title": {
+        "tr": "Çerez Politikası",
+        "en": "Cookie Policy",
+        "ar": "سياسة ملفات تعريف الارتباط"
+      },
+      "lastUpdated": "2026-10-22",
+      "slug": "cookies",
+      "sections": [
+        {
+          "id": "what-are-cookies",
+          "title": {
+            "tr": "Çerezler Nedir?",
+            "en": "What Are Cookies?",
+            "ar": "ما هي ملفات تعريف الارتباط؟"
+          },
+          "content": {
+            "tr": "Çerezler, web siteleri tarafından cihazınıza yerleştirilen küçük metin dosyalarıdır. Tercihlerinizi hatırlamak ve deneyiminizi iyileştirmek için kullanılırlar.",
+            "en": "Cookies are small text files placed on your device by websites. They are used to remember your preferences and improve your experience.",
+            "ar": "ملفات تعريف الارتباط هي ملفات نصية صغيرة تضعها مواقع الويب على جهازك. تُستخدم لتذكر تفضيلاتك وتحسين تجربتك."
+          }
+        },
+        {
+          "id": "cookies-we-use",
+          "title": {
+            "tr": "Kullandığımız Çerezler",
+            "en": "Cookies We Use",
+            "ar": "ملفات تعريف الارتباط التي نستخدمها"
+          },
+          "content": {
+            "tr": "Vidnoria şu türde çerezler kullanabilir: 1) Zorunlu çerezler: Dil tercihi ve tema seçimi gibi temel işlevler için. 2) Analiz çerezleri: Site kullanımını anonim olarak analiz etmek için (etkinleştirildiğinde). 3) Reklam çerezleri: Reklam ağları tarafından kullanılan çerezler (reklamlar etkinleştirildiğinde).",
+            "en": "Vidnoria may use the following types of cookies: 1) Essential cookies: For basic functions like language preference and theme selection. 2) Analytics cookies: For anonymously analyzing site usage (when enabled). 3) Advertising cookies: Cookies used by ad networks (when ads are enabled).",
+            "ar": "قد تستخدم فيدنوريا الأنواع التالية من ملفات تعريف الارتباط: 1) ملفات تعريف الارتباط الضرورية: للوظائف الأساسية مثل تفضيل اللغة واختيار السمة. 2) ملفات تعريف الارتباط التحليلية: لتحليل استخدام الموقع بشكل مجهول (عند التفعيل). 3) ملفات تعريف الارتباط الإعلانية: ملفات تعريف الارتباط المستخدمة من قبل شبكات الإعلانات (عند تفعيل الإعلانات)."
+          }
+        },
+        {
+          "id": "managing-cookies",
+          "title": {
+            "tr": "Çerez Yönetimi",
+            "en": "Managing Cookies",
+            "ar": "إدارة ملفات تعريف الارتباط"
+          },
+          "content": {
+            "tr": "Tarayıcı ayarlarınızdan çerezleri kabul etmeyi, reddetmeyi veya silmeyi seçebilirsiniz. Çerezleri devre dışı bırakmak, sitenin bazı özelliklerinin düzgün çalışmamasına neden olabilir.",
+            "en": "You can choose to accept, reject or delete cookies from your browser settings. Disabling cookies may cause some features of the site to not work properly.",
+            "ar": "يمكنك اختيار قبول أو رفض أو حذف ملفات تعريف الارتباط من إعدادات متصفحك. قد يؤدي تعطيل ملفات تعريف الارتباط إلى عدم عمل بعض ميزات الموقع بشكل صحيح."
+          }
+        }
+      ]
+    }
+  }
+}

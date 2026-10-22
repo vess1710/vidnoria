@@ -1,0 +1,50 @@
+{
+  "siteName": "Vidnoria",
+  "siteDescription": {
+    "tr": "Vidnoria - Ücretsiz Video ve Müzik İndirme Platformu. Desteklenen platformlardan video ve ses dosyalarını kolayca indirin.",
+    "en": "Vidnoria - Free Video & Music Downloader Platform. Easily download video and audio files from supported platforms.",
+    "ar": "فيدنوريا - منصة تحميل الفيديو والموسيقى المجانية. قم بتحميل ملفات الفيديو والصوت بسهولة من المنصات المدعومة."
+  },
+  "logo": "/images/logo.svg",
+  "favicon": "/images/favicon.svg",
+  "contactEmail": "contact@vidnoria.com",
+  "socialLinks": {
+    "twitter": "",
+    "github": "",
+    "instagram": ""
+  },
+  "seo": {
+    "defaultTitle": {
+      "tr": "Vidnoria - Ücretsiz Video ve Müzik İndirme | Video İndir, MP3 İndir",
+      "en": "Vidnoria - Free Video & Music Downloader | Download Videos, MP3",
+      "ar": "فيدنوريا - تحميل فيديو وموسيقى مجاني | تحميل فيديو، MP3"
+    },
+    "defaultDescription": {
+      "tr": "Vidnoria ile YouTube, Instagram, TikTok, Facebook ve Twitter'dan video ve müzik indirin. Ücretsiz, hızlı ve güvenli. MP4, MP3 ve daha fazla format desteği.",
+      "en": "Download videos and music from YouTube, Instagram, TikTok, Facebook and Twitter with Vidnoria. Free, fast and secure. MP4, MP3 and more format support.",
+      "ar": "قم بتحميل الفيديوهات والموسيقى من يوتيوب وإنستغرام وتيك توك وفيسبوك وتويتر مع فيدنوريا. مجاني وسريع وآمن. دعم MP4 و MP3 والمزيد."
+    },
+    "googleAnalyticsId": "",
+    "googleSearchConsoleId": "",
+    "bingWebmasterToolsId": ""
+  },
+  "ads": {
+    "enabled": false,
+    "adsensePublisherId": "",
+    "slots": [
+      { "id": "header-ad", "name": "Header Banner", "position": "header", "slotId": "", "format": "horizontal", "enabled": false },
+      { "id": "content-ad-1", "name": "Content Ad 1", "position": "content", "slotId": "", "format": "auto", "enabled": false },
+      { "id": "content-ad-2", "name": "Content Ad 2", "position": "content", "slotId": "", "format": "auto", "enabled": false },
+      { "id": "download-ad", "name": "Download Page Ad", "position": "download", "slotId": "", "format": "rectangle", "enabled": false },
+      { "id": "blog-ad", "name": "Blog Article Ad", "position": "blog", "slotId": "", "format": "auto", "enabled": false },
+      { "id": "sidebar-ad", "name": "Sidebar Ad", "position": "sidebar", "slotId": "", "format": "vertical", "enabled": false }
+    ]
+  },
+  "platforms": {
+    "youtube": { "enabled": true },
+    "instagram": { "enabled": true },
+    "tiktok": { "enabled": true },
+    "facebook": { "enabled": true },
+    "twitter": { "enabled": true }
+  }
+}

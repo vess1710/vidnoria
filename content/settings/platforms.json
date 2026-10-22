@@ -1,0 +1,206 @@
+{
+  "platforms": [
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "icon": "Youtube",
+      "color": "#FF0000",
+      "enabled": true,
+      "urlPatterns": [
+        "^(https?://)?(www\\.)?youtube\\.com/watch\\?v=[\\w-]+",
+        "^(https?://)?(www\\.)?youtube\\.com/shorts/[\\w-]+",
+        "^(https?://)?youtu\\.be/[\\w-]+",
+        "^(https?://)?(www\\.)?youtube\\.com/embed/[\\w-]+",
+        "^(https?://)?m\\.youtube\\.com/watch\\?v=[\\w-]+"
+      ],
+      "supportedFormats": {
+        "video": ["mp4", "webm"],
+        "audio": ["mp3", "m4a", "wav", "ogg"]
+      },
+      "supportedQualities": ["2160p", "1440p", "1080p", "720p", "480p", "360p", "240p", "144p"],
+      "features": {
+        "videoDownload": true,
+        "audioExtraction": true,
+        "thumbnailDownload": true,
+        "subtitleDownload": true,
+        "playlistSupport": false
+      },
+      "description": {
+        "tr": "YouTube videolarını ve seslerini çeşitli formatlarda indirin.",
+        "en": "Download YouTube videos and audio in various formats.",
+        "ar": "قم بتحميل فيديوهات وصوتيات يوتيوب بتنسيقات مختلفة."
+      },
+      "slug": {
+        "tr": "youtube-video-indir",
+        "en": "youtube-video-downloader",
+        "ar": "تحميل-فيديو-يوتيوب"
+      }
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "icon": "Instagram",
+      "color": "#E4405F",
+      "enabled": true,
+      "urlPatterns": [
+        "^(https?://)?(www\\.)?instagram\\.com/(p|reel|reels|tv)/[\\w-]+",
+        "^(https?://)?(www\\.)?instagram\\.com/stories/[\\w.]+/\\d+"
+      ],
+      "supportedFormats": {
+        "video": ["mp4"],
+        "audio": ["mp3"]
+      },
+      "supportedQualities": ["1080p", "720p", "480p"],
+      "features": {
+        "videoDownload": true,
+        "audioExtraction": true,
+        "thumbnailDownload": true,
+        "subtitleDownload": false,
+        "playlistSupport": false
+      },
+      "description": {
+        "tr": "Instagram Reels, hikayeler ve gönderilerden video indirin.",
+        "en": "Download videos from Instagram Reels, stories and posts.",
+        "ar": "قم بتحميل الفيديوهات من ريلز إنستغرام والقصص والمنشورات."
+      },
+      "slug": {
+        "tr": "instagram-video-indir",
+        "en": "instagram-video-downloader",
+        "ar": "تحميل-فيديو-انستغرام"
+      }
+    },
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "icon": "Music2",
+      "color": "#000000",
+      "enabled": true,
+      "urlPatterns": [
+        "^(https?://)?(www\\.)?tiktok\\.com/@[\\w.]+/video/\\d+",
+        "^(https?://)?(vm|vt)\\.tiktok\\.com/[\\w]+"
+      ],
+      "supportedFormats": {
+        "video": ["mp4"],
+        "audio": ["mp3"]
+      },
+      "supportedQualities": ["1080p", "720p", "480p"],
+      "features": {
+        "videoDownload": true,
+        "audioExtraction": true,
+        "thumbnailDownload": true,
+        "subtitleDownload": false,
+        "playlistSupport": false
+      },
+      "description": {
+        "tr": "TikTok videolarını filigranlı veya filigranlı olmadan indirin.",
+        "en": "Download TikTok videos with or without watermark.",
+        "ar": "قم بتحميل فيديوهات تيك توك مع أو بدون علامة مائية."
+      },
+      "slug": {
+        "tr": "tiktok-video-indir",
+        "en": "tiktok-video-downloader",
+        "ar": "تحميل-فيديو-تيك-توك"
+      }
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "icon": "Facebook",
+      "color": "#1877F2",
+      "enabled": true,
+      "urlPatterns": [
+        "^(https?://)?(www\\.)?facebook\\.com/.+/videos/\\d+",
+        "^(https?://)?(www\\.)?facebook\\.com/watch/\\?v=\\d+",
+        "^(https?://)?(www\\.)?facebook\\.com/reel/\\d+",
+        "^(https?://)?(www\\.)?fb\\.watch/[\\w]+"
+      ],
+      "supportedFormats": {
+        "video": ["mp4"],
+        "audio": ["mp3"]
+      },
+      "supportedQualities": ["1080p", "720p", "480p", "360p"],
+      "features": {
+        "videoDownload": true,
+        "audioExtraction": true,
+        "thumbnailDownload": true,
+        "subtitleDownload": false,
+        "playlistSupport": false
+      },
+      "description": {
+        "tr": "Facebook videolarını ve Reels içeriklerini indirin.",
+        "en": "Download Facebook videos and Reels content.",
+        "ar": "قم بتحميل فيديوهات فيسبوك ومحتوى ريلز."
+      },
+      "slug": {
+        "tr": "facebook-video-indir",
+        "en": "facebook-video-downloader",
+        "ar": "تحميل-فيديو-فيسبوك"
+      }
+    },
+    {
+      "id": "twitter",
+      "name": "Twitter / X",
+      "icon": "Twitter",
+      "color": "#1DA1F2",
+      "enabled": true,
+      "urlPatterns": [
+        "^(https?://)?(www\\.)?(twitter|x)\\.com/[\\w]+/status/\\d+",
+        "^(https?://)?(mobile\\.)?(twitter|x)\\.com/[\\w]+/status/\\d+"
+      ],
+      "supportedFormats": {
+        "video": ["mp4"],
+        "audio": ["mp3"]
+      },
+      "supportedQualities": ["1080p", "720p", "480p"],
+      "features": {
+        "videoDownload": true,
+        "audioExtraction": true,
+        "thumbnailDownload": true,
+        "subtitleDownload": false,
+        "playlistSupport": false
+      },
+      "description": {
+        "tr": "Twitter/X videolarını ve GIF'lerini indirin.",
+        "en": "Download Twitter/X videos and GIFs.",
+        "ar": "قم بتحميل فيديوهات وصور GIF من تويتر/إكس."
+      },
+      "slug": {
+        "tr": "twitter-video-indir",
+        "en": "twitter-video-downloader",
+        "ar": "تحميل-فيديو-تويتر"
+      }
+    }
+  ],
+  "formatDescriptions": {
+    "mp4": {
+      "tr": "En yaygın video formatı. Tüm cihazlarda oynatılabilir.",
+      "en": "Most common video format. Plays on all devices.",
+      "ar": "أكثر صيغ الفيديو شيوعًا. يعمل على جميع الأجهزة."
+    },
+    "webm": {
+      "tr": "Web için optimize edilmiş açık kaynak video formatı.",
+      "en": "Open-source video format optimized for the web.",
+      "ar": "صيغة فيديو مفتوحة المصدر محسّنة للويب."
+    },
+    "mp3": {
+      "tr": "En yaygın ses formatı. Küçük dosya boyutu.",
+      "en": "Most common audio format. Small file size.",
+      "ar": "أكثر صيغ الصوت شيوعًا. حجم ملف صغير."
+    },
+    "m4a": {
+      "tr": "Yüksek kaliteli ses formatı. Apple cihazlarında yaygın.",
+      "en": "High-quality audio format. Common on Apple devices.",
+      "ar": "صيغة صوت عالية الجودة. شائعة على أجهزة أبل."
+    },
+    "wav": {
+      "tr": "Sıkıştırılmamış ses formatı. En yüksek kalite.",
+      "en": "Uncompressed audio format. Highest quality.",
+      "ar": "صيغة صوت غير مضغوطة. أعلى جودة."
+    },
+    "ogg": {
+      "tr": "Açık kaynak ses formatı. İyi kalite/boyut oranı.",
+      "en": "Open-source audio format. Good quality/size ratio.",
+      "ar": "صيغة صوت مفتوحة المصدر. نسبة جودة/حجم جيدة."
+    }
+  }
+}

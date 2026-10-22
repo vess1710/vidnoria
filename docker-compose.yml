@@ -1,0 +1,38 @@
+services:
+  vidnoria:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vidnoria_app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-VidnoriaSecure2026!}
+      - ADMIN_SECRET=${ADMIN_SECRET:-vidnoria-super-secure-production-secret-change-me}
+      - NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL:-https://vidnoria.com}
+      - GA4_MEASUREMENT_ID=${GA4_MEASUREMENT_ID:-}
+    volumes:
+      # Persistent content volume: ensures changes made via admin panel survive rebuilds
+      - vidnoria_content:/app/content
+      - vidnoria_tmp:/tmp/vidnoria
+
+  nginx:
+    image: nginx:alpine
+    container_name: vidnoria_nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./docker/certs:/etc/nginx/certs:ro
+    depends_on:
+      - vidnoria
+
+volumes:
+  vidnoria_content:
+    name: vidnoria_content_data
+  vidnoria_tmp:
+    name: vidnoria_tmp_data

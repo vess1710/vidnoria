@@ -1,0 +1,166 @@
+{
+  "faq": [
+    {
+      "id": "what-is-vidnoria",
+      "question": {
+        "tr": "Vidnoria nedir?",
+        "en": "What is Vidnoria?",
+        "ar": "ما هي فيدنوريا؟"
+      },
+      "answer": {
+        "tr": "Vidnoria, YouTube, Instagram, TikTok, Facebook ve Twitter gibi popüler platformlardan video ve ses dosyalarını indirmenize olanak tanıyan ücretsiz bir web tabanlı araçtır. Herhangi bir yazılım yüklemenize gerek kalmadan, tarayıcınız üzerinden doğrudan kullanabilirsiniz.",
+        "en": "Vidnoria is a free web-based tool that allows you to download video and audio files from popular platforms like YouTube, Instagram, TikTok, Facebook and Twitter. You can use it directly through your browser without needing to install any software.",
+        "ar": "فيدنوريا هي أداة مجانية تعمل عبر الويب تتيح لك تحميل ملفات الفيديو والصوت من المنصات الشائعة مثل يوتيوب وإنستغرام وتيك توك وفيسبوك وتويتر. يمكنك استخدامها مباشرة من خلال متصفحك دون الحاجة إلى تثبيت أي برنامج."
+      },
+      "category": "general"
+    },
+    {
+      "id": "how-to-download",
+      "question": {
+        "tr": "Vidnoria ile video nasıl indirilir?",
+        "en": "How do I download a video with Vidnoria?",
+        "ar": "كيف أقوم بتحميل فيديو باستخدام فيدنوريا؟"
+      },
+      "answer": {
+        "tr": "Video indirmek için şu adımları izleyin: 1) İndirmek istediğiniz videonun URL'sini kopyalayın. 2) URL'yi Vidnoria ana sayfasındaki metin kutusuna yapıştırın. 3) 'İndir' butonuna tıklayın. 4) Mevcut format ve kalite seçeneklerinden birini seçin. 5) İndirme işlemi başlayacaktır.",
+        "en": "To download a video, follow these steps: 1) Copy the URL of the video you want to download. 2) Paste the URL into the text box on the Vidnoria homepage. 3) Click the 'Download' button. 4) Choose from the available format and quality options. 5) The download will begin.",
+        "ar": "لتحميل فيديو، اتبع هذه الخطوات: 1) انسخ رابط الفيديو الذي تريد تحميله. 2) الصق الرابط في مربع النص على الصفحة الرئيسية لفيدنوريا. 3) انقر على زر 'تحميل'. 4) اختر من خيارات الصيغة والجودة المتاحة. 5) سيبدأ التحميل."
+      },
+      "category": "usage"
+    },
+    {
+      "id": "supported-platforms",
+      "question": {
+        "tr": "Vidnoria hangi platformları destekliyor?",
+        "en": "Which platforms does Vidnoria support?",
+        "ar": "ما هي المنصات التي يدعمها فيدنوريا؟"
+      },
+      "answer": {
+        "tr": "Vidnoria şu anda YouTube, Instagram, TikTok, Facebook ve Twitter (X) platformlarını desteklemektedir. Her platform için farklı format ve kalite seçenekleri mevcuttur. Desteklenen platform sayısını artırmak için sürekli çalışıyoruz.",
+        "en": "Vidnoria currently supports YouTube, Instagram, TikTok, Facebook and Twitter (X) platforms. Different format and quality options are available for each platform. We are continuously working to increase the number of supported platforms.",
+        "ar": "يدعم فيدنوريا حاليًا منصات يوتيوب وإنستغرام وتيك توك وفيسبوك وتويتر (إكس). تتوفر خيارات صيغة وجودة مختلفة لكل منصة. نحن نعمل باستمرار على زيادة عدد المنصات المدعومة."
+      },
+      "category": "general"
+    },
+    {
+      "id": "supported-formats",
+      "question": {
+        "tr": "Hangi format ve kalite seçenekleri mevcut?",
+        "en": "What format and quality options are available?",
+        "ar": "ما هي خيارات الصيغة والجودة المتاحة؟"
+      },
+      "answer": {
+        "tr": "Video formatları olarak MP4 ve WebM, ses formatları olarak MP3, M4A, WAV ve OGG desteklenmektedir. Kalite seçenekleri platforma ve orijinal videonun kalitesine göre değişir. YouTube videoları için 144p'den 4K'ya kadar seçenekler mevcut olabilir.",
+        "en": "Supported video formats include MP4 and WebM, while audio formats include MP3, M4A, WAV and OGG. Quality options vary depending on the platform and the quality of the original video. For YouTube videos, options from 144p to 4K may be available.",
+        "ar": "تشمل صيغ الفيديو المدعومة MP4 و WebM، بينما تشمل صيغ الصوت MP3 و M4A و WAV و OGG. تختلف خيارات الجودة حسب المنصة وجودة الفيديو الأصلي. بالنسبة لفيديوهات يوتيوب، قد تتوفر خيارات من 144p إلى 4K."
+      },
+      "category": "usage"
+    },
+    {
+      "id": "is-free",
+      "question": {
+        "tr": "Vidnoria ücretsiz mi?",
+        "en": "Is Vidnoria free to use?",
+        "ar": "هل فيدنوريا مجاني الاستخدام؟"
+      },
+      "answer": {
+        "tr": "Evet, Vidnoria tamamen ücretsizdir. Herhangi bir kayıt veya üyelik gerektirmez. Tüm özelliklere ücretsiz olarak erişebilirsiniz.",
+        "en": "Yes, Vidnoria is completely free to use. It does not require any registration or membership. You can access all features for free.",
+        "ar": "نعم، فيدنوريا مجاني تمامًا للاستخدام. لا يتطلب أي تسجيل أو عضوية. يمكنك الوصول إلى جميع الميزات مجانًا."
+      },
+      "category": "general"
+    },
+    {
+      "id": "is-legal",
+      "question": {
+        "tr": "Vidnoria ile video indirmek yasal mı?",
+        "en": "Is it legal to download videos with Vidnoria?",
+        "ar": "هل تحميل الفيديوهات باستخدام فيدنوريا قانوني؟"
+      },
+      "answer": {
+        "tr": "Vidnoria bir araç olarak hizmet vermektedir. Kullanıcıların telif hakkı yasalarına ve ilgili platformların kullanım şartlarına uyma sorumluluğu kendilerine aittir. Yalnızca indirilmesine izin verilen veya kişisel kullanım için yasal olan içerikleri indirmenizi tavsiye ederiz. Telif hakkı korumalı içerikleri izinsiz dağıtmak yasalara aykırıdır.",
+        "en": "Vidnoria serves as a tool. Users are responsible for complying with copyright laws and the terms of service of the relevant platforms. We recommend only downloading content that is permitted for download or legal for personal use. Distributing copyrighted content without permission is against the law.",
+        "ar": "تعمل فيدنوريا كأداة. يتحمل المستخدمون مسؤولية الامتثال لقوانين حقوق النشر وشروط استخدام المنصات ذات الصلة. نوصي فقط بتحميل المحتوى المسموح بتحميله أو القانوني للاستخدام الشخصي. توزيع المحتوى المحمي بحقوق النشر دون إذن يعد مخالفًا للقانون."
+      },
+      "category": "legal"
+    },
+    {
+      "id": "need-account",
+      "question": {
+        "tr": "Vidnoria'yı kullanmak için hesap oluşturmam gerekiyor mu?",
+        "en": "Do I need to create an account to use Vidnoria?",
+        "ar": "هل أحتاج إلى إنشاء حساب لاستخدام فيدنوريا؟"
+      },
+      "answer": {
+        "tr": "Hayır, Vidnoria'yı kullanmak için herhangi bir hesap oluşturmanız veya kayıt olmanız gerekmez. Siteye girin, video URL'sini yapıştırın ve indirmeye başlayın.",
+        "en": "No, you do not need to create any account or register to use Vidnoria. Simply visit the site, paste the video URL and start downloading.",
+        "ar": "لا، لست بحاجة إلى إنشاء أي حساب أو التسجيل لاستخدام فيدنوريا. ما عليك سوى زيارة الموقع ولصق رابط الفيديو والبدء في التحميل."
+      },
+      "category": "general"
+    },
+    {
+      "id": "audio-extraction",
+      "question": {
+        "tr": "Bir videodan sadece sesi (MP3) indirebilir miyim?",
+        "en": "Can I download just the audio (MP3) from a video?",
+        "ar": "هل يمكنني تحميل الصوت فقط (MP3) من الفيديو؟"
+      },
+      "answer": {
+        "tr": "Evet, Vidnoria videolardan ses çıkarma özelliğini destekler. Video URL'sini yapıştırdıktan sonra format seçeneklerinde MP3, M4A, WAV veya OGG gibi ses formatlarını seçebilirsiniz. Bu özellik tüm desteklenen platformlarda mevcuttur.",
+        "en": "Yes, Vidnoria supports audio extraction from videos. After pasting the video URL, you can choose audio formats like MP3, M4A, WAV or OGG from the format options. This feature is available for all supported platforms.",
+        "ar": "نعم، يدعم فيدنوريا استخراج الصوت من الفيديوهات. بعد لصق رابط الفيديو، يمكنك اختيار صيغ الصوت مثل MP3 أو M4A أو WAV أو OGG من خيارات الصيغة. هذه الميزة متاحة لجميع المنصات المدعومة."
+      },
+      "category": "usage"
+    },
+    {
+      "id": "download-failed",
+      "question": {
+        "tr": "İndirme işlemi başarısız olursa ne yapmalıyım?",
+        "en": "What should I do if the download fails?",
+        "ar": "ماذا أفعل إذا فشل التحميل؟"
+      },
+      "answer": {
+        "tr": "İndirme başarısız olursa şunları deneyebilirsiniz: 1) URL'nin doğru ve tam olduğundan emin olun. 2) Videonun herkese açık olduğunu kontrol edin (özel videolar indirilemez). 3) Sayfayı yenileyip tekrar deneyin. 4) Farklı bir format veya kalite seçeneği deneyin. 5) Sorun devam ederse iletişim sayfamız üzerinden bize bildirin.",
+        "en": "If the download fails, you can try the following: 1) Make sure the URL is correct and complete. 2) Check that the video is public (private videos cannot be downloaded). 3) Refresh the page and try again. 4) Try a different format or quality option. 5) If the problem persists, let us know through our contact page.",
+        "ar": "إذا فشل التحميل، يمكنك تجربة ما يلي: 1) تأكد من أن الرابط صحيح وكامل. 2) تحقق من أن الفيديو عام (لا يمكن تحميل الفيديوهات الخاصة). 3) قم بتحديث الصفحة وحاول مرة أخرى. 4) جرب صيغة أو خيار جودة مختلف. 5) إذا استمرت المشكلة، أخبرنا من خلال صفحة الاتصال."
+      },
+      "category": "troubleshooting"
+    },
+    {
+      "id": "mobile-support",
+      "question": {
+        "tr": "Vidnoria'yı mobil cihazlarda kullanabilir miyim?",
+        "en": "Can I use Vidnoria on mobile devices?",
+        "ar": "هل يمكنني استخدام فيدنوريا على الأجهزة المحمولة؟"
+      },
+      "answer": {
+        "tr": "Evet, Vidnoria mobil uyumlu bir web uygulamasıdır. Herhangi bir akıllı telefon veya tabletten web tarayıcınız üzerinden kullanabilirsiniz. Herhangi bir uygulama indirmenize gerek yoktur.",
+        "en": "Yes, Vidnoria is a mobile-friendly web application. You can use it from any smartphone or tablet through your web browser. You don't need to download any app.",
+        "ar": "نعم، فيدنوريا تطبيق ويب متوافق مع الأجهزة المحمولة. يمكنك استخدامه من أي هاتف ذكي أو جهاز لوحي عبر متصفح الويب الخاص بك. لا تحتاج إلى تحميل أي تطبيق."
+      },
+      "category": "general"
+    }
+  ],
+  "categories": {
+    "general": {
+      "tr": "Genel",
+      "en": "General",
+      "ar": "عام"
+    },
+    "usage": {
+      "tr": "Kullanım",
+      "en": "Usage",
+      "ar": "الاستخدام"
+    },
+    "legal": {
+      "tr": "Yasal",
+      "en": "Legal",
+      "ar": "قانوني"
+    },
+    "troubleshooting": {
+      "tr": "Sorun Giderme",
+      "en": "Troubleshooting",
+      "ar": "استكشاف الأخطاء"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" width="200" height="48">
+  <defs>
+    <linearGradient id="brandGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="waveGradDark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+  <!-- V Symbol with audio wave motif -->
+  <g transform="translate(4, 4)">
+    <!-- Abstract V with frequency wave -->
+    <path d="M2 6 L14 34 L18 26 L15 20 L20 10 L24 20 L21 26 L26 34 L38 6" 
+          stroke="url(#brandGradDark)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Sound wave bars emanating from the V -->
+    <line x1="32" y1="14" x2="36" y2="14" stroke="url(#waveGradDark)" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+    <line x1="34" y1="8" x2="39" y2="8" stroke="url(#waveGradDark)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <line x1="34" y1="20" x2="39" y2="20" stroke="url(#waveGradDark)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  <!-- Vidnoria Text - white for dark backgrounds -->
+  <text x="54" y="33" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" letter-spacing="-0.5" fill="#F1F5F9">
+    Vid<tspan fill="url(#brandGradDark)">noria</tspan>
+  </text>
+</svg>

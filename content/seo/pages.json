@@ -1,0 +1,256 @@
+{
+  "pages": {
+    "home": {
+      "title": {
+        "tr": "Vidnoria - Ücretsiz Video ve Müzik İndirme | Video İndir, MP3 İndir",
+        "en": "Vidnoria - Free Video & Music Downloader | Download Videos, MP3",
+        "ar": "فيدنوريا - تحميل فيديو وموسيقى مجاني | تحميل فيديو، MP3"
+      },
+      "description": {
+        "tr": "Vidnoria ile YouTube, Instagram, TikTok, Facebook ve Twitter'dan video ve müzik indirin. Ücretsiz, hızlı ve güvenli online video indirme aracı. MP4, MP3, WebM format desteği.",
+        "en": "Download videos and music from YouTube, Instagram, TikTok, Facebook and Twitter with Vidnoria. Free, fast and secure online video downloader tool. MP4, MP3, WebM format support.",
+        "ar": "قم بتحميل الفيديوهات والموسيقى من يوتيوب وإنستغرام وتيك توك وفيسبوك وتويتر مع فيدنوريا. أداة تحميل فيديو مجانية وسريعة وآمنة. دعم MP4 و MP3 و WebM."
+      },
+      "keywords": {
+        "tr": ["video indir", "video indirme", "MP3 indir", "ücretsiz video indirme", "online video indir", "müzik indir", "video dönüştürücü", "MP4 indir", "ses indir"],
+        "en": ["video downloader", "online video downloader", "free video downloader", "MP3 converter", "download videos", "music downloader", "MP4 downloader", "audio extractor", "free download"],
+        "ar": ["تحميل فيديو", "تحميل فيديوهات", "تحميل MP3", "تحميل مجاني", "تحميل فيديو مجاني", "تحميل موسيقى", "محول فيديو", "تحميل MP4", "تحميل صوت"]
+      },
+      "canonicalPath": "/"
+    },
+    "blog": {
+      "title": {
+        "tr": "Blog - Video İndirme Rehberleri ve İpuçları | Vidnoria",
+        "en": "Blog - Video Download Guides & Tips | Vidnoria",
+        "ar": "المدونة - أدلة وإرشادات تحميل الفيديو | فيدنوريا"
+      },
+      "description": {
+        "tr": "Video indirme rehberleri, format karşılaştırmaları ve kullanım ipuçları. Vidnoria blog ile video indirme hakkında her şeyi öğrenin.",
+        "en": "Video download guides, format comparisons, and usage tips. Learn everything about video downloading with the Vidnoria blog.",
+        "ar": "أدلة تحميل الفيديو ومقارنات الصيغ ونصائح الاستخدام. تعرف على كل شيء عن تحميل الفيديو مع مدونة فيدنوريا."
+      },
+      "keywords": {
+        "tr": ["video indirme rehberi", "video format", "MP3 dönüştürme", "video indirme ipuçları", "YouTube video indir rehber"],
+        "en": ["video download guide", "video format guide", "MP3 conversion", "download tips", "YouTube download guide"],
+        "ar": ["دليل تحميل فيديو", "دليل صيغ الفيديو", "تحويل MP3", "نصائح التحميل", "دليل تحميل يوتيوب"]
+      },
+      "canonicalPath": "/blog"
+    },
+    "faq": {
+      "title": {
+        "tr": "Sıkça Sorulan Sorular (SSS) | Vidnoria",
+        "en": "Frequently Asked Questions (FAQ) | Vidnoria",
+        "ar": "الأسئلة الشائعة | فيدنوريا"
+      },
+      "description": {
+        "tr": "Vidnoria hakkında sıkça sorulan sorular. Video indirme, format seçimi, desteklenen platformlar ve daha fazlası hakkında bilgi edinin.",
+        "en": "Frequently asked questions about Vidnoria. Learn about video downloading, format selection, supported platforms and more.",
+        "ar": "الأسئلة الشائعة حول فيدنوريا. تعرف على تحميل الفيديو واختيار الصيغة والمنصات المدعومة والمزيد."
+      },
+      "keywords": {
+        "tr": ["video indirme soruları", "video indir SSS", "MP3 indir nasıl", "video format seçimi"],
+        "en": ["video download FAQ", "how to download video", "MP3 download questions", "video format selection"],
+        "ar": ["أسئلة تحميل الفيديو", "كيفية تحميل فيديو", "أسئلة تحميل MP3", "اختيار صيغة الفيديو"]
+      },
+      "canonicalPath": "/faq"
+    },
+    "contact": {
+      "title": {
+        "tr": "İletişim | Vidnoria",
+        "en": "Contact Us | Vidnoria",
+        "ar": "اتصل بنا | فيدنوريا"
+      },
+      "description": {
+        "tr": "Vidnoria ile iletişime geçin. Sorularınız, önerileriniz veya geri bildirimleriniz için bize ulaşın.",
+        "en": "Get in touch with Vidnoria. Reach out for your questions, suggestions or feedback.",
+        "ar": "تواصل مع فيدنوريا. تواصل معنا لأسئلتك أو اقتراحاتك أو ملاحظاتك."
+      },
+      "keywords": {
+        "tr": ["Vidnoria iletişim", "video indirme destek", "iletişim formu"],
+        "en": ["Vidnoria contact", "video downloader support", "contact form"],
+        "ar": ["اتصل بفيدنوريا", "دعم تحميل الفيديو", "نموذج الاتصال"]
+      },
+      "canonicalPath": "/contact"
+    },
+    "privacy": {
+      "title": {
+        "tr": "Gizlilik Politikası | Vidnoria",
+        "en": "Privacy Policy | Vidnoria",
+        "ar": "سياسة الخصوصية | فيدنوريا"
+      },
+      "description": {
+        "tr": "Vidnoria gizlilik politikası. Verilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu öğrenin.",
+        "en": "Vidnoria privacy policy. Learn how we collect, use, and protect your data.",
+        "ar": "سياسة خصوصية فيدنوريا. تعرف على كيفية جمع بياناتك واستخدامها وحمايتها."
+      },
+      "keywords": {
+        "tr": ["gizlilik politikası", "veri koruma", "kişisel veriler"],
+        "en": ["privacy policy", "data protection", "personal data"],
+        "ar": ["سياسة الخصوصية", "حماية البيانات", "البيانات الشخصية"]
+      },
+      "canonicalPath": "/privacy"
+    },
+    "terms": {
+      "title": {
+        "tr": "Kullanım Şartları | Vidnoria",
+        "en": "Terms of Service | Vidnoria",
+        "ar": "شروط الاستخدام | فيدنوريا"
+      },
+      "description": {
+        "tr": "Vidnoria kullanım şartları ve koşulları. Platformumuzu kullanmadan önce lütfen bu şartları okuyun.",
+        "en": "Vidnoria terms of service and conditions. Please read these terms before using our platform.",
+        "ar": "شروط وأحكام استخدام فيدنوريا. يرجى قراءة هذه الشروط قبل استخدام منصتنا."
+      },
+      "keywords": {
+        "tr": ["kullanım şartları", "hizmet koşulları", "kullanım koşulları"],
+        "en": ["terms of service", "terms and conditions", "usage terms"],
+        "ar": ["شروط الاستخدام", "الشروط والأحكام", "شروط الخدمة"]
+      },
+      "canonicalPath": "/terms"
+    },
+    "copyright": {
+      "title": {
+        "tr": "Telif Hakkı Politikası | Vidnoria",
+        "en": "Copyright Policy | Vidnoria",
+        "ar": "سياسة حقوق النشر | فيدنوريا"
+      },
+      "description": {
+        "tr": "Vidnoria telif hakkı politikası. Telif hakları, DMCA talepleri ve içerik kaldırma prosedürleri hakkında bilgi.",
+        "en": "Vidnoria copyright policy. Information about copyrights, DMCA requests and content removal procedures.",
+        "ar": "سياسة حقوق النشر في فيدنوريا. معلومات حول حقوق النشر وطلبات DMCA وإجراءات إزالة المحتوى."
+      },
+      "keywords": {
+        "tr": ["telif hakkı", "DMCA", "içerik kaldırma", "telif hakkı bildirimi"],
+        "en": ["copyright", "DMCA", "content removal", "copyright notice"],
+        "ar": ["حقوق النشر", "DMCA", "إزالة المحتوى", "إشعار حقوق النشر"]
+      },
+      "canonicalPath": "/copyright"
+    },
+    "disclaimer": {
+      "title": {
+        "tr": "Sorumluluk Reddi | Vidnoria",
+        "en": "Disclaimer | Vidnoria",
+        "ar": "إخلاء المسؤولية | فيدنوريا"
+      },
+      "description": {
+        "tr": "Vidnoria sorumluluk reddi beyanı. Hizmetimizin kullanımı ile ilgili önemli bilgiler.",
+        "en": "Vidnoria disclaimer statement. Important information regarding the use of our service.",
+        "ar": "بيان إخلاء مسؤولية فيدنوريا. معلومات مهمة بخصوص استخدام خدمتنا."
+      },
+      "keywords": {
+        "tr": ["sorumluluk reddi", "yasal uyarı", "hukuki bildirim"],
+        "en": ["disclaimer", "legal notice", "liability"],
+        "ar": ["إخلاء المسؤولية", "إشعار قانوني", "المسؤولية"]
+      },
+      "canonicalPath": "/disclaimer"
+    },
+    "cookies": {
+      "title": {
+        "tr": "Çerez Politikası | Vidnoria",
+        "en": "Cookie Policy | Vidnoria",
+        "ar": "سياسة ملفات تعريف الارتباط | فيدنوريا"
+      },
+      "description": {
+        "tr": "Vidnoria çerez politikası. Web sitemizde çerezleri nasıl kullandığımız hakkında bilgi edinin.",
+        "en": "Vidnoria cookie policy. Learn how we use cookies on our website.",
+        "ar": "سياسة ملفات تعريف الارتباط في فيدنوريا. تعرف على كيفية استخدامنا لملفات تعريف الارتباط على موقعنا."
+      },
+      "keywords": {
+        "tr": ["çerez politikası", "çerezler", "web çerezleri"],
+        "en": ["cookie policy", "cookies", "web cookies"],
+        "ar": ["سياسة ملفات تعريف الارتباط", "ملفات تعريف الارتباط", "كوكيز"]
+      },
+      "canonicalPath": "/cookies"
+    },
+    "youtube-video-downloader": {
+      "title": {
+        "tr": "YouTube Video İndirici - Ücretsiz YouTube Video İndir | Vidnoria",
+        "en": "YouTube Video Downloader - Free YouTube Video Download | Vidnoria",
+        "ar": "تحميل فيديو يوتيوب - تحميل فيديو يوتيوب مجاني | فيدنوريا"
+      },
+      "description": {
+        "tr": "YouTube video indirme aracı ile YouTube videolarını MP4, MP3, WebM formatlarında indirin. HD, Full HD ve 4K kalitede ücretsiz ve hızlı YouTube video indirici.",
+        "en": "Download YouTube videos in MP4, MP3, WebM formats with our YouTube video downloader. Free and fast YouTube video downloader in HD, Full HD and 4K quality.",
+        "ar": "قم بتحميل فيديوهات يوتيوب بصيغ MP4 و MP3 و WebM مع أداة تحميل فيديو يوتيوب. أداة تحميل فيديو يوتيوب مجانية وسريعة بجودة HD و Full HD و 4K."
+      },
+      "keywords": {
+        "tr": ["YouTube video indir", "YouTube MP3 indir", "YouTube video indirici", "YouTube indir", "YouTube video dönüştürücü", "YouTube MP4 indir", "YouTube HD video indir", "YouTube 4K video indir"],
+        "en": ["YouTube video downloader", "YouTube to MP3", "download YouTube video", "YouTube downloader", "YouTube converter", "YouTube to MP4", "YouTube HD download", "YouTube 4K download"],
+        "ar": ["تحميل فيديو يوتيوب", "تحميل يوتيوب MP3", "تحميل فيديوهات يوتيوب", "تحميل من يوتيوب", "محول يوتيوب", "تحميل يوتيوب MP4", "تحميل يوتيوب HD", "تحميل يوتيوب 4K"]
+      },
+      "canonicalPath": "/youtube-video-downloader"
+    },
+    "instagram-video-downloader": {
+      "title": {
+        "tr": "Instagram Video İndirici - Reels, Hikaye, IGTV İndir | Vidnoria",
+        "en": "Instagram Video Downloader - Reels, Story, IGTV Download | Vidnoria",
+        "ar": "تحميل فيديو انستغرام - ريلز، ستوري، IGTV | فيدنوريا"
+      },
+      "description": {
+        "tr": "Instagram video indirme aracı ile Instagram Reels, hikaye ve IGTV videolarını indirin. Ücretsiz ve hızlı Instagram video indirici.",
+        "en": "Download Instagram Reels, stories and IGTV videos with our Instagram video downloader. Free and fast Instagram video downloader.",
+        "ar": "قم بتحميل ريلز إنستغرام والقصص وفيديوهات IGTV مع أداة تحميل فيديو إنستغرام. أداة تحميل فيديو إنستغرام مجانية وسريعة."
+      },
+      "keywords": {
+        "tr": ["Instagram video indir", "Instagram Reels indir", "Instagram hikaye indir", "Instagram indirici", "Instagram video indirme", "Instagram Reels kaydet"],
+        "en": ["Instagram video downloader", "Instagram Reels download", "Instagram story download", "Instagram downloader", "download Instagram video", "save Instagram Reels"],
+        "ar": ["تحميل فيديو انستغرام", "تحميل ريلز انستغرام", "تحميل ستوري انستغرام", "تحميل من انستغرام", "تحميل فيديوهات انستغرام", "حفظ ريلز انستغرام"]
+      },
+      "canonicalPath": "/instagram-video-downloader"
+    },
+    "tiktok-video-downloader": {
+      "title": {
+        "tr": "TikTok Video İndirici - Filigranlı veya Filigranlı Olmadan | Vidnoria",
+        "en": "TikTok Video Downloader - With or Without Watermark | Vidnoria",
+        "ar": "تحميل فيديو تيك توك - مع أو بدون علامة مائية | فيدنوريا"
+      },
+      "description": {
+        "tr": "TikTok video indirme aracı ile TikTok videolarını MP4 formatında indirin. Filigranlı veya filigranlı olmadan ücretsiz TikTok video indirici.",
+        "en": "Download TikTok videos in MP4 format with our TikTok video downloader. Free TikTok video downloader with or without watermark.",
+        "ar": "قم بتحميل فيديوهات تيك توك بصيغة MP4 مع أداة تحميل فيديو تيك توك. أداة تحميل فيديو تيك توك مجانية مع أو بدون علامة مائية."
+      },
+      "keywords": {
+        "tr": ["TikTok video indir", "TikTok indirici", "TikTok video indirme", "TikTok filigran olmadan indir", "TikTok video kaydet", "TikTok MP4 indir"],
+        "en": ["TikTok video downloader", "TikTok downloader", "download TikTok video", "TikTok no watermark", "save TikTok video", "TikTok to MP4"],
+        "ar": ["تحميل فيديو تيك توك", "تحميل من تيك توك", "تحميل فيديوهات تيك توك", "تيك توك بدون علامة مائية", "حفظ فيديو تيك توك", "تحميل تيك توك MP4"]
+      },
+      "canonicalPath": "/tiktok-video-downloader"
+    },
+    "facebook-video-downloader": {
+      "title": {
+        "tr": "Facebook Video İndirici - Ücretsiz Facebook Video İndir | Vidnoria",
+        "en": "Facebook Video Downloader - Free Facebook Video Download | Vidnoria",
+        "ar": "تحميل فيديو فيسبوك - تحميل فيديو فيسبوك مجاني | فيدنوريا"
+      },
+      "description": {
+        "tr": "Facebook video indirme aracı ile Facebook videolarını ve Reels içeriklerini MP4 formatında indirin. Ücretsiz ve hızlı Facebook video indirici.",
+        "en": "Download Facebook videos and Reels content in MP4 format with our Facebook video downloader. Free and fast Facebook video downloader.",
+        "ar": "قم بتحميل فيديوهات فيسبوك ومحتوى ريلز بصيغة MP4 مع أداة تحميل فيديو فيسبوك. أداة تحميل فيديو فيسبوك مجانية وسريعة."
+      },
+      "keywords": {
+        "tr": ["Facebook video indir", "Facebook indirici", "Facebook video indirme", "Facebook Reels indir", "Facebook video kaydet", "Facebook MP4 indir"],
+        "en": ["Facebook video downloader", "Facebook downloader", "download Facebook video", "Facebook Reels download", "save Facebook video", "Facebook to MP4"],
+        "ar": ["تحميل فيديو فيسبوك", "تحميل من فيسبوك", "تحميل فيديوهات فيسبوك", "تحميل ريلز فيسبوك", "حفظ فيديو فيسبوك", "تحميل فيسبوك MP4"]
+      },
+      "canonicalPath": "/facebook-video-downloader"
+    },
+    "twitter-video-downloader": {
+      "title": {
+        "tr": "Twitter/X Video İndirici - Ücretsiz Twitter Video İndir | Vidnoria",
+        "en": "Twitter/X Video Downloader - Free Twitter Video Download | Vidnoria",
+        "ar": "تحميل فيديو تويتر/إكس - تحميل فيديو تويتر مجاني | فيدنوريا"
+      },
+      "description": {
+        "tr": "Twitter/X video indirme aracı ile Twitter videolarını ve GIF'lerini MP4 formatında indirin. Ücretsiz ve hızlı Twitter video indirici.",
+        "en": "Download Twitter/X videos and GIFs in MP4 format with our Twitter video downloader. Free and fast Twitter video downloader.",
+        "ar": "قم بتحميل فيديوهات تويتر/إكس وصور GIF بصيغة MP4 مع أداة تحميل فيديو تويتر. أداة تحميل فيديو تويتر مجانية وسريعة."
+      },
+      "keywords": {
+        "tr": ["Twitter video indir", "Twitter indirici", "Twitter video indirme", "X video indir", "Twitter GIF indir", "Twitter MP4 indir"],
+        "en": ["Twitter video downloader", "Twitter downloader", "download Twitter video", "X video download", "Twitter GIF download", "Twitter to MP4"],
+        "ar": ["تحميل فيديو تويتر", "تحميل من تويتر", "تحميل فيديوهات تويتر", "تحميل فيديو إكس", "تحميل GIF تويتر", "تحميل تويتر MP4"]
+      },
+      "canonicalPath": "/twitter-video-downloader"
+    }
+  }
+}
