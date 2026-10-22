@@ -2,11 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { 
   LayoutDashboard, Settings, DollarSign, Globe, FileText, 
   LogOut, Activity, Cpu, HardDrive, CheckCircle2, AlertTriangle, 
-  Save, Trash2, Plus, Edit, Loader2
+  Save, Trash2, Plus, Edit, Loader2, ExternalLink, HelpCircle
 } from 'lucide-react';
 import { SiteSettings } from '@/types';
 
@@ -72,29 +73,36 @@ export default function AdminDashboardPage() {
         analytics: { message: 'Google Analytics 4 yapılandırmaya hazır.' },
       });
 
+      const defaultSlots = [
+        { id: 'left-sidebar-ad', name: 'Sol Dikey Reklam (160×600)', position: 'sidebar' as const, slotId: '', format: 'vertical' as const, enabled: true },
+        { id: 'right-sidebar-ad', name: 'Sağ Dikey Reklam (160×600)', position: 'sidebar' as const, slotId: '', format: 'vertical' as const, enabled: true },
+        { id: 'home-top-banner', name: 'Ana Sayfa Üst Banner (728×90)', position: 'header' as const, slotId: '', format: 'horizontal' as const, enabled: true },
+        { id: 'home-mid-banner', name: 'Ana Sayfa Orta Banner (728×90)', position: 'content' as const, slotId: '', format: 'horizontal' as const, enabled: true },
+        { id: 'download-top-ad', name: 'İndirme Sayfası Üst Banner (728×90)', position: 'download' as const, slotId: '', format: 'horizontal' as const, enabled: true },
+        { id: 'blog-top-ad', name: 'Blog Sayfası Reklam Alanı', position: 'blog' as const, slotId: '', format: 'auto' as const, enabled: true },
+      ];
+
       const savedSettings = typeof window !== 'undefined' ? localStorage.getItem('vidnoria_settings') : null;
+      const parsed = savedSettings ? JSON.parse(savedSettings) : null;
+      const hasCurrentSlots = parsed?.ads?.slots?.some((s: any) => s.id === 'home-top-banner');
+
       setSettings(
-        savedSettings
-          ? JSON.parse(savedSettings)
+        parsed && hasCurrentSlots
+          ? parsed
           : {
-              siteName: 'Vidnoria',
+              siteName: parsed?.siteName || 'Vidnoria',
               siteDescription: { tr: 'Ücretsiz Video ve Müzik İndirme Platformu' },
-              logo: '/images/logo.svg',
+              logo: parsed?.logo || '/images/logo.svg',
               favicon: '/images/favicon.svg',
-              contactEmail: 'contact@vidnoria.com',
+              contactEmail: parsed?.contactEmail || 'contact@vidnoria.com',
               socialLinks: {},
-              seo: { defaultTitle: {}, defaultDescription: {}, googleAnalyticsId: '' },
+              seo: parsed?.seo || { defaultTitle: {}, defaultDescription: {}, googleAnalyticsId: '' },
               ads: {
-                enabled: false,
-                adsensePublisherId: '',
-                slots: [
-                  { id: 'left-sidebar-ad', name: 'Sol Dikey Reklam (160x600)', position: 'sidebar', slotId: '', format: 'vertical', enabled: false },
-                  { id: 'right-sidebar-ad', name: 'Sağ Dikey Reklam (160x600)', position: 'sidebar', slotId: '', format: 'vertical', enabled: false },
-                  { id: 'home-top-ad', name: 'Ana Sayfa Üst Banner (728x90)', position: 'header', slotId: '', format: 'horizontal', enabled: false },
-                  { id: 'home-mid-ad', name: 'Ana Sayfa Orta Banner (728x90)', position: 'content', slotId: '', format: 'horizontal', enabled: false },
-                ],
+                enabled: true,
+                adsensePublisherId: parsed?.ads?.adsensePublisherId || '',
+                slots: defaultSlots,
               },
-              platforms: {
+              platforms: parsed?.platforms || {
                 youtube: { enabled: true },
                 instagram: { enabled: true },
                 tiktok: { enabled: true },
@@ -115,6 +123,11 @@ export default function AdminDashboardPage() {
     setSaving(true);
     setMessage(null);
 
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('vidnoria_settings', JSON.stringify(settings));
+      window.dispatchEvent(new Event('storage'));
+    }
+
     try {
       const res = await fetch('/api/admin/settings', {
         method: 'POST',
@@ -125,7 +138,7 @@ export default function AdminDashboardPage() {
       if (res.headers.get('content-type')?.includes('application/json')) {
         const data = await res.json();
         if (data.success) {
-          setMessage({ type: 'success', text: 'Ayarlar başarıyla kaydedildi.' });
+          setMessage({ type: 'success', text: 'Ayarlar başarıyla kaydedildi! "Siteyi Göster" butonuna tıklayarak anında görebilirsiniz.' });
         } else {
           setMessage({ type: 'error', text: data.error || 'Kaydedilemedi.' });
         }
@@ -134,10 +147,7 @@ export default function AdminDashboardPage() {
     } catch {
       // Static fallback
     } finally {
-      if (typeof window !== 'undefined') {
-        localStorage.setItem('vidnoria_settings', JSON.stringify(settings));
-      }
-      setMessage({ type: 'success', text: 'Ayarlar başarıyla kaydedildi.' });
+      setMessage({ type: 'success', text: 'Ayarlar başarıyla kaydedildi! "Siteyi Göster" butonuna tıklayarak anında görebilirsiniz.' });
       setSaving(false);
     }
   };
@@ -265,7 +275,16 @@ export default function AdminDashboardPage() {
           </button>
         </nav>
 
-        <div className="pt-6 border-t border-border mt-auto">
+        <div className="pt-6 border-t border-border mt-auto space-y-2">
+          <Link
+            href="/tr"
+            target="_blank"
+            className="w-full flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl text-sm font-semibold gradient-bg text-white shadow-md hover:opacity-95 transition-all"
+          >
+            <ExternalLink className="w-4 h-4" />
+            <span>Siteyi Göster</span>
+          </Link>
+
           <button
             onClick={handleLogout}
             className="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-destructive hover:bg-destructive/10 transition-colors"
@@ -278,6 +297,20 @@ export default function AdminDashboardPage() {
 
       {/* Main Content Area */}
       <main className="flex-1 p-6 md:p-10 overflow-y-auto max-w-5xl">
+        {/* Top Quick Bar */}
+        <div className="flex items-center justify-between mb-6 pb-4 border-b border-border">
+          <div className="text-xs text-muted-foreground">
+            Vidnoria Yönetim Paneli • Yaptığınız değişiklikleri kaydettikten sonra anında görüntüleyebilirsiniz.
+          </div>
+          <Link
+            href="/tr"
+            target="_blank"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all shrink-0"
+          >
+            <ExternalLink className="w-3.5 h-3.5" />
+            <span>Siteyi Göster (Yeni Sekme)</span>
+          </Link>
+        </div>
         {message && (
           <div
             className={`p-4 rounded-xl text-sm mb-6 flex items-center gap-2 ${
@@ -486,37 +519,53 @@ export default function AdminDashboardPage() {
                 />
               </div>
 
-              <div className="pt-4">
+              <div className="p-4 rounded-xl bg-primary/5 border border-primary/20 text-xs text-muted-foreground space-y-1.5">
+                <div className="font-bold text-foreground flex items-center gap-1.5">
+                  <HelpCircle className="w-4 h-4 text-primary" />
+                  <span>Publisher ID ve Slot ID (Reklam Birimi Kodu) Nedir?</span>
+                </div>
+                <p>
+                  • <strong>Publisher ID (Yayıncı Kimliği):</strong> Google AdSense hesabınızın genel numarasıdır (Örn: <code>pub-1234567890123456</code>).
+                </p>
+                <p>
+                  • <strong>Slot ID (Reklam Birimi Kodu):</strong> Google AdSense panelinde <em>Reklamlar → Reklam Birimine Göre</em> menüsünden her bir kutu için oluşturduğunuz reklamın <strong>10 haneli özel numarasıdır</strong> (Örn: <code>9876543210</code>). Boş bırakırsanız sitede şık "Sponsorlu Reklam Alanı" kutusu görünür; kodu girdiğinizde gerçek Google reklamı çıkar. Yanındaki kutucuktan istediğiniz reklam alanını tek tıkla kapatıp açabilirsiniz.
+                </p>
+              </div>
+
+              <div className="pt-2">
                 <h3 className="font-bold text-sm mb-3">Reklam Alanları (Slots)</h3>
                 <div className="space-y-3">
                   {settings.ads.slots?.map((slot, idx) => (
-                    <div key={slot.id} className="p-3.5 rounded-xl border border-border flex items-center justify-between bg-card/40">
+                    <div key={slot.id} className="p-3.5 rounded-xl border border-border flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-card/40">
                       <div>
-                        <div className="font-semibold text-sm">{slot.name} ({slot.position})</div>
-                        <div className="text-xs text-muted-foreground">Format: {slot.format}</div>
+                        <div className="font-semibold text-sm">{slot.name}</div>
+                        <div className="text-xs text-muted-foreground">Konum: {slot.position} • Boyut/Format: {slot.format}</div>
                       </div>
                       <div className="flex items-center gap-3">
                         <input
                           type="text"
-                          placeholder="Slot ID"
+                          placeholder="Reklam Birimi Kodu (Örn: 1234567890)"
                           value={slot.slotId}
                           onChange={(e) => {
                             const newSlots = [...settings.ads.slots];
                             newSlots[idx].slotId = e.target.value;
                             setSettings({ ...settings, ads: { ...settings.ads, slots: newSlots } });
                           }}
-                          className="px-2.5 py-1 text-xs border border-border rounded-lg bg-background w-32"
+                          className="px-3 py-1.5 text-xs border border-border rounded-lg bg-background w-60"
                         />
-                        <input
-                          type="checkbox"
-                          checked={slot.enabled}
-                          onChange={(e) => {
-                            const newSlots = [...settings.ads.slots];
-                            newSlots[idx].enabled = e.target.checked;
-                            setSettings({ ...settings, ads: { ...settings.ads, slots: newSlots } });
-                          }}
-                          className="w-4 h-4 rounded text-primary"
-                        />
+                        <label className="flex items-center gap-1.5 text-xs font-medium cursor-pointer shrink-0">
+                          <input
+                            type="checkbox"
+                            checked={slot.enabled}
+                            onChange={(e) => {
+                              const newSlots = [...settings.ads.slots];
+                              newSlots[idx].enabled = e.target.checked;
+                              setSettings({ ...settings, ads: { ...settings.ads, slots: newSlots } });
+                            }}
+                            className="w-4 h-4 rounded text-primary"
+                          />
+                          <span>{slot.enabled ? 'Açık' : 'Kapalı'}</span>
+                        </label>
                       </div>
                     </div>
                   ))}

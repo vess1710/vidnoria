@@ -29,15 +29,15 @@
     "bingWebmasterToolsId": ""
   },
   "ads": {
-    "enabled": false,
+    "enabled": true,
     "adsensePublisherId": "",
     "slots": [
-      { "id": "header-ad", "name": "Header Banner", "position": "header", "slotId": "", "format": "horizontal", "enabled": false },
-      { "id": "content-ad-1", "name": "Content Ad 1", "position": "content", "slotId": "", "format": "auto", "enabled": false },
-      { "id": "content-ad-2", "name": "Content Ad 2", "position": "content", "slotId": "", "format": "auto", "enabled": false },
-      { "id": "download-ad", "name": "Download Page Ad", "position": "download", "slotId": "", "format": "rectangle", "enabled": false },
-      { "id": "blog-ad", "name": "Blog Article Ad", "position": "blog", "slotId": "", "format": "auto", "enabled": false },
-      { "id": "sidebar-ad", "name": "Sidebar Ad", "position": "sidebar", "slotId": "", "format": "vertical", "enabled": false }
+      { "id": "left-sidebar-ad", "name": "Sol Dikey Reklam (160×600)", "position": "sidebar", "slotId": "", "format": "vertical", "enabled": true },
+      { "id": "right-sidebar-ad", "name": "Sağ Dikey Reklam (160×600)", "position": "sidebar", "slotId": "", "format": "vertical", "enabled": true },
+      { "id": "home-top-banner", "name": "Ana Sayfa Üst Banner (728×90)", "position": "header", "slotId": "", "format": "horizontal", "enabled": true },
+      { "id": "home-mid-banner", "name": "Ana Sayfa Orta Banner (728×90)", "position": "content", "slotId": "", "format": "horizontal", "enabled": true },
+      { "id": "download-top-ad", "name": "İndirme Sayfası Üst Banner (728×90)", "position": "download", "slotId": "", "format": "horizontal", "enabled": true },
+      { "id": "blog-top-ad", "name": "Blog Sayfası Reklam Alanı", "position": "blog", "slotId": "", "format": "auto", "enabled": true }
     ]
   },
   "platforms": {

@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import type { Platform } from '@/types';
 import { useI18n } from '@/lib/i18n/context';
@@ -14,6 +15,32 @@ const platforms: { id: Platform; icon: string; color: string }[] = [
 
 export default function PlatformsSection() {
   const { t } = useI18n();
+  const [enabledMap, setEnabledMap] = useState<Record<string, boolean>>({});
+
+  useEffect(() => {
+    const load = () => {
+      try {
+        const raw = localStorage.getItem('vidnoria_settings');
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed?.platforms) {
+            const map: Record<string, boolean> = {};
+            for (const [k, v] of Object.entries(parsed.platforms)) {
+              map[k] = (v as any)?.enabled !== false;
+            }
+            setEnabledMap(map);
+          }
+        }
+      } catch {
+        // ignore
+      }
+    };
+    load();
+    window.addEventListener('storage', load);
+    return () => window.removeEventListener('storage', load);
+  }, []);
+
+  const visiblePlatforms = platforms.filter((p) => enabledMap[p.id] !== false);
 
   return (
     <section id="platforms" className="py-16 md:py-24">
@@ -28,7 +55,7 @@ export default function PlatformsSection() {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 max-w-4xl mx-auto">
-          {platforms.map((platform) => (
+          {visiblePlatforms.map((platform) => (
             <div
               key={platform.id}
               className="glass-card group flex flex-col items-center justify-center p-6 md:p-8 text-center cursor-default"
