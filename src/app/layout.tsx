@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   verification: {
     google: 'PlAR_ihtFqyAIvHZPYltHb-Rueh_Dl6EqJ5b2eV0bZg',
   },
+  manifest: '/manifest.json',
   icons: {
     icon: '/images/favicon.svg',
   },

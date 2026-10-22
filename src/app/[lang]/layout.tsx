@@ -6,6 +6,7 @@ import { I18nProvider } from '@/lib/i18n/context';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import HtmlDirSync from '@/components/layout/HtmlDirSync';
+import CookieConsent from '@/components/layout/CookieConsent';
 import AdSlot from '@/components/ads/AdSlot';
 
 interface LangLayoutProps {
@@ -196,6 +197,7 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
         </div>
 
         <Footer />
+        <CookieConsent />
       </div>
     </I18nProvider>
   );

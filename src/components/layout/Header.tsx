@@ -41,8 +41,13 @@ export default function Header() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const videoConvLabel = lang === 'tr' ? 'Video/Ses Çevirici' : lang === 'ar' ? 'محول الفيديو' : 'Video Converter';
+  const imageConvLabel = lang === 'tr' ? 'Resim Çevirici' : lang === 'ar' ? 'محول الصور' : 'Image Converter';
+
   const navItems = [
     { href: `/${lang}`, label: t('nav.home') },
+    { href: `/${lang}/video-converter`, label: videoConvLabel },
+    { href: `/${lang}/image-converter`, label: imageConvLabel },
     { href: `/${lang}#platforms`, label: t('nav.supportedPlatforms') },
     { href: `/${lang}/blog`, label: t('nav.blog') },
     { href: `/${lang}/faq`, label: t('nav.faq') },

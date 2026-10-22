@@ -122,6 +122,21 @@ export default function DownloadPage({ params }: DownloadPageProps) {
         }
 
         setMediaInfo(data.data);
+        try {
+          const rawHist = localStorage.getItem('vidnoria_recent_history');
+          const list = rawHist ? JSON.parse(rawHist) : [];
+          const filtered = list.filter((x: any) => x.url !== targetUrl);
+          filtered.unshift({
+            id: data.data.id,
+            title: data.data.title,
+            thumbnail: data.data.thumbnail,
+            platform: data.data.platform,
+            url: targetUrl,
+          });
+          localStorage.setItem('vidnoria_recent_history', JSON.stringify(filtered.slice(0, 6)));
+        } catch {
+          // ignore
+        }
         if (data.data.availableFormats?.length > 0) {
           // Default to first video or audio format
           setSelectedFormat(data.data.availableFormats[0]);
@@ -279,6 +294,27 @@ export default function DownloadPage({ params }: DownloadPageProps) {
                   </div>
                 )}
               </div>
+
+              {mediaInfo.thumbnail && (
+                <div className="mt-5 pt-4 border-t border-border">
+                  <a
+                    href={mediaInfo.thumbnail}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download={`${mediaInfo.title || 'thumbnail'}.jpg`}
+                    className="w-full py-2.5 px-4 rounded-xl border border-primary/30 bg-primary/10 text-primary hover:bg-primary hover:text-white text-xs font-bold flex items-center justify-center gap-2 transition-all"
+                  >
+                    <Download className="w-4 h-4" />
+                    <span>
+                      {lang === 'tr'
+                        ? 'HD Kapak Resmini (Thumbnail) İndir'
+                        : lang === 'ar'
+                        ? 'تحميل الصورة المصغرة (HD)'
+                        : 'Download HD Thumbnail'}
+                    </span>
+                  </a>
+                </div>
+              )}
             </div>
           </div>
 

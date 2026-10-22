@@ -1,0 +1,22 @@
+{
+  "name": "Vidnoria - Video, Müzik ve Format Dönüştürücü",
+  "short_name": "Vidnoria",
+  "description": "Ücretsiz online video indirme, MP3 dönüştürme, video ve resim format dönüştürücü platformu.",
+  "start_url": "/tr/",
+  "display": "standalone",
+  "background_color": "#0A0E1A",
+  "theme_color": "#3B82F6",
+  "icons": [
+    {
+      "src": "/images/logo-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/favicon.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    }
+  ]
+}

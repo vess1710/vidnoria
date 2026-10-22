@@ -18,9 +18,12 @@ const VALID_PLATFORMS = [
   'tiktok-video-downloader',
   'facebook-video-downloader',
   'twitter-video-downloader',
-  // Localized aliases
+  // Localized aliases & high-volume SEO landing pages
   'youtube-video-indir',
+  'youtube-mp3-indir',
+  'youtube-shorts-indir',
   'instagram-video-indir',
+  'instagram-reels-indir',
   'tiktok-video-indir',
   'facebook-video-indir',
   'twitter-video-indir',
@@ -33,6 +36,12 @@ export async function generateStaticParams() {
 }
 
 function normalizeSlug(slug: string): string {
+  if (slug === 'youtube-mp3-indir' || slug === 'youtube-shorts-indir') {
+    return 'youtube-video-downloader';
+  }
+  if (slug === 'instagram-reels-indir') {
+    return 'instagram-video-downloader';
+  }
   if (slug.endsWith('-video-indir')) {
     return slug.replace('-video-indir', '-video-downloader');
   }

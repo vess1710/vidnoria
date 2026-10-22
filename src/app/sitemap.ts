@@ -10,6 +10,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes: MetadataRoute.Sitemap = [];
   const staticPages = [
     '',
+    '/video-converter',
+    '/image-converter',
     '/blog',
     '/faq',
     '/contact',
@@ -19,7 +21,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/disclaimer',
     '/cookies',
     '/youtube-video-downloader',
+    '/youtube-video-indir',
+    '/youtube-mp3-indir',
+    '/youtube-shorts-indir',
     '/instagram-video-downloader',
+    '/instagram-reels-indir',
     '/tiktok-video-downloader',
     '/facebook-video-downloader',
     '/twitter-video-downloader',

@@ -11,8 +11,13 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   const isRtl = lang === 'ar';
 
+  const videoConvLabel = lang === 'tr' ? 'Video & Ses Dönüştürücü' : lang === 'ar' ? 'محول الفيديو والصوت' : 'Video & Audio Converter';
+  const imageConvLabel = lang === 'tr' ? 'Resim Uzantı Dönüştürücü' : lang === 'ar' ? 'محول صيغ الصور' : 'Image Format Converter';
+
   const quickLinks = [
     { href: `/${lang}`, label: t('nav.home') },
+    { href: `/${lang}/video-converter`, label: videoConvLabel },
+    { href: `/${lang}/image-converter`, label: imageConvLabel },
     { href: `/${lang}#platforms`, label: t('nav.supportedPlatforms') },
     { href: `/${lang}/blog`, label: t('nav.blog') },
     { href: `/${lang}/faq`, label: t('nav.faq') },
