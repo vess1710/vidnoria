@@ -22,7 +22,6 @@ export default function Footer() {
     { href: `/${lang}/blog`, label: t('nav.blog') },
     { href: `/${lang}/faq`, label: t('nav.faq') },
     { href: `/${lang}/contact`, label: t('legal.contact') },
-    { href: '/admin', label: t('admin.dashboard') },
   ];
 
   const legalLinks = [
