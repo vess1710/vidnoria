@@ -12,6 +12,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '',
     '/video-converter',
     '/image-converter',
+    '/audio-cutter',
     '/blog',
     '/faq',
     '/contact',

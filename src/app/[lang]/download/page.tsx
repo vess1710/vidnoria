@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { 
   ArrowLeft, Download, CheckCircle2, AlertTriangle, 
-  Loader2, Music, Video, RefreshCw, Clock, User
+  Loader2, Music, Video, RefreshCw, Clock, User, QrCode, Scissors
 } from 'lucide-react';
 import { MediaInfo, FormatOption, DownloadJob } from '@/types';
 import { Locale, getDirection } from '@/lib/i18n';
@@ -29,6 +29,7 @@ export default function DownloadPage({ params }: DownloadPageProps) {
   // Job progress state
   const [job, setJob] = useState<DownloadJob | null>(null);
   const [processing, setProcessing] = useState(false);
+  const [showQr, setShowQr] = useState(false);
 
   // Translations dictionary loaded dynamically or simple fallback mapping
   const texts = {
@@ -295,8 +296,8 @@ export default function DownloadPage({ params }: DownloadPageProps) {
                 )}
               </div>
 
-              {mediaInfo.thumbnail && (
-                <div className="mt-5 pt-4 border-t border-border">
+              <div className="mt-5 pt-4 border-t border-border space-y-2.5">
+                {mediaInfo.thumbnail && (
                   <a
                     href={mediaInfo.thumbnail}
                     target="_blank"
@@ -313,8 +314,53 @@ export default function DownloadPage({ params }: DownloadPageProps) {
                         : 'Download HD Thumbnail'}
                     </span>
                   </a>
-                </div>
-              )}
+                )}
+
+                <button
+                  onClick={() => setShowQr(!showQr)}
+                  className="w-full py-2.5 px-4 rounded-xl border border-secondary/30 bg-secondary/10 text-secondary hover:bg-secondary hover:text-white text-xs font-bold flex items-center justify-center gap-2 transition-all"
+                >
+                  <QrCode className="w-4 h-4" />
+                  <span>
+                    {lang === 'tr'
+                      ? 'Telefona QR Kod ile Gönder'
+                      : lang === 'ar'
+                      ? 'إرسال للهاتف عبر رمز QR'
+                      : 'Send to Phone via QR Code'}
+                  </span>
+                </button>
+
+                {showQr && (
+                  <div className="p-4 rounded-xl border border-border bg-background/80 text-center animate-fade-in">
+                    <img
+                      src={`https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(
+                        typeof window !== 'undefined' ? window.location.href : 'https://vidnoria.com'
+                      )}`}
+                      alt="QR Code"
+                      className="w-36 h-36 mx-auto rounded-lg bg-white p-2 mb-2"
+                    />
+                    <p className="text-[11px] text-muted-foreground">
+                      {lang === 'tr'
+                        ? 'Telefon kameranızla okutarak bu videoyu doğrudan telefonunuzda açıp indirebilirsiniz.'
+                        : 'Scan with your phone camera to open and download directly on mobile.'}
+                    </p>
+                  </div>
+                )}
+
+                <Link
+                  href={`/${lang}/audio-cutter`}
+                  className="w-full py-2 px-4 rounded-xl border border-border bg-card/60 hover:bg-accent text-muted-foreground hover:text-foreground text-xs font-semibold flex items-center justify-center gap-2 transition-all"
+                >
+                  <Scissors className="w-3.5 h-3.5 text-primary" />
+                  <span>
+                    {lang === 'tr'
+                      ? 'MP3 Ses Kesici / Zil Sesi Yapıcı'
+                      : lang === 'ar'
+                      ? 'قص الصوت وصانع النغمات'
+                      : 'MP3 Cutter / Ringtone Maker'}
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -403,6 +449,15 @@ export default function DownloadPage({ params }: DownloadPageProps) {
                 </div>
               </div>
             )}
+
+            {/* High-CTR 336x280 Rectangle Ad Slot above Download Action */}
+            <div className="mb-6">
+              <AdSlot
+                slotId="download-box-ad"
+                format="rectangle"
+                label="İndirme Üstü 336×280 Odaklı Kutu Reklam"
+              />
+            </div>
 
             {/* Ready State */}
             {job?.status === 'completed' && job.downloadUrl && (

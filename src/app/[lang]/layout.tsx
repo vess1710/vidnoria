@@ -8,6 +8,7 @@ import Footer from '@/components/layout/Footer';
 import HtmlDirSync from '@/components/layout/HtmlDirSync';
 import CookieConsent from '@/components/layout/CookieConsent';
 import AdSlot from '@/components/ads/AdSlot';
+import MobileStickyAd from '@/components/ads/MobileStickyAd';
 
 interface LangLayoutProps {
   children: React.ReactNode;
@@ -197,6 +198,7 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
         </div>
 
         <Footer />
+        <MobileStickyAd />
         <CookieConsent />
       </div>
     </I18nProvider>

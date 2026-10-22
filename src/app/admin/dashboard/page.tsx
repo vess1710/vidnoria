@@ -79,12 +79,14 @@ export default function AdminDashboardPage() {
         { id: 'home-top-banner', name: 'Ana Sayfa Üst Banner (728×90)', position: 'header' as const, slotId: '', format: 'horizontal' as const, enabled: true },
         { id: 'home-mid-banner', name: 'Ana Sayfa Orta Banner (728×90)', position: 'content' as const, slotId: '', format: 'horizontal' as const, enabled: true },
         { id: 'download-top-ad', name: 'İndirme Sayfası Üst Banner (728×90)', position: 'download' as const, slotId: '', format: 'horizontal' as const, enabled: true },
+        { id: 'download-box-ad', name: 'İndirme Butonu Üstü Odaklı Kutu Reklam (336×280)', position: 'download' as const, slotId: '', format: 'rectangle' as const, enabled: true },
+        { id: 'mobile-sticky-ad', name: 'Mobil Alt Yapışkan Reklam (320×50)', position: 'footer' as const, slotId: '', format: 'horizontal' as const, enabled: true },
         { id: 'blog-top-ad', name: 'Blog Sayfası Reklam Alanı', position: 'blog' as const, slotId: '', format: 'auto' as const, enabled: true },
       ];
 
       const savedSettings = typeof window !== 'undefined' ? localStorage.getItem('vidnoria_settings') : null;
       const parsed = savedSettings ? JSON.parse(savedSettings) : null;
-      const hasCurrentSlots = parsed?.ads?.slots?.some((s: any) => s.id === 'home-top-banner');
+      const hasCurrentSlots = parsed?.ads?.slots?.some((s: any) => s.id === 'download-box-ad');
 
       setSettings(
         parsed && hasCurrentSlots

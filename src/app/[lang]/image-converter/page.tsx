@@ -56,6 +56,8 @@ export default function ImageConverterPage({ params }: ImageConverterPageProps) 
   const [file, setFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [dimensions, setDimensions] = useState<{ w: number; h: number } | null>(null);
+  const [customWidth, setCustomWidth] = useState<number>(0);
+  const [customHeight, setCustomHeight] = useState<number>(0);
   const [targetFormat, setTargetFormat] = useState<ImageFormat>('png');
   const [quality, setQuality] = useState<number>(92);
   const [converting, setConverting] = useState(false);
@@ -145,6 +147,8 @@ export default function ImageConverterPage({ params }: ImageConverterPageProps) 
     const img = new window.Image();
     img.onload = () => {
       setDimensions({ w: img.naturalWidth, h: img.naturalHeight });
+      setCustomWidth(img.naturalWidth);
+      setCustomHeight(img.naturalHeight);
     };
     img.src = objUrl;
   };
@@ -173,8 +177,8 @@ export default function ImageConverterPage({ params }: ImageConverterPageProps) 
         canvas.width = 64;
         canvas.height = 64;
       } else {
-        canvas.width = img.naturalWidth || 800;
-        canvas.height = img.naturalHeight || 600;
+        canvas.width = customWidth || img.naturalWidth || 800;
+        canvas.height = customHeight || img.naturalHeight || 600;
       }
 
       const ctx = canvas.getContext('2d');
@@ -341,38 +345,87 @@ export default function ImageConverterPage({ params }: ImageConverterPageProps) 
               </div>
             </div>
 
-            {/* Quality Slider for JPG & WebP */}
-            {(targetFormat === 'jpg' || targetFormat === 'webp') && (
-              <div className="p-4 rounded-xl border border-border bg-card/40">
-                <div className="flex items-center justify-between text-xs font-semibold mb-2">
-                  <span className="flex items-center gap-1.5">
-                    <Sliders className="w-3.5 h-3.5 text-primary" />
-                    {t.qualityLabel}
-                  </span>
-                  <span className="text-primary font-bold">%{quality}</span>
+            {/* Quality & Resize Controls */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {(targetFormat === 'jpg' || targetFormat === 'webp') && (
+                <div className="p-4 rounded-xl border border-border bg-card/40">
+                  <div className="flex items-center justify-between text-xs font-semibold mb-2">
+                    <span className="flex items-center gap-1.5">
+                      <Sliders className="w-3.5 h-3.5 text-primary" />
+                      {t.qualityLabel}
+                    </span>
+                    <span className="text-primary font-bold">%{quality}</span>
+                  </div>
+                  <input
+                    type="range"
+                    min={20}
+                    max={100}
+                    value={quality}
+                    onChange={(e) => {
+                      setQuality(Number(e.target.value));
+                      setResultUrl(null);
+                    }}
+                    className="w-full accent-primary cursor-pointer"
+                  />
                 </div>
-                <input
-                  type="range"
-                  min={20}
-                  max={100}
-                  value={quality}
-                  onChange={(e) => {
-                    setQuality(Number(e.target.value));
-                    setResultUrl(null);
-                  }}
-                  className="w-full accent-primary cursor-pointer"
-                />
-              </div>
-            )}
+              )}
+
+              {targetFormat !== 'ico' && dimensions && (
+                <div className="p-4 rounded-xl border border-border bg-card/40">
+                  <div className="text-xs font-semibold mb-2">
+                    {lang === 'tr' ? 'Boyutlandırma (Genişlik × Yükseklik px)' : 'Resize Dimensions (px)'}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="number"
+                      min={16}
+                      max={8000}
+                      value={customWidth || ''}
+                      onChange={(e) => {
+                        const w = Number(e.target.value);
+                        setCustomWidth(w);
+                        if (dimensions.w > 0) {
+                          setCustomHeight(Math.round((w * dimensions.h) / dimensions.w));
+                        }
+                        setResultUrl(null);
+                      }}
+                      className="w-full px-3 py-1.5 rounded-lg border border-border bg-background text-xs"
+                      placeholder="Genişlik"
+                    />
+                    <span className="text-xs text-muted-foreground">×</span>
+                    <input
+                      type="number"
+                      min={16}
+                      max={8000}
+                      value={customHeight || ''}
+                      onChange={(e) => {
+                        setCustomHeight(Number(e.target.value));
+                        setResultUrl(null);
+                      }}
+                      className="w-full px-3 py-1.5 rounded-lg border border-border bg-background text-xs"
+                      placeholder="Yükseklik"
+                    />
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* Ready Result */}
             {resultUrl && !converting && (
               <div className="p-6 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-center animate-fade-in">
+                <div className="mb-4">
+                  <AdSlot slotId="download-box-ad" format="rectangle" label="İndirme Üstü 336×280 Kutu Reklam" />
+                </div>
                 <CheckCircle2 className="w-10 h-10 text-emerald-500 mx-auto mb-2" />
                 <h3 className="text-base font-bold text-emerald-500 mb-1">{t.ready}</h3>
-                <p className="text-xs text-muted-foreground mb-4">
-                  {resultName} ({formatBytes(resultSize)})
-                </p>
+                <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground mb-4">
+                  <span>{resultName} ({formatBytes(resultSize)})</span>
+                  {file && resultSize < file.size && (
+                    <span className="px-2 py-0.5 rounded-full bg-emerald-500 text-white font-bold text-[10px]">
+                      %{Math.round(((file.size - resultSize) / file.size) * 100)} Küçüldü!
+                    </span>
+                  )}
+                </div>
                 <a
                   href={resultUrl}
                   download={resultName}

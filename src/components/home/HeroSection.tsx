@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { Search, Clipboard, Loader2, AlertCircle, History, Trash2, Film, Image as ImageIcon, Share2 } from 'lucide-react';
+import { Search, Clipboard, Loader2, AlertCircle, History, Trash2, Film, Image as ImageIcon, Share2, Scissors } from 'lucide-react';
 import { useI18n } from '@/lib/i18n/context';
 import { analyzeUrlClient } from '@/lib/client-api';
 
@@ -217,6 +217,13 @@ export default function HeroSection() {
               >
                 <ImageIcon className="w-3.5 h-3.5" />
                 <span>{toolTexts.imageConv}</span>
+              </Link>
+              <Link
+                href={`/${lang}/audio-cutter`}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-amber-500/10 text-amber-500 border border-amber-500/20 hover:bg-amber-500 hover:text-white transition-all shadow-sm"
+              >
+                <Scissors className="w-3.5 h-3.5" />
+                <span>{lang === 'tr' ? 'MP3 / Ses Kesici' : lang === 'ar' ? 'قص الصوت MP3' : 'MP3 / Audio Cutter'}</span>
               </Link>
               <a
                 href={`https://api.whatsapp.com/send?text=${encodeURIComponent('Ücretsiz Video, MP3 ve Format Dönüştürücü: https://vidnoria.com')}`}
