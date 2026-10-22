@@ -96,7 +96,13 @@ export default function AdminDashboardPage() {
               favicon: '/images/favicon.svg',
               contactEmail: parsed?.contactEmail || 'contact@vidnoria.com',
               socialLinks: {},
-              seo: parsed?.seo || { defaultTitle: {}, defaultDescription: {}, googleAnalyticsId: '' },
+              seo: parsed?.seo || {
+                defaultTitle: {},
+                defaultDescription: {},
+                googleAnalyticsId: '',
+                googleTagManagerId: '',
+                googleSearchConsoleId: 'PlAR_ihtFqyAIvHZPYltHb-Rueh_Dl6EqJ5b2eV0bZg',
+              },
               ads: {
                 enabled: true,
                 adsensePublisherId: parsed?.ads?.adsensePublisherId || '',
@@ -451,7 +457,23 @@ export default function AdminDashboardPage() {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold mb-1">Google Analytics Ölçüm Kimliği (G-XXXXX)</label>
+                <label className="block text-xs font-semibold mb-1">Google Search Console Doğrulama Kodu (google-site-verification)</label>
+                <input
+                  type="text"
+                  value={settings.seo?.googleSearchConsoleId || 'PlAR_ihtFqyAIvHZPYltHb-Rueh_Dl6EqJ5b2eV0bZg'}
+                  onChange={(e) =>
+                    setSettings({
+                      ...settings,
+                      seo: { ...settings.seo, googleSearchConsoleId: e.target.value },
+                    })
+                  }
+                  placeholder="PlAR_ihtFqyAIvHZPYltHb-Rueh_Dl6EqJ5b2eV0bZg"
+                  className="w-full px-3.5 py-2 rounded-xl border border-border bg-card/50 text-sm"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold mb-1">Google Analytics 4 Ölçüm Kimliği (G-XXXXXXXXXX)</label>
                 <input
                   type="text"
                   value={settings.seo?.googleAnalyticsId || ''}
@@ -461,7 +483,23 @@ export default function AdminDashboardPage() {
                       seo: { ...settings.seo, googleAnalyticsId: e.target.value },
                     })
                   }
-                  placeholder="G-..."
+                  placeholder="G-XXXXXXXXXX"
+                  className="w-full px-3.5 py-2 rounded-xl border border-border bg-card/50 text-sm"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold mb-1">Google Etiket Yöneticisi / Tag Manager Kimliği (GTM-XXXXXXX)</label>
+                <input
+                  type="text"
+                  value={settings.seo?.googleTagManagerId || ''}
+                  onChange={(e) =>
+                    setSettings({
+                      ...settings,
+                      seo: { ...settings.seo, googleTagManagerId: e.target.value },
+                    })
+                  }
+                  placeholder="GTM-XXXXXXX"
                   className="w-full px-3.5 py-2 rounded-xl border border-border bg-card/50 text-sm"
                 />
               </div>

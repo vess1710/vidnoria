@@ -88,6 +88,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     description: t('seo.homeDescription'),
     keywords: SEO_KEYWORDS[locale] || SEO_KEYWORDS.tr,
     metadataBase: new URL('https://vidnoria.com'),
+    verification: {
+      google: 'PlAR_ihtFqyAIvHZPYltHb-Rueh_Dl6EqJ5b2eV0bZg',
+    },
     robots: {
       index: true,
       follow: true,

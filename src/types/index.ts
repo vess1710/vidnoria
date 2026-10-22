@@ -127,6 +127,7 @@ export interface SiteSettings {
     defaultTitle: Record<string, string>;
     defaultDescription: Record<string, string>;
     googleAnalyticsId?: string;
+    googleTagManagerId?: string;
     googleSearchConsoleId?: string;
     bingWebmasterToolsId?: string;
   };
