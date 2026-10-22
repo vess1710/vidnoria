@@ -10,15 +10,14 @@ import {
 import { MediaInfo, FormatOption, DownloadJob } from '@/types';
 import { Locale, getDirection } from '@/lib/i18n';
 import AdSlot from '@/components/ads/AdSlot';
+import { analyzeUrlClient, startDownloadClient, pollJobStatusClient } from '@/lib/client-api';
 
 interface DownloadPageProps {
   params: Promise<{ lang: string }>;
-  searchParams: Promise<{ url?: string; id?: string }>;
 }
 
-export default function DownloadPage({ params, searchParams }: DownloadPageProps) {
+export default function DownloadPage({ params }: DownloadPageProps) {
   const resolvedParams = use(params);
-  const resolvedSearchParams = use(searchParams);
   const lang = resolvedParams.lang as Locale;
   const isRtl = lang === 'ar';
 
@@ -104,7 +103,10 @@ export default function DownloadPage({ params, searchParams }: DownloadPageProps
 
   useEffect(() => {
     async function loadMedia() {
-      const targetUrl = resolvedSearchParams.url;
+      const targetUrl =
+        typeof window !== 'undefined'
+          ? new URLSearchParams(window.location.search).get('url')
+          : null;
       if (!targetUrl) {
         setError('No URL provided');
         setLoading(false);
@@ -113,13 +115,7 @@ export default function DownloadPage({ params, searchParams }: DownloadPageProps
 
       try {
         setLoading(true);
-        const res = await fetch('/api/analyze', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ url: targetUrl }),
-        });
-
-        const data = await res.json();
+        const data = await analyzeUrlClient(targetUrl);
         if (!data.success || !data.data) {
           setError(data.error?.message || 'Could not analyze content.');
           return;
@@ -138,7 +134,7 @@ export default function DownloadPage({ params, searchParams }: DownloadPageProps
     }
 
     loadMedia();
-  }, [resolvedSearchParams.url]);
+  }, []);
 
   // Handle format selection change (resets previous completed job so user can convert new format)
   const handleSelectFormat = (fmt: FormatOption) => {
@@ -156,16 +152,7 @@ export default function DownloadPage({ params, searchParams }: DownloadPageProps
     setError(null);
     setProcessing(true);
     try {
-      const res = await fetch('/api/download', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          mediaInfo,
-          format: selectedFormat,
-        }),
-      });
-
-      const data = await res.json();
+      const data = await startDownloadClient(mediaInfo, selectedFormat);
       if (!data.success || !data.job) {
         setError(data.error || 'Failed to start job');
         setProcessing(false);
@@ -185,8 +172,7 @@ export default function DownloadPage({ params, searchParams }: DownloadPageProps
   const pollJobStatus = (jobId: string) => {
     const interval = setInterval(async () => {
       try {
-        const res = await fetch(`/api/download/${jobId}`);
-        const data = await res.json();
+        const data = await pollJobStatusClient(jobId);
 
         if (data.success && data.job) {
           setJob(data.job);

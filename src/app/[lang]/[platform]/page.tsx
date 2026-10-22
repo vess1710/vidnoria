@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { Locale } from '@/lib/i18n';
+import { Locale, locales } from '@/lib/i18n';
 import { readJSON, contentPath } from '@/lib/storage';
 import HeroSection from '@/components/home/HeroSection';
 import HowItWorksSection from '@/components/home/HowItWorksSection';
@@ -25,6 +25,12 @@ const VALID_PLATFORMS = [
   'facebook-video-indir',
   'twitter-video-indir',
 ];
+
+export async function generateStaticParams() {
+  return locales.flatMap((lang) =>
+    VALID_PLATFORMS.map((platform) => ({ lang, platform }))
+  );
+}
 
 function normalizeSlug(slug: string): string {
   if (slug.endsWith('-video-indir')) {

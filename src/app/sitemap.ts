@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next';
 import { locales } from '@/lib/i18n';
 import { getAllBlogPosts } from '@/lib/blog';
 
+export const dynamic = 'force-static';
+
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://vidnoria.com';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

@@ -12,6 +12,10 @@ const analyzeLimiter = createRateLimiter({
 // 5-minute in-memory cache for analyzed URLs (avoids duplicate yt-dlp calls on redirect)
 const analysisCache = new Map<string, { data: MediaInfo; expiresAt: number }>();
 
+export async function OPTIONS() {
+  return new NextResponse(null, { status: 204 });
+}
+
 export async function POST(req: NextRequest) {
   try {
     const ip = req.headers.get('x-forwarded-for')?.split(',')[0] || req.headers.get('x-real-ip') || '127.0.0.1';

@@ -25,17 +25,31 @@ export default function AdminLoginPage() {
         body: JSON.stringify({ password }),
       });
 
-      const data = await res.json();
-      if (data.success) {
-        router.push('/admin/dashboard');
-      } else {
-        setError(data.error || 'Authentication failed');
+      const contentType = res.headers.get('content-type') || '';
+      if (contentType.includes('application/json')) {
+        const data = await res.json();
+        if (data.success) {
+          sessionStorage.setItem('vidnoria_admin_auth', 'true');
+          router.push('/admin/dashboard');
+          return;
+        } else {
+          setError(data.error || 'Authentication failed');
+          return;
+        }
       }
     } catch {
-      setError('Connection failed. Please retry.');
-    } finally {
-      setLoading(false);
+      // Static host fallback below
     }
+
+    // Fallback for static hosting (GitHub Pages)
+    if (password === 'VidnoriaSecure2026!') {
+      sessionStorage.setItem('vidnoria_admin_auth', 'true');
+      router.push('/admin/dashboard');
+    } else {
+      setError('Geçersiz yönetici şifresi.');
+    }
+    setLoading(false);
+    return;
   };
 
   return (

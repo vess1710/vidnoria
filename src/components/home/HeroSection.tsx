@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react';
 import { Search, Clipboard, Loader2, AlertCircle } from 'lucide-react';
 import { useI18n } from '@/lib/i18n/context';
+import { analyzeUrlClient } from '@/lib/client-api';
 
 export default function HeroSection() {
   const { lang, t } = useI18n();
@@ -39,13 +40,7 @@ export default function HeroSection() {
     setLoading(true);
 
     try {
-      const response = await fetch('/api/analyze', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ url: url.trim() }),
-      });
-
-      const data = await response.json();
+      const data = await analyzeUrlClient(url.trim());
 
       if (data.success && data.data) {
         const params = new URLSearchParams({

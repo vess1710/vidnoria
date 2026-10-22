@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, BookOpen } from 'lucide-react';
-import { Locale, getTranslations, createTranslator } from '@/lib/i18n';
+import { Locale, locales, getTranslations, createTranslator } from '@/lib/i18n';
 import { getBlogPostBySlug, getAllBlogPosts } from '@/lib/blog';
 import AdSlot from '@/components/ads/AdSlot';
 import { marked } from 'marked';
@@ -10,6 +10,13 @@ import sanitizeHtml from 'sanitize-html';
 
 interface PostPageProps {
   params: Promise<{ lang: string; slug: string }>;
+}
+
+export async function generateStaticParams() {
+  const posts = await getAllBlogPosts('tr');
+  return locales.flatMap((lang) =>
+    posts.map((post) => ({ lang, slug: post.slug }))
+  );
 }
 
 export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
