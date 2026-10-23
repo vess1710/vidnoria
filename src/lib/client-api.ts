@@ -2,25 +2,32 @@ import { MediaInfo, FormatOption, DownloadJob, Platform } from '@/types';
 
 const DEFAULT_TUNNEL_URL = 'https://whose-challenges-pair-receiving.trycloudflare.com';
 let cachedApiBase: string | null = null;
+let cachedAt = 0;
+const CACHE_TTL_MS = 2 * 60 * 1000; // Re-verify every 2 minutes
 
 /**
  * Resolves the active backend API base URL.
  * 1. Tries same-origin `/api/health` (when running on a Node.js server).
- * 2. Tries live config from GitHub / `/api-config.json` (when frontend is hosted on GitHub Pages).
+ * 2. Tries live config from GitHub (`raw.githubusercontent.com`) and `/api-config.json`.
  */
-export async function getApiBaseUrl(): Promise<string> {
-  if (cachedApiBase !== null && cachedApiBase !== '') return cachedApiBase;
+export async function getApiBaseUrl(forceRefresh = false): Promise<string> {
+  if (!forceRefresh && cachedApiBase !== null && cachedApiBase !== '' && Date.now() - cachedAt < CACHE_TTL_MS) {
+    return cachedApiBase;
+  }
 
-  // 1. Check same-origin API first
-  try {
-    const res = await fetch('/api/health', { method: 'GET', cache: 'no-store' });
-    const contentType = res.headers.get('content-type') || '';
-    if (res.ok && contentType.includes('application/json')) {
-      cachedApiBase = '';
-      return '';
+  // 1. Check same-origin API first (only when not on github.io / vidnoria.com static host)
+  if (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+    try {
+      const res = await fetch('/api/health', { method: 'GET', cache: 'no-store' });
+      const contentType = res.headers.get('content-type') || '';
+      if (res.ok && contentType.includes('application/json')) {
+        cachedApiBase = '';
+        cachedAt = Date.now();
+        return '';
+      }
+    } catch {
+      // Same-origin API not available
     }
-  } catch {
-    // Same-origin API not available
   }
 
   // 2. Check remote dynamic api-config.json from GitHub repo (allows updating tunnel URL without rebuilding Pages)
@@ -54,9 +61,17 @@ export async function getApiBaseUrl(): Promise<string> {
 
   for (const cleanBase of candidateBases) {
     try {
-      const healthRes = await fetch(`${cleanBase}/api/health`, { method: 'GET', cache: 'no-store' });
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 5000);
+      const healthRes = await fetch(`${cleanBase}/api/health`, {
+        method: 'GET',
+        cache: 'no-store',
+        signal: controller.signal,
+      });
+      clearTimeout(timer);
       if (healthRes.ok) {
         cachedApiBase = cleanBase;
+        cachedAt = Date.now();
         return cleanBase;
       }
     } catch {
@@ -212,28 +227,29 @@ export async function startDownloadClient(
   mediaInfo: MediaInfo,
   selectedFormat: FormatOption
 ): Promise<{ success: boolean; job?: DownloadJob; error?: string; baseUrl?: string }> {
-  const baseUrl = await getApiBaseUrl();
+  for (const force of [false, true]) {
+    const baseUrl = await getApiBaseUrl(force);
+    try {
+      const res = await fetch(`${baseUrl}/api/download`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          mediaInfo,
+          format: selectedFormat,
+        }),
+      });
 
-  try {
-    const res = await fetch(`${baseUrl}/api/download`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        mediaInfo,
-        format: selectedFormat,
-      }),
-    });
-
-    const contentType = res.headers.get('content-type') || '';
-    if (contentType.includes('application/json')) {
-      const data = await res.json();
-      if (data.job?.downloadUrl && baseUrl && data.job.downloadUrl.startsWith('/')) {
-        data.job.downloadUrl = `${baseUrl}${data.job.downloadUrl}`;
+      const contentType = res.headers.get('content-type') || '';
+      if (contentType.includes('application/json')) {
+        const data = await res.json();
+        if (data.job?.downloadUrl && baseUrl && data.job.downloadUrl.startsWith('/')) {
+          data.job.downloadUrl = `${baseUrl}${data.job.downloadUrl}`;
+        }
+        return { ...data, baseUrl };
       }
-      return { ...data, baseUrl };
+    } catch {
+      cachedApiBase = null;
     }
-  } catch {
-    // Ignore
   }
 
   return {
