@@ -173,6 +173,37 @@ class JobManager {
   }
 }
 
+/**
+ * Remove temp files (media + job metadata) older than JOB_EXPIRATION_MS.
+ */
+async function cleanupExpiredFiles(): Promise<void> {
+  try {
+    const files = await fs.readdir(/*turbopackIgnore: true*/ TEMP_DIR);
+    const now = Date.now();
+    for (const f of files) {
+      const full = path.join(/*turbopackIgnore: true*/ TEMP_DIR, f);
+      try {
+        const stat = await fs.stat(full);
+        if (stat.isFile() && now - stat.mtimeMs > JOB_EXPIRATION_MS) {
+          await fs.unlink(full);
+        }
+      } catch {
+        // ignore individual file errors
+      }
+    }
+  } catch {
+    // temp dir missing — nothing to clean
+  }
+}
+
+const globalForCleanup = globalThis as unknown as { vidnoriaCleanupTimer?: NodeJS.Timeout };
+if (!globalForCleanup.vidnoriaCleanupTimer) {
+  const timer = setInterval(cleanupExpiredFiles, 10 * 60 * 1000);
+  if (timer.unref) timer.unref();
+  globalForCleanup.vidnoriaCleanupTimer = timer;
+  void cleanupExpiredFiles();
+}
+
 const globalForJobManager = globalThis as unknown as { jobManager?: JobManager };
 export const jobManager = globalForJobManager.jobManager ?? new JobManager();
 if (process.env.NODE_ENV !== 'production') globalForJobManager.jobManager = jobManager;

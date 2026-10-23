@@ -1,12 +1,9 @@
 import type { PlatformAdapter } from './base';
 import type { MediaInfo, FormatOption } from '@/types';
+import { PLATFORM_PATTERNS } from '@/lib/security';
 import { fetchMediaInfo, buildMediaInfo, downloadMedia } from './yt-dlp';
 
-const URL_PATTERNS = [
-  /^https?:\/\/(www\.)?instagram\.com\/p\/[\w-]+/i,
-  /^https?:\/\/(www\.)?instagram\.com\/reel\/[\w-]+/i,
-  /^https?:\/\/(www\.)?instagram\.com\/tv\/[\w-]+/i,
-];
+const URL_PATTERNS = PLATFORM_PATTERNS.instagram;
 
 export class InstagramAdapter implements PlatformAdapter {
   platform = 'instagram' as const;

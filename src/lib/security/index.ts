@@ -12,7 +12,7 @@ import type { Platform } from '@/types';
 // Platform URL Patterns
 // ---------------------------------------------------------------------------
 
-const PLATFORM_PATTERNS: Record<Platform, RegExp[]> = {
+export const PLATFORM_PATTERNS: Record<Platform, RegExp[]> = {
   youtube: [
     /^https?:\/\/(www\.|m\.|music\.)?youtube\.com\/watch\?.*v=[\w-]+/i,
     /^https?:\/\/youtu\.be\/[\w-]+/i,
@@ -21,10 +21,11 @@ const PLATFORM_PATTERNS: Record<Platform, RegExp[]> = {
     /^https?:\/\/(www\.)?youtube\.com\/embed\/[\w-]+/i,
   ],
   instagram: [
-    /^https?:\/\/(www\.)?instagram\.com\/p\/[\w-]+/i,
-    /^https?:\/\/(www\.)?instagram\.com\/reel\/[\w-]+/i,
-    /^https?:\/\/(www\.)?instagram\.com\/tv\/[\w-]+/i,
-    /^https?:\/\/(www\.)?instagram\.com\/stories\/[\w-]+\/[\d]+/i,
+    /^https?:\/\/(www\.)?instagram\.com\/(?:[\w.]+\/)?p\/[\w-]+/i,
+    /^https?:\/\/(www\.)?instagram\.com\/(?:[\w.]+\/)?reels?\/[\w-]+/i,
+    /^https?:\/\/(www\.)?instagram\.com\/(?:[\w.]+\/)?tv\/[\w-]+/i,
+    /^https?:\/\/(www\.)?instagram\.com\/stories\/[\w.-]+\/[\d]+/i,
+    /^https?:\/\/(www\.)?instagram\.com\/share\/(?:reel\/|p\/)?[\w-]+/i,
   ],
   tiktok: [
     /^https?:\/\/(www\.)?tiktok\.com\/@[\w.-]+\/video\/\d+/i,
@@ -32,14 +33,15 @@ const PLATFORM_PATTERNS: Record<Platform, RegExp[]> = {
     /^https?:\/\/(www\.)?tiktok\.com\/t\/[\w-]+/i,
   ],
   facebook: [
-    /^https?:\/\/(www\.)?facebook\.com\/[\w.-]+\/videos\/\d+/i,
-    /^https?:\/\/(www\.)?facebook\.com\/watch\/?\?v=\d+/i,
+    /^https?:\/\/(www\.|m\.|web\.)?facebook\.com\/[\w.-]+\/videos\/(?:[\w.-]+\/)?\d+/i,
+    /^https?:\/\/(www\.|m\.|web\.)?facebook\.com\/watch\/?\?(?:.*&)?v=\d+/i,
     /^https?:\/\/fb\.watch\/[\w-]+/i,
-    /^https?:\/\/(www\.)?facebook\.com\/reel\/\d+/i,
+    /^https?:\/\/(www\.|m\.|web\.)?facebook\.com\/reel\/\d+/i,
+    /^https?:\/\/(www\.|m\.|web\.)?facebook\.com\/share\/(?:v|r)\/[\w-]+/i,
   ],
   twitter: [
-    /^https?:\/\/(www\.)?twitter\.com\/[\w]+\/status\/\d+/i,
-    /^https?:\/\/(www\.)?x\.com\/[\w]+\/status\/\d+/i,
+    /^https?:\/\/(www\.|mobile\.)?twitter\.com\/(?:i\/(?:web\/)?|\w+\/)status\/\d+/i,
+    /^https?:\/\/(www\.|mobile\.)?x\.com\/(?:i\/(?:web\/)?|\w+\/)status\/\d+/i,
   ],
 };
 

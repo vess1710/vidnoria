@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { Locale } from '@/lib/i18n';
 import AdSlot from '@/components/ads/AdSlot';
+import { convertFileClient } from '@/lib/client-api';
 
 interface AudioCutterPageProps {
   params: Promise<{ lang: string }>;
@@ -263,9 +264,22 @@ export default function AudioCutterPage({ params }: AudioCutterPageProps) {
       await new Promise((r) => setTimeout(r, 350));
       const wavBlob = sliceAudioBufferToWav(audioBuffer, startTime, endTime);
       const baseName = file.name.replace(/\.[^/.]+$/, '') || 'vidnoria-clip';
-      const outName = `${baseName}-trimmed.${exportFormat}`;
-      setResultUrl(URL.createObjectURL(wavBlob));
-      setResultName(outName);
+      let outBlob: Blob = wavBlob;
+      let outExt: string = exportFormat;
+
+      if (exportFormat !== 'wav') {
+        // Real MP3 / M4A encoding happens on the media server (FFmpeg)
+        try {
+          outBlob = await convertFileClient(wavBlob, `${baseName}.wav`, exportFormat);
+        } catch {
+          // Server unavailable: deliver an honest WAV file instead of a mislabeled one
+          outBlob = wavBlob;
+          outExt = 'wav';
+        }
+      }
+
+      setResultUrl(URL.createObjectURL(outBlob));
+      setResultName(`${baseName}-trimmed.${outExt}`);
     } finally {
       setCutting(false);
     }

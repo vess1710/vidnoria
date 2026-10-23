@@ -102,7 +102,7 @@ export async function extractAudio(
  */
 export async function convertVideo(
   inputPath: string,
-  format: 'mp4' | 'webm' = 'mp4'
+  format: 'mp4' | 'webm' | 'mov' = 'mp4'
 ): Promise<string> {
   const outputDir = path.join(os.tmpdir(), 'vidnoria');
   await fs.mkdir(outputDir, { recursive: true });
@@ -111,7 +111,7 @@ export async function convertVideo(
 
   const args = [
     '-i', inputPath,
-    ...(format === 'mp4'
+    ...(format === 'mp4' || format === 'mov'
       ? ['-c:v', 'libx264', '-c:a', 'aac', '-movflags', '+faststart']
       : ['-c:v', 'libvpx-vp9', '-c:a', 'libopus']),
     '-y',

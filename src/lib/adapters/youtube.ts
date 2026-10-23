@@ -1,14 +1,9 @@
 import type { PlatformAdapter } from './base';
 import type { MediaInfo, FormatOption } from '@/types';
+import { PLATFORM_PATTERNS } from '@/lib/security';
 import { fetchMediaInfo, buildMediaInfo, downloadMedia } from './yt-dlp';
 
-const URL_PATTERNS = [
-  /^https?:\/\/(www\.|m\.|music\.)?youtube\.com\/watch\?.*v=[\w-]+/i,
-  /^https?:\/\/youtu\.be\/[\w-]+/i,
-  /^https?:\/\/(www\.|m\.)?youtube\.com\/shorts\/[\w-]+/i,
-  /^https?:\/\/(www\.|m\.)?youtube\.com\/live\/[\w-]+/i,
-  /^https?:\/\/(www\.)?youtube\.com\/embed\/[\w-]+/i,
-];
+const URL_PATTERNS = PLATFORM_PATTERNS.youtube;
 
 export class YouTubeAdapter implements PlatformAdapter {
   platform = 'youtube' as const;

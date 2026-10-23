@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { getSiteSettingsClient } from '@/lib/client-api';
 
 interface GoogleTrackingProps {
   defaultGaId?: string;
@@ -19,17 +20,16 @@ export default function GoogleTracking({
   const [gtmId, setGtmId] = useState(defaultGtmId);
 
   useEffect(() => {
-    const syncFromSettings = () => {
+    let cancelled = false;
+    const syncFromSettings = async () => {
       try {
-        const raw = localStorage.getItem('vidnoria_settings');
-        if (raw) {
-          const parsed = JSON.parse(raw);
-          if (parsed?.seo?.googleAnalyticsId !== undefined) {
-            setGaId(parsed.seo.googleAnalyticsId.trim());
-          }
-          if (parsed?.seo?.googleTagManagerId !== undefined) {
-            setGtmId(parsed.seo.googleTagManagerId.trim());
-          }
+        const parsed = await getSiteSettingsClient();
+        if (cancelled || !parsed) return;
+        if (parsed.seo?.googleAnalyticsId !== undefined) {
+          setGaId(parsed.seo.googleAnalyticsId.trim());
+        }
+        if (parsed.seo?.googleTagManagerId !== undefined) {
+          setGtmId(parsed.seo.googleTagManagerId.trim());
         }
       } catch {
         // ignore
@@ -38,7 +38,10 @@ export default function GoogleTracking({
 
     syncFromSettings();
     window.addEventListener('storage', syncFromSettings);
-    return () => window.removeEventListener('storage', syncFromSettings);
+    return () => {
+      cancelled = true;
+      window.removeEventListener('storage', syncFromSettings);
+    };
   }, []);
 
   // Inject Google Analytics 4 (gtag.js)

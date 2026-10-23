@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { validateUrl, createRateLimiter } from '@/lib/security';
 import { getAdapterForUrl } from '@/lib/adapters';
-import { AnalysisResponse, MediaInfo } from '@/types';
+import { readJSON, contentPath } from '@/lib/storage';
+import { AnalysisResponse, MediaInfo, SiteSettings } from '@/types';
 
 // Rate limiter: 20 analysis requests per minute per IP
 const analyzeLimiter = createRateLimiter({
@@ -91,6 +92,20 @@ export async function POST(req: NextRequest) {
           error: {
             code: 'UNSUPPORTED_PLATFORM',
             message: 'This platform is not supported or currently disabled.',
+          },
+        },
+        { status: 400, headers: corsHeaders }
+      );
+    }
+
+    const siteSettings = await readJSON<SiteSettings>(contentPath('settings', 'site.json'));
+    if (siteSettings?.platforms?.[adapter.platform]?.enabled === false) {
+      return NextResponse.json<AnalysisResponse>(
+        {
+          success: false,
+          error: {
+            code: 'UNSUPPORTED_PLATFORM',
+            message: 'This platform is currently disabled by administrator.',
           },
         },
         { status: 400, headers: corsHeaders }

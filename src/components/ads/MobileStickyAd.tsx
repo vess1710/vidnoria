@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { X, Sparkles } from 'lucide-react';
-import { SiteSettings } from '@/types';
+import { getSiteSettingsClient } from '@/lib/client-api';
 
 export default function MobileStickyAd() {
   const [closed, setClosed] = useState(false);
@@ -11,11 +11,11 @@ export default function MobileStickyAd() {
   const [slotCode, setSlotCode] = useState('');
 
   useEffect(() => {
-    const sync = () => {
+    let cancelled = false;
+    const sync = async () => {
       try {
-        const raw = localStorage.getItem('vidnoria_settings');
-        if (!raw) return;
-        const settings = JSON.parse(raw) as SiteSettings;
+        const settings = await getSiteSettingsClient();
+        if (cancelled || !settings) return;
         if (settings?.ads?.enabled === false) {
           setIsEnabled(false);
           return;
@@ -39,7 +39,10 @@ export default function MobileStickyAd() {
 
     sync();
     window.addEventListener('storage', sync);
-    return () => window.removeEventListener('storage', sync);
+    return () => {
+      cancelled = true;
+      window.removeEventListener('storage', sync);
+    };
   }, []);
 
   if (closed || !isEnabled) return null;

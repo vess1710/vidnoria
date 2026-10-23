@@ -1,6 +1,6 @@
-import { MediaInfo, FormatOption, DownloadJob, Platform } from '@/types';
+import { MediaInfo, FormatOption, DownloadJob, Platform, SiteSettings } from '@/types';
 
-const DEFAULT_TUNNEL_URL = 'https://whose-challenges-pair-receiving.trycloudflare.com';
+const DEFAULT_TUNNEL_URL = 'https://vidnoria.onrender.com';
 let cachedApiBase: string | null = null;
 let cachedAt = 0;
 const CACHE_TTL_MS = 2 * 60 * 1000; // Re-verify every 2 minutes
@@ -15,8 +15,9 @@ export async function getApiBaseUrl(forceRefresh = false): Promise<string> {
     return cachedApiBase;
   }
 
-  // 1. Check same-origin API first (only when not on github.io / vidnoria.com static host)
-  if (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+  // 1. Check same-origin API first (works on any Node.js host; static hosts like GitHub Pages
+  //    return a non-JSON 404 page here, so we simply fall through to the remote config).
+  if (typeof window !== 'undefined') {
     try {
       const res = await fetch('/api/health', { method: 'GET', cache: 'no-store' });
       const contentType = res.headers.get('content-type') || '';
@@ -220,6 +221,8 @@ export async function analyzeUrlClient(targetUrl: string): Promise<{ success: bo
     // Fallback to browser OEmbed analyzer
   }
 
+  // The backend could not be reached. The browser fallback only provides basic
+  // metadata; actual downloading still requires the media server.
   return fallbackBrowserAnalyze(targetUrl);
 }
 
@@ -266,4 +269,75 @@ export async function pollJobStatusClient(jobId: string): Promise<{ success: boo
     data.job.downloadUrl = `${baseUrl}${data.job.downloadUrl}`;
   }
   return data;
+}
+
+
+/**
+ * Upload a local file to the media server and convert it with FFmpeg.
+ * Throws an Error with a user-readable message when the server is unreachable or fails.
+ */
+export async function convertFileClient(file: Blob, filename: string, format: string, bitrate = '192'): Promise<Blob> {
+  let lastError = 'Medya işleme sunucusuna bağlanılamadı.';
+
+  for (const force of [false, true]) {
+    const baseUrl = await getApiBaseUrl(force);
+    try {
+      const form = new FormData();
+      form.append('file', file, filename);
+      form.append('format', format);
+      form.append('bitrate', bitrate);
+
+      const res = await fetch(`${baseUrl}/api/convert`, { method: 'POST', body: form });
+      if (res.ok) {
+        return await res.blob();
+      }
+      const contentType = res.headers.get('content-type') || '';
+      if (contentType.includes('application/json')) {
+        const data = await res.json().catch(() => null);
+        if (data?.error) lastError = data.error;
+        // Server answered with an application error — retrying won't help
+        break;
+      }
+    } catch {
+      cachedApiBase = null;
+    }
+  }
+
+  throw new Error(lastError);
+}
+
+let cachedPublicSettings: SiteSettings | null = null;
+let publicSettingsPromise: Promise<SiteSettings | null> | null = null;
+
+/**
+ * Returns site settings for the current visitor.
+ * Admin preview values in localStorage win; otherwise the public settings
+ * configured through the admin panel are fetched from the media server.
+ */
+export async function getSiteSettingsClient(): Promise<SiteSettings | null> {
+  try {
+    const raw = typeof window !== 'undefined' ? localStorage.getItem('vidnoria_settings') : null;
+    if (raw) return JSON.parse(raw) as SiteSettings;
+  } catch {
+    // ignore malformed local settings
+  }
+
+  if (cachedPublicSettings) return cachedPublicSettings;
+  if (!publicSettingsPromise) {
+    publicSettingsPromise = (async () => {
+      try {
+        const baseUrl = await getApiBaseUrl();
+        const res = await fetch(`${baseUrl}/api/settings`, { cache: 'no-store' });
+        if (!res.ok || !(res.headers.get('content-type') || '').includes('application/json')) return null;
+        const data = await res.json();
+        cachedPublicSettings = data?.success ? (data.settings as SiteSettings) : null;
+        return cachedPublicSettings;
+      } catch {
+        return null;
+      } finally {
+        publicSettingsPromise = null;
+      }
+    })();
+  }
+  return publicSettingsPromise;
 }

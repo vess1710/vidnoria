@@ -184,6 +184,9 @@ export async function downloadMedia(
   const outputTemplate = path.join(dir, `${fileId}.%(ext)s`);
   const actualSelector = formatId.split('#')[0];
 
+  // Audio-only selectors must not be forced into an mp4 container
+  const isAudioOnly = actualSelector.startsWith('bestaudio');
+
   try {
     const args = [
       '--js-runtimes', 'node',
@@ -191,7 +194,7 @@ export async function downloadMedia(
       '--no-check-certificates',
       '--ffmpeg-location', ffmpegBin,
       '-f', actualSelector,
-      '--merge-output-format', 'mp4',
+      ...(isAudioOnly ? [] : ['--merge-output-format', 'mp4']),
       '-o', outputTemplate,
       '--no-part',
       '--no-mtime',

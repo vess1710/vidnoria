@@ -18,8 +18,10 @@ const API_CONFIG_PATH = path.join(ROOT, 'public', 'api-config.json');
 const CUSTOM_CONFIG_PATH = path.join(ROOT, 'content', 'settings', 'cloudflare-tunnel.json');
 
 // Ensure Git & GitHub CLI are in PATH on Windows
-const localAppData = process.env.LOCALAPPDATA || path.join(process.env.USERPROFILE || 'C:\\Users\\pc', 'AppData', 'Local');
-process.env.PATH = `${process.env.PATH};${path.join(localAppData, 'Programs', 'MinGit', 'cmd')};C:\\Program Files\\GitHub CLI`;
+const os = require('os');
+const localAppData = process.env.LOCALAPPDATA || path.join(os.homedir(), 'AppData', 'Local');
+const wingetMinGit = path.join(localAppData, 'Microsoft', 'WinGet', 'Packages', 'Git.MinGit_Microsoft.Winget.Source_8wekyb3d8bbwe', 'cmd');
+process.env.PATH = `${process.env.PATH};${wingetMinGit};${path.join(localAppData, 'Programs', 'MinGit', 'cmd')};C:\\Program Files\\GitHub CLI`;
 
 let nextProcess = null;
 let tunnelProcess = null;

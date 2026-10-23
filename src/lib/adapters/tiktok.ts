@@ -1,12 +1,9 @@
 import type { PlatformAdapter } from './base';
 import type { MediaInfo, FormatOption } from '@/types';
+import { PLATFORM_PATTERNS } from '@/lib/security';
 import { fetchMediaInfo, buildMediaInfo, downloadMedia } from './yt-dlp';
 
-const URL_PATTERNS = [
-  /^https?:\/\/(www\.)?tiktok\.com\/@[\w.-]+\/video\/\d+/i,
-  /^https?:\/\/vm\.tiktok\.com\/[\w-]+/i,
-  /^https?:\/\/(www\.)?tiktok\.com\/t\/[\w-]+/i,
-];
+const URL_PATTERNS = PLATFORM_PATTERNS.tiktok;
 
 export class TikTokAdapter implements PlatformAdapter {
   platform = 'tiktok' as const;

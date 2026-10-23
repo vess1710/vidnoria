@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { Locale } from '@/lib/i18n';
 import AdSlot from '@/components/ads/AdSlot';
+import { convertFileClient } from '@/lib/client-api';
 
 interface VideoConverterPageProps {
   params: Promise<{ lang: string }>;
@@ -229,43 +230,39 @@ export default function VideoConverterPage({ params }: VideoConverterPageProps) 
       const baseName = file.name.replace(/\.[^/.]+$/, '') || 'vidnoria-media';
       const outFilename = `${baseName}.${targetFormat}`;
       const selectedOpt = FORMAT_OPTIONS.find((f) => f.id === targetFormat)!;
+      let outBlob: Blob;
 
-      if (selectedOpt.category === 'audio') {
+      if (targetFormat === 'wav') {
+        // WAV can be produced locally in the browser
         setProgress(40);
-        // Decode audio track directly in browser using Web Audio API
         const arrayBuffer = await file.arrayBuffer();
         setProgress(65);
         const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
         const audioCtx = new AudioCtx();
-        const audioBuffer = await audioCtx.decodeAudioData(arrayBuffer);
-        setProgress(85);
-        const wavBlob = audioBufferToWavBlob(audioBuffer);
-        const finalBlob = new Blob([wavBlob], { type: selectedOpt.mime });
-        const url = URL.createObjectURL(finalBlob);
-        setResultUrl(url);
-        setResultName(outFilename);
-        setProgress(100);
-        await audioCtx.close();
+        try {
+          const audioBuffer = await audioCtx.decodeAudioData(arrayBuffer);
+          setProgress(85);
+          outBlob = audioBufferToWavBlob(audioBuffer);
+        } finally {
+          await audioCtx.close();
+        }
       } else {
-        setProgress(50);
-        await new Promise((r) => setTimeout(r, 600));
-        setProgress(85);
-        const arrayBuffer = await file.arrayBuffer();
-        const outBlob = new Blob([arrayBuffer], { type: selectedOpt.mime });
-        const url = URL.createObjectURL(outBlob);
-        setResultUrl(url);
-        setResultName(outFilename);
-        setProgress(100);
+        // MP3 / M4A / MP4 / WebM / MOV are converted for real with FFmpeg on the media server
+        setProgress(40);
+        const converted = await convertFileClient(file, file.name, targetFormat);
+        setProgress(90);
+        outBlob = new Blob([converted], { type: selectedOpt.mime });
       }
-    } catch {
-      // Fallback stream repackaging if codec is proprietary
-      const baseName = file.name.replace(/\.[^/.]+$/, '') || 'vidnoria-media';
-      const outFilename = `${baseName}.${targetFormat}`;
-      const selectedOpt = FORMAT_OPTIONS.find((f) => f.id === targetFormat)!;
-      const outBlob = new Blob([file], { type: selectedOpt.mime });
+
       setResultUrl(URL.createObjectURL(outBlob));
       setResultName(outFilename);
       setProgress(100);
+    } catch (e) {
+      setError(
+        e instanceof Error && e.message
+          ? e.message
+          : 'Dönüştürme başarısız oldu. Dosya formatı desteklenmiyor olabilir.'
+      );
     } finally {
       setConverting(false);
     }

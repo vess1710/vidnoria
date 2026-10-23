@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import type { Platform } from '@/types';
 import { useI18n } from '@/lib/i18n/context';
+import { getSiteSettingsClient } from '@/lib/client-api';
 
 const platforms: { id: Platform; icon: string; color: string }[] = [
   { id: 'youtube', icon: '/images/platforms/youtube.svg', color: 'from-red-500/10 to-red-600/5' },
@@ -18,26 +19,26 @@ export default function PlatformsSection() {
   const [enabledMap, setEnabledMap] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
-    const load = () => {
+    let cancelled = false;
+    const load = async () => {
       try {
-        const raw = localStorage.getItem('vidnoria_settings');
-        if (raw) {
-          const parsed = JSON.parse(raw);
-          if (parsed?.platforms) {
-            const map: Record<string, boolean> = {};
-            for (const [k, v] of Object.entries(parsed.platforms)) {
-              map[k] = (v as any)?.enabled !== false;
-            }
-            setEnabledMap(map);
-          }
+        const parsed = await getSiteSettingsClient();
+        if (cancelled || !parsed?.platforms) return;
+        const map: Record<string, boolean> = {};
+        for (const [k, v] of Object.entries(parsed.platforms)) {
+          map[k] = (v as { enabled?: boolean } | undefined)?.enabled !== false;
         }
+        setEnabledMap(map);
       } catch {
         // ignore
       }
     };
     load();
     window.addEventListener('storage', load);
-    return () => window.removeEventListener('storage', load);
+    return () => {
+      cancelled = true;
+      window.removeEventListener('storage', load);
+    };
   }, []);
 
   const visiblePlatforms = platforms.filter((p) => enabledMap[p.id] !== false);

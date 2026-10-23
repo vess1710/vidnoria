@@ -34,20 +34,16 @@ export default function AdminLoginPage() {
           return;
         } else {
           setError(data.error || 'Authentication failed');
+          setLoading(false);
           return;
         }
       }
     } catch {
-      // Static host fallback below
+      // Admin API unreachable (e.g. static hosting)
     }
 
-    // Fallback for static hosting (GitHub Pages)
-    if (password === 'VidnoriaSecure2026!') {
-      sessionStorage.setItem('vidnoria_admin_auth', 'true');
-      router.push('/admin/dashboard');
-    } else {
-      setError('Geçersiz yönetici şifresi.');
-    }
+    // No client-side password fallback: authentication is only possible against the server API.
+    setError('Yönetim sunucusuna ulaşılamadı. Yönetim paneli yalnızca Node.js sunucusunda çalışır.');
     setLoading(false);
     return;
   };

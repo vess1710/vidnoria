@@ -9,8 +9,8 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-VidnoriaSecure2026!}
-      - ADMIN_SECRET=${ADMIN_SECRET:-vidnoria-super-secure-production-secret-change-me}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:?Set ADMIN_PASSWORD in .env}
+      - ADMIN_SECRET=${ADMIN_SECRET:?Set ADMIN_SECRET in .env}
       - NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL:-https://vidnoria.com}
       - GA4_MEASUREMENT_ID=${GA4_MEASUREMENT_ID:-}
     volumes:

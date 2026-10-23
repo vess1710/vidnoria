@@ -1,7 +1,9 @@
-/** @type {import('ts-jest').JestConfigWithTsJest} */
+/** @type {import('jest').Config} */
 module.exports = {
-  preset: 'ts-jest',
   testEnvironment: 'node',
+  transform: {
+    '^.+\\.tsx?$': [require.resolve('ts-jest'), { tsconfig: { module: 'commonjs', esModuleInterop: true, jsx: 'react-jsx' } }],
+  },
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },

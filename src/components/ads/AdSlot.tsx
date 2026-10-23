@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Sparkles } from 'lucide-react';
 import { SiteSettings } from '@/types';
+import { getSiteSettingsClient } from '@/lib/client-api';
 
 interface AdSlotProps {
   slotId: string;
@@ -50,26 +51,19 @@ export default function AdSlot({
       }
     };
 
-    try {
-      const localRaw = localStorage.getItem('vidnoria_settings');
-      if (localRaw) {
-        applySettings(JSON.parse(localRaw));
-      }
-    } catch {
-      // ignore
-    }
-
-    const handleStorage = () => {
-      try {
-        const raw = localStorage.getItem('vidnoria_settings');
-        if (raw) applySettings(JSON.parse(raw));
-      } catch {
-        // ignore
-      }
+    let cancelled = false;
+    const load = () => {
+      getSiteSettingsClient().then((s) => {
+        if (!cancelled) applySettings(s);
+      });
     };
 
-    window.addEventListener('storage', handleStorage);
-    return () => window.removeEventListener('storage', handleStorage);
+    load();
+    window.addEventListener('storage', load);
+    return () => {
+      cancelled = true;
+      window.removeEventListener('storage', load);
+    };
   }, [slotId]);
 
   useEffect(() => {

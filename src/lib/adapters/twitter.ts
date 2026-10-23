@@ -1,11 +1,9 @@
 import type { PlatformAdapter } from './base';
 import type { MediaInfo, FormatOption } from '@/types';
+import { PLATFORM_PATTERNS } from '@/lib/security';
 import { fetchMediaInfo, buildMediaInfo, downloadMedia } from './yt-dlp';
 
-const URL_PATTERNS = [
-  /^https?:\/\/(www\.)?twitter\.com\/[\w]+\/status\/\d+/i,
-  /^https?:\/\/(www\.)?x\.com\/[\w]+\/status\/\d+/i,
-];
+const URL_PATTERNS = PLATFORM_PATTERNS.twitter;
 
 export class TwitterAdapter implements PlatformAdapter {
   platform = 'twitter' as const;

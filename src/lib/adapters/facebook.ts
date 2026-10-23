@@ -1,13 +1,9 @@
 import type { PlatformAdapter } from './base';
 import type { MediaInfo, FormatOption } from '@/types';
+import { PLATFORM_PATTERNS } from '@/lib/security';
 import { fetchMediaInfo, buildMediaInfo, downloadMedia } from './yt-dlp';
 
-const URL_PATTERNS = [
-  /^https?:\/\/(www\.)?facebook\.com\/[\w.-]+\/videos\/\d+/i,
-  /^https?:\/\/(www\.)?facebook\.com\/watch\/?\?v=\d+/i,
-  /^https?:\/\/fb\.watch\/[\w-]+/i,
-  /^https?:\/\/(www\.)?facebook\.com\/reel\/\d+/i,
-];
+const URL_PATTERNS = PLATFORM_PATTERNS.facebook;
 
 export class FacebookAdapter implements PlatformAdapter {
   platform = 'facebook' as const;
