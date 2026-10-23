@@ -1,0 +1,34 @@
+3:"$Sreact.fragment"
+4:"/_next/static/chunks/280dipis5beo5.js"
+5:I[39756,["$4"],"default"]
+6:I[37457,["$4"],"default"]
+b:"/_next/static/chunks/0xgtsu_dw-9y9.js"
+c:"/_next/static/chunks/211p9z91-aa7x.js"
+d:"/_next/static/chunks/1quxlw7dudxon.js"
+e:I[48044,["$4","$b","$c","$d"],"default"]
+f:I[50212,["$4","$b","$c","$d"],"default"]
+10:I[92539,["$4","$b","$c","$d"],"default"]
+11:I[68179,["$4","$b","$c","$d"],"default"]
+12:I[46348,["$4","$b","$c","$d"],"default"]
+13:I[97367,["$4"],"OutletBoundary"]
+14:"$Sreact.suspense"
+17:"ViewportBoundary"
+18:I[97367,["$4"],"$17"]
+19:"MetadataBoundary"
+1a:I[97367,["$4"],"$19"]
+1b:I[27201,["$4"],"IconMark"]
+8:X
+8:C
+9:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$3","c",{"children":[["$","div",null,{"dir":"ltr","children":[["$","div",null,{"className":"py-12 text-center container-custom","children":[["$","h1",null,{"className":"text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 gradient-text","children":"Instagram Video Downloader - Reels, Story, IGTV Download | Vidnoria"}],["$","p",null,{"className":"text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed","children":"Download Instagram Reels, stories and IGTV videos with our Instagram video downloader. Free and fast Instagram video downloader."}]]}],["$","$Le",null,{}],["$","div",null,{"className":"container-custom my-8","children":["$","$Lf",null,{"slotId":"platform-mid-ad","format":"horizontal"}]}],["$","$L10",null,{}],["$","$L11",null,{}],["$","$L12",null,{}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/1quxlw7dudxon.js","async":true}]],["$","$L13",null,{"children":["$","$14",null,{"name":"Next.MetadataOutlet","children":"$@15"}]}]]}],"p":"$@16","v":null,"s":"$9"}}]]
+2:[["children",{"s":{"n":"platform","t":"d","k":"instagram-video-downloader","s":["audio-cutter","blog","contact","cookies","copyright","disclaimer","download","faq","image-converter","privacy","terms","video-converter"]},"h":64,"d":{"r":["$","$3","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}]}]]}],"p":"$@7","v":"$8","s":"$9"},"c":"$Qa"}]]
+1:[["children",{"s":{"n":"lang","t":"d","k":"en","s":["admin"]},"h":32,"c":"$Q2"}]]
+0:{"t":{"t":{"s":"","h":80,"c":"$Q1"},"h":{"r":["$","$3","h",{"children":[null,["$","$L18",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1a",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$14",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Instagram Video Downloader - Reels, Story, IGTV Download | Vidnoria | Vidnoria"}],["$","meta","1",{"name":"description","content":"Download Instagram Reels, stories and IGTV videos with our Instagram video downloader. Free and fast Instagram video downloader."}],["$","link","2",{"rel":"manifest","href":"/manifest.json"}],["$","meta","3",{"name":"keywords","content":"Instagram video downloader,Instagram Reels download,Instagram story download,Instagram downloader,download Instagram video,save Instagram Reels"}],["$","meta","4",{"name":"robots","content":"index, follow"}],["$","meta","5",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","6",{"rel":"canonical","href":"https://vidnoria.com/en/"}],["$","link","7",{"rel":"alternate","hrefLang":"tr","href":"https://vidnoria.com/tr/"}],["$","link","8",{"rel":"alternate","hrefLang":"en","href":"https://vidnoria.com/en/"}],["$","link","9",{"rel":"alternate","hrefLang":"ar","href":"https://vidnoria.com/ar/"}],["$","link","10",{"rel":"alternate","hrefLang":"x-default","href":"https://vidnoria.com/tr/"}],["$","meta","11",{"name":"google-site-verification","content":"PlAR_ihtFqyAIvHZPYltHb-Rueh_Dl6EqJ5b2eV0bZg"}],["$","meta","12",{"property":"og:title","content":"Vidnoria - Free Video & Music Downloader"}],["$","meta","13",{"property":"og:description","content":"Download high-quality videos and music from YouTube, Instagram, TikTok, and more. Free, fast, and secure."}],["$","meta","14",{"property":"og:url","content":"https://vidnoria.com/en/"}],["$","meta","15",{"property":"og:site_name","content":"Vidnoria"}],["$","meta","16",{"property":"og:locale","content":"en_US"}],["$","meta","17",{"property":"og:type","content":"website"}],["$","meta","18",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","19",{"name":"twitter:title","content":"Vidnoria - Free Video & Music Downloader"}],["$","meta","20",{"name":"twitter:description","content":"Download high-quality videos and music from YouTube, Instagram, TikTok, and more. Free, fast, and secure."}],["$","link","21",{"rel":"icon","href":"/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","link","22",{"rel":"icon","href":"/images/favicon.svg"}],["$","$L1b","23",{}]]}]}],null]}],null]}],"p":"$@1c","v":null,"s":"$9"}},"a":"$@1d","u":"$@1e","b":"Uzdfb8WOstyo-zQs7IDao"}
+15:null
+1e:true
+9:300
+9:C
+1d:0
+7:"$undefined"
+1c:"$undefined"
+16:"$undefined"

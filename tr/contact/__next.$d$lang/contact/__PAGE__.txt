@@ -1,0 +1,31 @@
+3:"$Sreact.fragment"
+4:"/_next/static/chunks/280dipis5beo5.js"
+5:I[39756,["$4"],"default"]
+6:I[37457,["$4"],"default"]
+b:"/_next/static/chunks/0xgtsu_dw-9y9.js"
+c:"/_next/static/chunks/211p9z91-aa7x.js"
+d:"/_next/static/chunks/1nrt1r43_lu3_.js"
+e:I[5014,["$4","$b","$c","$d"],"default"]
+f:I[14219,["$4","$b","$c","$d"],"default"]
+10:I[97367,["$4"],"OutletBoundary"]
+11:"$Sreact.suspense"
+14:"ViewportBoundary"
+15:I[97367,["$4"],"$14"]
+16:"MetadataBoundary"
+17:I[97367,["$4"],"$16"]
+18:I[27201,["$4"],"IconMark"]
+8:X
+8:C
+9:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$3","c",{"children":[["$","div",null,{"className":"container-custom py-12 md:py-20 max-w-4xl","dir":"ltr","children":[["$","div",null,{"className":"text-center max-w-2xl mx-auto mb-12","children":[["$","h1",null,{"className":"text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 gradient-text","children":"İletişim"}],["$","p",null,{"className":"text-muted-foreground text-base md:text-lg","children":["Sorularınız, telif hakkı bildirimleriniz (DMCA) veya teknik destek için bize ulaşın.",false,false]}]]}],["$","div",null,{"className":"grid grid-cols-1 md:grid-cols-2 gap-8 items-start","children":[["$","div",null,{"className":"glass-card p-6 md:p-8 space-y-6","children":[["$","h2",null,{"className":"text-xl font-bold flex items-center gap-2","children":[["$","$Le",null,{"icon":{"name":"mail","size":24,"node":[["path",{"d":"m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7","key":"132q7q"}],["rect",{"x":"2","y":"4","width":"20","height":"16","rx":"2","key":"izxlao"}]]},"className":"w-5 h-5 text-primary"}],["$","span",null,{"children":"Vidnoria Support"}]]}],["$","p",null,{"className":"text-sm text-muted-foreground leading-relaxed","children":["Vidnoria ekibi telif haklarına ve yasal mevzuata azami özen göstermektedir. DMCA veya içerik kaldırma talepleriniz en geç 24 saat içerisinde değerlendirilir.",false,false]}],["$","div",null,{"className":"space-y-3 pt-4 border-t border-border","children":[["$","div",null,{"className":"text-sm","children":[["$","span",null,{"className":"text-muted-foreground","children":"E-Mail: "}],["$","a",null,{"href":"mailto:contact@vidnoria.com","className":"font-semibold text-primary hover:underline","children":"contact@vidnoria.com"}]]}],["$","div",null,{"className":"text-sm","children":[["$","span",null,{"className":"text-muted-foreground","children":"DMCA: "}],["$","a",null,{"href":"mailto:dmca@vidnoria.com","className":"font-semibold text-primary hover:underline","children":"dmca@vidnoria.com"}]]}]]}]]}],["$","$Lf",null,{"locale":"tr"}]]}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/1nrt1r43_lu3_.js","async":true}]],["$","$L10",null,{"children":["$","$11",null,{"name":"Next.MetadataOutlet","children":"$@12"}]}]]}],"p":"$@13","v":null,"s":"$9"}}]]
+2:[["children",{"s":"contact","h":64,"d":{"r":["$","$3","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}]}]]}],"p":"$@7","v":"$8","s":"$9"},"c":"$Qa"}]]
+1:[["children",{"s":{"n":"lang","t":"d","k":"tr","s":["admin"]},"h":32,"c":"$Q2"}]]
+0:{"t":{"t":{"s":"","h":80,"c":"$Q1"},"h":{"r":["$","$3","h",{"children":[null,["$","$L15",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L17",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$11",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"İletişim | Vidnoria"}],["$","meta","1",{"name":"description","content":"Get in touch with the Vidnoria support and DMCA compliance team."}],["$","link","2",{"rel":"manifest","href":"/manifest.json"}],["$","meta","3",{"name":"keywords","content":"video indir,ücretsiz video indir,youtube video indir,youtube mp3 indir,youtube mp3 dönüştürücü,youtube mp4 indir,instagram video indir,instagram reels indir,tiktok video indir,tiktok filigransız video indir,twitter video indir,x video indir,facebook video indir,online video indirici,müzik indir,mp3 dönüştürücü,hd video indir,4k video indir,programsız video indir,vidnoria"}],["$","meta","4",{"name":"robots","content":"index, follow"}],["$","meta","5",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","6",{"rel":"canonical","href":"https://vidnoria.com/tr/"}],["$","link","7",{"rel":"alternate","hrefLang":"tr","href":"https://vidnoria.com/tr/"}],["$","link","8",{"rel":"alternate","hrefLang":"en","href":"https://vidnoria.com/en/"}],["$","link","9",{"rel":"alternate","hrefLang":"ar","href":"https://vidnoria.com/ar/"}],["$","link","10",{"rel":"alternate","hrefLang":"x-default","href":"https://vidnoria.com/tr/"}],["$","meta","11",{"name":"google-site-verification","content":"PlAR_ihtFqyAIvHZPYltHb-Rueh_Dl6EqJ5b2eV0bZg"}],["$","meta","12",{"property":"og:title","content":"Vidnoria - Ücretsiz Video ve Müzik İndirici"}],["$","meta","13",{"property":"og:description","content":"YouTube, Instagram, TikTok ve daha birçok platformdan yüksek kaliteli video ve müzik indirin. Ücretsiz, hızlı ve güvenli."}],["$","meta","14",{"property":"og:url","content":"https://vidnoria.com/tr/"}],["$","meta","15",{"property":"og:site_name","content":"Vidnoria"}],["$","meta","16",{"property":"og:locale","content":"tr_TR"}],["$","meta","17",{"property":"og:type","content":"website"}],["$","meta","18",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","19",{"name":"twitter:title","content":"Vidnoria - Ücretsiz Video ve Müzik İndirici"}],["$","meta","20",{"name":"twitter:description","content":"YouTube, Instagram, TikTok ve daha birçok platformdan yüksek kaliteli video ve müzik indirin. Ücretsiz, hızlı ve güvenli."}],["$","link","21",{"rel":"icon","href":"/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","link","22",{"rel":"icon","href":"/images/favicon.svg"}],["$","$L18","23",{}]]}]}],null]}],null]}],"p":"$@19","v":null,"s":"$9"}},"a":"$@1a","u":"$@1b","b":"Uzdfb8WOstyo-zQs7IDao"}
+12:null
+1b:true
+9:300
+9:C
+1a:0
+7:"$undefined"
+19:"$undefined"
+13:"$undefined"

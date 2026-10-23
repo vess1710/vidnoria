@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- X (Twitter) icon - black rounded square with X mark -->
+  <rect width="32" height="32" rx="6" fill="#000000"/>
+  <path d="M6.5 7 L13.5 16.5 L6.5 25 L8.5 25 L14.5 17.8 L19.5 25 L25.5 25 L18 14.8 L24.5 7 L22.5 7 L17 13.5 L12.5 7 Z M9.5 8.5 L11.8 8.5 L22.5 23.5 L20.2 23.5 Z" 
+        fill="white"/>
+</svg>

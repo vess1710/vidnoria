@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="iconWaveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="50%" stop-color="#6D5BF7"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded background -->
+  <rect x="0" y="0" width="48" height="48" rx="10" ry="10" fill="white"/>
+  <!-- Abstract V with frequency wave - centered -->
+  <g transform="translate(4, 5)">
+    <path d="M2 6 L14 34 L18 26 L15 20 L20 10 L24 20 L21 26 L26 34 L38 6" 
+          stroke="url(#iconGrad)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Sound wave bars -->
+    <line x1="32" y1="14" x2="36" y2="14" stroke="url(#iconWaveGrad)" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+    <line x1="34" y1="8" x2="39" y2="8" stroke="url(#iconWaveGrad)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <line x1="34" y1="20" x2="39" y2="20" stroke="url(#iconWaveGrad)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  </g>
+</svg>
