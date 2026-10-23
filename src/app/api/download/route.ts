@@ -9,8 +9,14 @@ const downloadLimiter = createRateLimiter({
   maxRequests: 6,
 });
 
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
+
 export async function OPTIONS() {
-  return new NextResponse(null, { status: 204 });
+  return new NextResponse(null, { status: 204, headers: corsHeaders });
 }
 
 export async function POST(req: NextRequest) {
@@ -21,7 +27,7 @@ export async function POST(req: NextRequest) {
     if (!rateCheck.allowed) {
       return NextResponse.json(
         { success: false, error: 'Rate limit exceeded. Please wait a minute before downloading again.' },
-        { status: 429 }
+        { status: 429, headers: corsHeaders }
       );
     }
 
@@ -29,7 +35,7 @@ export async function POST(req: NextRequest) {
     if (!body || !body.mediaInfo || !body.format) {
       return NextResponse.json(
         { success: false, error: 'Invalid download parameters.' },
-        { status: 400 }
+        { status: 400, headers: corsHeaders }
       );
     }
 
@@ -37,14 +43,17 @@ export async function POST(req: NextRequest) {
 
     const job = await jobManager.createJob(mediaInfo, format);
 
-    return NextResponse.json({
-      success: true,
-      job,
-    });
+    return NextResponse.json(
+      {
+        success: true,
+        job,
+      },
+      { headers: corsHeaders }
+    );
   } catch (err: any) {
     return NextResponse.json(
       { success: false, error: err.message || 'Failed to start download job' },
-      { status: 500 }
+      { status: 500, headers: corsHeaders }
     );
   }
 }

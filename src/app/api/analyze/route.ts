@@ -12,8 +12,14 @@ const analyzeLimiter = createRateLimiter({
 // 5-minute in-memory cache for analyzed URLs (avoids duplicate yt-dlp calls on redirect)
 const analysisCache = new Map<string, { data: MediaInfo; expiresAt: number }>();
 
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
+
 export async function OPTIONS() {
-  return new NextResponse(null, { status: 204 });
+  return new NextResponse(null, { status: 204, headers: corsHeaders });
 }
 
 export async function POST(req: NextRequest) {
@@ -30,7 +36,7 @@ export async function POST(req: NextRequest) {
             message: 'Too many requests. Please wait a moment and try again.',
           },
         },
-        { status: 429 }
+        { status: 429, headers: corsHeaders }
       );
     }
 
@@ -44,7 +50,7 @@ export async function POST(req: NextRequest) {
             message: 'Please provide a valid URL string.',
           },
         },
-        { status: 400 }
+        { status: 400, headers: corsHeaders }
       );
     }
 
@@ -53,10 +59,13 @@ export async function POST(req: NextRequest) {
     // Check cache first
     const cached = analysisCache.get(trimmedUrl);
     if (cached && cached.expiresAt > Date.now()) {
-      return NextResponse.json<AnalysisResponse>({
-        success: true,
-        data: cached.data,
-      });
+      return NextResponse.json<AnalysisResponse>(
+        {
+          success: true,
+          data: cached.data,
+        },
+        { headers: corsHeaders }
+      );
     }
 
     const validation = validateUrl(trimmedUrl);
@@ -70,7 +79,7 @@ export async function POST(req: NextRequest) {
             message: validation.error || 'Invalid URL provided.',
           },
         },
-        { status: 400 }
+        { status: 400, headers: corsHeaders }
       );
     }
 
@@ -84,7 +93,7 @@ export async function POST(req: NextRequest) {
             message: 'This platform is not supported or currently disabled.',
           },
         },
-        { status: 400 }
+        { status: 400, headers: corsHeaders }
       );
     }
 
@@ -96,10 +105,13 @@ export async function POST(req: NextRequest) {
       expiresAt: Date.now() + 5 * 60 * 1000,
     });
 
-    return NextResponse.json<AnalysisResponse>({
-      success: true,
-      data: mediaInfo,
-    });
+    return NextResponse.json<AnalysisResponse>(
+      {
+        success: true,
+        data: mediaInfo,
+      },
+      { headers: corsHeaders }
+    );
   } catch (err: any) {
     const code = err.code || 'PROCESSING_ERROR';
     const message = err.message || 'Failed to process media request.';
@@ -112,7 +124,7 @@ export async function POST(req: NextRequest) {
           message,
         },
       },
-      { status: 500 }
+      { status: 500, headers: corsHeaders }
     );
   }
 }

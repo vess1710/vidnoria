@@ -1,5 +1,6 @@
 import { MediaInfo, FormatOption, DownloadJob, Platform } from '@/types';
 
+const DEFAULT_TUNNEL_URL = 'https://whose-challenges-pair-receiving.trycloudflare.com';
 let cachedApiBase: string | null = null;
 
 /**
@@ -8,7 +9,7 @@ let cachedApiBase: string | null = null;
  * 2. Tries live config from GitHub / `/api-config.json` (when frontend is hosted on GitHub Pages).
  */
 export async function getApiBaseUrl(): Promise<string> {
-  if (cachedApiBase !== null) return cachedApiBase;
+  if (cachedApiBase !== null && cachedApiBase !== '') return cachedApiBase;
 
   // 1. Check same-origin API first
   try {
@@ -28,6 +29,8 @@ export async function getApiBaseUrl(): Promise<string> {
     `/api-config.json?t=${Date.now()}`,
   ];
 
+  const candidateBases: string[] = [];
+
   for (const cfgUrl of configUrls) {
     try {
       const res = await fetch(cfgUrl, { cache: 'no-store' });
@@ -35,10 +38,8 @@ export async function getApiBaseUrl(): Promise<string> {
         const cfg = await res.json();
         if (cfg?.apiBaseUrl) {
           const cleanBase = cfg.apiBaseUrl.replace(/\/+$/, '');
-          const healthRes = await fetch(`${cleanBase}/api/health`, { method: 'GET', cache: 'no-store' });
-          if (healthRes.ok) {
-            cachedApiBase = cleanBase;
-            return cleanBase;
+          if (cleanBase && !candidateBases.includes(cleanBase)) {
+            candidateBases.push(cleanBase);
           }
         }
       }
@@ -47,8 +48,23 @@ export async function getApiBaseUrl(): Promise<string> {
     }
   }
 
-  cachedApiBase = '';
-  return '';
+  if (!candidateBases.includes(DEFAULT_TUNNEL_URL)) {
+    candidateBases.push(DEFAULT_TUNNEL_URL);
+  }
+
+  for (const cleanBase of candidateBases) {
+    try {
+      const healthRes = await fetch(`${cleanBase}/api/health`, { method: 'GET', cache: 'no-store' });
+      if (healthRes.ok) {
+        cachedApiBase = cleanBase;
+        return cleanBase;
+      }
+    } catch {
+      // Try next candidate
+    }
+  }
+
+  return candidateBases[0] || DEFAULT_TUNNEL_URL;
 }
 
 function detectPlatform(url: string): Platform | null {
