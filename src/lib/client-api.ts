@@ -11,7 +11,13 @@ const CACHE_TTL_MS = 2 * 60 * 1000; // Re-verify every 2 minutes
  * 2. Tries live config from GitHub (`raw.githubusercontent.com`) and `/api-config.json`.
  */
 export async function getApiBaseUrl(forceRefresh = false): Promise<string> {
-  if (!forceRefresh && cachedApiBase !== null && cachedApiBase !== '' && Date.now() - cachedAt < CACHE_TTL_MS) {
+  if (
+    !forceRefresh &&
+    cachedApiBase !== null &&
+    cachedApiBase !== '' &&
+    cachedApiBase !== DEFAULT_TUNNEL_URL &&
+    Date.now() - cachedAt < CACHE_TTL_MS
+  ) {
     return cachedApiBase;
   }
 
@@ -20,7 +26,11 @@ export async function getApiBaseUrl(forceRefresh = false): Promise<string> {
       const saved = sessionStorage.getItem('vidnoria_api_base');
       if (saved) {
         const parsed = JSON.parse(saved);
-        if (parsed.url !== undefined && Date.now() - parsed.ts < CACHE_TTL_MS) {
+        if (
+          parsed.url !== undefined &&
+          parsed.url !== DEFAULT_TUNNEL_URL &&
+          Date.now() - parsed.ts < CACHE_TTL_MS
+        ) {
           cachedApiBase = parsed.url;
           cachedAt = parsed.ts;
           return parsed.url;
@@ -49,13 +59,35 @@ export async function getApiBaseUrl(forceRefresh = false): Promise<string> {
     }
   }
 
-  // 2. Check remote dynamic api-config.json from GitHub repo (allows updating tunnel URL without rebuilding Pages)
+  const candidateBases: string[] = [];
+
+  // 2a. Query GitHub REST API first (bypasses raw.githubusercontent.com 5-minute Fastly CDN cache)
+  try {
+    const ghRes = await fetch(
+      `https://api.github.com/repos/vess1710/vidnoria/contents/public/api-config.json?ref=main&t=${Date.now()}`,
+      { cache: 'no-store', headers: { Accept: 'application/vnd.github.v3+json' } }
+    );
+    if (ghRes.ok) {
+      const ghData = await ghRes.json();
+      if (ghData?.content) {
+        const decoded = JSON.parse(atob(ghData.content.replace(/\s/g, '')));
+        if (decoded?.apiBaseUrl) {
+          const cleanBase = decoded.apiBaseUrl.replace(/\/+$/, '');
+          if (cleanBase && !candidateBases.includes(cleanBase)) {
+            candidateBases.push(cleanBase);
+          }
+        }
+      }
+    }
+  } catch {
+    // Fallback to raw/static configUrls below
+  }
+
+  // 2b. Check remote dynamic api-config.json from GitHub repo and static /api-config.json
   const configUrls = [
     `https://raw.githubusercontent.com/vess1710/vidnoria/main/public/api-config.json?t=${Date.now()}`,
     `/api-config.json?t=${Date.now()}`,
   ];
-
-  const candidateBases: string[] = [];
 
   for (const cfgUrl of configUrls) {
     try {
@@ -89,12 +121,14 @@ export async function getApiBaseUrl(forceRefresh = false): Promise<string> {
       });
       clearTimeout(timer);
       if (healthRes.ok) {
-        cachedApiBase = cleanBase;
-        cachedAt = Date.now();
-        if (typeof window !== 'undefined') {
-          try {
-            sessionStorage.setItem('vidnoria_api_base', JSON.stringify({ url: cleanBase, ts: cachedAt }));
-          } catch {}
+        if (cleanBase !== DEFAULT_TUNNEL_URL) {
+          cachedApiBase = cleanBase;
+          cachedAt = Date.now();
+          if (typeof window !== 'undefined') {
+            try {
+              sessionStorage.setItem('vidnoria_api_base', JSON.stringify({ url: cleanBase, ts: cachedAt }));
+            } catch {}
+          }
         }
         return cleanBase;
       }
