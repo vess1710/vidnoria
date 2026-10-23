@@ -117,7 +117,7 @@ export async function fetchMediaInfo(url: string): Promise<YtDlpInfo> {
   try {
     const { stdout } = await execFileAsync(ytdlpBin, [
       '--dump-json',
-      '--no-warnings',
+      '--js-runtimes', 'node',
       '--no-playlist',
       '--no-check-certificates',
       sanitized,
@@ -186,7 +186,7 @@ export async function downloadMedia(
 
   try {
     const args = [
-      '--no-warnings',
+      '--js-runtimes', 'node',
       '--no-playlist',
       '--no-check-certificates',
       '--ffmpeg-location', ffmpegBin,
