@@ -10,12 +10,124 @@ import { promisify } from 'util';
 import path from 'path';
 import os from 'os';
 import fs from 'fs/promises';
+import fsSync from 'fs';
 import crypto from 'crypto';
 import { MediaInfo, FormatOption, Platform, VideoQuality } from '@/types';
 import { AdapterError, ADAPTER_TIMEOUTS } from './base';
 import { getYtDlpBinary, getFFmpegBinary } from '@/lib/media/processor';
 
 const execFileAsync = promisify(execFile);
+
+/**
+ * Returns ['--cookies', path] if a valid Netscape cookies.txt is configured
+ * via YOUTUBE_COOKIES env var or content/settings/cookies.txt.
+ */
+function getCookieArgs(): string[] {
+  try {
+    if (process.env.YOUTUBE_COOKIES && process.env.YOUTUBE_COOKIES.trim().length > 20) {
+      const envCookiePath = path.join(/*turbopackIgnore: true*/ os.tmpdir(), 'vidnoria', 'yt-cookies.txt');
+      fsSync.mkdirSync(path.dirname(envCookiePath), { recursive: true });
+      fsSync.writeFileSync(envCookiePath, process.env.YOUTUBE_COOKIES, 'utf8');
+      return ['--cookies', envCookiePath];
+    }
+    const localCookiePath = path.join(/*turbopackIgnore: true*/ process.cwd(), 'content', 'settings', 'cookies.txt');
+    if (fsSync.existsSync(localCookiePath)) {
+      const content = fsSync.readFileSync(localCookiePath, 'utf8');
+      const hasCookieLines = content
+        .split(/\r?\n/)
+        .some(line => line.trim() && !line.trim().startsWith('#') && line.includes('\t'));
+      if (hasCookieLines) {
+        return ['--cookies', localCookiePath];
+      }
+    }
+  } catch {
+    // ignore cookie read errors
+  }
+  return [];
+}
+
+/**
+ * Fallback downloader via public Piped / Invidious APIs when a datacenter IP
+ * (such as Render) hits YouTube's bot check without cookies.
+ */
+async function fallbackPublicStreamDownload(
+  url: string,
+  isAudioOnly: boolean,
+  dir: string,
+  fileId: string
+): Promise<string | null> {
+  const ytIdMatch = url.match(/(?:v=|youtu\.be\/|\/shorts\/)([\w-]{11})/);
+  if (!ytIdMatch) return null;
+  const videoId = ytIdMatch[1];
+
+  const pipedApis = [
+    `https://pipedapi.kavin.rocks/streams/${videoId}`,
+    `https://pipedapi.tokhmi.xyz/streams/${videoId}`,
+    `https://pipedapi.moomoo.me/streams/${videoId}`,
+  ];
+
+  for (const apiUrl of pipedApis) {
+    try {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 8000);
+      const res = await fetch(apiUrl, { signal: controller.signal });
+      clearTimeout(timer);
+      if (!res.ok) continue;
+      const data = await res.json();
+      const streams = isAudioOnly ? data.audioStreams : data.videoStreams?.filter((s: any) => !s.videoOnly);
+      const streamUrl = streams?.[0]?.url || data.videoStreams?.[0]?.url;
+      if (streamUrl) {
+        const ext = isAudioOnly ? 'm4a' : 'mp4';
+        const outPath = path.join(/*turbopackIgnore: true*/ dir, `${fileId}.${ext}`);
+        const mediaRes = await fetch(streamUrl);
+        if (mediaRes.ok) {
+          const buf = Buffer.from(await mediaRes.arrayBuffer());
+          if (buf.byteLength > 1000) {
+            await fs.writeFile(outPath, buf);
+            return outPath;
+          }
+        }
+      }
+    } catch {
+      // try next mirror
+    }
+  }
+
+  const invidiousApis = [
+    `https://inv.nadeko.net/api/v1/videos/${videoId}`,
+    `https://invidious.nerdvpn.de/api/v1/videos/${videoId}`,
+  ];
+
+  for (const apiUrl of invidiousApis) {
+    try {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 8000);
+      const res = await fetch(apiUrl, { signal: controller.signal });
+      clearTimeout(timer);
+      if (!res.ok) continue;
+      const data = await res.json();
+      const streamUrl = isAudioOnly
+        ? data.adaptiveFormats?.find((f: any) => f.type?.startsWith('audio/'))?.url
+        : data.formatStreams?.[0]?.url;
+      if (streamUrl) {
+        const ext = isAudioOnly ? 'm4a' : 'mp4';
+        const outPath = path.join(/*turbopackIgnore: true*/ dir, `${fileId}.${ext}`);
+        const mediaRes = await fetch(streamUrl);
+        if (mediaRes.ok) {
+          const buf = Buffer.from(await mediaRes.arrayBuffer());
+          if (buf.byteLength > 1000) {
+            await fs.writeFile(outPath, buf);
+            return outPath;
+          }
+        }
+      }
+    } catch {
+      // try next mirror
+    }
+  }
+
+  return null;
+}
 
 // ---------------------------------------------------------------------------
 // URL Sanitization
@@ -113,11 +225,13 @@ export interface YtDlpFormat {
 export async function fetchMediaInfo(url: string): Promise<YtDlpInfo> {
   const sanitized = sanitizeUrl(url);
   const ytdlpBin = getYtDlpBinary();
+  const cookieArgs = getCookieArgs();
 
   try {
     const { stdout } = await execFileAsync(ytdlpBin, [
       '--dump-json',
       '--js-runtimes', 'node',
+      ...cookieArgs,
       '--no-playlist',
       '--no-warnings',
       '--no-check-certificates',
@@ -204,6 +318,7 @@ export async function downloadMedia(
   const dir = outputDir || path.join(os.tmpdir(), 'vidnoria');
   const ytdlpBin = getYtDlpBinary();
   const ffmpegBin = getFFmpegBinary();
+  const cookieArgs = getCookieArgs();
 
   await fs.mkdir(dir, { recursive: true });
 
@@ -214,23 +329,24 @@ export async function downloadMedia(
   // Audio-only selectors must not be forced into an mp4 container
   const isAudioOnly = actualSelector.startsWith('bestaudio');
 
-  try {
-    const args = [
-      '--js-runtimes', 'node',
-      '--concurrent-fragments', '4',
-      '--no-playlist',
-      '--no-warnings',
-      '--no-check-certificates',
-      '--ffmpeg-location', ffmpegBin,
-      '-f', actualSelector,
-      ...(isAudioOnly ? [] : ['--merge-output-format', 'mp4']),
-      '-o', outputTemplate,
-      '--no-part',
-      '--no-mtime',
-      sanitized,
-    ];
+  const baseArgs = [
+    '--js-runtimes', 'node',
+    ...cookieArgs,
+    '--concurrent-fragments', '4',
+    '--no-playlist',
+    '--no-warnings',
+    '--no-check-certificates',
+    '--ffmpeg-location', ffmpegBin,
+    '-f', actualSelector,
+    ...(isAudioOnly ? [] : ['--merge-output-format', 'mp4']),
+    '-o', outputTemplate,
+    '--no-part',
+    '--no-mtime',
+    sanitized,
+  ];
 
-    await execFileAsync(ytdlpBin, args, {
+  try {
+    await execFileAsync(ytdlpBin, baseArgs, {
       timeout: ADAPTER_TIMEOUTS.DOWNLOAD,
       maxBuffer: 10 * 1024 * 1024,
     });
@@ -244,6 +360,31 @@ export async function downloadMedia(
 
     return path.join(dir, downloaded);
   } catch (err: unknown) {
+    // Retry 1: Alternate embedded/VR YouTube clients (bypasses many datacenter bot checks)
+    try {
+      await execFileAsync(
+        ytdlpBin,
+        ['--extractor-args', 'youtube:player_client=android_vr,tv_embedded,mweb,ios', ...baseArgs],
+        {
+          timeout: ADAPTER_TIMEOUTS.DOWNLOAD,
+          maxBuffer: 10 * 1024 * 1024,
+        }
+      );
+      const files = await fs.readdir(/*turbopackIgnore: true*/ dir);
+      const downloaded = files.find(f => f.startsWith(fileId));
+      if (downloaded) {
+        return path.join(dir, downloaded);
+      }
+    } catch {
+      // Proceed to public mirror fallback
+    }
+
+    // Retry 2: Public Piped / Invidious stream mirrors when datacenter IP is blocked
+    const mirrorPath = await fallbackPublicStreamDownload(sanitized, isAudioOnly, dir, fileId);
+    if (mirrorPath) {
+      return mirrorPath;
+    }
+
     if (err instanceof AdapterError) throw err;
 
     const error = err as { killed?: boolean; stderr?: string; message?: string };
