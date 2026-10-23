@@ -118,8 +118,8 @@ export async function fetchMediaInfo(url: string): Promise<YtDlpInfo> {
     const { stdout } = await execFileAsync(ytdlpBin, [
       '--dump-json',
       '--js-runtimes', 'node',
-      '--extractor-args', 'youtube:player_client=default,mweb,tv,ios',
       '--no-playlist',
+      '--no-warnings',
       '--no-check-certificates',
       sanitized,
     ], {
@@ -217,8 +217,9 @@ export async function downloadMedia(
   try {
     const args = [
       '--js-runtimes', 'node',
-      '--extractor-args', 'youtube:player_client=default,mweb,tv,ios',
+      '--concurrent-fragments', '4',
       '--no-playlist',
+      '--no-warnings',
       '--no-check-certificates',
       '--ffmpeg-location', ffmpegBin,
       '-f', actualSelector,

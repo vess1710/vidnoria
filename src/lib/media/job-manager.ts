@@ -146,9 +146,12 @@ class JobManager {
       // Post-processing if audio conversion is requested (MP3, M4A, etc.)
       if (job.selectedFormat.type === 'audio') {
         const audioFormat = job.selectedFormat.format as any;
-        const converted = await extractAudio(downloadedPath, audioFormat, job.selectedFormat.bitrate || '192');
-        await fs.unlink(downloadedPath).catch(() => {});
-        downloadedPath = converted;
+        const alreadyM4a = audioFormat === 'm4a' && downloadedPath.toLowerCase().endsWith('.m4a');
+        if (!alreadyM4a) {
+          const converted = await extractAudio(downloadedPath, audioFormat, job.selectedFormat.bitrate || '192');
+          await fs.unlink(downloadedPath).catch(() => {});
+          downloadedPath = converted;
+        }
       }
 
       job.progress = 100;

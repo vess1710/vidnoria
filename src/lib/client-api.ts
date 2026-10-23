@@ -15,15 +15,33 @@ export async function getApiBaseUrl(forceRefresh = false): Promise<string> {
     return cachedApiBase;
   }
 
-  // 1. Check same-origin API first (works on any Node.js host; static hosts like GitHub Pages
-  //    return a non-JSON 404 page here, so we simply fall through to the remote config).
-  if (typeof window !== 'undefined') {
+  if (!forceRefresh && typeof window !== 'undefined') {
+    try {
+      const saved = sessionStorage.getItem('vidnoria_api_base');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed.url !== undefined && Date.now() - parsed.ts < CACHE_TTL_MS) {
+          cachedApiBase = parsed.url;
+          cachedAt = parsed.ts;
+          return parsed.url;
+        }
+      }
+    } catch {
+      // ignore storage errors
+    }
+  }
+
+  // 1. Check same-origin API first (skip on static GitHub Pages domain vidnoria.com to save a round-trip)
+  if (typeof window !== 'undefined' && !window.location.hostname.endsWith('vidnoria.com') && !window.location.hostname.endsWith('github.io')) {
     try {
       const res = await fetch('/api/health', { method: 'GET', cache: 'no-store' });
       const contentType = res.headers.get('content-type') || '';
       if (res.ok && contentType.includes('application/json')) {
         cachedApiBase = '';
         cachedAt = Date.now();
+        try {
+          sessionStorage.setItem('vidnoria_api_base', JSON.stringify({ url: '', ts: cachedAt }));
+        } catch {}
         return '';
       }
     } catch {
@@ -73,6 +91,11 @@ export async function getApiBaseUrl(forceRefresh = false): Promise<string> {
       if (healthRes.ok) {
         cachedApiBase = cleanBase;
         cachedAt = Date.now();
+        if (typeof window !== 'undefined') {
+          try {
+            sessionStorage.setItem('vidnoria_api_base', JSON.stringify({ url: cleanBase, ts: cachedAt }));
+          } catch {}
+        }
         return cleanBase;
       }
     } catch {
@@ -204,6 +227,19 @@ async function fallbackBrowserAnalyze(targetUrl: string): Promise<{ success: boo
 }
 
 export async function analyzeUrlClient(targetUrl: string): Promise<{ success: boolean; data?: MediaInfo; error?: any }> {
+  const cacheKey = `vidnoria_analyze:${targetUrl.trim()}`;
+  if (typeof window !== 'undefined') {
+    try {
+      const cached = sessionStorage.getItem(cacheKey);
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (parsed.data && Date.now() - parsed.ts < 5 * 60 * 1000) {
+          return { success: true, data: parsed.data };
+        }
+      }
+    } catch {}
+  }
+
   const baseUrl = await getApiBaseUrl();
 
   try {
@@ -217,6 +253,11 @@ export async function analyzeUrlClient(targetUrl: string): Promise<{ success: bo
     if (contentType.includes('application/json')) {
       const json = await res.json();
       if (json.success && json.data) {
+        if (typeof window !== 'undefined') {
+          try {
+            sessionStorage.setItem(cacheKey, JSON.stringify({ data: json.data, ts: Date.now() }));
+          } catch {}
+        }
         return json;
       }
       // If datacenter backend returned a bot-block / processing error, fall back to browser OEmbed analyzer

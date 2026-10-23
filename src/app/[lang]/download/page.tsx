@@ -205,7 +205,7 @@ export default function DownloadPage({ params }: DownloadPageProps) {
         clearInterval(interval);
         setProcessing(false);
       }
-    }, 1500);
+    }, 900);
   };
 
   const formatDuration = (seconds: number) => {
