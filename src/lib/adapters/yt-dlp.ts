@@ -136,6 +136,7 @@ export async function fetchMediaInfo(url: string): Promise<YtDlpInfo> {
     }
 
     const stderr = error.stderr || error.message || '';
+    console.error('[yt-dlp error]', stderr);
 
     if (stderr.includes('Private video') || stderr.includes('is private')) {
       throw new AdapterError('This content is private', 'PRIVATE_CONTENT');
