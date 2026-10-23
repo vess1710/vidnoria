@@ -51,13 +51,25 @@ async function main() {
     if (!fs.existsSync(binDir)) {
       fs.mkdirSync(binDir, { recursive: true });
     }
-    if (fs.existsSync(targetPath)) {
+    if (!fs.existsSync(targetPath)) {
+      console.log(`[Vidnoria] Downloading standalone ${binaryName} for ${process.platform}...`);
+      await downloadFile(downloadUrl, targetPath);
+      console.log(`[Vidnoria] Successfully installed ${binaryName} to ./bin`);
+    } else {
       console.log(`[Vidnoria] ${binaryName} already exists in ./bin`);
-      return;
     }
-    console.log(`[Vidnoria] Downloading standalone ${binaryName} for ${process.platform}...`);
-    await downloadFile(downloadUrl, targetPath);
-    console.log(`[Vidnoria] Successfully installed ${binaryName} to ./bin`);
+
+    if (isWin) {
+      const cfPath = path.join(binDir, 'cloudflared.exe');
+      if (!fs.existsSync(cfPath)) {
+        console.log('[Vidnoria] Downloading standalone cloudflared.exe for Windows...');
+        await downloadFile(
+          'https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.exe',
+          cfPath
+        );
+        console.log('[Vidnoria] Successfully installed cloudflared.exe to ./bin');
+      }
+    }
   } catch (err) {
     console.warn(`[Vidnoria] Warning: Could not auto-download yt-dlp (${err.message})`);
   }

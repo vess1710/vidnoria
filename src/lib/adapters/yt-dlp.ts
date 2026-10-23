@@ -118,6 +118,7 @@ export async function fetchMediaInfo(url: string): Promise<YtDlpInfo> {
     const { stdout } = await execFileAsync(ytdlpBin, [
       '--dump-json',
       '--js-runtimes', 'node',
+      '--extractor-args', 'youtube:player_client=default,mweb,tv,ios',
       '--no-playlist',
       '--no-check-certificates',
       sanitized,
@@ -129,6 +130,32 @@ export async function fetchMediaInfo(url: string): Promise<YtDlpInfo> {
     const info: YtDlpInfo = JSON.parse(stdout);
     return info;
   } catch (err: unknown) {
+    // If datacenter IP is blocked by YouTube bot-check, fallback to public OEmbed metadata
+    try {
+      const oembedRes = await fetch(`https://noembed.com/embed?url=${encodeURIComponent(sanitized)}`);
+      if (oembedRes.ok) {
+        const oembed = await oembedRes.json();
+        if (oembed && oembed.title) {
+          const ytIdMatch = sanitized.match(/(?:v=|youtu\.be\/|\/shorts\/)([\w-]{11})/);
+          const id = ytIdMatch ? ytIdMatch[1] : crypto.randomUUID().slice(0, 11);
+          return {
+            id,
+            title: oembed.title,
+            thumbnail: oembed.thumbnail_url || (ytIdMatch ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : ''),
+            duration: 0,
+            uploader: oembed.author_name || '',
+            webpage_url: sanitized,
+            formats: [
+              { format_id: '137', ext: 'mp4', height: 1080, vcodec: 'avc1' },
+              { format_id: '22', ext: 'mp4', height: 720, vcodec: 'avc1' },
+              { format_id: '18', ext: 'mp4', height: 360, vcodec: 'avc1' },
+            ],
+          };
+        }
+      }
+    } catch {
+      // Proceed to standard error mapping
+    }
     const error = err as { killed?: boolean; code?: string; stderr?: string; message?: string };
 
     if (error.killed) {
@@ -190,6 +217,7 @@ export async function downloadMedia(
   try {
     const args = [
       '--js-runtimes', 'node',
+      '--extractor-args', 'youtube:player_client=default,mweb,tv,ios',
       '--no-playlist',
       '--no-check-certificates',
       '--ffmpeg-location', ffmpegBin,

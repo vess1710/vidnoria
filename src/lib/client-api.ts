@@ -215,7 +215,16 @@ export async function analyzeUrlClient(targetUrl: string): Promise<{ success: bo
 
     const contentType = res.headers.get('content-type') || '';
     if (contentType.includes('application/json')) {
-      return await res.json();
+      const json = await res.json();
+      if (json.success && json.data) {
+        return json;
+      }
+      // If datacenter backend returned a bot-block / processing error, fall back to browser OEmbed analyzer
+      if (json.error?.code !== 'INVALID_URL' && json.error?.code !== 'UNSUPPORTED_PLATFORM') {
+        const fallback = await fallbackBrowserAnalyze(targetUrl);
+        if (fallback.success) return fallback;
+      }
+      return json;
     }
   } catch {
     // Fallback to browser OEmbed analyzer
