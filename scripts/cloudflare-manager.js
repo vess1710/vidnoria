@@ -10,6 +10,7 @@
 
 const { spawn, execSync } = require('child_process');
 const fs = require('fs');
+const net = require('net');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
@@ -51,25 +52,48 @@ async function checkUrlHealth(url, timeoutMs = 6000) {
   }
 }
 
+function isPortOpen(port, host = '127.0.0.1', timeoutMs = 2000) {
+  return new Promise((resolve) => {
+    const socket = new net.Socket();
+    let settled = false;
+    const done = (result) => {
+      if (!settled) {
+        settled = true;
+        socket.destroy();
+        resolve(result);
+      }
+    };
+    socket.setTimeout(timeoutMs);
+    socket.once('connect', () => done(true));
+    socket.once('timeout', () => done(false));
+    socket.once('error', () => done(false));
+    socket.connect(port, host);
+  });
+}
+
 async function ensureNextServer() {
-  const healthy = await checkUrlHealth('http://localhost:3000', 3000);
+  if (await isPortOpen(3000)) {
+    return true;
+  }
+
+  const healthy = await checkUrlHealth('http://localhost:3000', 8000);
   if (healthy) {
     return true;
   }
 
   if (nextProcess) {
     try {
+      nextProcess.removeAllListeners();
       nextProcess.kill();
     } catch {}
     nextProcess = null;
   }
 
   log('Yerel medya sunucusu (localhost:3000) başlatılıyor...');
-  const npmCmd = process.platform === 'win32' ? 'npm.cmd' : 'npm';
-  nextProcess = spawn(npmCmd, ['run', 'dev'], {
+  const nextBin = path.join(ROOT, 'node_modules', 'next', 'dist', 'bin', 'next');
+  nextProcess = spawn(process.execPath, [nextBin, 'dev'], {
     cwd: ROOT,
     stdio: 'ignore',
-    shell: true,
     windowsHide: true,
   });
 
@@ -78,10 +102,11 @@ async function ensureNextServer() {
     nextProcess = null;
   });
 
-  // Wait up to 20 seconds for localhost:3000 to respond
-  for (let i = 0; i < 20; i++) {
+  // Wait up to 30 seconds for localhost:3000 to open port and respond
+  for (let i = 0; i < 30; i++) {
     await new Promise((r) => setTimeout(r, 1000));
-    if (await checkUrlHealth('http://localhost:3000', 2000)) {
+    if (await isPortOpen(3000)) {
+      await checkUrlHealth('http://localhost:3000', 10000);
       log('Yerel medya sunucusu (yt-dlp + FFmpeg) hazır: http://localhost:3000');
       return true;
     }
@@ -131,6 +156,7 @@ function syncTunnelUrlToGitHub(newUrl) {
 function startCloudflareTunnel() {
   if (tunnelProcess) {
     try {
+      tunnelProcess.removeAllListeners();
       tunnelProcess.kill();
     } catch {}
     tunnelProcess = null;
@@ -221,13 +247,13 @@ async function startWatchdog() {
       return;
     }
 
-    const tunnelOk = await checkUrlHealth(currentTunnelUrl, 6000);
+    const tunnelOk = await checkUrlHealth(currentTunnelUrl, 15000);
     if (tunnelOk) {
       failedHealthChecks = 0;
     } else {
       failedHealthChecks++;
-      log(`Tünel sağlık kontrolü başarısız (${failedHealthChecks}/2): ${currentTunnelUrl}`);
-      if (failedHealthChecks >= 2) {
+      log(`Tünel sağlık kontrolü başarısız (${failedHealthChecks}/3): ${currentTunnelUrl}`);
+      if (failedHealthChecks >= 3) {
         log('Tünel bağlantısı yenileniyor...');
         failedHealthChecks = 0;
         startCloudflareTunnel();
