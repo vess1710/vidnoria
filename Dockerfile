@@ -2,13 +2,14 @@
 # Includes Node.js 20, Next.js standalone build, FFmpeg, and yt-dlp
 
 # --- Stage 1: Dependencies ---
-FROM node:20-bullseye-slim AS deps
+FROM node:22-bookworm-slim AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
+COPY scripts ./scripts
 RUN npm ci
 
 # --- Stage 2: Builder ---
-FROM node:20-bullseye-slim AS builder
+FROM node:22-bookworm-slim AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
@@ -17,7 +18,7 @@ ENV NODE_ENV=production
 RUN npm run build
 
 # --- Stage 3: Runner ---
-FROM node:20-bullseye-slim AS runner
+FROM node:22-bookworm-slim AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
@@ -59,3 +60,4 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
   CMD curl -f http://localhost:3000/api/health || exit 1
 
 CMD ["node", "server.js"]
+
