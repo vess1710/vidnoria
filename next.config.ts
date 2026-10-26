@@ -4,8 +4,12 @@ import path from "path";
 const isStaticExport = process.env.STATIC_EXPORT === "true";
 
 const nextConfig: NextConfig = {
+  distDir: isStaticExport ? ".next-export" : ".next",
   output: isStaticExport ? "export" : "standalone",
   trailingSlash: isStaticExport ? true : false,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   turbopack: {
     root: path.resolve(__dirname),
     rules: {

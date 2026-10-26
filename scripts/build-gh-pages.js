@@ -32,13 +32,70 @@ try {
   movedApi = moveIfExists(apiDir, tmpApiDir);
   movedProxy = moveIfExists(proxyFile, tmpProxyFile);
 
-  // Clean .next before static export
-  const nextDir = path.join(rootDir, '.next');
-  if (fs.existsSync(nextDir)) {
-    fs.rmSync(nextDir, { recursive: true, force: true });
-  }
+  const outDir = path.join(rootDir, 'out');
 
-  execSync('npx next build', {
+  // Pre-create out directory and all known route directories to prevent Windows EPERM race condition
+  fs.mkdirSync(outDir, { recursive: true });
+  const locales = ['tr', 'en', 'ar'];
+  const baseRoutes = [
+    'audio-cutter',
+    'video-converter',
+    'image-converter',
+    'contact',
+    'cookies',
+    'copyright',
+    'disclaimer',
+    'download',
+    'faq',
+    'privacy',
+    'terms',
+    'blog',
+    'blog/copyright-and-legal-downloads',
+    'blog/how-to-download-tiktok-videos-without-watermark',
+    'blog/instagram-video-download-guide',
+    'blog/save-instagram-reels-with-audio-guide',
+    'blog/youtube-video-download-guide',
+  ];
+  const platforms = [
+    'youtube-video-downloader',
+    'instagram-video-downloader',
+    'tiktok-video-downloader',
+    'facebook-video-downloader',
+    'twitter-video-downloader',
+    'pinterest-video-downloader',
+    'reddit-video-downloader',
+    'threads-video-downloader',
+    'capcut-video-downloader',
+    'snapchat-video-downloader',
+    'youtube-video-indir',
+    'youtube-mp3-indir',
+    'youtube-shorts-indir',
+    'instagram-video-indir',
+    'instagram-reels-indir',
+    'tiktok-video-indir',
+    'facebook-video-indir',
+    'twitter-video-indir',
+    'pinterest-video-indir',
+    'reddit-video-indir',
+    'threads-video-indir',
+    'capcut-video-indir',
+    'snapchat-video-indir',
+  ];
+
+  for (const locale of locales) {
+    fs.mkdirSync(path.join(outDir, locale), { recursive: true });
+    for (const r of baseRoutes) {
+      fs.mkdirSync(path.join(outDir, locale, r), { recursive: true });
+    }
+    for (const p of platforms) {
+      fs.mkdirSync(path.join(outDir, locale, p), { recursive: true });
+    }
+  }
+  fs.mkdirSync(path.join(outDir, 'admin'), { recursive: true });
+  fs.mkdirSync(path.join(outDir, 'admin', 'dashboard'), { recursive: true });
+
+  const npxCmd = process.platform === 'win32' ? 'npx.cmd' : 'npx';
+  execSync(`${npxCmd} next build --webpack`, {
     cwd: rootDir,
     stdio: 'inherit',
     env: {
@@ -48,7 +105,6 @@ try {
   });
 
   // Ensure .nojekyll and CNAME exist in out/
-  const outDir = path.join(rootDir, 'out');
   if (fs.existsSync(outDir)) {
     fs.writeFileSync(path.join(outDir, '.nojekyll'), '');
     fs.writeFileSync(path.join(outDir, 'CNAME'), 'vidnoria.com\n');
