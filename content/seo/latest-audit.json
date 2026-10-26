@@ -1,9 +1,9 @@
 {
-  "version": 20,
-  "updatedAt": "2026-10-26T07:33:43.390Z",
+  "version": 22,
+  "updatedAt": "2026-10-26T10:56:07.105Z",
   "data": {
-    "id": "audit_1793000023377",
-    "auditedAt": "2026-10-26T07:33:43.377Z",
+    "id": "audit_1793012167100",
+    "auditedAt": "2026-10-26T10:56:07.100Z",
     "totalPagesChecked": 84,
     "healthScore": 82,
     "counts": {

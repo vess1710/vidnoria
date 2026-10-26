@@ -113,7 +113,7 @@ export default function AdminDashboardPage() {
               },
               ads: {
                 enabled: true,
-                adsensePublisherId: parsed?.ads?.adsensePublisherId || '',
+                adsensePublisherId: parsed?.ads?.adsensePublisherId || 'ca-pub-4211004489667670',
                 slots: defaultSlots,
               },
               platforms: parsed?.platforms || {

@@ -31,7 +31,7 @@
   },
   "ads": {
     "enabled": true,
-    "adsensePublisherId": "",
+    "adsensePublisherId": "ca-pub-4211004489667670",
     "slots": [
       { "id": "left-sidebar-ad", "name": "Sol Dikey Reklam (160×600)", "position": "sidebar", "slotId": "", "format": "vertical", "enabled": true },
       { "id": "right-sidebar-ad", "name": "Sağ Dikey Reklam (160×600)", "position": "sidebar", "slotId": "", "format": "vertical", "enabled": true },

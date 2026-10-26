@@ -24,6 +24,12 @@ export default function RootLayout({
     <html lang="tr" suppressHydrationWarning>
       <head>
         <meta name="google-site-verification" content="PlAR_ihtFqyAIvHZPYltHb-Rueh_Dl6EqJ5b2eV0bZg" />
+        <meta name="google-adsense-account" content="ca-pub-4211004489667670" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4211004489667670"
+          crossOrigin="anonymous"
+        />
         {/* Prevent flash of wrong theme */}
         <script
           dangerouslySetInnerHTML={{
