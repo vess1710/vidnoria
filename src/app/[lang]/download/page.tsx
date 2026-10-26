@@ -10,6 +10,7 @@ import {
 import { MediaInfo, FormatOption, DownloadJob } from '@/types';
 import { Locale, getDirection } from '@/lib/i18n';
 import AdSlot from '@/components/ads/AdSlot';
+import DownloadCountdownModal from '@/components/download/DownloadCountdownModal';
 import { analyzeUrlClient, startDownloadClient, pollJobStatusClient } from '@/lib/client-api';
 
 interface DownloadPageProps {
@@ -30,6 +31,8 @@ export default function DownloadPage({ params }: DownloadPageProps) {
   const [job, setJob] = useState<DownloadJob | null>(null);
   const [processing, setProcessing] = useState(false);
   const [showQr, setShowQr] = useState(false);
+  const [showCountdown, setShowCountdown] = useState(false);
+  const [showMobileQr, setShowMobileQr] = useState(false);
 
   // Translations dictionary loaded dynamically or simple fallback mapping
   const texts = {
@@ -467,13 +470,37 @@ export default function DownloadPage({ params }: DownloadPageProps) {
                 <p className="text-xs text-muted-foreground mb-4">
                   {selectedFormat?.label} ({selectedFormat?.format.toUpperCase()})
                 </p>
-                <a
-                  href={job.downloadUrl}
-                  className="gradient-bg text-white font-bold px-8 py-3.5 rounded-xl inline-flex items-center gap-2 shadow-lg hover:scale-105 transition-transform"
-                >
-                  <Download className="w-5 h-5" />
-                  <span>{texts.downloadNow}</span>
-                </a>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <button
+                    onClick={() => setShowCountdown(true)}
+                    className="w-full sm:w-auto gradient-bg text-white font-bold px-8 py-3.5 rounded-xl inline-flex items-center justify-center gap-2 shadow-lg hover:scale-105 transition-transform"
+                  >
+                    <Download className="w-5 h-5" />
+                    <span>{texts.downloadNow}</span>
+                  </button>
+                  <button
+                    onClick={() => setShowMobileQr(!showMobileQr)}
+                    className="w-full sm:w-auto glass-card border-primary/40 text-primary font-bold px-5 py-3.5 rounded-xl inline-flex items-center justify-center gap-2 hover:bg-primary/10 transition-colors"
+                  >
+                    <QrCode className="w-5 h-5" />
+                    <span>Telefona İndir (QR)</span>
+                  </button>
+                </div>
+
+                {showMobileQr && (
+                  <div className="mt-4 p-4 rounded-xl border border-primary/30 bg-background/90 text-center animate-fade-in max-w-xs mx-auto">
+                    <img
+                      src={`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(
+                        job.downloadUrl.startsWith('http') ? job.downloadUrl : (typeof window !== 'undefined' ? `${window.location.origin}${job.downloadUrl}` : `https://vidnoria.com${job.downloadUrl}`)
+                      )}`}
+                      alt="Download QR Code"
+                      className="w-40 h-40 mx-auto rounded-lg bg-white p-2 mb-2 shadow-md"
+                    />
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      Telefonunuzun kamerasıyla QR kodu taratarak videoyu doğrudan cihazınıza indirin.
+                    </p>
+                  </div>
+                )}
               </div>
             )}
 
@@ -500,6 +527,17 @@ export default function DownloadPage({ params }: DownloadPageProps) {
       <div className="mt-12">
         <AdSlot slotId="download-bottom-ad" format="auto" />
       </div>
+
+      {/* High-CTR Countdown Ad Modal */}
+      {job?.downloadUrl && (
+        <DownloadCountdownModal
+          isOpen={showCountdown}
+          onClose={() => setShowCountdown(false)}
+          downloadUrl={job.downloadUrl}
+          formatLabel={`${selectedFormat?.label || ''} (${selectedFormat?.format.toUpperCase() || 'MP4'})`}
+          lang={lang}
+        />
+      )}
     </div>
   );
 }

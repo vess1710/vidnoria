@@ -46,6 +46,16 @@ const PAGE_PATH_TO_KEY: Record<string, string> = {
   '/facebook-video-indir': 'facebook-video-indir',
   '/twitter-video-downloader': 'twitter-video-downloader',
   '/twitter-video-indir': 'twitter-video-indir',
+  '/pinterest-video-downloader': 'pinterest-video-downloader',
+  '/pinterest-video-indir': 'pinterest-video-downloader',
+  '/reddit-video-downloader': 'reddit-video-downloader',
+  '/reddit-video-indir': 'reddit-video-downloader',
+  '/threads-video-downloader': 'threads-video-downloader',
+  '/threads-video-indir': 'threads-video-downloader',
+  '/capcut-video-downloader': 'capcut-video-downloader',
+  '/capcut-video-indir': 'capcut-video-downloader',
+  '/snapchat-video-downloader': 'snapchat-video-downloader',
+  '/snapchat-video-indir': 'snapchat-video-downloader',
 };
 
 /**

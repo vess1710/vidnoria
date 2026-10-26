@@ -32,6 +32,16 @@ export const INDEXABLE_STATIC_PAGES = [
   '/facebook-video-indir',
   '/twitter-video-downloader',
   '/twitter-video-indir',
+  '/pinterest-video-downloader',
+  '/pinterest-video-indir',
+  '/reddit-video-downloader',
+  '/reddit-video-indir',
+  '/threads-video-downloader',
+  '/threads-video-indir',
+  '/capcut-video-downloader',
+  '/capcut-video-indir',
+  '/snapchat-video-downloader',
+  '/snapchat-video-indir',
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

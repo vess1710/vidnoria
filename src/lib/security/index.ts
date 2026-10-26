@@ -43,6 +43,26 @@ export const PLATFORM_PATTERNS: Record<Platform, RegExp[]> = {
     /^https?:\/\/(www\.|mobile\.)?twitter\.com\/(?:i\/(?:web\/)?|\w+\/)status\/\d+/i,
     /^https?:\/\/(www\.|mobile\.)?x\.com\/(?:i\/(?:web\/)?|\w+\/)status\/\d+/i,
   ],
+  pinterest: [
+    /^https?:\/\/(?:[a-z]{2,3}\.)?pinterest\.(?:com|[a-z]{2}(?:\.[a-z]{2})?)\/pin\/[\w-]+/i,
+    /^https?:\/\/pin\.it\/[\w-]+/i,
+  ],
+  reddit: [
+    /^https?:\/\/(?:www\.|old\.|new\.)?reddit\.com\/r\/[\w.-]+\/comments\/[\w-]+\/?(?:[\w.-]+)?/i,
+    /^https?:\/\/v\.redd\.it\/[\w-]+/i,
+  ],
+  threads: [
+    /^https?:\/\/(?:www\.)?threads\.(?:net|com)\/@[\w.-]+\/post\/[\w-]+/i,
+  ],
+  capcut: [
+    /^https?:\/\/(?:www\.)?capcut\.com\/(?:t|template-detail)\/[\w-]+/i,
+    /^https?:\/\/(?:www\.)?capcut\.net\/(?:t|template-detail)\/[\w-]+/i,
+  ],
+  snapchat: [
+    /^https?:\/\/(?:www\.)?snapchat\.com\/spotlight\/[\w-]+/i,
+    /^https?:\/\/(?:www\.)?snapchat\.com\/add\/[\w.-]+\/spotlight\/[\w-]+/i,
+    /^https?:\/\/t\.snapchat\.com\/[\w-]+/i,
+  ],
 };
 
 // ---------------------------------------------------------------------------

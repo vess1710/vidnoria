@@ -819,6 +819,153 @@
         ]
       },
       "canonicalPath": "/twitter-video-indir"
+    },
+    "pinterest-video-downloader": {
+      "title": {
+        "tr": "Ücretsiz Pinterest Video İndirici (HD / MP4) | Vidnoria",
+        "en": "Free Pinterest Video Downloader (HD / MP4) | Vidnoria",
+        "ar": "تحميل فيديو بنترست مجاناً (HD / MP4) | فيدنوريا"
+      },
+      "description": {
+        "tr": "Pinterest videolarını, hikayelerini ve giflerini programsız, en yüksek kalitede MP4 olarak anında indirin. Ücretsiz Pinterest video indirici.",
+        "en": "Download Pinterest videos, story pins and GIFs in high definition MP4 format for free without any software. Fast online Pinterest downloader.",
+        "ar": "قم بتحميل مقاطع فيديو بنترست والقصص بصيغة MP4 بجودة عالية مجاناً وبسرعة فائقة عبر الإنترنت بدون برامج."
+      },
+      "keywords": {
+        "tr": [
+          "pinterest video indir",
+          "pinterest video indirme",
+          "pinterest mp4 indir",
+          "pinterest indir"
+        ],
+        "en": [
+          "pinterest video downloader",
+          "download pinterest video",
+          "pinterest mp4 downloader"
+        ],
+        "ar": [
+          "تحميل فيديو بنترست",
+          "تنزيل من بنترست"
+        ]
+      },
+      "canonicalPath": "/pinterest-video-downloader"
+    },
+    "reddit-video-downloader": {
+      "title": {
+        "tr": "Ücretsiz Reddit Video ve Ses İndirici (Sesli MP4) | Vidnoria",
+        "en": "Free Reddit Video Downloader with Audio (HD MP4) | Vidnoria",
+        "ar": "تحميل فيديو ريديت مع الصوت (HD MP4) | فيدنوريا"
+      },
+      "description": {
+        "tr": "Reddit videolarını sesli olarak yüksek kalitede MP4 formatında indirin. V.redd.it videolarını birleştirerek tek tıkla cihazınıza kaydedin.",
+        "en": "Download Reddit videos with sound in crystal clear HD MP4 format. Save v.redd.it video clips with audio merged online for free.",
+        "ar": "قم بتحميل فيديوهات ريديت مع الصوت المدمج بجودة عالية MP4 مجاناً وبسرعة بدون برامج."
+      },
+      "keywords": {
+        "tr": [
+          "reddit video indir",
+          "reddit sesli video indir",
+          "v.redd.it indir",
+          "reddit video downloader"
+        ],
+        "en": [
+          "reddit video downloader",
+          "reddit video download with audio",
+          "v.redd.it downloader"
+        ],
+        "ar": [
+          "تحميل فيديو ريديت",
+          "تنزيل فيديو من ريديت"
+        ]
+      },
+      "canonicalPath": "/reddit-video-downloader"
+    },
+    "threads-video-downloader": {
+      "title": {
+        "tr": "Ücretsiz Threads Video İndirici (Instagram Threads) | Vidnoria",
+        "en": "Free Threads Video Downloader (Instagram Threads) | Vidnoria",
+        "ar": "تحميل فيديوهات ثريدز مجاناً (Instagram Threads) | فيدنوريا"
+      },
+      "description": {
+        "tr": "Instagram Threads paylaşımlarındaki videoları en yüksek kalitede, filigransız ve ücretsiz MP4 formatında anında indirin.",
+        "en": "Download videos from Instagram Threads posts in original high quality MP4 format for free without login or software.",
+        "ar": "تنزيل مقاطع الفيديو من منشورات ثريدز بجودة أصلية MP4 مجاناً بدون تسجيل دخول."
+      },
+      "keywords": {
+        "tr": [
+          "threads video indir",
+          "threads video indirme",
+          "instagram threads indir"
+        ],
+        "en": [
+          "threads video downloader",
+          "download threads video",
+          "instagram threads downloader"
+        ],
+        "ar": [
+          "تحميل فيديو ثريدز",
+          "تنزيل مقاطع ثريدز"
+        ]
+      },
+      "canonicalPath": "/threads-video-downloader"
+    },
+    "capcut-video-downloader": {
+      "title": {
+        "tr": "Ücretsiz CapCut Şablon ve Video İndirici (Filigransız) | Vidnoria",
+        "en": "Free CapCut Video & Template Downloader (No Watermark) | Vidnoria",
+        "ar": "تحميل قوالب وفيديوهات كاب كات بدون علامة مائية | فيدنوريا"
+      },
+      "description": {
+        "tr": "CapCut şablon videolarını filigransız ve logosuz olarak yüksek çözünürlükte indirin. TikTok ve Reels için en hızlı CapCut indirici.",
+        "en": "Download CapCut template videos without watermark in crisp Full HD. Fast online downloader for TikTok creators and editors.",
+        "ar": "تحميل مقاطع قوالب كاب كات بدون علامة مائية وبدقة عالية مجاناً لصناع محتوى تيك توك."
+      },
+      "keywords": {
+        "tr": [
+          "capcut video indir",
+          "capcut şablon indir",
+          "capcut filigransız indir"
+        ],
+        "en": [
+          "capcut video downloader",
+          "capcut template download",
+          "capcut no watermark"
+        ],
+        "ar": [
+          "تحميل فيديو كاب كات",
+          "تنزيل قوالب كاب كات"
+        ]
+      },
+      "canonicalPath": "/capcut-video-downloader"
+    },
+    "snapchat-video-downloader": {
+      "title": {
+        "tr": "Ücretsiz Snapchat Spotlight ve Video İndirici | Vidnoria",
+        "en": "Free Snapchat Spotlight Video Downloader (HD MP4) | Vidnoria",
+        "ar": "تحميل فيديوهات سناب شات سبوتلايت مجاناً | فيدنوريا"
+      },
+      "description": {
+        "tr": "Snapchat Spotlight videolarını ve hikayelerini programsız, yüksek kalitede MP4 formatında tek tıkla indirin.",
+        "en": "Download public Snapchat Spotlight videos and stories in HD MP4 format directly to your phone or computer for free.",
+        "ar": "تنزيل مقاطع سناب شات سبوتلايت وقصص سناب شات العامة بجودة عالية MP4 مجاناً."
+      },
+      "keywords": {
+        "tr": [
+          "snapchat video indir",
+          "snapchat spotlight indir",
+          "snapchat hikaye indir"
+        ],
+        "en": [
+          "snapchat video downloader",
+          "snapchat spotlight downloader",
+          "download snapchat video"
+        ],
+        "ar": [
+          "تحميل فيديو سناب شات",
+          "تنزيل سبوتلايت سناب"
+        ]
+      },
+      "canonicalPath": "/snapchat-video-downloader"
     }
   }
 }

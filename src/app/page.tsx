@@ -11,6 +11,8 @@ import SEOContentSection from '@/components/home/SEOContentSection';
 import FAQSection from '@/components/home/FAQSection';
 import AdSlot from '@/components/ads/AdSlot';
 import MobileStickyAd from '@/components/ads/MobileStickyAd';
+import AdBlockDetector from '@/components/ads/AdBlockDetector';
+import PWAInstallPrompt from '@/components/layout/PWAInstallPrompt';
 import CookieConsent from '@/components/layout/CookieConsent';
 
 export const metadata: Metadata = {
@@ -179,6 +181,8 @@ export default async function RootPage() {
 
         <Footer />
         <MobileStickyAd />
+        <AdBlockDetector />
+        <PWAInstallPrompt />
         <CookieConsent />
       </div>
     </I18nProvider>

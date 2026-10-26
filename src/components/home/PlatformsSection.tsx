@@ -12,6 +12,11 @@ const platforms: { id: Platform; icon: string; color: string }[] = [
   { id: 'tiktok', icon: '/images/platforms/tiktok.svg', color: 'from-slate-800/10 to-pink-500/5' },
   { id: 'facebook', icon: '/images/platforms/facebook.svg', color: 'from-blue-600/10 to-blue-700/5' },
   { id: 'twitter', icon: '/images/platforms/twitter.svg', color: 'from-slate-700/10 to-slate-800/5' },
+  { id: 'pinterest', icon: '/images/platforms/pinterest.svg', color: 'from-red-600/10 to-red-700/5' },
+  { id: 'reddit', icon: '/images/platforms/reddit.svg', color: 'from-orange-500/10 to-orange-600/5' },
+  { id: 'threads', icon: '/images/platforms/threads.svg', color: 'from-zinc-700/10 to-zinc-800/5' },
+  { id: 'capcut', icon: '/images/platforms/capcut.svg', color: 'from-cyan-500/10 to-blue-500/5' },
+  { id: 'snapchat', icon: '/images/platforms/snapchat.svg', color: 'from-yellow-400/10 to-amber-500/5' },
 ];
 
 export default function PlatformsSection() {

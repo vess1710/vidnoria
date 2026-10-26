@@ -19,6 +19,11 @@ const VALID_PLATFORMS = [
   'tiktok-video-downloader',
   'facebook-video-downloader',
   'twitter-video-downloader',
+  'pinterest-video-downloader',
+  'reddit-video-downloader',
+  'threads-video-downloader',
+  'capcut-video-downloader',
+  'snapchat-video-downloader',
   // Localized aliases & high-volume SEO landing pages
   'youtube-video-indir',
   'youtube-mp3-indir',
@@ -28,6 +33,11 @@ const VALID_PLATFORMS = [
   'tiktok-video-indir',
   'facebook-video-indir',
   'twitter-video-indir',
+  'pinterest-video-indir',
+  'reddit-video-indir',
+  'threads-video-indir',
+  'capcut-video-indir',
+  'snapchat-video-indir',
 ];
 
 export async function generateStaticParams() {

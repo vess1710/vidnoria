@@ -7,7 +7,17 @@
 // ---------------------------------------------------------------------------
 
 /** Supported download platforms */
-export type Platform = 'youtube' | 'instagram' | 'tiktok' | 'facebook' | 'twitter';
+export type Platform =
+  | 'youtube'
+  | 'instagram'
+  | 'tiktok'
+  | 'facebook'
+  | 'twitter'
+  | 'pinterest'
+  | 'reddit'
+  | 'threads'
+  | 'capcut'
+  | 'snapchat';
 
 /** Configuration for a supported platform */
 export interface PlatformConfig {

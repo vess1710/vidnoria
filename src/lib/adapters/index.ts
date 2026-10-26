@@ -9,6 +9,11 @@ import { InstagramAdapter } from './instagram';
 import { TikTokAdapter } from './tiktok';
 import { FacebookAdapter } from './facebook';
 import { TwitterAdapter } from './twitter';
+import { PinterestAdapter } from './pinterest';
+import { RedditAdapter } from './reddit';
+import { ThreadsAdapter } from './threads';
+import { CapCutAdapter } from './capcut';
+import { SnapchatAdapter } from './snapchat';
 
 /** All registered platform adapters */
 const adapters: PlatformAdapter[] = [
@@ -17,6 +22,11 @@ const adapters: PlatformAdapter[] = [
   new TikTokAdapter(),
   new FacebookAdapter(),
   new TwitterAdapter(),
+  new PinterestAdapter(),
+  new RedditAdapter(),
+  new ThreadsAdapter(),
+  new CapCutAdapter(),
+  new SnapchatAdapter(),
 ];
 
 /**

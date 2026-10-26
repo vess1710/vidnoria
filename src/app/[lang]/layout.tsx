@@ -9,6 +9,8 @@ import HtmlDirSync from '@/components/layout/HtmlDirSync';
 import CookieConsent from '@/components/layout/CookieConsent';
 import AdSlot from '@/components/ads/AdSlot';
 import MobileStickyAd from '@/components/ads/MobileStickyAd';
+import AdBlockDetector from '@/components/ads/AdBlockDetector';
+import PWAInstallPrompt from '@/components/layout/PWAInstallPrompt';
 
 interface LangLayoutProps {
   children: React.ReactNode;
@@ -199,6 +201,8 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
 
         <Footer />
         <MobileStickyAd />
+        <AdBlockDetector />
+        <PWAInstallPrompt />
         <CookieConsent />
       </div>
     </I18nProvider>
