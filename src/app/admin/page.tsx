@@ -1,15 +1,30 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { Lock, ArrowRight, AlertCircle, Loader2 } from 'lucide-react';
+import { Lock, ArrowRight, AlertCircle, Loader2, Server, ExternalLink } from 'lucide-react';
+import { getApiBaseUrl } from '@/lib/client-api';
 
 export default function AdminLoginPage() {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [tunnelUrl, setTunnelUrl] = useState<string | null>(null);
   const router = useRouter();
+
+  const isStaticHosting = typeof window !== 'undefined' && (
+    window.location.hostname.endsWith('vidnoria.com') ||
+    window.location.hostname.endsWith('github.io')
+  );
+
+  useEffect(() => {
+    getApiBaseUrl().then((url) => {
+      if (url && url !== '') {
+        setTunnelUrl(url.replace(/\/+$/, ''));
+      }
+    }).catch(() => {});
+  }, []);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,8 +57,11 @@ export default function AdminLoginPage() {
       // Admin API unreachable (e.g. static hosting)
     }
 
-    // No client-side password fallback: authentication is only possible against the server API.
-    setError('Yönetim sunucusuna ulaşılamadı. Yönetim paneli yalnızca Node.js sunucusunda çalışır.');
+    if (tunnelUrl) {
+      setError(`Vidnoria ana sitesi statik CDN (GitHub Pages) üzerindedir. Yönetim paneline giriş yapmak için lütfen aşağıdaki aktif Node.js sunucusunu kullanın.`);
+    } else {
+      setError('Yönetim sunucusuna ulaşılamadı. Yönetim paneli yalnızca Node.js sunucusunda çalışır.');
+    }
     setLoading(false);
     return;
   };
@@ -76,10 +94,40 @@ export default function AdminLoginPage() {
           </p>
         </div>
 
+        {isStaticHosting && tunnelUrl && (
+          <div className="mb-6 p-4 rounded-xl bg-primary/10 border border-primary/20 text-xs text-foreground space-y-2">
+            <p className="font-semibold text-primary flex items-center gap-1.5">
+              <Server className="w-4 h-4 shrink-0" />
+              Aktif Node.js Yönetim Sunucusu Tespit Edildi
+            </p>
+            <p className="text-muted-foreground text-[11px] leading-relaxed">
+              Vidnoria web arayüzü statik CDN üzerinde yayınlandığından, oturum güvenliği gereği yönetim paneli ve SEO Manager aktif Node.js sunucunuz üzerinden çalışmaktadır:
+            </p>
+            <a
+              href={`${tunnelUrl}/admin`}
+              className="mt-2 w-full gradient-bg text-white font-semibold py-2.5 px-4 rounded-lg flex items-center justify-center gap-2 hover:opacity-95 transition-all text-xs"
+            >
+              <span>Aktif Yönetim Paneline Git</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        )}
+
         {error && (
-          <div className="flex items-center gap-2 p-3 bg-destructive/10 border border-destructive/20 rounded-xl text-destructive text-sm mb-6 animate-slide-up">
-            <AlertCircle className="w-4 h-4 shrink-0" />
-            <span>{error}</span>
+          <div className="p-3.5 bg-destructive/10 border border-destructive/20 rounded-xl text-destructive text-xs mb-6 animate-slide-up space-y-2">
+            <div className="flex items-center gap-2 font-medium">
+              <AlertCircle className="w-4 h-4 shrink-0" />
+              <span>{error}</span>
+            </div>
+            {tunnelUrl && (
+              <a
+                href={`${tunnelUrl}/admin`}
+                className="inline-flex items-center gap-1 text-primary font-bold hover:underline text-[11px]"
+              >
+                <span>{tunnelUrl}/admin adresine git</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            )}
           </div>
         )}
 
