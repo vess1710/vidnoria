@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Locale, locales } from '@/lib/i18n';
 import { readJSON, contentPath } from '@/lib/storage';
+import { buildPageMetadata, SeoPagesFile } from '@/lib/seo/metadata';
 import HeroSection from '@/components/home/HeroSection';
 import HowItWorksSection from '@/components/home/HowItWorksSection';
 import FeaturesSection from '@/components/home/FeaturesSection';
@@ -51,17 +52,10 @@ function normalizeSlug(slug: string): string {
 export async function generateMetadata({ params }: PlatformPageProps): Promise<Metadata> {
   const { lang, platform } = await params;
   const normalized = normalizeSlug(platform);
-  const seoData = await readJSON<any>(contentPath('seo', 'pages.json'));
-  const page = seoData?.pages?.[normalized];
+  const seoData = await readJSON<SeoPagesFile>(contentPath('seo', 'pages.json'));
+  const key = seoData?.pages?.[platform] ? platform : normalized;
 
-  if (!page) return {};
-
-  const locale = lang as Locale;
-  return {
-    title: page.title?.[locale] || page.title?.['en'],
-    description: page.description?.[locale] || page.description?.['en'],
-    keywords: page.keywords?.[locale] || page.keywords?.['en'],
-  };
+  return buildPageMetadata(lang as Locale, key, `/${platform}`);
 }
 
 export default async function PlatformSEOPage({ params }: PlatformPageProps) {
@@ -75,8 +69,8 @@ export default async function PlatformSEOPage({ params }: PlatformPageProps) {
   const locale = lang as Locale;
   const isRtl = locale === 'ar';
 
-  const seoData = await readJSON<any>(contentPath('seo', 'pages.json'));
-  const page = seoData?.pages?.[normalized];
+  const seoData = await readJSON<SeoPagesFile>(contentPath('seo', 'pages.json'));
+  const page = seoData?.pages?.[platform] || seoData?.pages?.[normalized];
 
   const title = page?.title?.[locale] || page?.title?.['en'] || platform;
   const description = page?.description?.[locale] || page?.description?.['en'] || '';

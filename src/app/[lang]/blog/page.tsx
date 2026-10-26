@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Calendar, Clock, BookOpen, ArrowRight } from 'lucide-react';
 import { Locale, getTranslations, createTranslator } from '@/lib/i18n';
 import { getAllBlogPosts } from '@/lib/blog';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import AdSlot from '@/components/ads/AdSlot';
 
 interface BlogPageProps {
@@ -16,10 +17,10 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
   const dict = await getTranslations(locale);
   const t = createTranslator(dict);
 
-  return {
+  return buildPageMetadata(locale, 'blog', '/blog', {
     title: t('seo.blogTitle'),
     description: t('seo.blogDescription'),
-  };
+  });
 }
 
 export default async function BlogIndexPage({ params }: BlogPageProps) {

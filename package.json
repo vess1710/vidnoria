@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
+    "test": "node scripts/run-tests.js",
+    "test:seo": "node scripts/run-tests.js tests/seo.test.ts",
     "postinstall": "node scripts/ensure-ytdlp.js"
   },
   "dependencies": {

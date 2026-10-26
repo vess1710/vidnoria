@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, BookOpen } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import { Locale, locales, getTranslations, createTranslator } from '@/lib/i18n';
 import { getBlogPostBySlug, getAllBlogPosts } from '@/lib/blog';
+import { buildLocalizedAlternates } from '@/lib/seo/metadata';
 import AdSlot from '@/components/ads/AdSlot';
 import { marked } from 'marked';
 import sanitizeHtml from 'sanitize-html';
@@ -21,12 +22,33 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
   const { lang, slug } = await params;
-  const post = await getBlogPostBySlug(slug, lang as Locale);
+  const locale = lang as Locale;
+  const post = await getBlogPostBySlug(slug, locale);
   if (!post) return {};
 
+  const title = post.seoTitle || post.title;
+  const description = post.seoDescription || post.description;
+  const alternates = buildLocalizedAlternates(locale, `/blog/${slug}`);
+
   return {
-    title: post.seoTitle || post.title,
-    description: post.seoDescription || post.description,
+    title,
+    description,
+    keywords: post.tags,
+    alternates,
+    openGraph: {
+      title,
+      description,
+      url: alternates.canonical,
+      siteName: 'Vidnoria',
+      locale: locale === 'ar' ? 'ar_SA' : locale === 'tr' ? 'tr_TR' : 'en_US',
+      type: 'article',
+      publishedTime: post.publishedAt,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
   };
 }
 

@@ -16,7 +16,61 @@
         "en": ["video downloader", "online video downloader", "free video downloader", "MP3 converter", "download videos", "music downloader", "MP4 downloader", "audio extractor", "free download"],
         "ar": ["تحميل فيديو", "تحميل فيديوهات", "تحميل MP3", "تحميل مجاني", "تحميل فيديو مجاني", "تحميل موسيقى", "محول فيديو", "تحميل MP4", "تحميل صوت"]
       },
-      "canonicalPath": "/"
+      "canonicalPath": ""
+    },
+    "video-converter": {
+      "title": {
+        "tr": "Ücretsiz Online Video ve Ses Dönüştürücü (MP4, MP3, WebM, MOV) | Vidnoria",
+        "en": "Free Online Video & Audio Converter (MP4, MP3, WebM, MOV) | Vidnoria",
+        "ar": "محول الفيديو والصوت المجاني عبر الإنترنت (MP4, MP3, WebM, MOV) | فيدنوريا"
+      },
+      "description": {
+        "tr": "Videolarınızı programsız olarak MP3, M4A, MP4, WebM ve MOV formatlarına hızla dönüştürün. Ücretsiz, yüksek kaliteli FFmpeg tabanlı online video dönüştürücü.",
+        "en": "Convert your video files into MP3, M4A, MP4, WebM, and MOV formats online without software. Free, high-quality FFmpeg-powered video and audio converter.",
+        "ar": "قم بتحويل ملفات الفيديو إلى صيغ MP3 و M4A و MP4 و WebM و MOV عبر الإنترنت بدون برامج. محول فيديو وصوت مجاني عالي الجودة."
+      },
+      "keywords": {
+        "tr": ["video dönüştürücü", "video mp3 dönüştürücü", "mp4 mp3 çevirici", "online format dönüştürücü", "ücretsiz video çevirici"],
+        "en": ["video converter", "video to mp3 converter", "mp4 to mp3", "online format converter", "free video converter"],
+        "ar": ["محول الفيديو", "تحويل الفيديو إلى MP3", "تحويل MP4 إلى MP3", "محول صيغ الفيديو مجانا"]
+      },
+      "canonicalPath": "/video-converter"
+    },
+    "image-converter": {
+      "title": {
+        "tr": "Ücretsiz Resim Format Dönüştürücü (JPG, PNG, WebP) | Vidnoria",
+        "en": "Free Online Image Format Converter (JPG, PNG, WebP) | Vidnoria",
+        "ar": "محول صيغ الصور المجاني عبر الإنترنت (JPG, PNG, WebP) | فيدنوريا"
+      },
+      "description": {
+        "tr": "Görsellerinizi kalite kaybı olmadan JPG, PNG ve WebP formatları arasında anında dönüştürün. Tarayıcı tabanlı, güvenli ve ücretsiz resim uzantı değiştirici.",
+        "en": "Convert images between JPG, PNG, and WebP formats instantly without losing quality. Fast, private, browser-based free online image converter.",
+        "ar": "حول الصور بين صيغ JPG و PNG و WebP فوراً بدون فقدان الجودة. محول صور مجاني وسريع وآمن يعمل مباشرة في المتصفح."
+      },
+      "keywords": {
+        "tr": ["resim dönüştürücü", "webp jpg çevirici", "png jpg dönüştürücü", "fotoğraf uzantı değiştirme"],
+        "en": ["image converter", "webp to jpg", "png to jpg converter", "online image format converter"],
+        "ar": ["محول الصور", "تحويل WebP إلى JPG", "تحويل PNG إلى JPG", "تغيير صيغة الصور"]
+      },
+      "canonicalPath": "/image-converter"
+    },
+    "audio-cutter": {
+      "title": {
+        "tr": "Online Ses Kesici ve Zil Sesi Yapıcı (MP3 Kırpma) | Vidnoria",
+        "en": "Online Audio Cutter & Ringtone Maker (MP3 Trimmer) | Vidnoria",
+        "ar": "قاطع الصوت وصانع النغمات عبر الإنترنت (قص MP3) | فيدنوريا"
+      },
+      "description": {
+        "tr": "MP3, WAV ve M4A ses dosyalarınızı saniyesi saniyesine kesin, kırpın ve zil sesi hazırlayın. Ücretsiz, hızlı ve programsız online ses kesme aracı.",
+        "en": "Trim and cut MP3, WAV, and M4A audio tracks with millisecond precision online. Create custom ringtones for free with no software required.",
+        "ar": "قم بقص وتقطيع ملفات الصوت MP3 و WAV و M4A بدقة عالية عبر الإنترنت. اصنع نغمات رنين مخصصة مجاناً بدون برامج."
+      },
+      "keywords": {
+        "tr": ["ses kesici", "mp3 kesici", "online şarkı kesme", "zil sesi yapma", "ses kırpma aracı"],
+        "en": ["audio cutter", "mp3 cutter", "online song trimmer", "ringtone maker", "cut audio online"],
+        "ar": ["قص الصوت", "قاطع MP3", "قص الأغاني أونلاين", "صانع نغمات الرنين"]
+      },
+      "canonicalPath": "/audio-cutter"
     },
     "blog": {
       "title": {
@@ -56,19 +110,19 @@
     },
     "contact": {
       "title": {
-        "tr": "İletişim | Vidnoria",
-        "en": "Contact Us | Vidnoria",
-        "ar": "اتصل بنا | فيدنوريا"
+        "tr": "İletişim ve DMCA Destek | Vidnoria",
+        "en": "Contact Us & DMCA Support | Vidnoria",
+        "ar": "اتصل بنا ودعم حقوق النشر DMCA | فيدنوريا"
       },
       "description": {
-        "tr": "Vidnoria ile iletişime geçin. Sorularınız, önerileriniz veya geri bildirimleriniz için bize ulaşın.",
-        "en": "Get in touch with Vidnoria. Reach out for your questions, suggestions or feedback.",
-        "ar": "تواصل مع فيدنوريا. تواصل معنا لأسئلتك أو اقتراحاتك أو ملاحظاتك."
+        "tr": "Vidnoria ile iletişime geçin. Sorularınız, önerileriniz, teknik destek veya DMCA telif hakkı bildirimleriniz için bize ulaşın.",
+        "en": "Get in touch with Vidnoria. Reach out for your questions, suggestions, technical support, or DMCA copyright inquiries.",
+        "ar": "تواصل مع فيدنوريا. تواصل معنا لأسئلتك أو اقتراحاتك أو الدعم الفني أو إشعارات حقوق النشر DMCA."
       },
       "keywords": {
-        "tr": ["Vidnoria iletişim", "video indirme destek", "iletişim formu"],
-        "en": ["Vidnoria contact", "video downloader support", "contact form"],
-        "ar": ["اتصل بفيدنوريا", "دعم تحميل الفيديو", "نموذج الاتصال"]
+        "tr": ["Vidnoria iletişim", "video indirme destek", "iletişim formu", "DMCA bildirim"],
+        "en": ["Vidnoria contact", "video downloader support", "contact form", "DMCA takedown"],
+        "ar": ["اتصل بفيدنوريا", "دعم تحميل الفيديو", "نموذج الاتصال", "حقوق النشر"]
       },
       "canonicalPath": "/contact"
     },
@@ -110,9 +164,9 @@
     },
     "copyright": {
       "title": {
-        "tr": "Telif Hakkı Politikası | Vidnoria",
-        "en": "Copyright Policy | Vidnoria",
-        "ar": "سياسة حقوق النشر | فيدنوريا"
+        "tr": "Telif Hakkı Politikası ve DMCA | Vidnoria",
+        "en": "Copyright Policy & DMCA | Vidnoria",
+        "ar": "سياسة حقوق النشر و DMCA | فيدنوريا"
       },
       "description": {
         "tr": "Vidnoria telif hakkı politikası. Telif hakları, DMCA talepleri ve içerik kaldırma prosedürleri hakkında bilgi.",
@@ -128,14 +182,14 @@
     },
     "disclaimer": {
       "title": {
-        "tr": "Sorumluluk Reddi | Vidnoria",
-        "en": "Disclaimer | Vidnoria",
-        "ar": "إخلاء المسؤولية | فيدنوريا"
+        "tr": "Yasal Uyarı ve Sorumluluk Reddi | Vidnoria",
+        "en": "Legal Disclaimer | Vidnoria",
+        "ar": "إخلاء المسؤولية القانونية | فيدنوريا"
       },
       "description": {
-        "tr": "Vidnoria sorumluluk reddi beyanı. Hizmetimizin kullanımı ile ilgili önemli bilgiler.",
-        "en": "Vidnoria disclaimer statement. Important information regarding the use of our service.",
-        "ar": "بيان إخلاء مسؤولية فيدنوريا. معلومات مهمة بخصوص استخدام خدمتنا."
+        "tr": "Vidnoria sorumluluk reddi beyanı. Hizmetimizin kullanımı ve yasal sorumluluk sınırları ile ilgili önemli bilgiler.",
+        "en": "Vidnoria disclaimer statement. Important legal information regarding the use of our media tools and services.",
+        "ar": "بيان إخلاء مسؤولية فيدنوريا. معلومات قانونية مهمة بخصوص استخدام خدمتنا وأدوات الوسائط."
       },
       "keywords": {
         "tr": ["sorumluluk reddi", "yasal uyarı", "hukuki bildirim"],
@@ -151,8 +205,8 @@
         "ar": "سياسة ملفات تعريف الارتباط | فيدنوريا"
       },
       "description": {
-        "tr": "Vidnoria çerez politikası. Web sitemizde çerezleri nasıl kullandığımız hakkında bilgi edinin.",
-        "en": "Vidnoria cookie policy. Learn how we use cookies on our website.",
+        "tr": "Vidnoria çerez politikası. Web sitemizde çerezleri nasıl kullandığımız ve tercihlerinizi nasıl yönetebileceğiniz hakkında bilgi edinin.",
+        "en": "Vidnoria cookie policy. Learn how we use cookies on our website and how you can manage your preferences.",
         "ar": "سياسة ملفات تعريف الارتباط في فيدنوريا. تعرف على كيفية استخدامنا لملفات تعريف الارتباط على موقعنا."
       },
       "keywords": {
@@ -164,93 +218,237 @@
     },
     "youtube-video-downloader": {
       "title": {
-        "tr": "YouTube Video İndirici - Ücretsiz YouTube Video İndir | Vidnoria",
-        "en": "YouTube Video Downloader - Free YouTube Video Download | Vidnoria",
-        "ar": "تحميل فيديو يوتيوب - تحميل فيديو يوتيوب مجاني | فيدنوريا"
+        "tr": "YouTube Video İndirici - 1080p, 4K MP4 ve MP3 İndir | Vidnoria",
+        "en": "YouTube Video Downloader - Free HD, 1080p, 4K MP4 & MP3 | Vidnoria",
+        "ar": "تحميل فيديو من يوتيوب - تنزيل بجودة HD و 4K MP4 و MP3 مجاناً | فيدنوريا"
       },
       "description": {
-        "tr": "YouTube video indirme aracı ile YouTube videolarını MP4, MP3, WebM formatlarında indirin. HD, Full HD ve 4K kalitede ücretsiz ve hızlı YouTube video indirici.",
-        "en": "Download YouTube videos in MP4, MP3, WebM formats with our YouTube video downloader. Free and fast YouTube video downloader in HD, Full HD and 4K quality.",
-        "ar": "قم بتحميل فيديوهات يوتيوب بصيغ MP4 و MP3 و WebM مع أداة تحميل فيديو يوتيوب. أداة تحميل فيديو يوتيوب مجانية وسريعة بجودة HD و Full HD و 4K."
+        "tr": "YouTube video indirme aracı ile YouTube videolarını MP4, MP3 ve M4A formatlarında indirin. HD, Full HD 1080p ve 4K kalitede ücretsiz ve hızlı YouTube indirici.",
+        "en": "Download YouTube videos in MP4, MP3, and M4A formats with our YouTube video downloader. Free and fast YouTube downloader in HD, Full HD 1080p, and 4K quality.",
+        "ar": "قم بتحميل فيديوهات يوتيوب بصيغ MP4 و MP3 و M4A مع أداة تحميل فيديو يوتيوب. أداة تحميل مجانية وسريعة بجودة HD و Full HD و 4K."
       },
       "keywords": {
-        "tr": ["YouTube video indir", "YouTube MP3 indir", "YouTube video indirici", "YouTube indir", "YouTube video dönüştürücü", "YouTube MP4 indir", "YouTube HD video indir", "YouTube 4K video indir"],
-        "en": ["YouTube video downloader", "YouTube to MP3", "download YouTube video", "YouTube downloader", "YouTube converter", "YouTube to MP4", "YouTube HD download", "YouTube 4K download"],
-        "ar": ["تحميل فيديو يوتيوب", "تحميل يوتيوب MP3", "تحميل فيديوهات يوتيوب", "تحميل من يوتيوب", "محول يوتيوب", "تحميل يوتيوب MP4", "تحميل يوتيوب HD", "تحميل يوتيوب 4K"]
+        "tr": ["YouTube video indir", "YouTube MP3 indir", "YouTube video indirici", "YouTube MP4 indir", "YouTube HD video indir", "YouTube 4K video indir"],
+        "en": ["YouTube video downloader", "YouTube to MP3", "download YouTube video", "YouTube to MP4", "YouTube HD download", "YouTube 4K download"],
+        "ar": ["تحميل فيديو من يوتيوب", "تحميل يوتيوب MP3", "تحميل فيديوهات يوتيوب", "تحميل يوتيوب MP4", "تحميل يوتيوب 4K"]
       },
       "canonicalPath": "/youtube-video-downloader"
+    },
+    "youtube-video-indir": {
+      "title": {
+        "tr": "YouTube Video İndir - Programsız Ücretsiz MP4 Video İndirme | Vidnoria",
+        "en": "Download YouTube Videos Online - Fast & Free MP4 Saver | Vidnoria",
+        "ar": "تنزيل فيديو يوتيوب أونلاين - حفظ MP4 مجاناً بدون برامج | فيدنوريا"
+      },
+      "description": {
+        "tr": "Programsız YouTube video indir! Mobil ve bilgisayardan tek tıkla 1080p Full HD, 720p ve 4K YouTube videolarını MP4 olarak cihazınıza kaydedin.",
+        "en": "Save YouTube videos directly to your phone or PC without software. Fast 1080p Full HD, 720p, and 4K MP4 online YouTube video saver.",
+        "ar": "احفظ مقاطع يوتيوب مباشرة على هاتفك أو حاسوبك بدون برامج. تنزيل سريع بجودة 1080p و 720p و 4K بصيغة MP4."
+      },
+      "keywords": {
+        "tr": ["YouTube video indir", "programsız YouTube video indir", "telefona YouTube video indirme", "ücretsiz YouTube MP4 indir"],
+        "en": ["download YouTube videos", "save YouTube MP4", "YouTube video saver online"],
+        "ar": ["تنزيل فيديو يوتيوب", "حفظ فيديو يوتيوب MP4", "تحميل يوتيوب للهاتف"]
+      },
+      "canonicalPath": "/youtube-video-indir"
+    },
+    "youtube-mp3-indir": {
+      "title": {
+        "tr": "YouTube MP3 Dönüştürücü - 320kbps Yüksek Kalite Müzik İndir | Vidnoria",
+        "en": "YouTube to MP3 Converter - Free 320kbps High Quality Audio | Vidnoria",
+        "ar": "تحويل الفيديو إلى MP3 من يوتيوب - تحميل صوت بجودة 320kbps | فيدنوريا"
+      },
+      "description": {
+        "tr": "YouTube videolarını saniyeler içinde 320kbps ve 192kbps MP3 veya M4A ses dosyasına dönüştürün. Ücretsiz, hızlı ve reklamsız YouTube MP3 dönüştürücü.",
+        "en": "Convert YouTube videos to 320kbps and 192kbps MP3 or M4A audio files in seconds. Free, fast, and reliable online YouTube to MP3 converter.",
+        "ar": "حول فيديوهات يوتيوب إلى ملفات صوتية MP3 و M4A بجودة 320kbps في ثوانٍ. محول يوتيوب إلى MP3 مجاني وسريع."
+      },
+      "keywords": {
+        "tr": ["YouTube MP3 dönüştürücü", "YouTube MP3 indir", "320kbps MP3 indir", "YouTube müzik indir", "video MP3 çevirici"],
+        "en": ["YouTube to MP3 converter", "YouTube MP3 download", "320kbps MP3 converter", "video to MP3 converter"],
+        "ar": ["تحويل الفيديو إلى MP3", "تحويل يوتيوب إلى MP3", "تحميل MP3 من يوتيوب", "تحميل موسيقى يوتيوب"]
+      },
+      "canonicalPath": "/youtube-mp3-indir"
+    },
+    "youtube-shorts-indir": {
+      "title": {
+        "tr": "YouTube Shorts Video İndir - HD Kısa Video Kaydetme Aracı | Vidnoria",
+        "en": "YouTube Shorts Downloader - Save HD Shorts Videos Free | Vidnoria",
+        "ar": "تحميل يوتيوب شورتس - تنزيل مقاطع Shorts بجودة عالية مجاناً | فيدنوريا"
+      },
+      "description": {
+        "tr": "YouTube Shorts videolarını filigransız ve orijinal Full HD kalitesinde MP4 veya MP3 olarak indirin. Mobil uyumlu ücretsiz Shorts video indirici.",
+        "en": "Download YouTube Shorts videos in original Full HD MP4 or MP3 quality without watermark. Fast and mobile-friendly Shorts saver.",
+        "ar": "قم بتحميل مقاطع يوتيوب شورتس بجودة Full HD الأصلية بصيغة MP4 أو MP3. أداة سريعة ومتوافقة مع الهاتف."
+      },
+      "keywords": {
+        "tr": ["YouTube Shorts indir", "Shorts video indirme", "YouTube kısa video indir", "Shorts MP4 kaydet"],
+        "en": ["YouTube Shorts downloader", "download YouTube Shorts", "save Shorts video MP4"],
+        "ar": ["تحميل يوتيوب شورتس", "تنزيل مقاطع Shorts", "حفظ شورتس يوتيوب"]
+      },
+      "canonicalPath": "/youtube-shorts-indir"
     },
     "instagram-video-downloader": {
       "title": {
         "tr": "Instagram Video İndirici - Reels, Hikaye, IGTV İndir | Vidnoria",
         "en": "Instagram Video Downloader - Reels, Story, IGTV Download | Vidnoria",
-        "ar": "تحميل فيديو انستغرام - ريلز، ستوري، IGTV | فيدنوريا"
+        "ar": "تحميل فيديو من انستقرام - ريلز، ستوري، IGTV | فيدنوريا"
       },
       "description": {
-        "tr": "Instagram video indirme aracı ile Instagram Reels, hikaye ve IGTV videolarını indirin. Ücretsiz ve hızlı Instagram video indirici.",
-        "en": "Download Instagram Reels, stories and IGTV videos with our Instagram video downloader. Free and fast Instagram video downloader.",
-        "ar": "قم بتحميل ريلز إنستغرام والقصص وفيديوهات IGTV مع أداة تحميل فيديو إنستغرام. أداة تحميل فيديو إنستغرام مجانية وسريعة."
+        "tr": "Instagram video indirme aracı ile Instagram Reels, hikaye ve gönderi videolarını HD MP4 olarak indirin. Ücretsiz ve hızlı Instagram video indirici.",
+        "en": "Download Instagram Reels, stories, and post videos in HD MP4 with our Instagram video downloader. Free and fast Instagram downloader.",
+        "ar": "قم بتحميل ريلز إنستغرام والقصص وفيديوهات المنشورات بجودة HD MP4 مع أداة تحميل فيديو من انستقرام."
       },
       "keywords": {
-        "tr": ["Instagram video indir", "Instagram Reels indir", "Instagram hikaye indir", "Instagram indirici", "Instagram video indirme", "Instagram Reels kaydet"],
-        "en": ["Instagram video downloader", "Instagram Reels download", "Instagram story download", "Instagram downloader", "download Instagram video", "save Instagram Reels"],
-        "ar": ["تحميل فيديو انستغرام", "تحميل ريلز انستغرام", "تحميل ستوري انستغرام", "تحميل من انستغرام", "تحميل فيديوهات انستغرام", "حفظ ريلز انستغرام"]
+        "tr": ["Instagram video indir", "Instagram Reels indir", "Instagram hikaye indir", "Instagram indirici", "Instagram video indirme"],
+        "en": ["Instagram video downloader", "Instagram Reels download", "Instagram story download", "download Instagram video"],
+        "ar": ["تحميل فيديو من انستقرام", "تحميل ريلز انستقرام", "تحميل ستوري انستقرام", "تنزيل فيديو انستغرام"]
       },
       "canonicalPath": "/instagram-video-downloader"
     },
-    "tiktok-video-downloader": {
+    "instagram-video-indir": {
       "title": {
-        "tr": "TikTok Video İndirici - Filigranlı veya Filigranlı Olmadan | Vidnoria",
-        "en": "TikTok Video Downloader - With or Without Watermark | Vidnoria",
-        "ar": "تحميل فيديو تيك توك - مع أو بدون علامة مائية | فيدنوريا"
+        "tr": "Instagram Video İndir - Programsız HD Gönderi ve Video Kaydet | Vidnoria",
+        "en": "Download Instagram Videos Online - Free HD MP4 Saver | Vidnoria",
+        "ar": "تنزيل مقاطع انستقرام أونلاين - حفظ الفيديو بجودة HD | فيدنوريا"
       },
       "description": {
-        "tr": "TikTok video indirme aracı ile TikTok videolarını MP4 formatında indirin. Filigranlı veya filigranlı olmadan ücretsiz TikTok video indirici.",
-        "en": "Download TikTok videos in MP4 format with our TikTok video downloader. Free TikTok video downloader with or without watermark.",
-        "ar": "قم بتحميل فيديوهات تيك توك بصيغة MP4 مع أداة تحميل فيديو تيك توك. أداة تحميل فيديو تيك توك مجانية مع أو بدون علامة مائية."
+        "tr": "Instagram videolarını telefonunuza veya bilgisayarınıza programsız olarak HD MP4 kalitesinde indirin. Şifresiz ve ücretsiz Instagram video kaydetme.",
+        "en": "Save Instagram videos directly to your phone or computer in HD MP4 quality without logging in. Free online Instagram video saver.",
+        "ar": "احفظ مقاطع فيديو انستقرام مباشرة على هاتفك أو جهازك بجودة HD MP4 بدون تسجيل دخول."
       },
       "keywords": {
-        "tr": ["TikTok video indir", "TikTok indirici", "TikTok video indirme", "TikTok filigran olmadan indir", "TikTok video kaydet", "TikTok MP4 indir"],
-        "en": ["TikTok video downloader", "TikTok downloader", "download TikTok video", "TikTok no watermark", "save TikTok video", "TikTok to MP4"],
-        "ar": ["تحميل فيديو تيك توك", "تحميل من تيك توك", "تحميل فيديوهات تيك توك", "تيك توك بدون علامة مائية", "حفظ فيديو تيك توك", "تحميل تيك توك MP4"]
+        "tr": ["Instagram video indir", "telefona Instagram video indirme", "programsız Instagram indir"],
+        "en": ["download Instagram video", "save Instagram MP4", "Instagram video saver"],
+        "ar": ["تنزيل فيديو انستقرام", "حفظ مقاطع انستقرام", "تحميل من انستقرام"]
+      },
+      "canonicalPath": "/instagram-video-indir"
+    },
+    "instagram-reels-indir": {
+      "title": {
+        "tr": "Instagram Reels İndir - Filigransız HD Reels Video ve Ses Kaydet | Vidnoria",
+        "en": "Instagram Reels Downloader - Save HD Reels Videos & Audio | Vidnoria",
+        "ar": "تحميل ريلز انستقرام - حفظ مقاطع Reels بجودة HD مجاناً | فيدنوريا"
+      },
+      "description": {
+        "tr": "Instagram Reels videolarını orijinal ses ve Full HD görüntü kalitesiyle MP4 veya MP3 formatında indirin. Hızlı ve ücretsiz Reels indirme aracı.",
+        "en": "Download Instagram Reels videos with original audio in Full HD MP4 or MP3 format. Fast, free, and unlimited Instagram Reels downloader.",
+        "ar": "قم بتحميل مقاطع ريلز انستقرام مع الصوت الأصلي بجودة Full HD MP4 أو MP3 مجاناً وبسرعة."
+      },
+      "keywords": {
+        "tr": ["Instagram Reels indir", "Reels video indirme", "Instagram Reels MP4 kaydet", "Reels ses indirme"],
+        "en": ["Instagram Reels downloader", "download Instagram Reels", "save Reels video"],
+        "ar": ["تحميل ريلز انستقرام", "تنزيل Reels انستغرام", "حفظ ريلز MP4"]
+      },
+      "canonicalPath": "/instagram-reels-indir"
+    },
+    "tiktok-video-downloader": {
+      "title": {
+        "tr": "TikTok Video İndirici - Filigransız HD MP4 ve MP3 İndir | Vidnoria",
+        "en": "TikTok Video Downloader - Without Watermark HD MP4 & MP3 | Vidnoria",
+        "ar": "تحميل فيديو من تيك توك - بدون علامة مائية HD MP4 و MP3 | فيدنوريا"
+      },
+      "description": {
+        "tr": "TikTok video indirme aracı ile TikTok videolarını filigransız (logosuz) HD MP4 veya MP3 formatında indirin. Ücretsiz ve sınırsız TikTok indirici.",
+        "en": "Download TikTok videos without watermark in HD MP4 or MP3 format with our TikTok video downloader. Free and unlimited TikTok saver.",
+        "ar": "قم بتحميل فيديوهات تيك توك بدون علامة مائية بصيغة HD MP4 أو MP3 مجاناً وبسرعة مع فيدنوريا."
+      },
+      "keywords": {
+        "tr": ["TikTok video indir", "TikTok filigransız video indir", "TikTok indirici", "TikTok MP4 indir", "TikTok MP3 indir"],
+        "en": ["TikTok video downloader", "TikTok no watermark", "download TikTok video", "TikTok to MP4", "TikTok MP3"],
+        "ar": ["تحميل فيديو من تيك توك", "تحميل تيك توك بدون علامة مائية", "تنزيل تيك توك MP4"]
       },
       "canonicalPath": "/tiktok-video-downloader"
     },
-    "facebook-video-downloader": {
+    "tiktok-video-indir": {
       "title": {
-        "tr": "Facebook Video İndirici - Ücretsiz Facebook Video İndir | Vidnoria",
-        "en": "Facebook Video Downloader - Free Facebook Video Download | Vidnoria",
-        "ar": "تحميل فيديو فيسبوك - تحميل فيديو فيسبوك مجاني | فيدنوريا"
+        "tr": "TikTok Video İndir - Logosuz ve Filigransız TikTok Kaydetme | Vidnoria",
+        "en": "Download TikTok Videos No Watermark - Fast Online Saver | Vidnoria",
+        "ar": "تنزيل مقاطع تيك توك بدون شعار - حفظ سريع ومجاني | فيدنوريا"
       },
       "description": {
-        "tr": "Facebook video indirme aracı ile Facebook videolarını ve Reels içeriklerini MP4 formatında indirin. Ücretsiz ve hızlı Facebook video indirici.",
-        "en": "Download Facebook videos and Reels content in MP4 format with our Facebook video downloader. Free and fast Facebook video downloader.",
-        "ar": "قم بتحميل فيديوهات فيسبوك ومحتوى ريلز بصيغة MP4 مع أداة تحميل فيديو فيسبوك. أداة تحميل فيديو فيسبوك مجانية وسريعة."
+        "tr": "TikTok videolarını yazı ve logo olmadan (filigransız) telefonunuza veya bilgisayarınıza MP4 olarak kaydedin. Ücretsiz TikTok video indirme sayfası.",
+        "en": "Save TikTok videos without logo or watermark directly to your mobile or desktop in MP4 format. Free online TikTok downloader.",
+        "ar": "احفظ مقاطع تيك توك بدون شعار أو علامة مائية مباشرة على هاتفك بصيغة MP4 مجاناً."
       },
       "keywords": {
-        "tr": ["Facebook video indir", "Facebook indirici", "Facebook video indirme", "Facebook Reels indir", "Facebook video kaydet", "Facebook MP4 indir"],
-        "en": ["Facebook video downloader", "Facebook downloader", "download Facebook video", "Facebook Reels download", "save Facebook video", "Facebook to MP4"],
-        "ar": ["تحميل فيديو فيسبوك", "تحميل من فيسبوك", "تحميل فيديوهات فيسبوك", "تحميل ريلز فيسبوك", "حفظ فيديو فيسبوك", "تحميل فيسبوك MP4"]
+        "tr": ["TikTok video indir", "logosuz TikTok indir", "filigransız TikTok kaydet"],
+        "en": ["download TikTok no watermark", "save TikTok video", "remove TikTok watermark"],
+        "ar": ["تنزيل تيك توك بدون شعار", "حفظ فيديو تيك توك", "تحميل من تيك توك"]
+      },
+      "canonicalPath": "/tiktok-video-indir"
+    },
+    "facebook-video-downloader": {
+      "title": {
+        "tr": "Facebook Video İndirici - HD MP4 ve Reels Video İndir | Vidnoria",
+        "en": "Facebook Video Downloader - Free HD MP4 & Reels Download | Vidnoria",
+        "ar": "تحميل فيديو فيسبوك - تنزيل مقاطع وريلز بجودة HD مجاناً | فيدنوريا"
+      },
+      "description": {
+        "tr": "Facebook video indirme aracı ile Facebook videolarını, Watch ve Reels içeriklerini 1080p HD MP4 formatında indirin. Ücretsiz Facebook video indirici.",
+        "en": "Download Facebook videos, Watch, and Reels content in 1080p HD MP4 format with our Facebook video downloader. Free and fast.",
+        "ar": "قم بتحميل فيديوهات فيسبوك ومقاطع ريلز بصيغة 1080p HD MP4 مع أداة تحميل فيديو فيسبوك المجانية."
+      },
+      "keywords": {
+        "tr": ["Facebook video indir", "Facebook indirici", "Facebook Reels indir", "Facebook MP4 indir"],
+        "en": ["Facebook video downloader", "download Facebook video", "Facebook Reels download", "Facebook to MP4"],
+        "ar": ["تحميل فيديو فيسبوك", "تنزيل مقاطع فيسبوك", "تحميل ريلز فيسبوك"]
       },
       "canonicalPath": "/facebook-video-downloader"
     },
-    "twitter-video-downloader": {
+    "facebook-video-indir": {
       "title": {
-        "tr": "Twitter/X Video İndirici - Ücretsiz Twitter Video İndir | Vidnoria",
-        "en": "Twitter/X Video Downloader - Free Twitter Video Download | Vidnoria",
-        "ar": "تحميل فيديو تويتر/إكس - تحميل فيديو تويتر مجاني | فيدنوريا"
+        "tr": "Facebook Video İndir - Programsız Telefona ve PC'ye Kaydet | Vidnoria",
+        "en": "Save Facebook Videos Online - Free MP4 Downloader | Vidnoria",
+        "ar": "تنزيل فيديو من فيسبوك للهاتف والكمبيوتر مجاناً | فيدنوريا"
       },
       "description": {
-        "tr": "Twitter/X video indirme aracı ile Twitter videolarını ve GIF'lerini MP4 formatında indirin. Ücretsiz ve hızlı Twitter video indirici.",
-        "en": "Download Twitter/X videos and GIFs in MP4 format with our Twitter video downloader. Free and fast Twitter video downloader.",
-        "ar": "قم بتحميل فيديوهات تويتر/إكس وصور GIF بصيغة MP4 مع أداة تحميل فيديو تويتر. أداة تحميل فيديو تويتر مجانية وسريعة."
+        "tr": "Herkese açık Facebook gönderi ve Reels videolarını programsız olarak MP4 veya MP3 formatında cihazınıza indirin.",
+        "en": "Download public Facebook post and Reels videos in MP4 or MP3 format to your device without any software.",
+        "ar": "حمل مقاطع الفيديو العامة من فيسبوك بصيغة MP4 أو MP3 على جهازك بدون أي برامج."
       },
       "keywords": {
-        "tr": ["Twitter video indir", "Twitter indirici", "Twitter video indirme", "X video indir", "Twitter GIF indir", "Twitter MP4 indir"],
-        "en": ["Twitter video downloader", "Twitter downloader", "download Twitter video", "X video download", "Twitter GIF download", "Twitter to MP4"],
-        "ar": ["تحميل فيديو تويتر", "تحميل من تويتر", "تحميل فيديوهات تويتر", "تحميل فيديو إكس", "تحميل GIF تويتر", "تحميل تويتر MP4"]
+        "tr": ["Facebook video indir", "telefona Facebook video indirme", "Facebook video kaydet"],
+        "en": ["save Facebook video", "Facebook MP4 download online"],
+        "ar": ["تنزيل فيديو من فيسبوك", "حفظ فيديو فيسبوك"]
+      },
+      "canonicalPath": "/facebook-video-indir"
+    },
+    "twitter-video-downloader": {
+      "title": {
+        "tr": "Twitter (X) Video İndirici - Ücretsiz MP4 ve GIF İndir | Vidnoria",
+        "en": "Twitter (X) Video Downloader - Free HD MP4 & GIF Saver | Vidnoria",
+        "ar": "تحميل فيديو تويتر (إكس) - تنزيل MP4 و GIF مجاناً | فيدنوريا"
+      },
+      "description": {
+        "tr": "Twitter/X video indirme aracı ile tweet videolarını ve GIF'lerini HD MP4 formatında indirin. Ücretsiz ve hızlı Twitter/X video indirici.",
+        "en": "Download Twitter/X videos and GIFs in HD MP4 format with our Twitter video downloader. Free and fast X video saver.",
+        "ar": "قم بتحميل فيديوهات تويتر/إكس وصور GIF بصيغة HD MP4 مع أداة تحميل فيديو تويتر المجانية والسريعة."
+      },
+      "keywords": {
+        "tr": ["Twitter video indir", "X video indir", "Twitter indirici", "Twitter GIF indir", "Twitter MP4 indir"],
+        "en": ["Twitter video downloader", "X video download", "download Twitter video", "Twitter GIF download"],
+        "ar": ["تحميل فيديو تويتر", "تحميل فيديو إكس", "تنزيل مقاطع تويتر MP4"]
       },
       "canonicalPath": "/twitter-video-downloader"
+    },
+    "twitter-video-indir": {
+      "title": {
+        "tr": "Twitter ve X Video İndir - Tweet Videolarını MP4 Kaydet | Vidnoria",
+        "en": "Download X (Twitter) Videos Online - Free HD MP4 Tool | Vidnoria",
+        "ar": "تنزيل مقاطع فيديو إكس (تويتر) أونلاين بجودة عالية | فيدنوريا"
+      },
+      "description": {
+        "tr": "X (Twitter) üzerindeki videoları bağlantı adresini yapıştırarak tek tıkla HD MP4 olarak telefonunuza ve bilgisayarınıza indirin.",
+        "en": "Paste any X (Twitter) post link to download videos in HD MP4 directly to your phone or computer with one click.",
+        "ar": "الصق رابط أي منشور على إكس (تويتر) لتحميل الفيديو بجودة HD MP4 مباشرة بنقرة واحدة."
+      },
+      "keywords": {
+        "tr": ["Twitter video indir", "X video indir", "tweet video kaydetme"],
+        "en": ["download X videos", "save tweet video MP4"],
+        "ar": ["تنزيل فيديو إكس", "حفظ فيديو تويتر"]
+      },
+      "canonicalPath": "/twitter-video-indir"
     }
   }
 }

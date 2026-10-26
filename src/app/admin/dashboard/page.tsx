@@ -7,11 +7,12 @@ import { useRouter } from 'next/navigation';
 import { 
   LayoutDashboard, Settings, DollarSign, Globe, FileText, 
   LogOut, Activity, Cpu, HardDrive, CheckCircle2, AlertTriangle, 
-  Save, Trash2, Plus, Edit, Loader2, ExternalLink, HelpCircle
+  Save, Trash2, Plus, Edit, Loader2, ExternalLink, HelpCircle, TrendingUp
 } from 'lucide-react';
 import { SiteSettings } from '@/types';
+import SeoManagerPanel from '@/components/admin/SeoManagerPanel';
 
-type Tab = 'overview' | 'settings' | 'ads' | 'platforms' | 'blog';
+type Tab = 'overview' | 'settings' | 'ads' | 'platforms' | 'blog' | 'seo';
 
 export default function AdminDashboardPage() {
   const [activeTab, setActiveTab] = useState<Tab>('overview');
@@ -240,6 +241,16 @@ export default function AdminDashboardPage() {
           >
             <LayoutDashboard className="w-4 h-4" />
             <span>Genel Bakış</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('seo')}
+            className={`w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-colors ${
+              activeTab === 'seo' ? 'bg-primary text-white' : 'text-muted-foreground hover:bg-accent'
+            }`}
+          >
+            <TrendingUp className="w-4 h-4 text-emerald-500" />
+            <span>SEO Manager</span>
           </button>
 
           <button
@@ -785,6 +796,11 @@ export default function AdminDashboardPage() {
               </div>
             )}
           </div>
+        )}
+
+        {/* SEO Manager Tab */}
+        {activeTab === 'seo' && (
+          <SeoManagerPanel onNotify={setMessage} />
         )}
       </main>
     </div>

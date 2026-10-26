@@ -1,0 +1,26 @@
+name = "vidnoria-seo-scheduler"
+main = "worker.ts"
+compatibility_date = "2024-09-23"
+
+# Cloudflare Cron Triggers in UTC (corresponding to TSİ / UTC+3):
+# - 00:00 UTC (03:00 TSİ): Technical SEO Audit
+# - 01:00 UTC (04:00 TSİ): Search Console Sync
+# - 02:00 UTC (05:00 TSİ): Anomaly Analysis & Fix Recommendations
+# - 03:00 UTC (Her Pazartesi 06:00 TSİ): Weekly Performance Report
+# - 03:00 UTC (Her Ayın 1'i 06:00 TSİ): Monthly SEO Report
+[triggers]
+crons = [
+  "0 0 * * *",
+  "0 1 * * *",
+  "0 2 * * *",
+  "0 3 * * 1",
+  "0 3 1 * *"
+]
+
+# Optional KV Binding for Distributed Idempotency Locks
+# [[kv_namespaces]]
+# binding = "VIDNORIA_SEO_KV"
+# id = "<YOUR_CLOUDFLARE_KV_NAMESPACE_ID>"
+
+[vars]
+BACKEND_API_BASE = "https://vidnoria.com"

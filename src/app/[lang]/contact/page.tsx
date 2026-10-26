@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Mail } from 'lucide-react';
 import { Locale, getTranslations, createTranslator } from '@/lib/i18n';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import ContactForm from '@/components/contact/ContactForm';
 
 interface ContactPageProps {
@@ -13,10 +14,10 @@ export async function generateMetadata({ params }: ContactPageProps): Promise<Me
   const dict = await getTranslations(locale);
   const t = createTranslator(dict);
 
-  return {
+  return buildPageMetadata(locale, 'contact', '/contact', {
     title: t('legal.contact'),
     description: 'Get in touch with the Vidnoria support and DMCA compliance team.',
-  };
+  });
 }
 
 export default async function ContactPage({ params }: ContactPageProps) {

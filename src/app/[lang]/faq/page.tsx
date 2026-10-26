@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Locale, getTranslations, createTranslator } from '@/lib/i18n';
+import { buildPageMetadata } from '@/lib/seo/metadata';
 import FAQSection from '@/components/home/FAQSection';
 import AdSlot from '@/components/ads/AdSlot';
 
@@ -13,10 +14,10 @@ export async function generateMetadata({ params }: FaqPageProps): Promise<Metada
   const dict = await getTranslations(locale);
   const t = createTranslator(dict);
 
-  return {
+  return buildPageMetadata(locale, 'faq', '/faq', {
     title: t('seo.faqTitle'),
     description: t('seo.faqDescription'),
-  };
+  });
 }
 
 export default async function FaqPage() {

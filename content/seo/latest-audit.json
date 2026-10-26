@@ -1,0 +1,1269 @@
+{
+  "version": 10,
+  "updatedAt": "2026-10-26T06:39:55.096Z",
+  "data": {
+    "id": "audit_1792996795095",
+    "auditedAt": "2026-10-26T06:39:55.095Z",
+    "totalPagesChecked": 84,
+    "healthScore": 75,
+    "counts": {
+      "critical": 0,
+      "warning": 1,
+      "suggestion": 21,
+      "passed": 410
+    },
+    "issues": [
+      {
+        "id": "length-desc-tr-home",
+        "severity": "suggestion",
+        "category": "description",
+        "pageUrl": "https://vidnoria.com/tr",
+        "pageKey": "home",
+        "locale": "tr",
+        "title": {
+          "tr": "Meta Açıklama Uzunluğu (174 karakter)",
+          "en": "Meta Description Length (174 chars)",
+          "ar": "طول وصف الميتا (174 حرفاً)"
+        },
+        "description": {
+          "tr": "Meta açıklamasının 80-160 karakter aralığında olması tıklama oranını (CTR) artırır.",
+          "en": "Keeping meta descriptions between 80-160 characters improves CTR.",
+          "ar": "الحفاظ على وصف الميتا بين 80 و160 حرفاً يحسن نسبة النقر إلى الظهور."
+        },
+        "currentValue": "Vidnoria ile YouTube, Instagram, TikTok, Facebook ve Twitter'dan video ve müzik indirin. Ücretsiz, hızlı ve güvenli online video indirme aracı. MP4, MP3, WebM format desteği.",
+        "recommendedValue": "Vidnoria ile YouTube, Instagram, TikTok, Facebook ve Twitter'dan video ve müzik indirin. Ücretsiz, hızlı ve güvenli online video indirme aracı. MP4, MP3, W...",
+        "canAutoProposeFix": true,
+        "changeType": "meta_description"
+      },
+      {
+        "id": "length-desc-en-home",
+        "severity": "suggestion",
+        "category": "description",
+        "pageUrl": "https://vidnoria.com/en",
+        "pageKey": "home",
+        "locale": "en",
+        "title": {
+          "tr": "Meta Açıklama Uzunluğu (177 karakter)",
+          "en": "Meta Description Length (177 chars)",
+          "ar": "طول وصف الميتا (177 حرفاً)"
+        },
+        "description": {
+          "tr": "Meta açıklamasının 80-160 karakter aralığında olması tıklama oranını (CTR) artırır.",
+          "en": "Keeping meta descriptions between 80-160 characters improves CTR.",
+          "ar": "الحفاظ على وصف الميتا بين 80 و160 حرفاً يحسن نسبة النقر إلى الظهور."
+        },
+        "currentValue": "Download videos and music from YouTube, Instagram, TikTok, Facebook and Twitter with Vidnoria. Free, fast and secure online video downloader tool. MP4, MP3, WebM format support.",
+        "recommendedValue": "Download videos and music from YouTube, Instagram, TikTok, Facebook and Twitter with Vidnoria. Free, fast and secure online video downloader tool. MP4, MP3...",
+        "canAutoProposeFix": true,
+        "changeType": "meta_description"
+      },
+      {
+        "id": "length-title-tr-video-converter",
+        "severity": "suggestion",
+        "category": "title",
+        "pageUrl": "https://vidnoria.com/tr/video-converter",
+        "pageKey": "video-converter",
+        "locale": "tr",
+        "title": {
+          "tr": "Başlık Uzunluğu Optimize Edilebilir (73 karakter)",
+          "en": "Title Length Can Be Optimized (73 chars)",
+          "ar": "يمكن تحسين طول العنوان (73 حرفاً)"
+        },
+        "description": {
+          "tr": "Google arama sonuçlarında ideal başlık uzunluğu 35-65 karakter arasıdır.",
+          "en": "Ideal title length in Google SERPs is between 35 and 65 characters.",
+          "ar": "الطول المثالي للعنوان في نتائج بحث Google هو بين 35 و65 حرفاً."
+        },
+        "currentValue": "Ücretsiz Online Video ve Ses Dönüştürücü (MP4, MP3, WebM, MOV) | Vidnoria",
+        "recommendedValue": "Ücretsiz Online Video ve Ses Dönüştürücü (MP4, MP3, | Vidnoria",
+        "canAutoProposeFix": true,
+        "changeType": "seo_title"
+      },
+      {
+        "id": "length-title-ar-video-converter",
+        "severity": "suggestion",
+        "category": "title",
+        "pageUrl": "https://vidnoria.com/ar/video-converter",
+        "pageKey": "video-converter",
+        "locale": "ar",
+        "title": {
+          "tr": "Başlık Uzunluğu Optimize Edilebilir (73 karakter)",
+          "en": "Title Length Can Be Optimized (73 chars)",
+          "ar": "يمكن تحسين طول العنوان (73 حرفاً)"
+        },
+        "description": {
+          "tr": "Google arama sonuçlarında ideal başlık uzunluğu 35-65 karakter arasıdır.",
+          "en": "Ideal title length in Google SERPs is between 35 and 65 characters.",
+          "ar": "الطول المثالي للعنوان في نتائج بحث Google هو بين 35 و65 حرفاً."
+        },
+        "currentValue": "محول الفيديو والصوت المجاني عبر الإنترنت (MP4, MP3, WebM, MOV) | فيدنوريا",
+        "recommendedValue": "محول الفيديو والصوت المجاني عبر الإنترنت (MP4, MP3, | Vidnoria",
+        "canAutoProposeFix": true,
+        "changeType": "seo_title"
+      },
+      {
+        "id": "length-title-ar-faq",
+        "severity": "suggestion",
+        "category": "title",
+        "pageUrl": "https://vidnoria.com/ar/faq",
+        "pageKey": "faq",
+        "locale": "ar",
+        "title": {
+          "tr": "Başlık Uzunluğu Optimize Edilebilir (26 karakter)",
+          "en": "Title Length Can Be Optimized (26 chars)",
+          "ar": "يمكن تحسين طول العنوان (26 حرفاً)"
+        },
+        "description": {
+          "tr": "Google arama sonuçlarında ideal başlık uzunluğu 35-65 karakter arasıdır.",
+          "en": "Ideal title length in Google SERPs is between 35 and 65 characters.",
+          "ar": "الطول المثالي للعنوان في نتائج بحث Google هو بين 35 و65 حرفاً."
+        },
+        "currentValue": "الأسئلة الشائعة | فيدنوريا",
+        "recommendedValue": "الأسئلة الشائعة | فيدنوريا - Ücretsiz HD İndir | Vidnoria",
+        "canAutoProposeFix": true,
+        "changeType": "seo_title"
+      },
+      {
+        "id": "length-title-en-privacy",
+        "severity": "suggestion",
+        "category": "title",
+        "pageUrl": "https://vidnoria.com/en/privacy",
+        "pageKey": "privacy",
+        "locale": "en",
+        "title": {
+          "tr": "Başlık Uzunluğu Optimize Edilebilir (25 karakter)",
+          "en": "Title Length Can Be Optimized (25 chars)",
+          "ar": "يمكن تحسين طول العنوان (25 حرفاً)"
+        },
+        "description": {
+          "tr": "Google arama sonuçlarında ideal başlık uzunluğu 35-65 karakter arasıdır.",
+          "en": "Ideal title length in Google SERPs is between 35 and 65 characters.",
+          "ar": "الطول المثالي للعنوان في نتائج بحث Google هو بين 35 و65 حرفاً."
+        },
+        "currentValue": "Privacy Policy | Vidnoria",
+        "recommendedValue": "Privacy Policy | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+        "canAutoProposeFix": true,
+        "changeType": "seo_title"
+      },
+      {
+        "id": "length-title-ar-privacy",
+        "severity": "suggestion",
+        "category": "title",
+        "pageUrl": "https://vidnoria.com/ar/privacy",
+        "pageKey": "privacy",
+        "locale": "ar",
+        "title": {
+          "tr": "Başlık Uzunluğu Optimize Edilebilir (25 karakter)",
+          "en": "Title Length Can Be Optimized (25 chars)",
+          "ar": "يمكن تحسين طول العنوان (25 حرفاً)"
+        },
+        "description": {
+          "tr": "Google arama sonuçlarında ideal başlık uzunluğu 35-65 karakter arasıdır.",
+          "en": "Ideal title length in Google SERPs is between 35 and 65 characters.",
+          "ar": "الطول المثالي للعنوان في نتائج بحث Google هو بين 35 و65 حرفاً."
+        },
+        "currentValue": "سياسة الخصوصية | فيدنوريا",
+        "recommendedValue": "سياسة الخصوصية | فيدنوريا - Ücretsiz HD İndir | Vidnoria",
+        "canAutoProposeFix": true,
+        "changeType": "seo_title"
+      },
+      {
+        "id": "length-title-tr-terms",
+        "severity": "suggestion",
+        "category": "title",
+        "pageUrl": "https://vidnoria.com/tr/terms",
+        "pageKey": "terms",
+        "locale": "tr",
+        "title": {
+          "tr": "Başlık Uzunluğu Optimize Edilebilir (28 karakter)",
+          "en": "Title Length Can Be Optimized (28 chars)",
+          "ar": "يمكن تحسين طول العنوان (28 حرفاً)"
+        },
+        "description": {
+          "tr": "Google arama sonuçlarında ideal başlık uzunluğu 35-65 karakter arasıdır.",
+          "en": "Ideal title length in Google SERPs is between 35 and 65 characters.",
+          "ar": "الطول المثالي للعنوان في نتائج بحث Google هو بين 35 و65 حرفاً."
+        },
+        "currentValue": "Kullanım Şartları | Vidnoria",
+        "recommendedValue": "Kullanım Şartları | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+        "canAutoProposeFix": true,
+        "changeType": "seo_title"
+      },
+      {
+        "id": "length-title-en-terms",
+        "severity": "suggestion",
+        "category": "title",
+        "pageUrl": "https://vidnoria.com/en/terms",
+        "pageKey": "terms",
+        "locale": "en",
+        "title": {
+          "tr": "Başlık Uzunluğu Optimize Edilebilir (27 karakter)",
+          "en": "Title Length Can Be Optimized (27 chars)",
+          "ar": "يمكن تحسين طول العنوان (27 حرفاً)"
+        },
+        "description": {
+          "tr": "Google arama sonuçlarında ideal başlık uzunluğu 35-65 karakter arasıdır.",
+          "en": "Ideal title length in Google SERPs is between 35 and 65 characters.",
+          "ar": "الطول المثالي للعنوان في نتائج بحث Google هو بين 35 و65 حرفاً."
+        },
+        "currentValue": "Terms of Service | Vidnoria",
+        "recommendedValue": "Terms of Service | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+        "canAutoProposeFix": true,
+        "changeType": "seo_title"
+      },
+      {
+        "id": "length-title-ar-terms",
+        "severity": "suggestion",
+        "category": "title",
+        "pageUrl": "https://vidnoria.com/ar/terms",
+        "pageKey": "terms",
+        "locale": "ar",
+        "title": {
+          "tr": "Başlık Uzunluğu Optimize Edilebilir (25 karakter)",
+          "en": "Title Length Can Be Optimized (25 chars)",
+          "ar": "يمكن تحسين طول العنوان (25 حرفاً)"
+        },
+        "description": {
+          "tr": "Google arama sonuçlarında ideal başlık uzunluğu 35-65 karakter arasıdır.",
+          "en": "Ideal title length in Google SERPs is between 35 and 65 characters.",
+          "ar": "الطول المثالي للعنوان في نتائج بحث Google هو بين 35 و65 حرفاً."
+        },
+        "currentValue": "شروط الاستخدام | فيدنوريا",
+        "recommendedValue": "شروط الاستخدام | فيدنوريا - Ücretsiz HD İndir | Vidnoria",
+        "canAutoProposeFix": true,
+        "changeType": "seo_title"
+      },
+      {
+        "id": "length-title-en-disclaimer",
+        "severity": "suggestion",
+        "category": "title",
+        "pageUrl": "https://vidnoria.com/en/disclaimer",
+        "pageKey": "disclaimer",
+        "locale": "en",
+        "title": {
+          "tr": "Başlık Uzunluğu Optimize Edilebilir (27 karakter)",
+          "en": "Title Length Can Be Optimized (27 chars)",
+          "ar": "يمكن تحسين طول العنوان (27 حرفاً)"
+        },
+        "description": {
+          "tr": "Google arama sonuçlarında ideal başlık uzunluğu 35-65 karakter arasıdır.",
+          "en": "Ideal title length in Google SERPs is between 35 and 65 characters.",
+          "ar": "الطول المثالي للعنوان في نتائج بحث Google هو بين 35 و65 حرفاً."
+        },
+        "currentValue": "Legal Disclaimer | Vidnoria",
+        "recommendedValue": "Legal Disclaimer | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+        "canAutoProposeFix": true,
+        "changeType": "seo_title"
+      },
+      {
+        "id": "length-title-tr-cookies",
+        "severity": "suggestion",
+        "category": "title",
+        "pageUrl": "https://vidnoria.com/tr/cookies",
+        "pageKey": "cookies",
+        "locale": "tr",
+        "title": {
+          "tr": "Başlık Uzunluğu Optimize Edilebilir (27 karakter)",
+          "en": "Title Length Can Be Optimized (27 chars)",
+          "ar": "يمكن تحسين طول العنوان (27 حرفاً)"
+        },
+        "description": {
+          "tr": "Google arama sonuçlarında ideal başlık uzunluğu 35-65 karakter arasıdır.",
+          "en": "Ideal title length in Google SERPs is between 35 and 65 characters.",
+          "ar": "الطول المثالي للعنوان في نتائج بحث Google هو بين 35 و65 حرفاً."
+        },
+        "currentValue": "Çerez Politikası | Vidnoria",
+        "recommendedValue": "Çerez Politikası | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+        "canAutoProposeFix": true,
+        "changeType": "seo_title"
+      },
+      {
+        "id": "length-title-en-cookies",
+        "severity": "suggestion",
+        "category": "title",
+        "pageUrl": "https://vidnoria.com/en/cookies",
+        "pageKey": "cookies",
+        "locale": "en",
+        "title": {
+          "tr": "Başlık Uzunluğu Optimize Edilebilir (24 karakter)",
+          "en": "Title Length Can Be Optimized (24 chars)",
+          "ar": "يمكن تحسين طول العنوان (24 حرفاً)"
+        },
+        "description": {
+          "tr": "Google arama sonuçlarında ideal başlık uzunluğu 35-65 karakter arasıdır.",
+          "en": "Ideal title length in Google SERPs is between 35 and 65 characters.",
+          "ar": "الطول المثالي للعنوان في نتائج بحث Google هو بين 35 و65 حرفاً."
+        },
+        "currentValue": "Cookie Policy | Vidnoria",
+        "recommendedValue": "Cookie Policy | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+        "canAutoProposeFix": true,
+        "changeType": "seo_title"
+      },
+      {
+        "id": "length-title-tr-instagram-reels-indir",
+        "severity": "suggestion",
+        "category": "title",
+        "pageUrl": "https://vidnoria.com/tr/instagram-reels-indir",
+        "pageKey": "instagram-reels-indir",
+        "locale": "tr",
+        "title": {
+          "tr": "Başlık Uzunluğu Optimize Edilebilir (75 karakter)",
+          "en": "Title Length Can Be Optimized (75 chars)",
+          "ar": "يمكن تحسين طول العنوان (75 حرفاً)"
+        },
+        "description": {
+          "tr": "Google arama sonuçlarında ideal başlık uzunluğu 35-65 karakter arasıdır.",
+          "en": "Ideal title length in Google SERPs is between 35 and 65 characters.",
+          "ar": "الطول المثالي للعنوان في نتائج بحث Google هو بين 35 و65 حرفاً."
+        },
+        "currentValue": "Instagram Reels İndir - Filigransız HD Reels Video ve Ses Kaydet | Vidnoria",
+        "recommendedValue": "Instagram Reels İndir - Filigransız HD Reels Video v | Vidnoria",
+        "canAutoProposeFix": true,
+        "changeType": "seo_title"
+      },
+      {
+        "id": "blog-internal-link-tr-instagram-video-download-guide",
+        "severity": "suggestion",
+        "category": "internal_links",
+        "pageUrl": "https://vidnoria.com/tr/blog/instagram-video-download-guide",
+        "locale": "tr",
+        "title": {
+          "tr": "İç Bağlantı (Internal Link) Fırsatı",
+          "en": "Internal Linking Opportunity",
+          "ar": "فرصة لإضافة روابط داخلية"
+        },
+        "description": {
+          "tr": "\"Instagram Reels ve Video Kaydetme Yöntemleri\" yazısından ilgili video indirme aracına (örn. /tr/youtube-video-downloader) iç bağlantı verilmesi SEO otoritesini güçlendirir.",
+          "en": "Adding an internal link from \"Instagram Reels ve Video Kaydetme Yöntemleri\" to the relevant downloader tool strengthens topical authority.",
+          "ar": "إضافة رابط داخلي من \"Instagram Reels ve Video Kaydetme Yöntemleri\" إلى أداة التحميل ذات الصلة يعزز قوة السيو."
+        },
+        "currentValue": "0 iç bağlantı",
+        "recommendedValue": "[Vidnoria Video İndirici](/tr/youtube-video-downloader)",
+        "canAutoProposeFix": true,
+        "changeType": "content_update"
+      },
+      {
+        "id": "blog-internal-link-tr-youtube-video-download-guide",
+        "severity": "suggestion",
+        "category": "internal_links",
+        "pageUrl": "https://vidnoria.com/tr/blog/youtube-video-download-guide",
+        "locale": "tr",
+        "title": {
+          "tr": "İç Bağlantı (Internal Link) Fırsatı",
+          "en": "Internal Linking Opportunity",
+          "ar": "فرصة لإضافة روابط داخلية"
+        },
+        "description": {
+          "tr": "\"YouTube Video ve Ses İndirme Rehberi\" yazısından ilgili video indirme aracına (örn. /tr/youtube-video-downloader) iç bağlantı verilmesi SEO otoritesini güçlendirir.",
+          "en": "Adding an internal link from \"YouTube Video ve Ses İndirme Rehberi\" to the relevant downloader tool strengthens topical authority.",
+          "ar": "إضافة رابط داخلي من \"YouTube Video ve Ses İndirme Rehberi\" إلى أداة التحميل ذات الصلة يعزز قوة السيو."
+        },
+        "currentValue": "0 iç bağlantı",
+        "recommendedValue": "[Vidnoria Video İndirici](/tr/youtube-video-downloader)",
+        "canAutoProposeFix": true,
+        "changeType": "content_update"
+      },
+      {
+        "id": "blog-internal-link-en-instagram-video-download-guide",
+        "severity": "suggestion",
+        "category": "internal_links",
+        "pageUrl": "https://vidnoria.com/en/blog/instagram-video-download-guide",
+        "locale": "en",
+        "title": {
+          "tr": "İç Bağlantı (Internal Link) Fırsatı",
+          "en": "Internal Linking Opportunity",
+          "ar": "فرصة لإضافة روابط داخلية"
+        },
+        "description": {
+          "tr": "\"How to Save Instagram Reels and Videos\" yazısından ilgili video indirme aracına (örn. /en/youtube-video-downloader) iç bağlantı verilmesi SEO otoritesini güçlendirir.",
+          "en": "Adding an internal link from \"How to Save Instagram Reels and Videos\" to the relevant downloader tool strengthens topical authority.",
+          "ar": "إضافة رابط داخلي من \"How to Save Instagram Reels and Videos\" إلى أداة التحميل ذات الصلة يعزز قوة السيو."
+        },
+        "currentValue": "0 iç bağlantı",
+        "recommendedValue": "[Vidnoria Video İndirici](/en/youtube-video-downloader)",
+        "canAutoProposeFix": true,
+        "changeType": "content_update"
+      },
+      {
+        "id": "blog-internal-link-en-youtube-video-download-guide",
+        "severity": "suggestion",
+        "category": "internal_links",
+        "pageUrl": "https://vidnoria.com/en/blog/youtube-video-download-guide",
+        "locale": "en",
+        "title": {
+          "tr": "İç Bağlantı (Internal Link) Fırsatı",
+          "en": "Internal Linking Opportunity",
+          "ar": "فرصة لإضافة روابط داخلية"
+        },
+        "description": {
+          "tr": "\"YouTube Video & Audio Download Guide\" yazısından ilgili video indirme aracına (örn. /en/youtube-video-downloader) iç bağlantı verilmesi SEO otoritesini güçlendirir.",
+          "en": "Adding an internal link from \"YouTube Video & Audio Download Guide\" to the relevant downloader tool strengthens topical authority.",
+          "ar": "إضافة رابط داخلي من \"YouTube Video & Audio Download Guide\" إلى أداة التحميل ذات الصلة يعزز قوة السيو."
+        },
+        "currentValue": "0 iç bağlantı",
+        "recommendedValue": "[Vidnoria Video İndirici](/en/youtube-video-downloader)",
+        "canAutoProposeFix": true,
+        "changeType": "content_update"
+      },
+      {
+        "id": "blog-internal-link-ar-copyright-and-legal-downloads",
+        "severity": "suggestion",
+        "category": "internal_links",
+        "pageUrl": "https://vidnoria.com/ar/blog/copyright-and-legal-downloads",
+        "locale": "ar",
+        "title": {
+          "tr": "İç Bağlantı (Internal Link) Fırsatı",
+          "en": "Internal Linking Opportunity",
+          "ar": "فرصة لإضافة روابط داخلية"
+        },
+        "description": {
+          "tr": "\"دليل حقوق النشر والاستخدام العادل والتحميل القانوني\" yazısından ilgili video indirme aracına (örn. /ar/youtube-video-downloader) iç bağlantı verilmesi SEO otoritesini güçlendirir.",
+          "en": "Adding an internal link from \"دليل حقوق النشر والاستخدام العادل والتحميل القانوني\" to the relevant downloader tool strengthens topical authority.",
+          "ar": "إضافة رابط داخلي من \"دليل حقوق النشر والاستخدام العادل والتحميل القانوني\" إلى أداة التحميل ذات الصلة يعزز قوة السيو."
+        },
+        "currentValue": "0 iç bağlantı",
+        "recommendedValue": "[Vidnoria Video İndirici](/ar/youtube-video-downloader)",
+        "canAutoProposeFix": true,
+        "changeType": "content_update"
+      },
+      {
+        "id": "blog-h2-ar-instagram-video-download-guide",
+        "severity": "warning",
+        "category": "headings",
+        "pageUrl": "https://vidnoria.com/ar/blog/instagram-video-download-guide",
+        "locale": "ar",
+        "title": {
+          "tr": "Blog Yazısında H2 Alt Başlık Eksik",
+          "en": "Blog Post Missing H2 Subheadings",
+          "ar": "مقال المدونة يفتقر إلى عناوين فرعية H2"
+        },
+        "description": {
+          "tr": "instagram-video-download-guide (AR) içeriğinde H2 (##) alt başlık hiyerarşisi bulunamadı.",
+          "en": "No H2 (##) subheadings found in instagram-video-download-guide (AR).",
+          "ar": "لم يتم العثور على عناوين فرعية H2 في instagram-video-download-guide."
+        },
+        "canAutoProposeFix": false
+      },
+      {
+        "id": "blog-internal-link-ar-instagram-video-download-guide",
+        "severity": "suggestion",
+        "category": "internal_links",
+        "pageUrl": "https://vidnoria.com/ar/blog/instagram-video-download-guide",
+        "locale": "ar",
+        "title": {
+          "tr": "İç Bağlantı (Internal Link) Fırsatı",
+          "en": "Internal Linking Opportunity",
+          "ar": "فرصة لإضافة روابط داخلية"
+        },
+        "description": {
+          "tr": "\"طريقة حفظ مقاطع ريلز وفيديوهات انستقرام\" yazısından ilgili video indirme aracına (örn. /ar/youtube-video-downloader) iç bağlantı verilmesi SEO otoritesini güçlendirir.",
+          "en": "Adding an internal link from \"طريقة حفظ مقاطع ريلز وفيديوهات انستقرام\" to the relevant downloader tool strengthens topical authority.",
+          "ar": "إضافة رابط داخلي من \"طريقة حفظ مقاطع ريلز وفيديوهات انستقرام\" إلى أداة التحميل ذات الصلة يعزز قوة السيو."
+        },
+        "currentValue": "0 iç bağlantı",
+        "recommendedValue": "[Vidnoria Video İndirici](/ar/youtube-video-downloader)",
+        "canAutoProposeFix": true,
+        "changeType": "content_update"
+      },
+      {
+        "id": "blog-internal-link-ar-youtube-video-download-guide",
+        "severity": "suggestion",
+        "category": "internal_links",
+        "pageUrl": "https://vidnoria.com/ar/blog/youtube-video-download-guide",
+        "locale": "ar",
+        "title": {
+          "tr": "İç Bağlantı (Internal Link) Fırsatı",
+          "en": "Internal Linking Opportunity",
+          "ar": "فرصة لإضافة روابط داخلية"
+        },
+        "description": {
+          "tr": "\"دليل تحميل الفيديو والصوت من يوتيوب\" yazısından ilgili video indirme aracına (örn. /ar/youtube-video-downloader) iç bağlantı verilmesi SEO otoritesini güçlendirir.",
+          "en": "Adding an internal link from \"دليل تحميل الفيديو والصوت من يوتيوب\" to the relevant downloader tool strengthens topical authority.",
+          "ar": "إضافة رابط داخلي من \"دليل تحميل الفيديو والصوت من يوتيوب\" إلى أداة التحميل ذات الصلة يعزز قوة السيو."
+        },
+        "currentValue": "0 iç bağlantı",
+        "recommendedValue": "[Vidnoria Video İndirici](/ar/youtube-video-downloader)",
+        "canAutoProposeFix": true,
+        "changeType": "content_update"
+      }
+    ],
+    "multilingualMatrix": [
+      {
+        "routeKey": "home",
+        "subPath": "/",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Vidnoria - Ücretsiz Video ve Müzik İndirme | Video İndir, MP3 İndir",
+          "en": "Vidnoria - Free Video & Music Downloader | Download Videos, MP3",
+          "ar": "فيدنوريا - تحميل فيديو وموسيقى مجاني | تحميل فيديو، MP3"
+        },
+        "descriptions": {
+          "tr": "Vidnoria ile YouTube, Instagram, TikTok, Facebook ve Twitter'dan video ve müzik indirin. Ücretsiz, hızlı ve güvenli online video indirme aracı. MP4, MP3, WebM format desteği.",
+          "en": "Download videos and music from YouTube, Instagram, TikTok, Facebook and Twitter with Vidnoria. Free, fast and secure online video downloader tool. MP4, MP3, WebM format support.",
+          "ar": "قم بتحميل الفيديوهات والموسيقى من يوتيوب وإنستغرام وتيك توك وفيسبوك وتويتر مع فيدنوريا. أداة تحميل فيديو مجانية وسريعة وآمنة. دعم MP4 و MP3 و WebM."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr",
+          "en": "https://vidnoria.com/en",
+          "ar": "https://vidnoria.com/ar"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "video-converter",
+        "subPath": "/video-converter",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Ücretsiz Online Video ve Ses Dönüştürücü (MP4, MP3, WebM, MOV) | Vidnoria",
+          "en": "Free Online Video & Audio Converter (MP4, MP3, WebM, MOV) | Vidnoria",
+          "ar": "محول الفيديو والصوت المجاني عبر الإنترنت (MP4, MP3, WebM, MOV) | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "Videolarınızı programsız olarak MP3, M4A, MP4, WebM ve MOV formatlarına hızla dönüştürün. Ücretsiz, yüksek kaliteli FFmpeg tabanlı online video dönüştürücü.",
+          "en": "Convert your video files into MP3, M4A, MP4, WebM, and MOV formats online without software. Free, high-quality FFmpeg-powered video and audio converter.",
+          "ar": "قم بتحويل ملفات الفيديو إلى صيغ MP3 و M4A و MP4 و WebM و MOV عبر الإنترنت بدون برامج. محول فيديو وصوت مجاني عالي الجودة."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/video-converter",
+          "en": "https://vidnoria.com/en/video-converter",
+          "ar": "https://vidnoria.com/ar/video-converter"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/video-converter",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "image-converter",
+        "subPath": "/image-converter",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Ücretsiz Resim Format Dönüştürücü (JPG, PNG, WebP) | Vidnoria",
+          "en": "Free Online Image Format Converter (JPG, PNG, WebP) | Vidnoria",
+          "ar": "محول صيغ الصور المجاني عبر الإنترنت (JPG, PNG, WebP) | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "Görsellerinizi kalite kaybı olmadan JPG, PNG ve WebP formatları arasında anında dönüştürün. Tarayıcı tabanlı, güvenli ve ücretsiz resim uzantı değiştirici.",
+          "en": "Convert images between JPG, PNG, and WebP formats instantly without losing quality. Fast, private, browser-based free online image converter.",
+          "ar": "حول الصور بين صيغ JPG و PNG و WebP فوراً بدون فقدان الجودة. محول صور مجاني وسريع وآمن يعمل مباشرة في المتصفح."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/image-converter",
+          "en": "https://vidnoria.com/en/image-converter",
+          "ar": "https://vidnoria.com/ar/image-converter"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/image-converter",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "audio-cutter",
+        "subPath": "/audio-cutter",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Online Ses Kesici ve Zil Sesi Yapıcı (MP3 Kırpma) | Vidnoria",
+          "en": "Online Audio Cutter & Ringtone Maker (MP3 Trimmer) | Vidnoria",
+          "ar": "قاطع الصوت وصانع النغمات عبر الإنترنت (قص MP3) | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "MP3, WAV ve M4A ses dosyalarınızı saniyesi saniyesine kesin, kırpın ve zil sesi hazırlayın. Ücretsiz, hızlı ve programsız online ses kesme aracı.",
+          "en": "Trim and cut MP3, WAV, and M4A audio tracks with millisecond precision online. Create custom ringtones for free with no software required.",
+          "ar": "قم بقص وتقطيع ملفات الصوت MP3 و WAV و M4A بدقة عالية عبر الإنترنت. اصنع نغمات رنين مخصصة مجاناً بدون برامج."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/audio-cutter",
+          "en": "https://vidnoria.com/en/audio-cutter",
+          "ar": "https://vidnoria.com/ar/audio-cutter"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/audio-cutter",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "blog",
+        "subPath": "/blog",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Blog - Video İndirme Rehberleri ve İpuçları | Vidnoria",
+          "en": "Blog - Video Download Guides & Tips | Vidnoria",
+          "ar": "المدونة - أدلة وإرشادات تحميل الفيديو | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "Video indirme rehberleri, format karşılaştırmaları ve kullanım ipuçları. Vidnoria blog ile video indirme hakkında her şeyi öğrenin.",
+          "en": "Video download guides, format comparisons, and usage tips. Learn everything about video downloading with the Vidnoria blog.",
+          "ar": "أدلة تحميل الفيديو ومقارنات الصيغ ونصائح الاستخدام. تعرف على كل شيء عن تحميل الفيديو مع مدونة فيدنوريا."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/blog",
+          "en": "https://vidnoria.com/en/blog",
+          "ar": "https://vidnoria.com/ar/blog"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/blog",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "faq",
+        "subPath": "/faq",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Sıkça Sorulan Sorular (SSS) | Vidnoria",
+          "en": "Frequently Asked Questions (FAQ) | Vidnoria",
+          "ar": "الأسئلة الشائعة | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "Vidnoria hakkında sıkça sorulan sorular. Video indirme, format seçimi, desteklenen platformlar ve daha fazlası hakkında bilgi edinin.",
+          "en": "Frequently asked questions about Vidnoria. Learn about video downloading, format selection, supported platforms and more.",
+          "ar": "الأسئلة الشائعة حول فيدنوريا. تعرف على تحميل الفيديو واختيار الصيغة والمنصات المدعومة والمزيد."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/faq",
+          "en": "https://vidnoria.com/en/faq",
+          "ar": "https://vidnoria.com/ar/faq"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/faq",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "contact",
+        "subPath": "/contact",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "İletişim ve DMCA Destek | Vidnoria",
+          "en": "Contact Us & DMCA Support | Vidnoria",
+          "ar": "اتصل بنا ودعم حقوق النشر DMCA | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "Vidnoria ile iletişime geçin. Sorularınız, önerileriniz, teknik destek veya DMCA telif hakkı bildirimleriniz için bize ulaşın.",
+          "en": "Get in touch with Vidnoria. Reach out for your questions, suggestions, technical support, or DMCA copyright inquiries.",
+          "ar": "تواصل مع فيدنوريا. تواصل معنا لأسئلتك أو اقتراحاتك أو الدعم الفني أو إشعارات حقوق النشر DMCA."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/contact",
+          "en": "https://vidnoria.com/en/contact",
+          "ar": "https://vidnoria.com/ar/contact"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/contact",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "privacy",
+        "subPath": "/privacy",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Gizlilik Politikası | Vidnoria",
+          "en": "Privacy Policy | Vidnoria",
+          "ar": "سياسة الخصوصية | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "Vidnoria gizlilik politikası. Verilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu öğrenin.",
+          "en": "Vidnoria privacy policy. Learn how we collect, use, and protect your data.",
+          "ar": "سياسة خصوصية فيدنوريا. تعرف على كيفية جمع بياناتك واستخدامها وحمايتها."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/privacy",
+          "en": "https://vidnoria.com/en/privacy",
+          "ar": "https://vidnoria.com/ar/privacy"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/privacy",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "terms",
+        "subPath": "/terms",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Kullanım Şartları | Vidnoria",
+          "en": "Terms of Service | Vidnoria",
+          "ar": "شروط الاستخدام | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "Vidnoria kullanım şartları ve koşulları. Platformumuzu kullanmadan önce lütfen bu şartları okuyun.",
+          "en": "Vidnoria terms of service and conditions. Please read these terms before using our platform.",
+          "ar": "شروط وأحكام استخدام فيدنوريا. يرجى قراءة هذه الشروط قبل استخدام منصتنا."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/terms",
+          "en": "https://vidnoria.com/en/terms",
+          "ar": "https://vidnoria.com/ar/terms"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/terms",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "copyright",
+        "subPath": "/copyright",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Telif Hakkı Politikası ve DMCA | Vidnoria",
+          "en": "Copyright Policy & DMCA | Vidnoria",
+          "ar": "سياسة حقوق النشر و DMCA | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "Vidnoria telif hakkı politikası. Telif hakları, DMCA talepleri ve içerik kaldırma prosedürleri hakkında bilgi.",
+          "en": "Vidnoria copyright policy. Information about copyrights, DMCA requests and content removal procedures.",
+          "ar": "سياسة حقوق النشر في فيدنوريا. معلومات حول حقوق النشر وطلبات DMCA وإجراءات إزالة المحتوى."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/copyright",
+          "en": "https://vidnoria.com/en/copyright",
+          "ar": "https://vidnoria.com/ar/copyright"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/copyright",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "disclaimer",
+        "subPath": "/disclaimer",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Yasal Uyarı ve Sorumluluk Reddi | Vidnoria",
+          "en": "Legal Disclaimer | Vidnoria",
+          "ar": "إخلاء المسؤولية القانونية | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "Vidnoria sorumluluk reddi beyanı. Hizmetimizin kullanımı ve yasal sorumluluk sınırları ile ilgili önemli bilgiler.",
+          "en": "Vidnoria disclaimer statement. Important legal information regarding the use of our media tools and services.",
+          "ar": "بيان إخلاء مسؤولية فيدنوريا. معلومات قانونية مهمة بخصوص استخدام خدمتنا وأدوات الوسائط."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/disclaimer",
+          "en": "https://vidnoria.com/en/disclaimer",
+          "ar": "https://vidnoria.com/ar/disclaimer"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/disclaimer",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "cookies",
+        "subPath": "/cookies",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Çerez Politikası | Vidnoria",
+          "en": "Cookie Policy | Vidnoria",
+          "ar": "سياسة ملفات تعريف الارتباط | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "Vidnoria çerez politikası. Web sitemizde çerezleri nasıl kullandığımız ve tercihlerinizi nasıl yönetebileceğiniz hakkında bilgi edinin.",
+          "en": "Vidnoria cookie policy. Learn how we use cookies on our website and how you can manage your preferences.",
+          "ar": "سياسة ملفات تعريف الارتباط في فيدنوريا. تعرف على كيفية استخدامنا لملفات تعريف الارتباط على موقعنا."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/cookies",
+          "en": "https://vidnoria.com/en/cookies",
+          "ar": "https://vidnoria.com/ar/cookies"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/cookies",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "youtube-video-downloader",
+        "subPath": "/youtube-video-downloader",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "YouTube Video İndirici - 1080p, 4K MP4 ve MP3 İndir | Vidnoria",
+          "en": "YouTube Video Downloader - Free HD, 1080p, 4K MP4 & MP3 | Vidnoria",
+          "ar": "تحميل فيديو من يوتيوب - تنزيل بجودة HD و 4K MP4 و MP3 مجاناً | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "YouTube video indirme aracı ile YouTube videolarını MP4, MP3 ve M4A formatlarında indirin. HD, Full HD 1080p ve 4K kalitede ücretsiz ve hızlı YouTube indirici.",
+          "en": "Download YouTube videos in MP4, MP3, and M4A formats with our YouTube video downloader. Free and fast YouTube downloader in HD, Full HD 1080p, and 4K quality.",
+          "ar": "قم بتحميل فيديوهات يوتيوب بصيغ MP4 و MP3 و M4A مع أداة تحميل فيديو يوتيوب. أداة تحميل مجانية وسريعة بجودة HD و Full HD و 4K."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/youtube-video-downloader",
+          "en": "https://vidnoria.com/en/youtube-video-downloader",
+          "ar": "https://vidnoria.com/ar/youtube-video-downloader"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/youtube-video-downloader",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "youtube-video-indir",
+        "subPath": "/youtube-video-indir",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "YouTube Video İndir - Programsız Ücretsiz MP4 Video İndirme | Vidnoria",
+          "en": "Download YouTube Videos Online - Fast & Free MP4 Saver | Vidnoria",
+          "ar": "تنزيل فيديو يوتيوب أونلاين - حفظ MP4 مجاناً بدون برامج | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "Programsız YouTube video indir! Mobil ve bilgisayardan tek tıkla 1080p Full HD, 720p ve 4K YouTube videolarını MP4 olarak cihazınıza kaydedin.",
+          "en": "Save YouTube videos directly to your phone or PC without software. Fast 1080p Full HD, 720p, and 4K MP4 online YouTube video saver.",
+          "ar": "احفظ مقاطع يوتيوب مباشرة على هاتفك أو حاسوبك بدون برامج. تنزيل سريع بجودة 1080p و 720p و 4K بصيغة MP4."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/youtube-video-indir",
+          "en": "https://vidnoria.com/en/youtube-video-indir",
+          "ar": "https://vidnoria.com/ar/youtube-video-indir"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/youtube-video-indir",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "youtube-mp3-indir",
+        "subPath": "/youtube-mp3-indir",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "YouTube MP3 Dönüştürücü - 320kbps Yüksek Kalite Müzik İndir | Vidnoria",
+          "en": "YouTube to MP3 Converter - Free 320kbps High Quality Audio | Vidnoria",
+          "ar": "تحويل الفيديو إلى MP3 من يوتيوب - تحميل صوت بجودة 320kbps | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "YouTube videolarını saniyeler içinde 320kbps ve 192kbps MP3 veya M4A ses dosyasına dönüştürün. Ücretsiz, hızlı ve reklamsız YouTube MP3 dönüştürücü.",
+          "en": "Convert YouTube videos to 320kbps and 192kbps MP3 or M4A audio files in seconds. Free, fast, and reliable online YouTube to MP3 converter.",
+          "ar": "حول فيديوهات يوتيوب إلى ملفات صوتية MP3 و M4A بجودة 320kbps في ثوانٍ. محول يوتيوب إلى MP3 مجاني وسريع."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/youtube-mp3-indir",
+          "en": "https://vidnoria.com/en/youtube-mp3-indir",
+          "ar": "https://vidnoria.com/ar/youtube-mp3-indir"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/youtube-mp3-indir",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "youtube-shorts-indir",
+        "subPath": "/youtube-shorts-indir",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "YouTube Shorts Video İndir - HD Kısa Video Kaydetme Aracı | Vidnoria",
+          "en": "YouTube Shorts Downloader - Save HD Shorts Videos Free | Vidnoria",
+          "ar": "تحميل يوتيوب شورتس - تنزيل مقاطع Shorts بجودة عالية مجاناً | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "YouTube Shorts videolarını filigransız ve orijinal Full HD kalitesinde MP4 veya MP3 olarak indirin. Mobil uyumlu ücretsiz Shorts video indirici.",
+          "en": "Download YouTube Shorts videos in original Full HD MP4 or MP3 quality without watermark. Fast and mobile-friendly Shorts saver.",
+          "ar": "قم بتحميل مقاطع يوتيوب شورتس بجودة Full HD الأصلية بصيغة MP4 أو MP3. أداة سريعة ومتوافقة مع الهاتف."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/youtube-shorts-indir",
+          "en": "https://vidnoria.com/en/youtube-shorts-indir",
+          "ar": "https://vidnoria.com/ar/youtube-shorts-indir"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/youtube-shorts-indir",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "instagram-video-downloader",
+        "subPath": "/instagram-video-downloader",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Instagram Video İndirici - Reels, Hikaye, IGTV İndir | Vidnoria",
+          "en": "Instagram Video Downloader - Reels, Story, IGTV Download | Vidnoria",
+          "ar": "تحميل فيديو من انستقرام - ريلز، ستوري، IGTV | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "Instagram video indirme aracı ile Instagram Reels, hikaye ve gönderi videolarını HD MP4 olarak indirin. Ücretsiz ve hızlı Instagram video indirici.",
+          "en": "Download Instagram Reels, stories, and post videos in HD MP4 with our Instagram video downloader. Free and fast Instagram downloader.",
+          "ar": "قم بتحميل ريلز إنستغرام والقصص وفيديوهات المنشورات بجودة HD MP4 مع أداة تحميل فيديو من انستقرام."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/instagram-video-downloader",
+          "en": "https://vidnoria.com/en/instagram-video-downloader",
+          "ar": "https://vidnoria.com/ar/instagram-video-downloader"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/instagram-video-downloader",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "instagram-video-indir",
+        "subPath": "/instagram-video-indir",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Instagram Video İndir - Programsız HD Gönderi ve Video Kaydet | Vidnoria",
+          "en": "Download Instagram Videos Online - Free HD MP4 Saver | Vidnoria",
+          "ar": "تنزيل مقاطع انستقرام أونلاين - حفظ الفيديو بجودة HD | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "Instagram videolarını telefonunuza veya bilgisayarınıza programsız olarak HD MP4 kalitesinde indirin. Şifresiz ve ücretsiz Instagram video kaydetme.",
+          "en": "Save Instagram videos directly to your phone or computer in HD MP4 quality without logging in. Free online Instagram video saver.",
+          "ar": "احفظ مقاطع فيديو انستقرام مباشرة على هاتفك أو جهازك بجودة HD MP4 بدون تسجيل دخول."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/instagram-video-indir",
+          "en": "https://vidnoria.com/en/instagram-video-indir",
+          "ar": "https://vidnoria.com/ar/instagram-video-indir"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/instagram-video-indir",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "instagram-reels-indir",
+        "subPath": "/instagram-reels-indir",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Instagram Reels İndir - Filigransız HD Reels Video ve Ses Kaydet | Vidnoria",
+          "en": "Instagram Reels Downloader - Save HD Reels Videos & Audio | Vidnoria",
+          "ar": "تحميل ريلز انستقرام - حفظ مقاطع Reels بجودة HD مجاناً | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "Instagram Reels videolarını orijinal ses ve Full HD görüntü kalitesiyle MP4 veya MP3 formatında indirin. Hızlı ve ücretsiz Reels indirme aracı.",
+          "en": "Download Instagram Reels videos with original audio in Full HD MP4 or MP3 format. Fast, free, and unlimited Instagram Reels downloader.",
+          "ar": "قم بتحميل مقاطع ريلز انستقرام مع الصوت الأصلي بجودة Full HD MP4 أو MP3 مجاناً وبسرعة."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/instagram-reels-indir",
+          "en": "https://vidnoria.com/en/instagram-reels-indir",
+          "ar": "https://vidnoria.com/ar/instagram-reels-indir"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/instagram-reels-indir",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "tiktok-video-downloader",
+        "subPath": "/tiktok-video-downloader",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "TikTok Video İndirici - Filigransız HD MP4 ve MP3 İndir | Vidnoria",
+          "en": "TikTok Video Downloader - Without Watermark HD MP4 & MP3 | Vidnoria",
+          "ar": "تحميل فيديو من تيك توك - بدون علامة مائية HD MP4 و MP3 | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "TikTok video indirme aracı ile TikTok videolarını filigransız (logosuz) HD MP4 veya MP3 formatında indirin. Ücretsiz ve sınırsız TikTok indirici.",
+          "en": "Download TikTok videos without watermark in HD MP4 or MP3 format with our TikTok video downloader. Free and unlimited TikTok saver.",
+          "ar": "قم بتحميل فيديوهات تيك توك بدون علامة مائية بصيغة HD MP4 أو MP3 مجاناً وبسرعة مع فيدنوريا."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/tiktok-video-downloader",
+          "en": "https://vidnoria.com/en/tiktok-video-downloader",
+          "ar": "https://vidnoria.com/ar/tiktok-video-downloader"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/tiktok-video-downloader",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "tiktok-video-indir",
+        "subPath": "/tiktok-video-indir",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "TikTok Video İndir - Logosuz ve Filigransız TikTok Kaydetme | Vidnoria",
+          "en": "Download TikTok Videos No Watermark - Fast Online Saver | Vidnoria",
+          "ar": "تنزيل مقاطع تيك توك بدون شعار - حفظ سريع ومجاني | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "TikTok videolarını yazı ve logo olmadan (filigransız) telefonunuza veya bilgisayarınıza MP4 olarak kaydedin. Ücretsiz TikTok video indirme sayfası.",
+          "en": "Save TikTok videos without logo or watermark directly to your mobile or desktop in MP4 format. Free online TikTok downloader.",
+          "ar": "احفظ مقاطع تيك توك بدون شعار أو علامة مائية مباشرة على هاتفك بصيغة MP4 مجاناً."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/tiktok-video-indir",
+          "en": "https://vidnoria.com/en/tiktok-video-indir",
+          "ar": "https://vidnoria.com/ar/tiktok-video-indir"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/tiktok-video-indir",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "facebook-video-downloader",
+        "subPath": "/facebook-video-downloader",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Facebook Video İndirici - HD MP4 ve Reels Video İndir | Vidnoria",
+          "en": "Facebook Video Downloader - Free HD MP4 & Reels Download | Vidnoria",
+          "ar": "تحميل فيديو فيسبوك - تنزيل مقاطع وريلز بجودة HD مجاناً | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "Facebook video indirme aracı ile Facebook videolarını, Watch ve Reels içeriklerini 1080p HD MP4 formatında indirin. Ücretsiz Facebook video indirici.",
+          "en": "Download Facebook videos, Watch, and Reels content in 1080p HD MP4 format with our Facebook video downloader. Free and fast.",
+          "ar": "قم بتحميل فيديوهات فيسبوك ومقاطع ريلز بصيغة 1080p HD MP4 مع أداة تحميل فيديو فيسبوك المجانية."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/facebook-video-downloader",
+          "en": "https://vidnoria.com/en/facebook-video-downloader",
+          "ar": "https://vidnoria.com/ar/facebook-video-downloader"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/facebook-video-downloader",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "facebook-video-indir",
+        "subPath": "/facebook-video-indir",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Facebook Video İndir - Programsız Telefona ve PC'ye Kaydet | Vidnoria",
+          "en": "Save Facebook Videos Online - Free MP4 Downloader | Vidnoria",
+          "ar": "تنزيل فيديو من فيسبوك للهاتف والكمبيوتر مجاناً | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "Herkese açık Facebook gönderi ve Reels videolarını programsız olarak MP4 veya MP3 formatında cihazınıza indirin.",
+          "en": "Download public Facebook post and Reels videos in MP4 or MP3 format to your device without any software.",
+          "ar": "حمل مقاطع الفيديو العامة من فيسبوك بصيغة MP4 أو MP3 على جهازك بدون أي برامج."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/facebook-video-indir",
+          "en": "https://vidnoria.com/en/facebook-video-indir",
+          "ar": "https://vidnoria.com/ar/facebook-video-indir"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/facebook-video-indir",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "twitter-video-downloader",
+        "subPath": "/twitter-video-downloader",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Twitter (X) Video İndirici - Ücretsiz MP4 ve GIF İndir | Vidnoria",
+          "en": "Twitter (X) Video Downloader - Free HD MP4 & GIF Saver | Vidnoria",
+          "ar": "تحميل فيديو تويتر (إكس) - تنزيل MP4 و GIF مجاناً | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "Twitter/X video indirme aracı ile tweet videolarını ve GIF'lerini HD MP4 formatında indirin. Ücretsiz ve hızlı Twitter/X video indirici.",
+          "en": "Download Twitter/X videos and GIFs in HD MP4 format with our Twitter video downloader. Free and fast X video saver.",
+          "ar": "قم بتحميل فيديوهات تويتر/إكس وصور GIF بصيغة HD MP4 مع أداة تحميل فيديو تويتر المجانية والسريعة."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/twitter-video-downloader",
+          "en": "https://vidnoria.com/en/twitter-video-downloader",
+          "ar": "https://vidnoria.com/ar/twitter-video-downloader"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/twitter-video-downloader",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      },
+      {
+        "routeKey": "twitter-video-indir",
+        "subPath": "/twitter-video-indir",
+        "localesPresent": {
+          "tr": true,
+          "en": true,
+          "ar": true
+        },
+        "titles": {
+          "tr": "Twitter ve X Video İndir - Tweet Videolarını MP4 Kaydet | Vidnoria",
+          "en": "Download X (Twitter) Videos Online - Free HD MP4 Tool | Vidnoria",
+          "ar": "تنزيل مقاطع فيديو إكس (تويتر) أونلاين بجودة عالية | فيدنوريا"
+        },
+        "descriptions": {
+          "tr": "X (Twitter) üzerindeki videoları bağlantı adresini yapıştırarak tek tıkla HD MP4 olarak telefonunuza ve bilgisayarınıza indirin.",
+          "en": "Paste any X (Twitter) post link to download videos in HD MP4 directly to your phone or computer with one click.",
+          "ar": "الصق رابط أي منشور على إكس (تويتر) لتحميل الفيديو بجودة HD MP4 مباشرة بنقرة واحدة."
+        },
+        "canonicals": {
+          "tr": "https://vidnoria.com/tr/twitter-video-indir",
+          "en": "https://vidnoria.com/en/twitter-video-indir",
+          "ar": "https://vidnoria.com/ar/twitter-video-indir"
+        },
+        "hreflangValid": true,
+        "xDefaultUrl": "https://vidnoria.com/tr/twitter-video-indir",
+        "hasUniqueLocalizedTitles": true,
+        "hasUniqueLocalizedDescriptions": true,
+        "issues": []
+      }
+    ],
+    "robotsTxtStatus": {
+      "valid": true,
+      "adminDisallowed": true,
+      "apiDisallowed": true,
+      "sitemapDeclared": true,
+      "rawPreview": "User-Agent: *\nAllow: /\nDisallow: /api/\nDisallow: /admin/\nDisallow: /*/download?\nSitemap: https://vidnoria.com/sitemap.xml"
+    },
+    "sitemapStatus": {
+      "valid": true,
+      "totalUrls": 84,
+      "localesCovered": [
+        "tr",
+        "en",
+        "ar"
+      ],
+      "hasAlternates": true
+    },
+    "coreWebVitals": {
+      "mobile": {
+        "strategy": "mobile",
+        "source": "unavailable",
+        "fetchedAt": null,
+        "performanceScore": null,
+        "lcpMs": null,
+        "cls": null,
+        "inpMs": null,
+        "fcpMs": null,
+        "ttfbMs": null,
+        "statusMessage": {
+          "tr": "Canlı PageSpeed testi için \"PageSpeed Ölçümü Çalıştır\" butonunu kullanın veya PAGESPEED_API_KEY tanımlayın.",
+          "en": "Click \"Run Live PageSpeed Check\" or configure PAGESPEED_API_KEY to fetch live Core Web Vitals.",
+          "ar": "انقر على فحص PageSpeed المباشر أو قم بإعداد PAGESPEED_API_KEY."
+        }
+      },
+      "desktop": {
+        "strategy": "desktop",
+        "source": "unavailable",
+        "fetchedAt": null,
+        "performanceScore": null,
+        "lcpMs": null,
+        "cls": null,
+        "inpMs": null,
+        "fcpMs": null,
+        "ttfbMs": null,
+        "statusMessage": {
+          "tr": "Canlı PageSpeed testi için \"PageSpeed Ölçümü Çalıştır\" butonunu kullanın veya PAGESPEED_API_KEY tanımlayın.",
+          "en": "Click \"Run Live PageSpeed Check\" or configure PAGESPEED_API_KEY to fetch live Core Web Vitals.",
+          "ar": "انقر على فحص PageSpeed المباشر أو قم بإعداد PAGESPEED_API_KEY."
+        }
+      }
+    }
+  }
+}
