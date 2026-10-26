@@ -55,6 +55,10 @@ try {
     'blog/instagram-video-download-guide',
     'blog/save-instagram-reels-with-audio-guide',
     'blog/youtube-video-download-guide',
+    'blog/capcut-sablonu-filigransiz-video-indirme',
+    'blog/pinterest-video-ve-gif-indirme-rehberi',
+    'blog/instagram-hikaye-story-indirme-rehberi',
+    'blog/twitter-x-video-ve-gif-indirme-kolay-yol',
   ];
   const platforms = [
     'youtube-video-downloader',
