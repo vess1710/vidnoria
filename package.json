@@ -39,6 +39,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.4.2",
     "jest": "^30.5.2",
+    "ssh2": "^1.17.0",
     "ts-jest": "^29.4.15"
   }
 }
