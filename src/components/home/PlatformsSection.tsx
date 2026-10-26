@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import type { Platform } from '@/types';
 import { useI18n } from '@/lib/i18n/context';
 import { getSiteSettingsClient } from '@/lib/client-api';
@@ -20,7 +21,7 @@ const platforms: { id: Platform; icon: string; color: string }[] = [
 ];
 
 export default function PlatformsSection() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [enabledMap, setEnabledMap] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
@@ -61,25 +62,36 @@ export default function PlatformsSection() {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 max-w-4xl mx-auto">
-          {visiblePlatforms.map((platform) => (
-            <div
-              key={platform.id}
-              className="glass-card group flex flex-col items-center justify-center p-6 md:p-8 text-center cursor-default"
-            >
-              <div className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br ${platform.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
-                <Image
-                  src={platform.icon}
-                  alt={t(`platforms.${platform.id}`)}
-                  width={32}
-                  height={32}
-                  className="w-8 h-8"
-                />
-              </div>
-              <span className="text-sm font-semibold text-foreground">
-                {t(`platforms.${platform.id}`)}
-              </span>
-            </div>
-          ))}
+          {visiblePlatforms.map((platform) => {
+            const platformName = t(`platforms.${platform.id}`);
+            const slug = lang === 'tr' ? `${platform.id}-video-indir` : `${platform.id}-video-downloader`;
+            const linkTitle = lang === 'tr' 
+              ? `${platformName} Ücretsiz Video ve Müzik İndirme Sayfası`
+              : `${platformName} Free Video and Audio Downloader`;
+
+            return (
+              <Link
+                key={platform.id}
+                href={`/${lang}/${slug}`}
+                title={linkTitle}
+                aria-label={linkTitle}
+                className="glass-card group flex flex-col items-center justify-center p-6 md:p-8 text-center hover:border-primary/50 hover:shadow-lg transition-all"
+              >
+                <div className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br ${platform.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
+                  <Image
+                    src={platform.icon}
+                    alt={`${platformName} ikonu`}
+                    width={32}
+                    height={32}
+                    className="w-8 h-8"
+                  />
+                </div>
+                <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                  {platformName}
+                </span>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

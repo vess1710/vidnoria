@@ -3,7 +3,8 @@
 import { useI18n } from '@/lib/i18n/context';
 import { 
   Zap, FileCheck, MonitorSmartphone, ShieldCheck, 
-  CheckCircle2, Users, Award, Lock, Star, Sparkles, Server, HeartHandshake
+  CheckCircle2, Users, Award, Lock, Star, Sparkles, Server, HeartHandshake,
+  Check, X, HelpCircle, Activity, ArrowRight
 } from 'lucide-react';
 
 export default function SEOContentSection() {
@@ -309,8 +310,130 @@ export default function SEOContentSection() {
               </div>
             </div>
           </div>
+        {/* Technical Comparison Table: Vidnoria vs Standard Download Sites */}
+        <div className="glass-card p-6 md:p-8 rounded-3xl overflow-hidden">
+          <div className="text-center md:text-start mb-6">
+            <span className="text-xs font-bold text-primary tracking-wider uppercase mb-1 block">Teknik Üstünlükler & Karşılaştırma</span>
+            <h3 className="text-xl sm:text-2xl font-black text-foreground">Vidnoria vs Standart İndirme Siteleri</h3>
+            <p className="text-sm text-muted-foreground mt-1">
+              Neden milyonlarca kullanıcı klasik indirme siteleri yerine Vidnoria altyapısını tercih ediyor?
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm border-collapse">
+              <thead>
+                <tr className="border-b border-border bg-muted/30">
+                  <th className="py-3.5 px-4 font-bold text-foreground">Özellik</th>
+                  <th className="py-3.5 px-4 font-bold text-primary">Vidnoria Platformu</th>
+                  <th className="py-3.5 px-4 font-semibold text-muted-foreground">Sıradan İndirme Siteleri</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border/60">
+                <tr>
+                  <td className="py-3 px-4 font-semibold text-foreground">Maksimum Çözünürlük</td>
+                  <td className="py-3 px-4 text-emerald-500 font-bold flex items-center gap-1.5">
+                    <Check className="w-4 h-4 shrink-0" /> 4K Ultra HD & 1080p Full HD (Orijinal Bit Hızı)
+                  </td>
+                  <td className="py-3 px-4 text-muted-foreground flex items-center gap-1.5">
+                    <X className="w-4 h-4 text-destructive shrink-0" /> Sıkıştırılmış 720p veya 480p
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 font-semibold text-foreground">Ses Kalitesi (MP3)</td>
+                  <td className="py-3 px-4 text-emerald-500 font-bold flex items-center gap-1.5">
+                    <Check className="w-4 h-4 shrink-0" /> 320 kbps Stüdyo Kalitesi (Kayıpsız Eşleme)
+                  </td>
+                  <td className="py-3 px-4 text-muted-foreground flex items-center gap-1.5">
+                    <X className="w-4 h-4 text-destructive shrink-0" /> 128 kbps Boğuk & Parazitli Ses
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 font-semibold text-foreground">Sosyal Medya Logoları</td>
+                  <td className="py-3 px-4 text-emerald-500 font-bold flex items-center gap-1.5">
+                    <Check className="w-4 h-4 shrink-0" /> %100 Filigransız Temiz Çıktı (TikTok / CapCut)
+                  </td>
+                  <td className="py-3 px-4 text-muted-foreground flex items-center gap-1.5">
+                    <X className="w-4 h-4 text-destructive shrink-0" /> Logo ve Bitiş Kartları Kalır
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 font-semibold text-foreground">Kullanıcı Gizliliği</td>
+                  <td className="py-3 px-4 text-emerald-500 font-bold flex items-center gap-1.5">
+                    <Check className="w-4 h-4 shrink-0" /> Sıfır Log, Üyeliksiz, 256-bit SSL Koruma
+                  </td>
+                  <td className="py-3 px-4 text-muted-foreground flex items-center gap-1.5">
+                    <X className="w-4 h-4 text-destructive shrink-0" /> Çerez Takibi & Veri Kaydı
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 font-semibold text-foreground">Kullanıcı Deneyimi</td>
+                  <td className="py-3 px-4 text-emerald-500 font-bold flex items-center gap-1.5">
+                    <Check className="w-4 h-4 shrink-0" /> Sahte Buton Yok, Doğrudan Temiz İndirme
+                  </td>
+                  <td className="py-3 px-4 text-muted-foreground flex items-center gap-1.5">
+                    <X className="w-4 h-4 text-destructive shrink-0" /> Yanıltıcı Reklamlar & Açılır Pencereler
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
+        {/* Troubleshooting & Real User Support Guide */}
+        <div className="glass-card p-6 md:p-8 rounded-3xl">
+          <div className="text-center md:text-start mb-6">
+            <span className="text-xs font-bold text-primary tracking-wider uppercase mb-1 block">Kullanıcı Deneyimi & Destek</span>
+            <h3 className="text-xl sm:text-2xl font-black text-foreground">Sık Karşılaşılan Durumlar ve Çözümleri</h3>
+            <p className="text-sm text-muted-foreground mt-1">
+              İndirme işleminizin her zaman %100 başarıyla tamamlanması için dikkat etmeniz gereken püf noktaları:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="p-4 rounded-2xl bg-card/60 border border-border">
+              <h4 className="font-bold text-foreground text-sm flex items-center gap-2 mb-1.5">
+                <HelpCircle className="w-4 h-4 text-primary" />
+                <span>Gizli (Kilitli) Hesapların Videoları</span>
+              </h4>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Platformların güvenlik ve gizlilik kuralları gereği, yalnızca herkese açık (public) paylaşılan videolar analiz edilebilir. Gizli profillerin videoları indirilemez.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-card/60 border border-border">
+              <h4 className="font-bold text-foreground text-sm flex items-center gap-2 mb-1.5">
+                <HelpCircle className="w-4 h-4 text-primary" />
+                <span>Çoklu Gönderiler (Instagram Carousel)</span>
+              </h4>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Birden fazla fotoğraf ve video içeren albüm linki yapıştırdığınızda sistem tüm slaytları algılar. Tek tıkla <strong>Tümünü ZIP Olarak İndir</strong> butonunu kullanabilirsiniz.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-card/60 border border-border">
+              <h4 className="font-bold text-foreground text-sm flex items-center gap-2 mb-1.5">
+                <HelpCircle className="w-4 h-4 text-primary" />
+                <span>Canlı Yayın Kayıtları (Live Streams)</span>
+              </h4>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Devam eden canlı yayınlar indirilemez. Yayın sonlandıktan ve platform tarafından tam video olarak işlendikten sonra tek tıkla cihazınıza kaydedebilirsiniz.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-card/60 border border-border">
+              <h4 className="font-bold text-foreground text-sm flex items-center gap-2 mb-1.5">
+                <HelpCircle className="w-4 h-4 text-primary" />
+                <span>Doğru Bağlantı Formatı</span>
+              </h4>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Bağlantıyı paylaşırken tarayıcının adres çubuğundaki veya uygulamadaki &quot;Bağlantıyı Kopyala&quot; seçeneğini eksiksiz aldığınızdan emin olun.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        </div>
       </div>
     </section>
   );
