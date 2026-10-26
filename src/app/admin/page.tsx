@@ -19,12 +19,22 @@ export default function AdminLoginPage() {
   );
 
   useEffect(() => {
+    // If already authenticated, redirect directly to dashboard
+    if (typeof window !== 'undefined') {
+      const isAuth =
+        sessionStorage.getItem('vidnoria_admin_auth') === 'true' ||
+        localStorage.getItem('vidnoria_admin_auth') === 'true';
+      if (isAuth) {
+        router.push('/admin/dashboard');
+      }
+    }
+
     getApiBaseUrl().then((url) => {
       if (url && url !== '') {
         setTunnelUrl(url.replace(/\/+$/, ''));
       }
     }).catch(() => {});
-  }, []);
+  }, [router]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,7 +57,12 @@ export default function AdminLoginPage() {
       if (contentType.includes('application/json')) {
         const data = await res.json();
         if (data.success) {
+          if (data.token) {
+            sessionStorage.setItem('vidnoria_admin_token', data.token);
+            localStorage.setItem('vidnoria_admin_token', data.token);
+          }
           sessionStorage.setItem('vidnoria_admin_auth', 'true');
+          localStorage.setItem('vidnoria_admin_auth', 'true');
           router.push('/admin/dashboard');
           return;
         } else {
@@ -72,7 +87,12 @@ export default function AdminLoginPage() {
         if (contentType.includes('application/json')) {
           const data = await res.json();
           if (data.success) {
+            if (data.token) {
+              sessionStorage.setItem('vidnoria_admin_token', data.token);
+              localStorage.setItem('vidnoria_admin_token', data.token);
+            }
             sessionStorage.setItem('vidnoria_admin_auth', 'true');
+            localStorage.setItem('vidnoria_admin_auth', 'true');
             router.push('/admin/dashboard');
             return;
           }
@@ -92,6 +112,7 @@ export default function AdminLoginPage() {
 
     if (validPasswords.includes(trimmedPassword)) {
       sessionStorage.setItem('vidnoria_admin_auth', 'true');
+      localStorage.setItem('vidnoria_admin_auth', 'true');
       router.push('/admin/dashboard');
       return;
     }

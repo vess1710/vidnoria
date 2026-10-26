@@ -1,7 +1,180 @@
 {
-  "version": 7,
-  "updatedAt": "2026-10-26T06:39:55.062Z",
+  "version": 25,
+  "updatedAt": "2026-10-26T07:21:21.617Z",
   "data": [
+    {
+      "id": "appr_1792999281542_mce8l",
+      "status": "rolled_back",
+      "createdAt": "2026-10-26T07:21:21.542Z",
+      "changeType": "seo_title",
+      "targetPage": "/tr/unit-test-page",
+      "pageKey": "home",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "Başlık çok kısa",
+        "en": "Title too short",
+        "ar": "العنوان قصير"
+      },
+      "currentValue": "Eski Başlık",
+      "proposedValue": "Yeni Harika SEO Başlığı | Vidnoria",
+      "expectedBenefit": {
+        "tr": "CTR %15 artar",
+        "en": "Increases CTR",
+        "ar": "تحسين النقر"
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:21:21.567Z",
+      "decidedBy": "admin",
+      "rolledBackAt": "2026-10-26T07:21:21.595Z"
+    },
+    {
+      "id": "appr_1792999226088_md19z",
+      "status": "rejected",
+      "createdAt": "2026-10-26T07:20:26.088Z",
+      "changeType": "canonical",
+      "targetPage": "/en/reject-test",
+      "issueSummary": {
+        "tr": "Test",
+        "en": "Test",
+        "ar": "Test"
+      },
+      "currentValue": "old",
+      "proposedValue": "new",
+      "expectedBenefit": {
+        "tr": "Test",
+        "en": "Test",
+        "ar": "Test"
+      },
+      "riskLevel": "high",
+      "githubPrSuggested": true,
+      "decidedAt": "2026-10-26T07:21:21.614Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999226042_9p7xd",
+      "status": "rolled_back",
+      "createdAt": "2026-10-26T07:20:26.042Z",
+      "changeType": "seo_title",
+      "targetPage": "/tr/unit-test-page",
+      "pageKey": "home",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "Başlık çok kısa",
+        "en": "Title too short",
+        "ar": "العنوان قصير"
+      },
+      "currentValue": "Eski Başlık",
+      "proposedValue": "Yeni Harika SEO Başlığı | Vidnoria",
+      "expectedBenefit": {
+        "tr": "CTR %15 artar",
+        "en": "Increases CTR",
+        "ar": "تحسين النقر"
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:20:26.062Z",
+      "decidedBy": "admin",
+      "rolledBackAt": "2026-10-26T07:20:26.076Z"
+    },
+    {
+      "id": "appr_1792999151625_c1an5",
+      "status": "rejected",
+      "createdAt": "2026-10-26T07:19:11.625Z",
+      "changeType": "canonical",
+      "targetPage": "/en/reject-test",
+      "issueSummary": {
+        "tr": "Test",
+        "en": "Test",
+        "ar": "Test"
+      },
+      "currentValue": "old",
+      "proposedValue": "new",
+      "expectedBenefit": {
+        "tr": "Test",
+        "en": "Test",
+        "ar": "Test"
+      },
+      "riskLevel": "high",
+      "githubPrSuggested": true,
+      "decidedAt": "2026-10-26T07:19:11.637Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999151571_p8at2",
+      "status": "rolled_back",
+      "createdAt": "2026-10-26T07:19:11.571Z",
+      "changeType": "seo_title",
+      "targetPage": "/tr/unit-test-page",
+      "pageKey": "home",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "Başlık çok kısa",
+        "en": "Title too short",
+        "ar": "العنوان قصير"
+      },
+      "currentValue": "Eski Başlık",
+      "proposedValue": "Yeni Harika SEO Başlığı | Vidnoria",
+      "expectedBenefit": {
+        "tr": "CTR %15 artar",
+        "en": "Increases CTR",
+        "ar": "تحسين النقر"
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:19:11.592Z",
+      "decidedBy": "admin",
+      "rolledBackAt": "2026-10-26T07:19:11.609Z"
+    },
+    {
+      "id": "appr_1792998808698_c3uo3",
+      "status": "rejected",
+      "createdAt": "2026-10-26T07:13:28.698Z",
+      "changeType": "canonical",
+      "targetPage": "/en/reject-test",
+      "issueSummary": {
+        "tr": "Test",
+        "en": "Test",
+        "ar": "Test"
+      },
+      "currentValue": "old",
+      "proposedValue": "new",
+      "expectedBenefit": {
+        "tr": "Test",
+        "en": "Test",
+        "ar": "Test"
+      },
+      "riskLevel": "high",
+      "githubPrSuggested": true,
+      "decidedAt": "2026-10-26T07:13:28.708Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792998808651_h5xj0",
+      "status": "rolled_back",
+      "createdAt": "2026-10-26T07:13:28.651Z",
+      "changeType": "seo_title",
+      "targetPage": "/tr/unit-test-page",
+      "pageKey": "home",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "Başlık çok kısa",
+        "en": "Title too short",
+        "ar": "العنوان قصير"
+      },
+      "currentValue": "Eski Başlık",
+      "proposedValue": "Yeni Harika SEO Başlığı | Vidnoria",
+      "expectedBenefit": {
+        "tr": "CTR %15 artar",
+        "en": "Increases CTR",
+        "ar": "تحسين النقر"
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:13:28.671Z",
+      "decidedBy": "admin",
+      "rolledBackAt": "2026-10-26T07:13:28.687Z"
+    },
     {
       "id": "appr_1792996795062_kkimr",
       "status": "pending",

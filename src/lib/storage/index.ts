@@ -165,6 +165,26 @@ export async function readJSON<T = unknown>(filePath: string): Promise<T | null>
   }
 }
 
+async function safeAtomicRename(tmpPath: string, targetPath: string): Promise<void> {
+  for (let i = 0; i < 10; i++) {
+    try {
+      await fs.promises.rename(tmpPath, targetPath);
+      return;
+    } catch (err: any) {
+      if ((err.code === 'EPERM' || err.code === 'EBUSY') && i < 9) {
+        await new Promise((resolve) => setTimeout(resolve, 30));
+      } else if (i === 9) {
+        // Fallback for Windows locked file handles
+        await fs.promises.copyFile(tmpPath, targetPath);
+        await fs.promises.unlink(tmpPath).catch(() => {});
+        return;
+      } else {
+        throw err;
+      }
+    }
+  }
+}
+
 /**
  * Write data to a JSON file atomically.
  *
@@ -172,7 +192,7 @@ export async function readJSON<T = unknown>(filePath: string): Promise<T | null>
  * 1. Acquire a file lock
  * 2. Back up the existing file (if any)
  * 3. Write to a temporary file
- * 4. Rename the temp file to the target path
+ * 4. Rename the temp file to the target path (with retry & copy fallback on Windows)
  * 5. Release the lock
  *
  * @param filePath - Absolute path to the JSON file
@@ -194,7 +214,7 @@ export async function writeJSON<T = unknown>(
     await fs.promises.writeFile(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
 
     // Atomic rename
-    await fs.promises.rename(tmpPath, filePath);
+    await safeAtomicRename(tmpPath, filePath);
   } finally {
     await releaseLock(lockPath);
   }
@@ -248,7 +268,7 @@ export async function writeMarkdown(
     const output = matter.stringify(content, frontmatter);
     const tmpPath = `${filePath}.${randomUUID()}.tmp`;
     await fs.promises.writeFile(tmpPath, output, 'utf-8');
-    await fs.promises.rename(tmpPath, filePath);
+    await safeAtomicRename(tmpPath, filePath);
   } finally {
     await releaseLock(lockPath);
   }

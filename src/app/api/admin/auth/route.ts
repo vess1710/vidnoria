@@ -1,12 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { checkAdminPassword, createSessionToken } from '@/lib/admin/auth';
+import {
+  checkAdminPassword,
+  createSessionToken,
+  getAdminCorsHeaders,
+  adminOptionsResponse,
+} from '@/lib/admin/auth';
 import { createRateLimiter } from '@/lib/security';
-
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-};
 
 // Brute-force protection: 15 attempts per 15 minutes per IP
 const loginLimiter = createRateLimiter({
@@ -14,11 +13,12 @@ const loginLimiter = createRateLimiter({
   maxRequests: 15,
 });
 
-export async function OPTIONS() {
-  return new NextResponse(null, { status: 204, headers: corsHeaders });
+export async function OPTIONS(req: Request) {
+  return adminOptionsResponse(req);
 }
 
 export async function POST(req: NextRequest) {
+  const corsHeaders = getAdminCorsHeaders(req);
   const ip = req.headers.get('x-forwarded-for')?.split(',')[0] || '127.0.0.1';
   const rate = loginLimiter.check(ip);
 
@@ -39,12 +39,17 @@ export async function POST(req: NextRequest) {
   }
 
   const token = createSessionToken();
-  const response = NextResponse.json({ success: true, message: 'Authenticated' }, { headers: corsHeaders });
+  const response = NextResponse.json(
+    { success: true, message: 'Authenticated', token },
+    { headers: corsHeaders }
+  );
+
+  const isHttps = req.nextUrl.protocol === 'https:' || req.headers.get('x-forwarded-proto') === 'https';
 
   response.cookies.set('vidnoria_admin_session', token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: 'none',
+    secure: isHttps,
+    sameSite: isHttps ? 'none' : 'lax',
     path: '/',
     maxAge: 12 * 60 * 60, // 12 hours
   });
@@ -52,7 +57,8 @@ export async function POST(req: NextRequest) {
   return response;
 }
 
-export async function DELETE() {
+export async function DELETE(req: Request) {
+  const corsHeaders = getAdminCorsHeaders(req);
   const response = NextResponse.json({ success: true, message: 'Logged out' }, { headers: corsHeaders });
   response.cookies.delete('vidnoria_admin_session');
   return response;

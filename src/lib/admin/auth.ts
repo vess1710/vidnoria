@@ -1,10 +1,9 @@
 import { cookies } from 'next/headers';
+import { NextResponse } from 'next/server';
 import crypto from 'crypto';
 
 const SESSION_COOKIE = 'vidnoria_admin_session';
 const SESSION_DURATION = 12 * 60 * 60 * 1000; // 12 hours
-
-const isProduction = process.env.NODE_ENV === 'production';
 
 // Secret key for HMAC signing.
 const ADMIN_SECRET =
@@ -51,13 +50,68 @@ export function verifySessionToken(token: string): boolean {
 }
 
 /**
- * Server-side check if current admin is authenticated.
+ * Returns CORS headers for admin API requests.
  */
-export async function isAdminAuthenticated(): Promise<boolean> {
-  const cookieStore = await cookies();
-  const session = cookieStore.get(SESSION_COOKIE)?.value;
-  if (!session) return false;
-  return verifySessionToken(session);
+export function getAdminCorsHeaders(req?: Request): Record<string, string> {
+  const origin = req?.headers.get('origin') || '*';
+  const headers: Record<string, string> = {
+    'Access-Control-Allow-Origin': origin,
+    'Access-Control-Allow-Methods': 'GET, POST, PUT, PATCH, DELETE, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With',
+  };
+  if (origin !== '*') {
+    headers['Access-Control-Allow-Credentials'] = 'true';
+  }
+  return headers;
+}
+
+/**
+ * Preflight OPTIONS response helper.
+ */
+export function adminOptionsResponse(req?: Request): NextResponse {
+  return new NextResponse(null, { status: 204, headers: getAdminCorsHeaders(req) });
+}
+
+/**
+ * Server-side check if current admin is authenticated.
+ * Supports:
+ * 1. Authorization: Bearer <token> header (most reliable for cross-origin and SPA clients)
+ * 2. Cookie header on Request (vidnoria_admin_session)
+ * 3. Next.js cookies() store
+ */
+export async function isAdminAuthenticated(req?: Request): Promise<boolean> {
+  // 1. Check Authorization header
+  if (req) {
+    const authHeader = req.headers.get('Authorization') || req.headers.get('authorization');
+    if (authHeader && authHeader.toLowerCase().startsWith('bearer ')) {
+      const token = authHeader.slice(7).trim();
+      if (verifySessionToken(token)) {
+        return true;
+      }
+    }
+
+    // 2. Check Cookie header directly on req
+    const cookieHeader = req.headers.get('cookie') || req.headers.get('Cookie');
+    if (cookieHeader) {
+      const match = cookieHeader.match(/vidnoria_admin_session=([^;]+)/);
+      if (match && match[1] && verifySessionToken(decodeURIComponent(match[1]))) {
+        return true;
+      }
+    }
+  }
+
+  // 3. Fallback to Next.js cookieStore
+  try {
+    const cookieStore = await cookies();
+    const session = cookieStore.get(SESSION_COOKIE)?.value;
+    if (session && verifySessionToken(session)) {
+      return true;
+    }
+  } catch {
+    // Non-standard execution contexts or static build
+  }
+
+  return false;
 }
 
 /**

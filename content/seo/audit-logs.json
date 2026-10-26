@@ -1,7 +1,299 @@
 {
-  "version": 10,
-  "updatedAt": "2026-10-26T06:39:55.101Z",
+  "version": 40,
+  "updatedAt": "2026-10-26T07:21:22.163Z",
   "data": [
+    {
+      "action": "audit_run",
+      "actor": "admin",
+      "target": "https://vidnoria.com",
+      "summary": "Teknik SEO denetimi tamamlandı (Skor: 75/100, Kritik: 0, Uyarı: 1, Öneri: 21).",
+      "id": "log_1792999282162_eluug",
+      "timestamp": "2026-10-26T07:21:22.162Z"
+    },
+    {
+      "action": "draft_created",
+      "actor": "admin",
+      "target": "/blog/how-to-download-tiktok-videos-without-watermark",
+      "summary": "Yeni içerik taslağı oluşturuldu ve onay kuyruğuna eklendi: \"TikTok Videolarını Filigransız ve HD Olarak İndirme Rehberi (2026)\"",
+      "approvalId": "appr_1792996795062_kkimr",
+      "id": "log_1792999281903_1v7td",
+      "timestamp": "2026-10-26T07:21:21.903Z"
+    },
+    {
+      "action": "change_rejected",
+      "actor": "admin",
+      "target": "/en/reject-test",
+      "summary": "SEO önerisi reddedildi: Test",
+      "approvalId": "appr_1792999226088_md19z",
+      "id": "log_1792999281623_1tybv",
+      "timestamp": "2026-10-26T07:21:21.623Z"
+    },
+    {
+      "action": "change_rolled_back",
+      "actor": "admin",
+      "target": "/tr/unit-test-page",
+      "summary": "SEO değişikliği geri alındı: Başlık çok kısa",
+      "approvalId": "appr_1792999281542_mce8l",
+      "previousValue": "Yeni Harika SEO Başlığı | Vidnoria",
+      "newValue": "Eski Başlık",
+      "id": "log_1792999281601_t4foe",
+      "timestamp": "2026-10-26T07:21:21.601Z"
+    },
+    {
+      "action": "change_approved",
+      "actor": "admin",
+      "target": "/tr/unit-test-page",
+      "summary": "SEO değişikliği onaylandı ve uygulandı: Başlık çok kısa",
+      "approvalId": "appr_1792999281542_mce8l",
+      "previousValue": "Eski Başlık",
+      "newValue": "Yeni Harika SEO Başlığı | Vidnoria",
+      "id": "log_1792999281579_jjx0q",
+      "timestamp": "2026-10-26T07:21:21.579Z"
+    },
+    {
+      "action": "approval_created",
+      "actor": "admin",
+      "target": "/tr/unit-test-page",
+      "summary": "Yeni onay talebi oluşturuldu (seo_title): Başlık çok kısa",
+      "approvalId": "appr_1792999281542_mce8l",
+      "previousValue": "Eski Başlık",
+      "newValue": "Yeni Harika SEO Başlığı | Vidnoria",
+      "id": "log_1792999281547_3vghd",
+      "timestamp": "2026-10-26T07:21:21.547Z"
+    },
+    {
+      "action": "settings_updated",
+      "actor": "admin",
+      "target": "global",
+      "summary": "Settings updated test",
+      "id": "log_1792999281487_6h9fl",
+      "timestamp": "2026-10-26T07:21:21.487Z"
+    },
+    {
+      "action": "audit_run",
+      "actor": "admin",
+      "target": "https://vidnoria.com",
+      "summary": "Teknik SEO denetimi tamamlandı (Skor: 75/100, Kritik: 0, Uyarı: 1, Öneri: 21).",
+      "id": "log_1792999226236_4yqus",
+      "timestamp": "2026-10-26T07:20:26.236Z"
+    },
+    {
+      "action": "draft_created",
+      "actor": "admin",
+      "target": "/blog/how-to-download-tiktok-videos-without-watermark",
+      "summary": "Yeni içerik taslağı oluşturuldu ve onay kuyruğuna eklendi: \"TikTok Videolarını Filigransız ve HD Olarak İndirme Rehberi (2026)\"",
+      "approvalId": "appr_1792996795062_kkimr",
+      "id": "log_1792999226153_o8fv4",
+      "timestamp": "2026-10-26T07:20:26.153Z"
+    },
+    {
+      "action": "approval_created",
+      "actor": "admin",
+      "target": "/en/reject-test",
+      "summary": "Yeni onay talebi oluşturuldu (canonical): Test",
+      "approvalId": "appr_1792999226088_md19z",
+      "previousValue": "old",
+      "newValue": "new",
+      "id": "log_1792999226094_qqtxt",
+      "timestamp": "2026-10-26T07:20:26.094Z"
+    },
+    {
+      "action": "change_rolled_back",
+      "actor": "admin",
+      "target": "/tr/unit-test-page",
+      "summary": "SEO değişikliği geri alındı: Başlık çok kısa",
+      "approvalId": "appr_1792999226042_9p7xd",
+      "previousValue": "Yeni Harika SEO Başlığı | Vidnoria",
+      "newValue": "Eski Başlık",
+      "id": "log_1792999226082_63n28",
+      "timestamp": "2026-10-26T07:20:26.082Z"
+    },
+    {
+      "action": "change_approved",
+      "actor": "admin",
+      "target": "/tr/unit-test-page",
+      "summary": "SEO değişikliği onaylandı ve uygulandı: Başlık çok kısa",
+      "approvalId": "appr_1792999226042_9p7xd",
+      "previousValue": "Eski Başlık",
+      "newValue": "Yeni Harika SEO Başlığı | Vidnoria",
+      "id": "log_1792999226066_ieog5",
+      "timestamp": "2026-10-26T07:20:26.066Z"
+    },
+    {
+      "action": "approval_created",
+      "actor": "admin",
+      "target": "/tr/unit-test-page",
+      "summary": "Yeni onay talebi oluşturuldu (seo_title): Başlık çok kısa",
+      "approvalId": "appr_1792999226042_9p7xd",
+      "previousValue": "Eski Başlık",
+      "newValue": "Yeni Harika SEO Başlığı | Vidnoria",
+      "id": "log_1792999226050_9vgmu",
+      "timestamp": "2026-10-26T07:20:26.050Z"
+    },
+    {
+      "action": "settings_updated",
+      "actor": "admin",
+      "target": "global",
+      "summary": "Settings updated test",
+      "id": "log_1792999226027_84ezi",
+      "timestamp": "2026-10-26T07:20:26.027Z"
+    },
+    {
+      "action": "audit_run",
+      "actor": "admin",
+      "target": "https://vidnoria.com",
+      "summary": "Teknik SEO denetimi tamamlandı (Skor: 75/100, Kritik: 0, Uyarı: 1, Öneri: 21).",
+      "id": "log_1792999151801_lupht",
+      "timestamp": "2026-10-26T07:19:11.801Z"
+    },
+    {
+      "action": "draft_created",
+      "actor": "admin",
+      "target": "/blog/how-to-download-tiktok-videos-without-watermark",
+      "summary": "Yeni içerik taslağı oluşturuldu ve onay kuyruğuna eklendi: \"TikTok Videolarını Filigransız ve HD Olarak İndirme Rehberi (2026)\"",
+      "approvalId": "appr_1792996795062_kkimr",
+      "id": "log_1792999151676_k4kl9",
+      "timestamp": "2026-10-26T07:19:11.676Z"
+    },
+    {
+      "action": "change_rejected",
+      "actor": "admin",
+      "target": "/en/reject-test",
+      "summary": "SEO önerisi reddedildi: Test",
+      "approvalId": "appr_1792999151625_c1an5",
+      "id": "log_1792999151643_dew1z",
+      "timestamp": "2026-10-26T07:19:11.643Z"
+    },
+    {
+      "action": "approval_created",
+      "actor": "admin",
+      "target": "/en/reject-test",
+      "summary": "Yeni onay talebi oluşturuldu (canonical): Test",
+      "approvalId": "appr_1792999151625_c1an5",
+      "previousValue": "old",
+      "newValue": "new",
+      "id": "log_1792999151631_pzx2m",
+      "timestamp": "2026-10-26T07:19:11.631Z"
+    },
+    {
+      "action": "change_rolled_back",
+      "actor": "admin",
+      "target": "/tr/unit-test-page",
+      "summary": "SEO değişikliği geri alındı: Başlık çok kısa",
+      "approvalId": "appr_1792999151571_p8at2",
+      "previousValue": "Yeni Harika SEO Başlığı | Vidnoria",
+      "newValue": "Eski Başlık",
+      "id": "log_1792999151617_8yjgj",
+      "timestamp": "2026-10-26T07:19:11.617Z"
+    },
+    {
+      "action": "change_approved",
+      "actor": "admin",
+      "target": "/tr/unit-test-page",
+      "summary": "SEO değişikliği onaylandı ve uygulandı: Başlık çok kısa",
+      "approvalId": "appr_1792999151571_p8at2",
+      "previousValue": "Eski Başlık",
+      "newValue": "Yeni Harika SEO Başlığı | Vidnoria",
+      "id": "log_1792999151597_etcdz",
+      "timestamp": "2026-10-26T07:19:11.597Z"
+    },
+    {
+      "action": "approval_created",
+      "actor": "admin",
+      "target": "/tr/unit-test-page",
+      "summary": "Yeni onay talebi oluşturuldu (seo_title): Başlık çok kısa",
+      "approvalId": "appr_1792999151571_p8at2",
+      "previousValue": "Eski Başlık",
+      "newValue": "Yeni Harika SEO Başlığı | Vidnoria",
+      "id": "log_1792999151578_6sp48",
+      "timestamp": "2026-10-26T07:19:11.578Z"
+    },
+    {
+      "action": "settings_updated",
+      "actor": "admin",
+      "target": "global",
+      "summary": "Settings updated test",
+      "id": "log_1792999151562_7lz2o",
+      "timestamp": "2026-10-26T07:19:11.562Z"
+    },
+    {
+      "action": "audit_run",
+      "actor": "admin",
+      "target": "https://vidnoria.com",
+      "summary": "Teknik SEO denetimi tamamlandı (Skor: 75/100, Kritik: 0, Uyarı: 1, Öneri: 21).",
+      "id": "log_1792998808786_132dk",
+      "timestamp": "2026-10-26T07:13:28.786Z"
+    },
+    {
+      "action": "draft_created",
+      "actor": "admin",
+      "target": "/blog/how-to-download-tiktok-videos-without-watermark",
+      "summary": "Yeni içerik taslağı oluşturuldu ve onay kuyruğuna eklendi: \"TikTok Videolarını Filigransız ve HD Olarak İndirme Rehberi (2026)\"",
+      "approvalId": "appr_1792996795062_kkimr",
+      "id": "log_1792998808736_0zjkd",
+      "timestamp": "2026-10-26T07:13:28.736Z"
+    },
+    {
+      "action": "change_rejected",
+      "actor": "admin",
+      "target": "/en/reject-test",
+      "summary": "SEO önerisi reddedildi: Test",
+      "approvalId": "appr_1792998808698_c3uo3",
+      "id": "log_1792998808713_d7vu3",
+      "timestamp": "2026-10-26T07:13:28.713Z"
+    },
+    {
+      "action": "approval_created",
+      "actor": "admin",
+      "target": "/en/reject-test",
+      "summary": "Yeni onay talebi oluşturuldu (canonical): Test",
+      "approvalId": "appr_1792998808698_c3uo3",
+      "previousValue": "old",
+      "newValue": "new",
+      "id": "log_1792998808703_fyh1v",
+      "timestamp": "2026-10-26T07:13:28.703Z"
+    },
+    {
+      "action": "change_rolled_back",
+      "actor": "admin",
+      "target": "/tr/unit-test-page",
+      "summary": "SEO değişikliği geri alındı: Başlık çok kısa",
+      "approvalId": "appr_1792998808651_h5xj0",
+      "previousValue": "Yeni Harika SEO Başlığı | Vidnoria",
+      "newValue": "Eski Başlık",
+      "id": "log_1792998808692_ksihy",
+      "timestamp": "2026-10-26T07:13:28.692Z"
+    },
+    {
+      "action": "change_approved",
+      "actor": "admin",
+      "target": "/tr/unit-test-page",
+      "summary": "SEO değişikliği onaylandı ve uygulandı: Başlık çok kısa",
+      "approvalId": "appr_1792998808651_h5xj0",
+      "previousValue": "Eski Başlık",
+      "newValue": "Yeni Harika SEO Başlığı | Vidnoria",
+      "id": "log_1792998808676_8eop7",
+      "timestamp": "2026-10-26T07:13:28.676Z"
+    },
+    {
+      "action": "approval_created",
+      "actor": "admin",
+      "target": "/tr/unit-test-page",
+      "summary": "Yeni onay talebi oluşturuldu (seo_title): Başlık çok kısa",
+      "approvalId": "appr_1792998808651_h5xj0",
+      "previousValue": "Eski Başlık",
+      "newValue": "Yeni Harika SEO Başlığı | Vidnoria",
+      "id": "log_1792998808656_kpulz",
+      "timestamp": "2026-10-26T07:13:28.656Z"
+    },
+    {
+      "action": "settings_updated",
+      "actor": "admin",
+      "target": "global",
+      "summary": "Settings updated test",
+      "id": "log_1792998808638_8pgkd",
+      "timestamp": "2026-10-26T07:13:28.638Z"
+    },
     {
       "action": "audit_run",
       "actor": "admin",

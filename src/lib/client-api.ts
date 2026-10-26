@@ -425,3 +425,39 @@ export async function getSiteSettingsClient(): Promise<SiteSettings | null> {
   }
   return publicSettingsPromise;
 }
+
+/**
+ * Retrieves the stored admin bearer session token from sessionStorage or localStorage.
+ */
+export function getAdminToken(): string | null {
+  if (typeof window === 'undefined') return null;
+  return (
+    sessionStorage.getItem('vidnoria_admin_token') ||
+    localStorage.getItem('vidnoria_admin_token') ||
+    null
+  );
+}
+
+/**
+ * Checks whether the client has an active admin session locally.
+ */
+export function isAdminLoggedIn(): boolean {
+  if (typeof window === 'undefined') return false;
+  return (
+    sessionStorage.getItem('vidnoria_admin_auth') === 'true' ||
+    localStorage.getItem('vidnoria_admin_auth') === 'true'
+  );
+}
+
+/**
+ * Constructs request headers containing Bearer authorization for admin API calls.
+ */
+export function getAdminAuthHeaders(extraHeaders: Record<string, string> = {}): Record<string, string> {
+  const headers: Record<string, string> = { ...extraHeaders };
+  const token = getAdminToken();
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`;
+  }
+  return headers;
+}
+

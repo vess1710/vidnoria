@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import { SiteSettings } from '@/types';
 import SeoManagerPanel from '@/components/admin/SeoManagerPanel';
-import { getApiBaseUrl } from '@/lib/client-api';
+import { getApiBaseUrl, getAdminAuthHeaders } from '@/lib/client-api';
 
 type Tab = 'overview' | 'settings' | 'ads' | 'platforms' | 'blog' | 'seo';
 
@@ -38,28 +38,31 @@ export default function AdminDashboardPage() {
     try {
       setLoading(true);
       const baseUrl = await getApiBaseUrl().catch(() => '');
+      const authHeaders = getAdminAuthHeaders({ Accept: 'application/json' });
       const [statsRes, settingsRes, blogRes] = await Promise.all([
-        fetch(`${baseUrl}/api/admin/stats`).catch(() => null),
-        fetch(`${baseUrl}/api/admin/settings`).catch(() => null),
-        fetch(`${baseUrl}/api/admin/blog`).catch(() => null),
+        fetch(`${baseUrl}/api/admin/stats`, { headers: authHeaders, credentials: 'include' }).catch(() => null),
+        fetch(`${baseUrl}/api/admin/settings`, { headers: authHeaders, credentials: 'include' }).catch(() => null),
+        fetch(`${baseUrl}/api/admin/blog`, { headers: authHeaders, credentials: 'include' }).catch(() => null),
       ]);
 
       const isJson = statsRes?.headers.get('content-type')?.includes('application/json');
 
       if (isJson && statsRes && settingsRes && blogRes) {
         if (statsRes.status === 401 || settingsRes.status === 401) {
-          router.push('/admin');
+          if (typeof window !== 'undefined' && sessionStorage.getItem('vidnoria_admin_auth') !== 'true') {
+            router.push('/admin');
+            return;
+          }
+        } else {
+          const statsData = await statsRes.json();
+          const settingsData = await settingsRes.json();
+          const blogData = await blogRes.json();
+
+          if (statsData.success) setStats(statsData.stats);
+          if (settingsData.success) setSettings(settingsData.settings);
+          if (blogData.success) setBlogPosts(blogData.posts || []);
           return;
         }
-
-        const statsData = await statsRes.json();
-        const settingsData = await settingsRes.json();
-        const blogData = await blogRes.json();
-
-        if (statsData.success) setStats(statsData.stats);
-        if (settingsData.success) setSettings(settingsData.settings);
-        if (blogData.success) setBlogPosts(blogData.posts || []);
-        return;
       }
 
       // Static hosting (GitHub Pages) fallback using sessionStorage & localStorage
@@ -141,9 +144,11 @@ export default function AdminDashboardPage() {
 
     try {
       const baseUrl = await getApiBaseUrl().catch(() => '');
+      const authHeaders = getAdminAuthHeaders({ 'Content-Type': 'application/json' });
       const res = await fetch(`${baseUrl}/api/admin/settings`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: authHeaders,
+        credentials: 'include',
         body: JSON.stringify(settings),
       });
 
@@ -169,9 +174,11 @@ export default function AdminDashboardPage() {
     setSaving(true);
     try {
       const baseUrl = await getApiBaseUrl().catch(() => '');
+      const authHeaders = getAdminAuthHeaders({ 'Content-Type': 'application/json' });
       const res = await fetch(`${baseUrl}/api/admin/blog`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: authHeaders,
+        credentials: 'include',
         body: JSON.stringify(editingPost),
       });
       const data = await res.json();
@@ -191,8 +198,11 @@ export default function AdminDashboardPage() {
     if (!confirm(`"${slug}" yazısını silmek istediğinize emin misiniz?`)) return;
     try {
       const baseUrl = await getApiBaseUrl().catch(() => '');
+      const authHeaders = getAdminAuthHeaders();
       const res = await fetch(`${baseUrl}/api/admin/blog?slug=${encodeURIComponent(slug)}`, {
         method: 'DELETE',
+        headers: authHeaders,
+        credentials: 'include',
       });
       if (res.ok) {
         setMessage({ type: 'success', text: 'Yazı silindi.' });
@@ -205,8 +215,14 @@ export default function AdminDashboardPage() {
 
   const handleLogout = async () => {
     const baseUrl = await getApiBaseUrl().catch(() => '');
-    await fetch(`${baseUrl}/api/admin/auth`, { method: 'DELETE' }).catch(() => null);
-    sessionStorage.removeItem('vidnoria_admin_auth');
+    const authHeaders = getAdminAuthHeaders();
+    await fetch(`${baseUrl}/api/admin/auth`, { method: 'DELETE', headers: authHeaders, credentials: 'include' }).catch(() => null);
+    if (typeof window !== 'undefined') {
+      sessionStorage.removeItem('vidnoria_admin_auth');
+      sessionStorage.removeItem('vidnoria_admin_token');
+      localStorage.removeItem('vidnoria_admin_auth');
+      localStorage.removeItem('vidnoria_admin_token');
+    }
     router.push('/admin');
   };
 
