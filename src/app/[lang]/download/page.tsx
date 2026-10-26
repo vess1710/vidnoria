@@ -11,6 +11,7 @@ import { MediaInfo, FormatOption, DownloadJob } from '@/types';
 import { Locale, getDirection } from '@/lib/i18n';
 import AdSlot from '@/components/ads/AdSlot';
 import DownloadCountdownModal from '@/components/download/DownloadCountdownModal';
+import InstagramCarouselSection from '@/components/download/InstagramCarouselSection';
 import { analyzeUrlClient, startDownloadClient, pollJobStatusClient } from '@/lib/client-api';
 
 interface DownloadPageProps {
@@ -254,6 +255,15 @@ export default function DownloadPage({ params }: DownloadPageProps) {
             <span>{texts.retry}</span>
           </Link>
         </div>
+      )}
+
+      {mediaInfo && !loading && mediaInfo.isCarousel && mediaInfo.carouselItems && mediaInfo.carouselItems.length > 0 && (
+        <InstagramCarouselSection
+          items={mediaInfo.carouselItems}
+          mediaTitle={mediaInfo.title}
+          mediaId={mediaInfo.id}
+          lang={lang}
+        />
       )}
 
       {mediaInfo && !loading && (

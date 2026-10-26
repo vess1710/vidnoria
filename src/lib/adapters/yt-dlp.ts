@@ -12,7 +12,7 @@ import os from 'os';
 import fs from 'fs/promises';
 import fsSync from 'fs';
 import crypto from 'crypto';
-import { MediaInfo, FormatOption, Platform, VideoQuality } from '@/types';
+import { MediaInfo, FormatOption, Platform, VideoQuality, CarouselItem } from '@/types';
 import { AdapterError, ADAPTER_TIMEOUTS } from './base';
 import { getYtDlpBinary, getFFmpegBinary } from '@/lib/media/processor';
 
@@ -222,23 +222,25 @@ export interface YtDlpFormat {
  * Run yt-dlp --dump-json to fetch metadata for a URL.
  * Uses execFile with array arguments (never shell:true).
  */
-export async function fetchMediaInfo(url: string): Promise<YtDlpInfo> {
+export async function fetchMediaInfo(url: string, allowCarousel: boolean = false): Promise<YtDlpInfo> {
   const sanitized = sanitizeUrl(url);
   const ytdlpBin = getYtDlpBinary();
   const cookieArgs = getCookieArgs();
 
   try {
-    const { stdout } = await execFileAsync(ytdlpBin, [
-      '--dump-json',
+    const args = [
+      allowCarousel ? '--dump-single-json' : '--dump-json',
       '--js-runtimes', 'node',
       ...cookieArgs,
-      '--no-playlist',
+      ...(allowCarousel ? [] : ['--no-playlist']),
       '--no-warnings',
       '--no-check-certificates',
       sanitized,
-    ], {
+    ];
+
+    const { stdout } = await execFileAsync(ytdlpBin, args, {
       timeout: ADAPTER_TIMEOUTS.ANALYSIS,
-      maxBuffer: 15 * 1024 * 1024, // 15MB buffer for large format lists
+      maxBuffer: 25 * 1024 * 1024, // 25MB buffer for large format / carousel lists
     });
 
     const info: YtDlpInfo = JSON.parse(stdout);
@@ -508,14 +510,54 @@ export function getBestThumbnail(info: YtDlpInfo): string {
 }
 
 export function buildMediaInfo(info: YtDlpInfo, platform: Platform): MediaInfo {
+  let isCarousel = false;
+  let carouselItems: CarouselItem[] | undefined = undefined;
+
+  const entries = info.entries || (Array.isArray(info) ? info : null);
+  if (entries && Array.isArray(entries) && entries.length > 1) {
+    isCarousel = true;
+    carouselItems = entries.map((entry: any, idx: number) => {
+      const isVideo =
+        (entry.vcodec && entry.vcodec !== 'none') ||
+        entry.ext === 'mp4' ||
+        (entry.formats && entry.formats.some((f: any) => f.vcodec && f.vcodec !== 'none'));
+
+      let downloadUrl = entry.url;
+      if (!downloadUrl && entry.formats && entry.formats.length > 0) {
+        const sorted = [...entry.formats].sort((a: any, b: any) => (b.height || 0) - (a.height || 0));
+        downloadUrl = sorted[0].url;
+      }
+      if (!downloadUrl) {
+        downloadUrl = getBestThumbnail(entry) || entry.thumbnail;
+      }
+
+      return {
+        id: entry.id || `${info.id || 'slide'}_${idx + 1}`,
+        index: idx + 1,
+        type: isVideo ? 'video' : 'image',
+        url: downloadUrl || '',
+        thumbnail: getBestThumbnail(entry) || entry.thumbnail || downloadUrl || '',
+        format: isVideo ? 'mp4' : 'jpg',
+        quality: entry.height ? `${entry.height}p` : (isVideo ? 'HD MP4' : 'Orijinal JPG'),
+        width: entry.width,
+        height: entry.height,
+        title: entry.title || `Slayt #${idx + 1}`,
+      };
+    });
+  }
+
+  const primaryItem = (entries && entries.length > 0) ? entries[0] : info;
+
   return {
-    id: info.id,
-    title: info.title || 'Untitled',
-    thumbnail: getBestThumbnail(info),
+    id: info.id || primaryItem.id || 'media',
+    title: info.title || primaryItem.title || 'Untitled',
+    thumbnail: getBestThumbnail(primaryItem) || getBestThumbnail(info),
     platform,
-    duration: info.duration || 0,
-    creator: info.uploader || info.channel || info.creator,
-    url: info.webpage_url || '',
-    availableFormats: parseFormats(info.formats || [], platform),
+    duration: info.duration || primaryItem.duration || 0,
+    creator: info.uploader || info.channel || info.creator || primaryItem.uploader,
+    url: info.webpage_url || primaryItem.webpage_url || '',
+    availableFormats: parseFormats((primaryItem.formats || info.formats) || [], platform),
+    isCarousel,
+    carouselItems,
   };
 }

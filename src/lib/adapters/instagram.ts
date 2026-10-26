@@ -14,7 +14,7 @@ export class InstagramAdapter implements PlatformAdapter {
   }
 
   async analyze(url: string): Promise<MediaInfo> {
-    const info = await fetchMediaInfo(url);
+    const info = await fetchMediaInfo(url, true);
     return buildMediaInfo(info, this.platform);
   }
 

@@ -39,6 +39,20 @@ export type MediaFormat = VideoFormat | AudioFormat;
 export type VideoQuality = '360p' | '480p' | '720p' | '1080p' | '1440p' | '4k';
 export type AudioBitrate = '128' | '192' | '256' | '320';
 
+/** A single item inside a multi-item post (e.g. Instagram Carousel / Multi-photo) */
+export interface CarouselItem {
+  id: string;
+  index: number;
+  type: 'image' | 'video';
+  url: string;
+  thumbnail: string;
+  format: 'jpg' | 'png' | 'mp4';
+  quality?: string;
+  width?: number;
+  height?: number;
+  title?: string;
+}
+
 /** Information about a media item retrieved from a platform */
 export interface MediaInfo {
   id: string;
@@ -51,6 +65,8 @@ export interface MediaInfo {
   url: string;
   availableFormats: FormatOption[];
   embedUrl?: string;
+  isCarousel?: boolean;
+  carouselItems?: CarouselItem[];
 }
 
 /** A selectable format/quality option for download */
