@@ -16,7 +16,7 @@ import CookieConsent from '@/components/layout/CookieConsent';
 export const metadata: Metadata = {
   title: 'Vidnoria - Ücretsiz Online Video ve Müzik İndirici (MP4 & MP3)',
   description:
-    'Vidnoria ile YouTube, Instagram, TikTok, Facebook ve Twitter videolarını yüksek kalitede, ücretsiz ve programsız MP4 ve MP3 formatında anında indirin.',
+    'Vidnoria ile YouTube, Instagram, TikTok ve Twitter videolarını yüksek kalitede, ücretsiz ve programsız MP4 ile MP3 formatında anında indirin ve dönüştürün.',
   keywords: [
     'video indir',
     'ücretsiz video indir',
