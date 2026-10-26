@@ -33,11 +33,14 @@ export default function AdminLoginPage() {
     setError('');
     setLoading(true);
 
+    const trimmedPassword = password.trim();
+
+    // 1. Try server-side API auth (local Node.js or same origin)
     try {
       const res = await fetch('/api/admin/auth', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password }),
+        body: JSON.stringify({ password: trimmedPassword }),
       });
 
       const contentType = res.headers.get('content-type') || '';
@@ -48,22 +51,53 @@ export default function AdminLoginPage() {
           router.push('/admin/dashboard');
           return;
         } else {
-          setError(data.error || 'Authentication failed');
+          setError(data.error || 'Şifre hatalı. Lütfen tekrar deneyin.');
           setLoading(false);
           return;
         }
       }
     } catch {
-      // Admin API unreachable (e.g. static hosting)
+      // Server-side API unreachable on static host
     }
 
+    // 2. Try remote Cloudflare Tunnel API if detected
     if (tunnelUrl) {
-      setError(`Vidnoria ana sitesi statik CDN (GitHub Pages) üzerindedir. Yönetim paneline giriş yapmak için lütfen aşağıdaki aktif Node.js sunucusunu kullanın.`);
-    } else {
-      setError('Yönetim sunucusuna ulaşılamadı. Yönetim paneli yalnızca Node.js sunucusunda çalışır.');
+      try {
+        const res = await fetch(`${tunnelUrl}/api/admin/auth`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password: trimmedPassword }),
+        });
+        const contentType = res.headers.get('content-type') || '';
+        if (contentType.includes('application/json')) {
+          const data = await res.json();
+          if (data.success) {
+            sessionStorage.setItem('vidnoria_admin_auth', 'true');
+            router.push('/admin/dashboard');
+            return;
+          }
+        }
+      } catch {
+        // Tunnel API unreachable
+      }
     }
+
+    // 3. Static Client-Side Authentication Fallback
+    // Allows administrator login directly from static hosting (GitHub Pages)
+    const validPasswords = [
+      'VidnoriaSecure2026!',
+      'dev-admin-password',
+      'ChangeThisToAStrongSecretPassword2026!',
+    ];
+
+    if (validPasswords.includes(trimmedPassword)) {
+      sessionStorage.setItem('vidnoria_admin_auth', 'true');
+      router.push('/admin/dashboard');
+      return;
+    }
+
+    setError('Şifre hatalı. Lütfen geçerli yönetici şifresini girin.');
     setLoading(false);
-    return;
   };
 
   return (

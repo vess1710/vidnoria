@@ -15,6 +15,7 @@ import {
   SeoDateRange,
   SeoKeywordItem,
 } from '@/lib/seo/types';
+import { getApiBaseUrl } from '@/lib/client-api';
 
 interface SeoManagerPanelProps {
   onNotify: (msg: { type: 'success' | 'error'; text: string }) => void;
@@ -146,12 +147,13 @@ export default function SeoManagerPanel({ onNotify }: SeoManagerPanelProps) {
 
   const fetchAllSeoData = async () => {
     try {
+      const apiBase = await getApiBaseUrl().catch(() => '');
       const [auditRes, gscRes, kwRes, appRes, contRes] = await Promise.all([
-        fetch('/api/admin/seo/audit').catch(() => null),
-        fetch(`/api/admin/seo/gsc?range=${gscRange}&demo=${gscDemoToggle}`).catch(() => null),
-        fetch('/api/admin/seo/keywords').catch(() => null),
-        fetch('/api/admin/seo/approvals').catch(() => null),
-        fetch('/api/admin/seo/content').catch(() => null),
+        fetch(`${apiBase}/api/admin/seo/audit`).catch(() => null),
+        fetch(`${apiBase}/api/admin/seo/gsc?range=${gscRange}&demo=${gscDemoToggle}`).catch(() => null),
+        fetch(`${apiBase}/api/admin/seo/keywords`).catch(() => null),
+        fetch(`${apiBase}/api/admin/seo/approvals`).catch(() => null),
+        fetch(`${apiBase}/api/admin/seo/content`).catch(() => null),
       ]);
 
       if (auditRes?.ok) {
@@ -189,12 +191,13 @@ export default function SeoManagerPanel({ onNotify }: SeoManagerPanelProps) {
     let ignore = false;
     async function loadData() {
       try {
+        const apiBase = await getApiBaseUrl().catch(() => '');
         const [auditRes, gscRes, kwRes, appRes, contRes] = await Promise.all([
-          fetch('/api/admin/seo/audit').catch(() => null),
-          fetch(`/api/admin/seo/gsc?range=${gscRange}&demo=${gscDemoToggle}`).catch(() => null),
-          fetch('/api/admin/seo/keywords').catch(() => null),
-          fetch('/api/admin/seo/approvals').catch(() => null),
-          fetch('/api/admin/seo/content').catch(() => null),
+          fetch(`${apiBase}/api/admin/seo/audit`).catch(() => null),
+          fetch(`${apiBase}/api/admin/seo/gsc?range=${gscRange}&demo=${gscDemoToggle}`).catch(() => null),
+          fetch(`${apiBase}/api/admin/seo/keywords`).catch(() => null),
+          fetch(`${apiBase}/api/admin/seo/approvals`).catch(() => null),
+          fetch(`${apiBase}/api/admin/seo/content`).catch(() => null),
         ]);
 
         if (ignore) return;
@@ -243,7 +246,8 @@ export default function SeoManagerPanel({ onNotify }: SeoManagerPanelProps) {
   const handleRunAudit = async (includePageSpeed = false) => {
     setActionLoading(true);
     try {
-      const res = await fetch('/api/admin/seo/audit', {
+      const apiBase = await getApiBaseUrl().catch(() => '');
+      const res = await fetch(`${apiBase}/api/admin/seo/audit`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ includePageSpeed }),
@@ -267,7 +271,8 @@ export default function SeoManagerPanel({ onNotify }: SeoManagerPanelProps) {
   const handleApprovalAction = async (approvalId: string, action: 'approve' | 'reject' | 'rollback') => {
     setActionLoading(true);
     try {
-      const res = await fetch('/api/admin/seo/approvals', {
+      const apiBase = await getApiBaseUrl().catch(() => '');
+      const res = await fetch(`${apiBase}/api/admin/seo/approvals`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ approvalId, action }),
@@ -297,7 +302,8 @@ export default function SeoManagerPanel({ onNotify }: SeoManagerPanelProps) {
   const handleCreateDraft = async (topicId: string) => {
     setActionLoading(true);
     try {
-      const res = await fetch('/api/admin/seo/content', {
+      const apiBase = await getApiBaseUrl().catch(() => '');
+      const res = await fetch(`${apiBase}/api/admin/seo/content`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ topicId }),

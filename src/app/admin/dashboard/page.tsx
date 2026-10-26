@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { SiteSettings } from '@/types';
 import SeoManagerPanel from '@/components/admin/SeoManagerPanel';
+import { getApiBaseUrl } from '@/lib/client-api';
 
 type Tab = 'overview' | 'settings' | 'ads' | 'platforms' | 'blog' | 'seo';
 
@@ -36,10 +37,11 @@ export default function AdminDashboardPage() {
   const fetchInitialData = async () => {
     try {
       setLoading(true);
+      const baseUrl = await getApiBaseUrl().catch(() => '');
       const [statsRes, settingsRes, blogRes] = await Promise.all([
-        fetch('/api/admin/stats').catch(() => null),
-        fetch('/api/admin/settings').catch(() => null),
-        fetch('/api/admin/blog').catch(() => null),
+        fetch(`${baseUrl}/api/admin/stats`).catch(() => null),
+        fetch(`${baseUrl}/api/admin/settings`).catch(() => null),
+        fetch(`${baseUrl}/api/admin/blog`).catch(() => null),
       ]);
 
       const isJson = statsRes?.headers.get('content-type')?.includes('application/json');
@@ -138,7 +140,8 @@ export default function AdminDashboardPage() {
     }
 
     try {
-      const res = await fetch('/api/admin/settings', {
+      const baseUrl = await getApiBaseUrl().catch(() => '');
+      const res = await fetch(`${baseUrl}/api/admin/settings`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(settings),
@@ -165,7 +168,8 @@ export default function AdminDashboardPage() {
     if (!editingPost || !editingPost.slug) return;
     setSaving(true);
     try {
-      const res = await fetch('/api/admin/blog', {
+      const baseUrl = await getApiBaseUrl().catch(() => '');
+      const res = await fetch(`${baseUrl}/api/admin/blog`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(editingPost),
@@ -186,7 +190,8 @@ export default function AdminDashboardPage() {
   const handleDeleteBlogPost = async (slug: string) => {
     if (!confirm(`"${slug}" yazısını silmek istediğinize emin misiniz?`)) return;
     try {
-      const res = await fetch(`/api/admin/blog?slug=${encodeURIComponent(slug)}`, {
+      const baseUrl = await getApiBaseUrl().catch(() => '');
+      const res = await fetch(`${baseUrl}/api/admin/blog?slug=${encodeURIComponent(slug)}`, {
         method: 'DELETE',
       });
       if (res.ok) {
@@ -199,7 +204,9 @@ export default function AdminDashboardPage() {
   };
 
   const handleLogout = async () => {
-    await fetch('/api/admin/auth', { method: 'DELETE' });
+    const baseUrl = await getApiBaseUrl().catch(() => '');
+    await fetch(`${baseUrl}/api/admin/auth`, { method: 'DELETE' }).catch(() => null);
+    sessionStorage.removeItem('vidnoria_admin_auth');
     router.push('/admin');
   };
 
