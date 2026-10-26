@@ -1,0 +1,5 @@
+:HL["/_next/static/css/2065859a22c05218.css","style"]
+3:[["children",{"s":"__PAGE__","h":160}]]
+2:[["children",{"s":{"n":"platform","t":"d","k":"snapchat-video-downloader","s":["audio-cutter","blog","contact","cookies","copyright","disclaimer","download","faq","image-converter","privacy","terms","video-converter"]},"h":64,"c":"$Q3"}]]
+1:[["children",{"s":{"n":"lang","t":"d","k":"tr","s":["_not-found","_global-error","admin","ads.txt","favicon.ico","robots.txt","sitemap.xml"]},"c":"$Q2"}]]
+0:{"b":"ZGa3AEw1fjLAPY1XunwTh","t":{"t":{"s":"","h":16,"c":"$Q1"}}}

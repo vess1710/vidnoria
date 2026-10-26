@@ -1,2 +1,1 @@
-# Vidnoria - Google AdSense Authorized Digital Sellers (ads.txt)
 google.com, pub-4211004489667670, DIRECT, f08c47fec0942fa0

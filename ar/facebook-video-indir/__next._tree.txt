@@ -1,5 +1,5 @@
-:HL["/_next/static/chunks/0axv7qcfg6eba.css","style"]
+:HL["/_next/static/css/2065859a22c05218.css","style"]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"platform","t":"d","k":"facebook-video-indir","s":["audio-cutter","blog","contact","cookies","copyright","disclaimer","download","faq","image-converter","privacy","terms","video-converter"]},"h":64,"c":"$Q3"}]]
-1:[["children",{"s":{"n":"lang","t":"d","k":"ar","s":["admin"]},"h":32,"c":"$Q2"}]]
-0:{"b":"Uzdfb8WOstyo-zQs7IDao","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+1:[["children",{"s":{"n":"lang","t":"d","k":"ar","s":["_not-found","_global-error","admin","ads.txt","favicon.ico","robots.txt","sitemap.xml"]},"c":"$Q2"}]]
+0:{"b":"ZGa3AEw1fjLAPY1XunwTh","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
