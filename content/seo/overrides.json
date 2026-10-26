@@ -1,9 +1,53 @@
 {
-  "version": 11,
-  "updatedAt": "2026-10-26T07:21:21.586Z",
+  "version": 39,
+  "updatedAt": "2026-10-26T07:33:43.206Z",
   "data": {
     "home": {
-      "title": {}
+      "title": {},
+      "description": {
+        "tr": "Vidnoria ile YouTube, Instagram, TikTok, Facebook ve Twitter'dan video ve müzik indirin. Ücretsiz, hızlı ve güvenli online video indirme aracı. MP4, MP3, W...",
+        "en": "Download videos and music from YouTube, Instagram, TikTok, Facebook and Twitter with Vidnoria. Free, fast and secure online video downloader tool. MP4, MP3..."
+      }
+    },
+    "instagram-reels-indir": {
+      "title": {
+        "tr": "Instagram Reels İndir - Filigransız HD Reels Video v | Vidnoria"
+      }
+    },
+    "cookies": {
+      "title": {
+        "tr": "Çerez Politikası | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+        "en": "Cookie Policy | Vidnoria - Ücretsiz HD İndir | Vidnoria"
+      }
+    },
+    "terms": {
+      "title": {
+        "en": "Terms of Service | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+        "ar": "شروط الاستخدام | فيدنوريا - Ücretsiz HD İndir | Vidnoria",
+        "tr": "Kullanım Şartları | Vidnoria - Ücretsiz HD İndir | Vidnoria"
+      }
+    },
+    "faq": {
+      "title": {
+        "ar": "الأسئلة الشائعة | فيدنوريا - Ücretsiz HD İndir | Vidnoria"
+      }
+    },
+    "privacy": {
+      "title": {
+        "ar": "سياسة الخصوصية | فيدنوريا - Ücretsiz HD İndir | Vidnoria",
+        "en": "Privacy Policy | Vidnoria - Ücretsiz HD İndir | Vidnoria"
+      }
+    },
+    "video-converter": {
+      "title": {
+        "ar": "محول الفيديو والصوت المجاني عبر الإنترنت (MP4, MP3, | Vidnoria",
+        "tr": "Ücretsiz Online Video ve Ses Dönüştürücü (MP4, MP3, | Vidnoria"
+      }
+    },
+    "disclaimer": {
+      "title": {
+        "en": "Legal Disclaimer | Vidnoria - Ücretsiz HD İndir | Vidnoria"
+      }
     }
   }
 }

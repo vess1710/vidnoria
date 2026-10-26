@@ -1,16 +1,16 @@
 {
-  "version": 14,
-  "updatedAt": "2026-10-26T07:21:22.155Z",
+  "version": 20,
+  "updatedAt": "2026-10-26T07:33:43.390Z",
   "data": {
-    "id": "audit_1792999282152",
-    "auditedAt": "2026-10-26T07:21:22.152Z",
+    "id": "audit_1793000023377",
+    "auditedAt": "2026-10-26T07:33:43.377Z",
     "totalPagesChecked": 84,
-    "healthScore": 75,
+    "healthScore": 82,
     "counts": {
       "critical": 0,
       "warning": 1,
-      "suggestion": 21,
-      "passed": 410
+      "suggestion": 14,
+      "passed": 435
     },
     "issues": [
       {
@@ -322,111 +322,6 @@
         "changeType": "seo_title"
       },
       {
-        "id": "blog-internal-link-tr-instagram-video-download-guide",
-        "severity": "suggestion",
-        "category": "internal_links",
-        "pageUrl": "https://vidnoria.com/tr/blog/instagram-video-download-guide",
-        "locale": "tr",
-        "title": {
-          "tr": "İç Bağlantı (Internal Link) Fırsatı",
-          "en": "Internal Linking Opportunity",
-          "ar": "فرصة لإضافة روابط داخلية"
-        },
-        "description": {
-          "tr": "\"Instagram Reels ve Video Kaydetme Yöntemleri\" yazısından ilgili video indirme aracına (örn. /tr/youtube-video-downloader) iç bağlantı verilmesi SEO otoritesini güçlendirir.",
-          "en": "Adding an internal link from \"Instagram Reels ve Video Kaydetme Yöntemleri\" to the relevant downloader tool strengthens topical authority.",
-          "ar": "إضافة رابط داخلي من \"Instagram Reels ve Video Kaydetme Yöntemleri\" إلى أداة التحميل ذات الصلة يعزز قوة السيو."
-        },
-        "currentValue": "0 iç bağlantı",
-        "recommendedValue": "[Vidnoria Video İndirici](/tr/youtube-video-downloader)",
-        "canAutoProposeFix": true,
-        "changeType": "content_update"
-      },
-      {
-        "id": "blog-internal-link-tr-youtube-video-download-guide",
-        "severity": "suggestion",
-        "category": "internal_links",
-        "pageUrl": "https://vidnoria.com/tr/blog/youtube-video-download-guide",
-        "locale": "tr",
-        "title": {
-          "tr": "İç Bağlantı (Internal Link) Fırsatı",
-          "en": "Internal Linking Opportunity",
-          "ar": "فرصة لإضافة روابط داخلية"
-        },
-        "description": {
-          "tr": "\"YouTube Video ve Ses İndirme Rehberi\" yazısından ilgili video indirme aracına (örn. /tr/youtube-video-downloader) iç bağlantı verilmesi SEO otoritesini güçlendirir.",
-          "en": "Adding an internal link from \"YouTube Video ve Ses İndirme Rehberi\" to the relevant downloader tool strengthens topical authority.",
-          "ar": "إضافة رابط داخلي من \"YouTube Video ve Ses İndirme Rehberi\" إلى أداة التحميل ذات الصلة يعزز قوة السيو."
-        },
-        "currentValue": "0 iç bağlantı",
-        "recommendedValue": "[Vidnoria Video İndirici](/tr/youtube-video-downloader)",
-        "canAutoProposeFix": true,
-        "changeType": "content_update"
-      },
-      {
-        "id": "blog-internal-link-en-instagram-video-download-guide",
-        "severity": "suggestion",
-        "category": "internal_links",
-        "pageUrl": "https://vidnoria.com/en/blog/instagram-video-download-guide",
-        "locale": "en",
-        "title": {
-          "tr": "İç Bağlantı (Internal Link) Fırsatı",
-          "en": "Internal Linking Opportunity",
-          "ar": "فرصة لإضافة روابط داخلية"
-        },
-        "description": {
-          "tr": "\"How to Save Instagram Reels and Videos\" yazısından ilgili video indirme aracına (örn. /en/youtube-video-downloader) iç bağlantı verilmesi SEO otoritesini güçlendirir.",
-          "en": "Adding an internal link from \"How to Save Instagram Reels and Videos\" to the relevant downloader tool strengthens topical authority.",
-          "ar": "إضافة رابط داخلي من \"How to Save Instagram Reels and Videos\" إلى أداة التحميل ذات الصلة يعزز قوة السيو."
-        },
-        "currentValue": "0 iç bağlantı",
-        "recommendedValue": "[Vidnoria Video İndirici](/en/youtube-video-downloader)",
-        "canAutoProposeFix": true,
-        "changeType": "content_update"
-      },
-      {
-        "id": "blog-internal-link-en-youtube-video-download-guide",
-        "severity": "suggestion",
-        "category": "internal_links",
-        "pageUrl": "https://vidnoria.com/en/blog/youtube-video-download-guide",
-        "locale": "en",
-        "title": {
-          "tr": "İç Bağlantı (Internal Link) Fırsatı",
-          "en": "Internal Linking Opportunity",
-          "ar": "فرصة لإضافة روابط داخلية"
-        },
-        "description": {
-          "tr": "\"YouTube Video & Audio Download Guide\" yazısından ilgili video indirme aracına (örn. /en/youtube-video-downloader) iç bağlantı verilmesi SEO otoritesini güçlendirir.",
-          "en": "Adding an internal link from \"YouTube Video & Audio Download Guide\" to the relevant downloader tool strengthens topical authority.",
-          "ar": "إضافة رابط داخلي من \"YouTube Video & Audio Download Guide\" إلى أداة التحميل ذات الصلة يعزز قوة السيو."
-        },
-        "currentValue": "0 iç bağlantı",
-        "recommendedValue": "[Vidnoria Video İndirici](/en/youtube-video-downloader)",
-        "canAutoProposeFix": true,
-        "changeType": "content_update"
-      },
-      {
-        "id": "blog-internal-link-ar-copyright-and-legal-downloads",
-        "severity": "suggestion",
-        "category": "internal_links",
-        "pageUrl": "https://vidnoria.com/ar/blog/copyright-and-legal-downloads",
-        "locale": "ar",
-        "title": {
-          "tr": "İç Bağlantı (Internal Link) Fırsatı",
-          "en": "Internal Linking Opportunity",
-          "ar": "فرصة لإضافة روابط داخلية"
-        },
-        "description": {
-          "tr": "\"دليل حقوق النشر والاستخدام العادل والتحميل القانوني\" yazısından ilgili video indirme aracına (örn. /ar/youtube-video-downloader) iç bağlantı verilmesi SEO otoritesini güçlendirir.",
-          "en": "Adding an internal link from \"دليل حقوق النشر والاستخدام العادل والتحميل القانوني\" to the relevant downloader tool strengthens topical authority.",
-          "ar": "إضافة رابط داخلي من \"دليل حقوق النشر والاستخدام العادل والتحميل القانوني\" إلى أداة التحميل ذات الصلة يعزز قوة السيو."
-        },
-        "currentValue": "0 iç bağlantı",
-        "recommendedValue": "[Vidnoria Video İndirici](/ar/youtube-video-downloader)",
-        "canAutoProposeFix": true,
-        "changeType": "content_update"
-      },
-      {
         "id": "blog-h2-ar-instagram-video-download-guide",
         "severity": "warning",
         "category": "headings",
@@ -443,48 +338,6 @@
           "ar": "لم يتم العثور على عناوين فرعية H2 في instagram-video-download-guide."
         },
         "canAutoProposeFix": false
-      },
-      {
-        "id": "blog-internal-link-ar-instagram-video-download-guide",
-        "severity": "suggestion",
-        "category": "internal_links",
-        "pageUrl": "https://vidnoria.com/ar/blog/instagram-video-download-guide",
-        "locale": "ar",
-        "title": {
-          "tr": "İç Bağlantı (Internal Link) Fırsatı",
-          "en": "Internal Linking Opportunity",
-          "ar": "فرصة لإضافة روابط داخلية"
-        },
-        "description": {
-          "tr": "\"طريقة حفظ مقاطع ريلز وفيديوهات انستقرام\" yazısından ilgili video indirme aracına (örn. /ar/youtube-video-downloader) iç bağlantı verilmesi SEO otoritesini güçlendirir.",
-          "en": "Adding an internal link from \"طريقة حفظ مقاطع ريلز وفيديوهات انستقرام\" to the relevant downloader tool strengthens topical authority.",
-          "ar": "إضافة رابط داخلي من \"طريقة حفظ مقاطع ريلز وفيديوهات انستقرام\" إلى أداة التحميل ذات الصلة يعزز قوة السيو."
-        },
-        "currentValue": "0 iç bağlantı",
-        "recommendedValue": "[Vidnoria Video İndirici](/ar/youtube-video-downloader)",
-        "canAutoProposeFix": true,
-        "changeType": "content_update"
-      },
-      {
-        "id": "blog-internal-link-ar-youtube-video-download-guide",
-        "severity": "suggestion",
-        "category": "internal_links",
-        "pageUrl": "https://vidnoria.com/ar/blog/youtube-video-download-guide",
-        "locale": "ar",
-        "title": {
-          "tr": "İç Bağlantı (Internal Link) Fırsatı",
-          "en": "Internal Linking Opportunity",
-          "ar": "فرصة لإضافة روابط داخلية"
-        },
-        "description": {
-          "tr": "\"دليل تحميل الفيديو والصوت من يوتيوب\" yazısından ilgili video indirme aracına (örn. /ar/youtube-video-downloader) iç bağlantı verilmesi SEO otoritesini güçlendirir.",
-          "en": "Adding an internal link from \"دليل تحميل الفيديو والصوت من يوتيوب\" to the relevant downloader tool strengthens topical authority.",
-          "ar": "إضافة رابط داخلي من \"دليل تحميل الفيديو والصوت من يوتيوب\" إلى أداة التحميل ذات الصلة يعزز قوة السيو."
-        },
-        "currentValue": "0 iç bağlantı",
-        "recommendedValue": "[Vidnoria Video İndirici](/ar/youtube-video-downloader)",
-        "canAutoProposeFix": true,
-        "changeType": "content_update"
       }
     ],
     "multilingualMatrix": [

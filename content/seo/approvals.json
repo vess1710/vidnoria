@@ -1,7 +1,1138 @@
 {
-  "version": 25,
-  "updatedAt": "2026-10-26T07:21:21.617Z",
+  "version": 114,
+  "updatedAt": "2026-10-26T07:33:43.279Z",
   "data": [
+    {
+      "id": "appr_1793000023278_e0qds",
+      "status": "pending",
+      "createdAt": "2026-10-26T07:33:43.278Z",
+      "changeType": "blog_publish",
+      "targetPage": "/blog/how-to-download-tiktok-videos-without-watermark",
+      "pageKey": "how-to-download-tiktok-videos-without-watermark",
+      "issueSummary": {
+        "tr": "Yeni SEO Blog Yazısı Onay Bekliyor: \"TikTok Videolarını Filigransız ve HD Olarak İndirme Rehberi (2026)\"",
+        "en": "New SEO Blog Post Pending Approval: \"How to Download TikTok Videos Without Watermark in HD (2026 Guide)\"",
+        "ar": "مقال مدونة جديد بانتظار الموافقة: \"دليل تحميل فيديوهات تيك توك بدون علامة مائية بجودة HD (2026)\""
+      },
+      "currentValue": "Yayımlanmamış taslak",
+      "proposedValue": "Slug: /blog/how-to-download-tiktok-videos-without-watermark\nBaşlık: TikTok Videolarını Filigransız ve HD Olarak İndirme Rehberi (2026)",
+      "expectedBenefit": {
+        "tr": "Aylık yüksek arama hacmine sahip filigransız TikTok indirme sorgularından organik trafik çeker.",
+        "en": "Captures high-intent organic search queries for watermark-free video downloads.",
+        "ar": "يجذب حركة بحث مجانية عالية من عمليات البحث عن إزالة العلامة المائية."
+      },
+      "riskLevel": "low",
+      "metadataPayload": {
+        "slug": "how-to-download-tiktok-videos-without-watermark",
+        "draftId": "draft_1793000023277_wpivm",
+        "category": "guides",
+        "title": {
+          "tr": "TikTok Videolarını Filigransız ve HD Olarak İndirme Rehberi (2026)",
+          "en": "How to Download TikTok Videos Without Watermark in HD (2026 Guide)",
+          "ar": "دليل تحميل فيديوهات تيك توك بدون علامة مائية بجودة HD (2026)"
+        },
+        "seoTitle": {
+          "tr": "TikTok Videolarını Filigransız ve HD Olarak İndirme Rehberi (2026) | Vidnoria Blog",
+          "en": "How to Download TikTok Videos Without Watermark in HD (2026 Guide) | Vidnoria Blog",
+          "ar": "دليل تحميل فيديوهات تيك توك بدون علامة مائية بجودة HD (2026) | مدونة فيدنوريا"
+        },
+        "seoDescription": {
+          "tr": "TikTok Videolarını Filigransız ve HD Olarak İndirme Rehberi (2026). Programsız, ücretsiz ve hızlı adımlarla en yüksek kalitede indirme yapmayı öğrenin.",
+          "en": "Step-by-step guide on How to Download TikTok Videos Without Watermark in HD (2026 Guide). Free, online, fast, and secure.",
+          "ar": "دليل شامل خطوة بخطوة حول دليل تحميل فيديوهات تيك توك بدون علامة مائية بجودة HD (2026). مجاني وسريع وآمن عبر الإنترنت."
+        },
+        "contentMarkdown": {
+          "tr": "<!-- content:tr -->\n## Filigransız İndirme Neden Önemlidir?\nSosyal medya videolarını arşivlerken veya sunumlarda kullanırken logonun (filigranın) görüntü kalitesini bozması istenmez. Vidnoria, orijinal çözünürlüğü koruyarak en net video çıktısını almanızı sağlar.\n\n## Adım Adım İndirme Rehberi\n1. İndirmek istediğiniz videonun bağlantı adresini (URL) kopyalayın.\n2. [Vidnoria Video İndirici](/tr/tiktok-video-downloader) sayfasına gidin ve kutucuğa yapıştırın.\n3. **Çözümle** butonuna tıklayın ve istediğiniz MP4 çözünürlüğünü seçip indirmeyi başlatın.\n\n### Telefona (Android & iOS) Kaydetme\nMobil tarayıcınızdan (Safari veya Chrome) linki yapıştırarak doğrudan Galeri veya İndirilenler klasörüne kaydedebilirsiniz.\n\n### Telif Hakları ve Yasal Kullanım\nİndirilen içeriklerin yalnızca kişisel kullanım amacıyla ve telif hakkı sahibinin izin verdiği ölçüde kullanılması önerilir.\n",
+          "en": "<!-- content:en -->\n## Why Download Without Watermark?\nClean video clips without intrusive logos look professional for personal offline archives and presentations. Vidnoria preserves the pristine original quality with high-bitrate MP4 encoding.\n\n## Step-by-Step Download Instructions\n1. Copy the shareable link of the video from your social media app.\n2. Visit the [Vidnoria Video Downloader](/en/tiktok-video-downloader) page and paste the link into the search box.\n3. Click **Analyze**, select your preferred MP4 quality, and download instantly.\n\n### Saving on Mobile (iOS & Android)\nNo app installation required. Use Safari on iOS or Chrome on Android to save directly to your Files or Camera Roll.\n\n### Fair Use & Copyright Guidelines\nAlways respect content creators' rights. Only download videos you have explicit permission to access offline.\n",
+          "ar": "<!-- content:ar -->\n## لماذا يفضل التحميل بدون علامة مائية؟\nتوفر الفيديوهات الخالية من الشعارات مظهراً نظيفاً واحترافياً عند المشاهدة دون اتصال بالإنترنت. تضمن فيدنوريا الحفاظ على الدقة الأصلية بالكامل.\n\n## خطوات التحميل بالتفصيل\n1. انسخ رابط الفيديو من التطبيق.\n2. توجه إلى صفحة [أداة تحميل الفيديو فيدنوريا](/ar/tiktok-video-downloader) والصق الرابط في الصندوق المخصص.\n3. اضغط على **تحليل** ثم اختر صيغة MP4 المناسبة وابدأ التحميل.\n\n### الحفظ على الهاتف الذكي\nلا حاجة لتثبيت أي تطبيقات إضافية، فالأداة تعمل مباشرة عبر متصفح الهاتف مع حفظ الملف في التنزيلات.\n"
+        }
+      },
+      "githubPrSuggested": false
+    },
+    {
+      "id": "appr_1793000023227_k4x8r",
+      "status": "rejected",
+      "createdAt": "2026-10-26T07:33:43.227Z",
+      "changeType": "canonical",
+      "targetPage": "/en/reject-test",
+      "issueSummary": {
+        "tr": "Test",
+        "en": "Test",
+        "ar": "Test"
+      },
+      "currentValue": "old",
+      "proposedValue": "new",
+      "expectedBenefit": {
+        "tr": "Test",
+        "en": "Test",
+        "ar": "Test"
+      },
+      "riskLevel": "high",
+      "githubPrSuggested": true,
+      "decidedAt": "2026-10-26T07:33:43.246Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1793000023168_6zs9d",
+      "status": "rolled_back",
+      "createdAt": "2026-10-26T07:33:43.168Z",
+      "changeType": "seo_title",
+      "targetPage": "/tr/unit-test-page",
+      "pageKey": "home",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "Başlık çok kısa",
+        "en": "Title too short",
+        "ar": "العنوان قصير"
+      },
+      "currentValue": "Eski Başlık",
+      "proposedValue": "Yeni Harika SEO Başlığı | Vidnoria",
+      "expectedBenefit": {
+        "tr": "CTR %15 artar",
+        "en": "Increases CTR",
+        "ar": "تحسين النقر"
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:43.193Z",
+      "decidedBy": "admin",
+      "rolledBackAt": "2026-10-26T07:33:43.209Z"
+    },
+    {
+      "id": "appr_1792999823785_tl0gd",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.785Z",
+      "changeType": "content_update",
+      "targetPage": "https://vidnoria.com/ar/blog/youtube-video-download-guide",
+      "locale": "ar",
+      "issueSummary": {
+        "tr": "İç Bağlantı (Internal Link) Fırsatı",
+        "en": "Internal Linking Opportunity",
+        "ar": "فرصة لإضافة روابط داخلية"
+      },
+      "currentValue": "0 iç bağlantı",
+      "proposedValue": "[Vidnoria Video İndirici](/ar/youtube-video-downloader)",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.216Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823773_4mlsm",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.773Z",
+      "changeType": "content_update",
+      "targetPage": "https://vidnoria.com/ar/blog/instagram-video-download-guide",
+      "locale": "ar",
+      "issueSummary": {
+        "tr": "İç Bağlantı (Internal Link) Fırsatı",
+        "en": "Internal Linking Opportunity",
+        "ar": "فرصة لإضافة روابط داخلية"
+      },
+      "currentValue": "0 iç bağlantı",
+      "proposedValue": "[Vidnoria Video İndirici](/ar/youtube-video-downloader)",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.255Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823760_gey3p",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.760Z",
+      "changeType": "content_update",
+      "targetPage": "https://vidnoria.com/ar/blog/copyright-and-legal-downloads",
+      "locale": "ar",
+      "issueSummary": {
+        "tr": "İç Bağlantı (Internal Link) Fırsatı",
+        "en": "Internal Linking Opportunity",
+        "ar": "فرصة لإضافة روابط داخلية"
+      },
+      "currentValue": "0 iç bağlantı",
+      "proposedValue": "[Vidnoria Video İndirici](/ar/youtube-video-downloader)",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.278Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823749_ejqia",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.749Z",
+      "changeType": "content_update",
+      "targetPage": "https://vidnoria.com/en/blog/youtube-video-download-guide",
+      "locale": "en",
+      "issueSummary": {
+        "tr": "İç Bağlantı (Internal Link) Fırsatı",
+        "en": "Internal Linking Opportunity",
+        "ar": "فرصة لإضافة روابط داخلية"
+      },
+      "currentValue": "0 iç bağlantı",
+      "proposedValue": "[Vidnoria Video İndirici](/en/youtube-video-downloader)",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.301Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823737_pzmdd",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.737Z",
+      "changeType": "content_update",
+      "targetPage": "https://vidnoria.com/en/blog/instagram-video-download-guide",
+      "locale": "en",
+      "issueSummary": {
+        "tr": "İç Bağlantı (Internal Link) Fırsatı",
+        "en": "Internal Linking Opportunity",
+        "ar": "فرصة لإضافة روابط داخلية"
+      },
+      "currentValue": "0 iç bağlantı",
+      "proposedValue": "[Vidnoria Video İndirici](/en/youtube-video-downloader)",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.329Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823724_7qa08",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.724Z",
+      "changeType": "content_update",
+      "targetPage": "https://vidnoria.com/tr/blog/youtube-video-download-guide",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "İç Bağlantı (Internal Link) Fırsatı",
+        "en": "Internal Linking Opportunity",
+        "ar": "فرصة لإضافة روابط داخلية"
+      },
+      "currentValue": "0 iç bağlantı",
+      "proposedValue": "[Vidnoria Video İndirici](/tr/youtube-video-downloader)",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.345Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823712_w1ul0",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.712Z",
+      "changeType": "content_update",
+      "targetPage": "https://vidnoria.com/tr/blog/instagram-video-download-guide",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "İç Bağlantı (Internal Link) Fırsatı",
+        "en": "Internal Linking Opportunity",
+        "ar": "فرصة لإضافة روابط داخلية"
+      },
+      "currentValue": "0 iç bağlantı",
+      "proposedValue": "[Vidnoria Video İndirici](/tr/youtube-video-downloader)",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.363Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823701_dqv6l",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.701Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/tr/instagram-reels-indir",
+      "pageKey": "instagram-reels-indir",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (75 karakter)",
+        "en": "Title Length Can Be Optimized (75 chars)",
+        "ar": "يمكن تحسين طول العنوان (75 حرفاً)"
+      },
+      "currentValue": "Instagram Reels İndir - Filigransız HD Reels Video ve Ses Kaydet | Vidnoria",
+      "proposedValue": "Instagram Reels İndir - Filigransız HD Reels Video v | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.398Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823689_u07rx",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.689Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/tr/cookies",
+      "pageKey": "cookies",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (27 karakter)",
+        "en": "Title Length Can Be Optimized (27 chars)",
+        "ar": "يمكن تحسين طول العنوان (27 حرفاً)"
+      },
+      "currentValue": "Çerez Politikası | Vidnoria",
+      "proposedValue": "Çerez Politikası | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.420Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823676_gd4o0",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.676Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/ar/terms",
+      "pageKey": "terms",
+      "locale": "ar",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (25 karakter)",
+        "en": "Title Length Can Be Optimized (25 chars)",
+        "ar": "يمكن تحسين طول العنوان (25 حرفاً)"
+      },
+      "currentValue": "شروط الاستخدام | فيدنوريا",
+      "proposedValue": "شروط الاستخدام | فيدنوريا - Ücretsiz HD İndir | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.436Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823665_i6k6k",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.665Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/en/terms",
+      "pageKey": "terms",
+      "locale": "en",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (27 karakter)",
+        "en": "Title Length Can Be Optimized (27 chars)",
+        "ar": "يمكن تحسين طول العنوان (27 حرفاً)"
+      },
+      "currentValue": "Terms of Service | Vidnoria",
+      "proposedValue": "Terms of Service | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.452Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823653_koayq",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.653Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/tr/terms",
+      "pageKey": "terms",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (28 karakter)",
+        "en": "Title Length Can Be Optimized (28 chars)",
+        "ar": "يمكن تحسين طول العنوان (28 حرفاً)"
+      },
+      "currentValue": "Kullanım Şartları | Vidnoria",
+      "proposedValue": "Kullanım Şartları | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.468Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823642_xlw2p",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.642Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/ar/privacy",
+      "pageKey": "privacy",
+      "locale": "ar",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (25 karakter)",
+        "en": "Title Length Can Be Optimized (25 chars)",
+        "ar": "يمكن تحسين طول العنوان (25 حرفاً)"
+      },
+      "currentValue": "سياسة الخصوصية | فيدنوريا",
+      "proposedValue": "سياسة الخصوصية | فيدنوريا - Ücretsiz HD İndir | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.484Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823629_smelg",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.629Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/en/privacy",
+      "pageKey": "privacy",
+      "locale": "en",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (25 karakter)",
+        "en": "Title Length Can Be Optimized (25 chars)",
+        "ar": "يمكن تحسين طول العنوان (25 حرفاً)"
+      },
+      "currentValue": "Privacy Policy | Vidnoria",
+      "proposedValue": "Privacy Policy | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.500Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823613_kmbyx",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.613Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/ar/faq",
+      "pageKey": "faq",
+      "locale": "ar",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (26 karakter)",
+        "en": "Title Length Can Be Optimized (26 chars)",
+        "ar": "يمكن تحسين طول العنوان (26 حرفاً)"
+      },
+      "currentValue": "الأسئلة الشائعة | فيدنوريا",
+      "proposedValue": "الأسئلة الشائعة | فيدنوريا - Ücretsiz HD İndir | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.593Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823602_p0x7u",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.602Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/ar/video-converter",
+      "pageKey": "video-converter",
+      "locale": "ar",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (73 karakter)",
+        "en": "Title Length Can Be Optimized (73 chars)",
+        "ar": "يمكن تحسين طول العنوان (73 حرفاً)"
+      },
+      "currentValue": "محول الفيديو والصوت المجاني عبر الإنترنت (MP4, MP3, WebM, MOV) | فيدنوريا",
+      "proposedValue": "محول الفيديو والصوت المجاني عبر الإنترنت (MP4, MP3, | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.642Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823591_ktfht",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.592Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/tr/video-converter",
+      "pageKey": "video-converter",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (73 karakter)",
+        "en": "Title Length Can Be Optimized (73 chars)",
+        "ar": "يمكن تحسين طول العنوان (73 حرفاً)"
+      },
+      "currentValue": "Ücretsiz Online Video ve Ses Dönüştürücü (MP4, MP3, WebM, MOV) | Vidnoria",
+      "proposedValue": "Ücretsiz Online Video ve Ses Dönüştürücü (MP4, MP3, | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.687Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823581_hlza1",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.581Z",
+      "changeType": "meta_description",
+      "targetPage": "https://vidnoria.com/en",
+      "pageKey": "home",
+      "locale": "en",
+      "issueSummary": {
+        "tr": "Meta Açıklama Uzunluğu (177 karakter)",
+        "en": "Meta Description Length (177 chars)",
+        "ar": "طول وصف الميتا (177 حرفاً)"
+      },
+      "currentValue": "Download videos and music from YouTube, Instagram, TikTok, Facebook and Twitter with Vidnoria. Free, fast and secure online video downloader tool. MP4, MP3, WebM format support.",
+      "proposedValue": "Download videos and music from YouTube, Instagram, TikTok, Facebook and Twitter with Vidnoria. Free, fast and secure online video downloader tool. MP4, MP3...",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.717Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999823571_2esh6",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:30:23.571Z",
+      "changeType": "meta_description",
+      "targetPage": "https://vidnoria.com/tr",
+      "pageKey": "home",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "Meta Açıklama Uzunluğu (174 karakter)",
+        "en": "Meta Description Length (174 chars)",
+        "ar": "طول وصف الميتا (174 حرفاً)"
+      },
+      "currentValue": "Vidnoria ile YouTube, Instagram, TikTok, Facebook ve Twitter'dan video ve müzik indirin. Ücretsiz, hızlı ve güvenli online video indirme aracı. MP4, MP3, WebM format desteği.",
+      "proposedValue": "Vidnoria ile YouTube, Instagram, TikTok, Facebook ve Twitter'dan video ve müzik indirin. Ücretsiz, hızlı ve güvenli online video indirme aracı. MP4, MP3, W...",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.751Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999780302_lsrrs",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:29:40.302Z",
+      "changeType": "blog_publish",
+      "targetPage": "/blog/save-instagram-reels-with-audio-guide",
+      "pageKey": "save-instagram-reels-with-audio-guide",
+      "issueSummary": {
+        "tr": "Yeni SEO Blog Yazısı Onay Bekliyor: \"Instagram Reels Videolarını Sesli ve Orijinal Kalitede İndirme\"",
+        "en": "New SEO Blog Post Pending Approval: \"How to Save Instagram Reels with Original Audio on Phone & PC\"",
+        "ar": "مقال مدونة جديد بانتظار الموافقة: \"طريقة حفظ ريلز إنستغرام مع الصوت الأصلي على الهاتف والكمبيوتر\""
+      },
+      "currentValue": "Yayımlanmamış taslak",
+      "proposedValue": "Slug: /blog/save-instagram-reels-with-audio-guide\nBaşlık: Instagram Reels Videolarını Sesli ve Orijinal Kalitede İndirme",
+      "expectedBenefit": {
+        "tr": "Instagram Reels indirme trendlerinde otorite kazanarak organik sıralamayı yükseltir.",
+        "en": "Ranks for trending Instagram Reels queries and builds internal authority to /instagram-video-downloader.",
+        "ar": "يعزز الترتيب في استعلامات ريلز إنستغرام ويوجه الزوار للمنصة."
+      },
+      "riskLevel": "low",
+      "metadataPayload": {
+        "slug": "save-instagram-reels-with-audio-guide",
+        "draftId": "draft_1792999780301_pygw8",
+        "category": "guides",
+        "title": {
+          "tr": "Instagram Reels Videolarını Sesli ve Orijinal Kalitede İndirme",
+          "en": "How to Save Instagram Reels with Original Audio on Phone & PC",
+          "ar": "طريقة حفظ ريلز إنستغرام مع الصوت الأصلي على الهاتف والكمبيوتر"
+        },
+        "seoTitle": {
+          "tr": "Instagram Reels Videolarını Sesli ve Orijinal Kalitede İndirme | Vidnoria Blog",
+          "en": "How to Save Instagram Reels with Original Audio on Phone & PC | Vidnoria Blog",
+          "ar": "طريقة حفظ ريلز إنستغرام مع الصوت الأصلي على الهاتف والكمبيوتر | مدونة فيدنوريا"
+        },
+        "seoDescription": {
+          "tr": "Instagram Reels Videolarını Sesli ve Orijinal Kalitede İndirme. Programsız, ücretsiz ve hızlı adımlarla en yüksek kalitede indirme yapmayı öğrenin.",
+          "en": "Step-by-step guide on How to Save Instagram Reels with Original Audio on Phone & PC. Free, online, fast, and secure.",
+          "ar": "دليل شامل خطوة بخطوة حول طريقة حفظ ريلز إنستغرام مع الصوت الأصلي على الهاتف والكمبيوتر. مجاني وسريع وآمن عبر الإنترنت."
+        },
+        "contentMarkdown": {
+          "tr": "<!-- content:tr -->\n## Filigransız İndirme Neden Önemlidir?\nSosyal medya videolarını arşivlerken veya sunumlarda kullanırken logonun (filigranın) görüntü kalitesini bozması istenmez. Vidnoria, orijinal çözünürlüğü koruyarak en net video çıktısını almanızı sağlar.\n\n## Adım Adım İndirme Rehberi\n1. İndirmek istediğiniz videonun bağlantı adresini (URL) kopyalayın.\n2. [Vidnoria Video İndirici](/tr/tiktok-video-downloader) sayfasına gidin ve kutucuğa yapıştırın.\n3. **Çözümle** butonuna tıklayın ve istediğiniz MP4 çözünürlüğünü seçip indirmeyi başlatın.\n\n### Telefona (Android & iOS) Kaydetme\nMobil tarayıcınızdan (Safari veya Chrome) linki yapıştırarak doğrudan Galeri veya İndirilenler klasörüne kaydedebilirsiniz.\n\n### Telif Hakları ve Yasal Kullanım\nİndirilen içeriklerin yalnızca kişisel kullanım amacıyla ve telif hakkı sahibinin izin verdiği ölçüde kullanılması önerilir.\n",
+          "en": "<!-- content:en -->\n## Why Download Without Watermark?\nClean video clips without intrusive logos look professional for personal offline archives and presentations. Vidnoria preserves the pristine original quality with high-bitrate MP4 encoding.\n\n## Step-by-Step Download Instructions\n1. Copy the shareable link of the video from your social media app.\n2. Visit the [Vidnoria Video Downloader](/en/tiktok-video-downloader) page and paste the link into the search box.\n3. Click **Analyze**, select your preferred MP4 quality, and download instantly.\n\n### Saving on Mobile (iOS & Android)\nNo app installation required. Use Safari on iOS or Chrome on Android to save directly to your Files or Camera Roll.\n\n### Fair Use & Copyright Guidelines\nAlways respect content creators' rights. Only download videos you have explicit permission to access offline.\n",
+          "ar": "<!-- content:ar -->\n## لماذا يفضل التحميل بدون علامة مائية؟\nتوفر الفيديوهات الخالية من الشعارات مظهراً نظيفاً واحترافياً عند المشاهدة دون اتصال بالإنترنت. تضمن فيدنوريا الحفاظ على الدقة الأصلية بالكامل.\n\n## خطوات التحميل بالتفصيل\n1. انسخ رابط الفيديو من التطبيق.\n2. توجه إلى صفحة [أداة تحميل الفيديو فيدنوريا](/ar/tiktok-video-downloader) والصق الرابط في الصندوق المخصص.\n3. اضغط على **تحليل** ثم اختر صيغة MP4 المناسبة وابدأ التحميل.\n\n### الحفظ على الهاتف الذكي\nلا حاجة لتثبيت أي تطبيقات إضافية، فالأداة تعمل مباشرة عبر متصفح الهاتف مع حفظ الملف في التنزيلات.\n"
+        }
+      },
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:29:42.198Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702680_eznln",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.680Z",
+      "changeType": "content_update",
+      "targetPage": "https://vidnoria.com/ar/blog/youtube-video-download-guide",
+      "locale": "ar",
+      "issueSummary": {
+        "tr": "İç Bağlantı (Internal Link) Fırsatı",
+        "en": "Internal Linking Opportunity",
+        "ar": "فرصة لإضافة روابط داخلية"
+      },
+      "currentValue": "0 iç bağlantı",
+      "proposedValue": "[Vidnoria Video İndirici](/ar/youtube-video-downloader)",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:29:43.382Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702664_en4mh",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.664Z",
+      "changeType": "content_update",
+      "targetPage": "https://vidnoria.com/ar/blog/instagram-video-download-guide",
+      "locale": "ar",
+      "issueSummary": {
+        "tr": "İç Bağlantı (Internal Link) Fırsatı",
+        "en": "Internal Linking Opportunity",
+        "ar": "فرصة لإضافة روابط داخلية"
+      },
+      "currentValue": "0 iç bağlantı",
+      "proposedValue": "[Vidnoria Video İndirici](/ar/youtube-video-downloader)",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:29:44.537Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702652_h4zfa",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.652Z",
+      "changeType": "content_update",
+      "targetPage": "https://vidnoria.com/ar/blog/copyright-and-legal-downloads",
+      "locale": "ar",
+      "issueSummary": {
+        "tr": "İç Bağlantı (Internal Link) Fırsatı",
+        "en": "Internal Linking Opportunity",
+        "ar": "فرصة لإضافة روابط داخلية"
+      },
+      "currentValue": "0 iç bağlantı",
+      "proposedValue": "[Vidnoria Video İndirici](/ar/youtube-video-downloader)",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:29:46.193Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702640_8608x",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.640Z",
+      "changeType": "content_update",
+      "targetPage": "https://vidnoria.com/en/blog/youtube-video-download-guide",
+      "locale": "en",
+      "issueSummary": {
+        "tr": "İç Bağlantı (Internal Link) Fırsatı",
+        "en": "Internal Linking Opportunity",
+        "ar": "فرصة لإضافة روابط داخلية"
+      },
+      "currentValue": "0 iç bağlantı",
+      "proposedValue": "[Vidnoria Video İndirici](/en/youtube-video-downloader)",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:29:48.243Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702618_yakge",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.618Z",
+      "changeType": "content_update",
+      "targetPage": "https://vidnoria.com/en/blog/instagram-video-download-guide",
+      "locale": "en",
+      "issueSummary": {
+        "tr": "İç Bağlantı (Internal Link) Fırsatı",
+        "en": "Internal Linking Opportunity",
+        "ar": "فرصة لإضافة روابط داخلية"
+      },
+      "currentValue": "0 iç bağlantı",
+      "proposedValue": "[Vidnoria Video İndirici](/en/youtube-video-downloader)",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:29:48.848Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702603_tdjg5",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.603Z",
+      "changeType": "content_update",
+      "targetPage": "https://vidnoria.com/tr/blog/youtube-video-download-guide",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "İç Bağlantı (Internal Link) Fırsatı",
+        "en": "Internal Linking Opportunity",
+        "ar": "فرصة لإضافة روابط داخلية"
+      },
+      "currentValue": "0 iç bağlantı",
+      "proposedValue": "[Vidnoria Video İndirici](/tr/youtube-video-downloader)",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:29:52.271Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702587_y9911",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.587Z",
+      "changeType": "content_update",
+      "targetPage": "https://vidnoria.com/tr/blog/instagram-video-download-guide",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "İç Bağlantı (Internal Link) Fırsatı",
+        "en": "Internal Linking Opportunity",
+        "ar": "فرصة لإضافة روابط داخلية"
+      },
+      "currentValue": "0 iç bağlantı",
+      "proposedValue": "[Vidnoria Video İndirici](/tr/youtube-video-downloader)",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:29:54.289Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702569_ktnby",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.569Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/tr/instagram-reels-indir",
+      "pageKey": "instagram-reels-indir",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (75 karakter)",
+        "en": "Title Length Can Be Optimized (75 chars)",
+        "ar": "يمكن تحسين طول العنوان (75 حرفاً)"
+      },
+      "currentValue": "Instagram Reels İndir - Filigransız HD Reels Video ve Ses Kaydet | Vidnoria",
+      "proposedValue": "Instagram Reels İndir - Filigransız HD Reels Video v | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:29:55.166Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702541_qgpvt",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.541Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/en/cookies",
+      "pageKey": "cookies",
+      "locale": "en",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (24 karakter)",
+        "en": "Title Length Can Be Optimized (24 chars)",
+        "ar": "يمكن تحسين طول العنوان (24 حرفاً)"
+      },
+      "currentValue": "Cookie Policy | Vidnoria",
+      "proposedValue": "Cookie Policy | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.770Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702498_yjmp3",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.498Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/tr/cookies",
+      "pageKey": "cookies",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (27 karakter)",
+        "en": "Title Length Can Be Optimized (27 chars)",
+        "ar": "يمكن تحسين طول العنوان (27 حرفاً)"
+      },
+      "currentValue": "Çerez Politikası | Vidnoria",
+      "proposedValue": "Çerez Politikası | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:29:58.724Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702485_lito2",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.485Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/en/disclaimer",
+      "pageKey": "disclaimer",
+      "locale": "en",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (27 karakter)",
+        "en": "Title Length Can Be Optimized (27 chars)",
+        "ar": "يمكن تحسين طول العنوان (27 حرفاً)"
+      },
+      "currentValue": "Legal Disclaimer | Vidnoria",
+      "proposedValue": "Legal Disclaimer | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.784Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702472_bdq1q",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.472Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/ar/terms",
+      "pageKey": "terms",
+      "locale": "ar",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (25 karakter)",
+        "en": "Title Length Can Be Optimized (25 chars)",
+        "ar": "يمكن تحسين طول العنوان (25 حرفاً)"
+      },
+      "currentValue": "شروط الاستخدام | فيدنوريا",
+      "proposedValue": "شروط الاستخدام | فيدنوريا - Ücretsiz HD İndir | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:30:02.330Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702460_38enp",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.460Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/en/terms",
+      "pageKey": "terms",
+      "locale": "en",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (27 karakter)",
+        "en": "Title Length Can Be Optimized (27 chars)",
+        "ar": "يمكن تحسين طول العنوان (27 حرفاً)"
+      },
+      "currentValue": "Terms of Service | Vidnoria",
+      "proposedValue": "Terms of Service | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:30:01.409Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702447_4beu9",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.447Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/tr/terms",
+      "pageKey": "terms",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (28 karakter)",
+        "en": "Title Length Can Be Optimized (28 chars)",
+        "ar": "يمكن تحسين طول العنوان (28 حرفاً)"
+      },
+      "currentValue": "Kullanım Şartları | Vidnoria",
+      "proposedValue": "Kullanım Şartları | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:30:08.000Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702435_72jmb",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.435Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/ar/privacy",
+      "pageKey": "privacy",
+      "locale": "ar",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (25 karakter)",
+        "en": "Title Length Can Be Optimized (25 chars)",
+        "ar": "يمكن تحسين طول العنوان (25 حرفاً)"
+      },
+      "currentValue": "سياسة الخصوصية | فيدنوريا",
+      "proposedValue": "سياسة الخصوصية | فيدنوريا - Ücretsiz HD İndir | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:30:06.123Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702424_qu6z0",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.424Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/en/privacy",
+      "pageKey": "privacy",
+      "locale": "en",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (25 karakter)",
+        "en": "Title Length Can Be Optimized (25 chars)",
+        "ar": "يمكن تحسين طول العنوان (25 حرفاً)"
+      },
+      "currentValue": "Privacy Policy | Vidnoria",
+      "proposedValue": "Privacy Policy | Vidnoria - Ücretsiz HD İndir | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:30:07.091Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702412_9h8e6",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.412Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/ar/faq",
+      "pageKey": "faq",
+      "locale": "ar",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (26 karakter)",
+        "en": "Title Length Can Be Optimized (26 chars)",
+        "ar": "يمكن تحسين طول العنوان (26 حرفاً)"
+      },
+      "currentValue": "الأسئلة الشائعة | فيدنوريا",
+      "proposedValue": "الأسئلة الشائعة | فيدنوريا - Ücretsiz HD İndir | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:30:04.217Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702399_vzn0b",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.399Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/ar/video-converter",
+      "pageKey": "video-converter",
+      "locale": "ar",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (73 karakter)",
+        "en": "Title Length Can Be Optimized (73 chars)",
+        "ar": "يمكن تحسين طول العنوان (73 حرفاً)"
+      },
+      "currentValue": "محول الفيديو والصوت المجاني عبر الإنترنت (MP4, MP3, WebM, MOV) | فيدنوريا",
+      "proposedValue": "محول الفيديو والصوت المجاني عبر الإنترنت (MP4, MP3, | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:30:11.129Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702384_c4a0y",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.384Z",
+      "changeType": "seo_title",
+      "targetPage": "https://vidnoria.com/tr/video-converter",
+      "pageKey": "video-converter",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "Başlık Uzunluğu Optimize Edilebilir (73 karakter)",
+        "en": "Title Length Can Be Optimized (73 chars)",
+        "ar": "يمكن تحسين طول العنوان (73 حرفاً)"
+      },
+      "currentValue": "Ücretsiz Online Video ve Ses Dönüştürücü (MP4, MP3, WebM, MOV) | Vidnoria",
+      "proposedValue": "Ücretsiz Online Video ve Ses Dönüştürücü (MP4, MP3, | Vidnoria",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:30:12.286Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702371_6aohl",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.371Z",
+      "changeType": "meta_description",
+      "targetPage": "https://vidnoria.com/en",
+      "pageKey": "home",
+      "locale": "en",
+      "issueSummary": {
+        "tr": "Meta Açıklama Uzunluğu (177 karakter)",
+        "en": "Meta Description Length (177 chars)",
+        "ar": "طول وصف الميتا (177 حرفاً)"
+      },
+      "currentValue": "Download videos and music from YouTube, Instagram, TikTok, Facebook and Twitter with Vidnoria. Free, fast and secure online video downloader tool. MP4, MP3, WebM format support.",
+      "proposedValue": "Download videos and music from YouTube, Instagram, TikTok, Facebook and Twitter with Vidnoria. Free, fast and secure online video downloader tool. MP4, MP3...",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:30:15.916Z",
+      "decidedBy": "admin"
+    },
+    {
+      "id": "appr_1792999702362_jotrs",
+      "status": "approved",
+      "createdAt": "2026-10-26T07:28:22.362Z",
+      "changeType": "meta_description",
+      "targetPage": "https://vidnoria.com/tr",
+      "pageKey": "home",
+      "locale": "tr",
+      "issueSummary": {
+        "tr": "Meta Açıklama Uzunluğu (174 karakter)",
+        "en": "Meta Description Length (174 chars)",
+        "ar": "طول وصف الميتا (174 حرفاً)"
+      },
+      "currentValue": "Vidnoria ile YouTube, Instagram, TikTok, Facebook ve Twitter'dan video ve müzik indirin. Ücretsiz, hızlı ve güvenli online video indirme aracı. MP4, MP3, WebM format desteği.",
+      "proposedValue": "Vidnoria ile YouTube, Instagram, TikTok, Facebook ve Twitter'dan video ve müzik indirin. Ücretsiz, hızlı ve güvenli online video indirme aracı. MP4, MP3, W...",
+      "expectedBenefit": {
+        "tr": "Google arama sonuçlarında görünürlüğü ve tıklama oranını (CTR) iyileştirir.",
+        "en": "Improves SERP visibility and click-through rate.",
+        "ar": "يحسن الظهور في نتائج البحث ومعدل النقر."
+      },
+      "riskLevel": "low",
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:30:13.528Z",
+      "decidedBy": "admin"
+    },
     {
       "id": "appr_1792999281542_mce8l",
       "status": "rolled_back",
@@ -177,7 +1308,7 @@
     },
     {
       "id": "appr_1792996795062_kkimr",
-      "status": "pending",
+      "status": "approved",
       "createdAt": "2026-10-26T06:39:55.062Z",
       "changeType": "blog_publish",
       "targetPage": "/blog/how-to-download-tiktok-videos-without-watermark",
@@ -220,7 +1351,9 @@
           "ar": "<!-- content:ar -->\n## لماذا يفضل التحميل بدون علامة مائية؟\nتوفر الفيديوهات الخالية من الشعارات مظهراً نظيفاً واحترافياً عند المشاهدة دون اتصال بالإنترنت. تضمن فيدنوريا الحفاظ على الدقة الأصلية بالكامل.\n\n## خطوات التحميل بالتفصيل\n1. انسخ رابط الفيديو من التطبيق.\n2. توجه إلى صفحة [أداة تحميل الفيديو فيدنوريا](/ar/tiktok-video-downloader) والصق الرابط في الصندوق المخصص.\n3. اضغط على **تحليل** ثم اختر صيغة MP4 المناسبة وابدأ التحميل.\n\n### الحفظ على الهاتف الذكي\nلا حاجة لتثبيت أي تطبيقات إضافية، فالأداة تعمل مباشرة عبر متصفح الهاتف مع حفظ الملف في التنزيلات.\n"
         }
       },
-      "githubPrSuggested": false
+      "githubPrSuggested": false,
+      "decidedAt": "2026-10-26T07:33:26.798Z",
+      "decidedBy": "admin"
     },
     {
       "id": "appr_1792996795040_f848e",
