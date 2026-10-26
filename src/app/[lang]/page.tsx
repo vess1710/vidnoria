@@ -5,6 +5,7 @@ import HeroSection from '@/components/home/HeroSection';
 import PlatformsSection from '@/components/home/PlatformsSection';
 import HowItWorksSection from '@/components/home/HowItWorksSection';
 import FeaturesSection from '@/components/home/FeaturesSection';
+import SEOContentSection from '@/components/home/SEOContentSection';
 import FAQSection from '@/components/home/FAQSection';
 import AdSlot from '@/components/ads/AdSlot';
 
@@ -44,6 +45,7 @@ export default async function HomePage() {
       </div>
 
       <FeaturesSection />
+      <SEOContentSection />
       <FAQSection />
     </>
   );

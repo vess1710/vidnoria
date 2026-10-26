@@ -90,6 +90,9 @@ export default function GoogleTracking({
   return (
     <noscript>
       <iframe
+        title="Google Tag Manager"
+        aria-hidden="true"
+        loading="lazy"
         src={`https://www.googletagmanager.com/ns.html?id=${encodeURIComponent(gtmId)}`}
         height="0"
         width="0"
