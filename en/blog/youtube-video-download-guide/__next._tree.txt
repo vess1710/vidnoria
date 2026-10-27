@@ -1,6 +1,6 @@
-:HL["/_next/static/css/11dfe42163fc7ab6.css","style"]
+:HL["/_next/static/css/d7c7078a5801cfd3.css","style"]
 4:[["children",{"s":"__PAGE__","h":160}]]
 3:[["children",{"s":{"n":"slug","t":"d","k":"youtube-video-download-guide","s":[]},"h":96,"c":"$Q4"}]]
 2:[["children",{"s":"blog","h":64,"c":"$Q3"}]]
 1:[["children",{"s":{"n":"lang","t":"d","k":"en","s":["_not-found","_global-error","admin","ads.txt","favicon.ico","robots.txt","sitemap.xml"]},"c":"$Q2"}]]
-0:{"b":"fPl6IEvwsiuJ0aiLcdF7F","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"rwlRkPjjQpn6ISZxX5dRq","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
