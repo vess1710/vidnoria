@@ -130,6 +130,30 @@
       {
         "question": "Can I use it on mobile devices?",
         "answer": "Yes, Vidnoria is designed to work flawlessly on all mobile devices. Whether you use a smartphone or tablet, you can easily access it from your browser."
+      },
+      {
+        "question": "What is Vidnoria Media Studio and what can it do?",
+        "answer": "Vidnoria Media Studio is an all-in-one in-browser suite that allows you to trim videos, convert formats (MP4, WebM, MOV, AVI, MKV, GIF), convert iPhone HEIC photos to JPG with 60fps live filters, and boost audio volume up to 300%."
+      },
+      {
+        "question": "How do I convert iPhone HEIC photos to JPG?",
+        "answer": "Simply navigate to the Media Studio and drag & drop your Apple .heic or .heif file. The studio decodes it locally in your browser, lets you adjust brightness and contrast in real time, and exports high-resolution JPG or PNG files."
+      },
+      {
+        "question": "How does the 300% Audio Volume Booster work?",
+        "answer": "In Audio Studio mode, use the Volume Booster slider to amplify low-volume recordings up to 300%. Our intelligent soft-clipping algorithm ensures crystal-clear audio output without crackling or distortion."
+      },
+      {
+        "question": "How to download Instagram Carousel (Multiple Photos/Videos) in a ZIP?",
+        "answer": "Paste the Instagram carousel URL on the homepage. Vidnoria fetches all slides in the post, allowing you to download individual items or bundle everything into a single ZIP archive with one click."
+      },
+      {
+        "question": "Can I download TikTok and CapCut videos without watermarks?",
+        "answer": "Yes. Vidnoria automatically strips watermarks and outro logos from TikTok and CapCut videos, delivering pristine 1080p Full HD MP4 files."
+      },
+      {
+        "question": "Are my files uploaded or stored on your servers? (0-Log Privacy)",
+        "answer": "No. Vidnoria operates on a strict 100% client-side 0-log architecture. Media edited in the Studio never leaves your device and runs entirely in local browser RAM."
       }
     ]
   },

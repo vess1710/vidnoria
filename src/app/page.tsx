@@ -89,10 +89,50 @@ const faqJsonLd = {
     },
     {
       '@type': 'Question',
-      name: 'TikTok videoları filigransız indirilebilir mi?',
+      name: 'TikTok ve CapCut videoları filigransız indirilebilir mi?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Evet, Vidnoria TikTok videolarını orijinal kalitesinde ve filigran (watermark) olmadan indirmenize olanak tanır.',
+        text: 'Evet, Vidnoria TikTok ve CapCut şablon videolarını orijinal kalitesinde ve filigran (watermark) olmadan indirmenize olanak tanır.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Vidnoria Medya Stüdyosu nedir ve hangi özellikleri sunar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Vidnoria Medya Stüdyosu; videolarınızı saniyeler içinde kırpabileceğiniz, sesini ayıklayıp 320 kbps MP3 yapabileceğiniz, formatını (MP4, WebM, MOV, AVI, MKV, GIF) değiştirebileceğiniz; iPhone HEIC fotoğraflarınızı anında JPG ye dönüştürüp 60 FPS canlı filtrelerle düzenleyebileceğiniz hepsi bir arada tarayıcı içi medya merkezidir.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'iPhone HEIC fotoğraflarını bilgisayarda veya webde nasıl JPG yapabilirim?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Medya Stüdyosu na girip Apple iPhone ile çekilmiş .heic veya .heif fotoğrafınızı sürükleyip bırakmanız yeterlidir. Sistem fotoğrafı tarayıcınızda otomatik çözümler; 60 FPS filtrelerle düzenleyip kayıpsız JPG veya PNG olarak indirmenizi sağlar.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Kısık sesli video ve müziklerin ses seviyesi nasıl yükseltilir (%300 Booster)?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Ses & Müzik Stüdyosu modumuzdaki Volume Booster kaydırıcısı ile ses seviyesini %300 e kadar artırabilirsiniz. Akıllı soft-clipping filtreleme algoritması sayesinde ses 3 katına çıksa bile cızırtı ve ses patlaması yaşanmaz.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Instagram Carousel (Çoklu Fotoğraf ve Video) paylaşımları nasıl indirilir?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Instagram daki çoklu slayt gönderilerinin bağlantısını yapıştırarak albümdeki tüm fotoğraf ve videoları tek tıkla ZIP arşivi olarak indirebilirsiniz.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Dosyalarım veya indirdiğim videolar sunucularınızda saklanıyor mu? (Gizlilik & 0-Log)',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Kesinlikle hayır. Vidnoria %100 gizlilik odaklı 0-Log ve Client-Side mimarisine sahiptir. Medya Stüdyosu nda işlenen fotoğraf, video ve sesler asla sunucuya gitmez, doğrudan tarayıcınızda işlenir.',
       },
     },
   ],

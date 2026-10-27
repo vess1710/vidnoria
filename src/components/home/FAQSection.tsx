@@ -16,7 +16,7 @@ export default function FAQSection({ items }: FAQSectionProps) {
 
   const resolvedItems = faqItems.length > 0 ? faqItems : (() => {
     const result: { question: string; answer: string }[] = [];
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 25; i++) {
       const q = t(`faq.items.${i}.question`);
       const a = t(`faq.items.${i}.answer`);
       if (q.startsWith('faq.items.')) break;

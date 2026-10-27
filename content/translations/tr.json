@@ -130,6 +130,30 @@
       {
         "question": "Mobil cihazlarda kullanabilir miyim?",
         "answer": "Evet, Vidnoria tüm mobil cihazlarda sorunsuz çalışacak şekilde tasarlanmıştır. İster akıllı telefon ister tablet kullanın, tarayıcınızdan kolayca erişebilirsiniz."
+      },
+      {
+        "question": "Vidnoria Medya Stüdyosu nedir ve hangi özellikleri sunar?",
+        "answer": "Vidnoria Medya Stüdyosu; videolarınızı saniyeler içinde kırpabileceğiniz, sesini ayıklayıp 320 kbps MP3 yapabileceğiniz, formatını (MP4, WebM, MOV, AVI, MKV, GIF) değiştirebileceğiniz; iPhone HEIC fotoğraflarınızı anında JPG'ye dönüştürüp 60 FPS canlı filtrelerle düzenleyebileceğiniz hepsi bir arada tarayıcı içi medya merkezidir."
+      },
+      {
+        "question": "iPhone HEIC fotoğraflarını bilgisayarda veya webde nasıl JPG yapabilirim?",
+        "answer": "Medya Stüdyosu'na girip Apple iPhone ile çekilmiş .heic veya .heif fotoğrafınızı sürükleyip bırakmanız yeterlidir. Sistem fotoğrafı tarayıcınızda otomatik çözümler; dilediğiniz parlaklık, kontrast ve filtreleri uygulayıp saniyeler içinde kayıpsız JPG veya PNG olarak indirmenizi sağlar."
+      },
+      {
+        "question": "Kısık sesli video ve müziklerin ses seviyesi nasıl yükseltilir (%300 Booster)?",
+        "answer": "Ses & Müzik Stüdyosu modumuzdaki Volume Booster kaydırıcısı ile ses seviyesini %300'e kadar artırabilirsiniz. Özel akıllı soft-clipping filtreleme algoritması sayesinde ses seviyesi 3 katına çıksa bile cızırtı ve ses patlaması yaşanmaz."
+      },
+      {
+        "question": "Instagram Carousel (Çoklu Fotoğraf ve Video) paylaşımları nasıl indirilir?",
+        "answer": "Instagram'daki çoklu slayt gönderilerinin bağlantısını kopyalayıp ana sayfadaki arama alanına yapıştırın. Vidnoria albümdeki tüm fotoğraf ve videoları tek tek listeler; ister seçtiklerinizi tek tek, isterseniz 'Tümünü ZIP Olarak İndir' butonuyla tek pakette cihazınıza kaydedebilirsiniz."
+      },
+      {
+        "question": "TikTok ve CapCut videoları filigransız (logosuz) indirilebilir mi?",
+        "answer": "Evet. Vidnoria, TikTok ve CapCut şablon videolarını videonun üzerindeki logoları ve son jenerik filigranını otomatik olarak kaldırarak tertemiz 1080p Full HD MP4 formatında indirmenize imkân tanır."
+      },
+      {
+        "question": "Dosyalarım veya indirdiğim videolar sunucularınızda saklanıyor mu? (Gizlilik & 0-Log)",
+        "answer": "Kesinlikle hayır. Vidnoria %100 gizlilik odaklı 'Client-Side (İstemci Taraflı)' ve '0-Log' mimarisine sahiptir. İndirmeleriniz doğrudan güvenli şifrelemeyle cihazınıza aktarılır; Stüdyo'da düzenlediğiniz fotoğraf, video ve ses dosyaları ise sunucuya asla gitmeden tamamen cihazınızın RAM belleğinde işlenir."
       }
     ]
   },
