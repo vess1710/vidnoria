@@ -1,5 +1,5 @@
-:HL["/_next/static/css/e064ec6c82faa4d8.css","style"]
+:HL["/_next/static/css/be8de96cfb5cb852.css","style"]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":"copyright","h":64,"c":"$Q3"}]]
 1:[["children",{"s":{"n":"lang","t":"d","k":"tr","s":["_not-found","_global-error","admin","ads.txt","favicon.ico","robots.txt","sitemap.xml"]},"c":"$Q2"}]]
-0:{"b":"nfLVawWjMI2sohNhm2nJ3","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"Xe82k3hK2HCvfeJA9OST6","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
