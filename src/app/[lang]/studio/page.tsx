@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { Locale } from '@/lib/i18n';
 import AdSlot from '@/components/ads/AdSlot';
+import DownloadCountdownModal from '@/components/download/DownloadCountdownModal';
 
 interface StudioPageProps {
   params: Promise<{ lang: string }>;
@@ -166,6 +167,12 @@ export default function StudioPage({ params }: StudioPageProps) {
   const [imageFormat, setImageFormat] = useState<ImageFormat>('jpg');
   const [quality, setQuality] = useState(92);
   const [isHeicConverting, setIsHeicConverting] = useState(false);
+
+  // Download countdown modal state for Studio (Ses, Fotoğraf, Video)
+  const [showCountdown, setShowCountdown] = useState(false);
+  const [countdownDownloadUrl, setCountdownDownloadUrl] = useState<string | null>(null);
+  const [countdownFileName, setCountdownFileName] = useState<string>('');
+  const [countdownFormatLabel, setCountdownFormatLabel] = useState<string>('');
 
   // FAQ Accordion state
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -453,18 +460,23 @@ export default function StudioPage({ params }: StudioPageProps) {
         }
 
         const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
         const ext = imageFormat === 'jpg' ? 'jpg' : imageFormat;
-        a.download = `vidnoria-studio-photo.${ext}`;
-        a.click();
-        URL.revokeObjectURL(url);
-
+        const fname = `vidnoria-studio-photo.${ext}`;
+        setCountdownDownloadUrl(url);
+        setCountdownFileName(fname);
+        setCountdownFormatLabel(
+          lang === 'tr'
+            ? `Fotoğraf (${imageFormat.toUpperCase()})`
+            : lang === 'ar'
+              ? `صورة (${imageFormat.toUpperCase()})`
+              : `Photo (${imageFormat.toUpperCase()})`
+        );
+        setShowCountdown(true);
         setIsProcessing(false);
         setStatusMessage(
           lang === 'tr'
-            ? `✅ Fotoğraf başarıyla ${imageFormat.toUpperCase()} formatında indirildi!`
-            : `✅ Photo downloaded as ${imageFormat.toUpperCase()}!`
+            ? `✅ Fotoğraf hazırlandı! İndirme ekranı açıldı.`
+            : `✅ Photo ready! Download screen opened.`
         );
       },
       mime,
@@ -626,17 +638,23 @@ export default function StudioPage({ params }: StudioPageProps) {
     recorder.onstop = () => {
       const finalBlob = new Blob(chunks, { type: mime });
       const dlUrl = URL.createObjectURL(finalBlob);
-      const a = document.createElement('a');
-      a.href = dlUrl;
-      a.download = `vidnoria-studio-video.${videoFormat}`;
-      a.click();
-      URL.revokeObjectURL(dlUrl);
+      const fname = `vidnoria-studio-video.${videoFormat}`;
+      setCountdownDownloadUrl(dlUrl);
+      setCountdownFileName(fname);
+      setCountdownFormatLabel(
+        lang === 'tr'
+          ? `Video (${videoFormat.toUpperCase()})`
+          : lang === 'ar'
+            ? `فيديو (${videoFormat.toUpperCase()})`
+            : `Video (${videoFormat.toUpperCase()})`
+      );
+      setShowCountdown(true);
       setIsProcessing(false);
       setProgress(100);
       setStatusMessage(
         lang === 'tr'
-          ? `✅ Video başarıyla ${videoFormat.toUpperCase()} formatında dönüştürüldü ve indirildi!`
-          : `✅ Video downloaded successfully as ${videoFormat.toUpperCase()}!`
+          ? `✅ Video hazırlandı! İndirme ekranı açıldı.`
+          : `✅ Video ready! Download screen opened.`
       );
     };
 
@@ -754,17 +772,23 @@ export default function StudioPage({ params }: StudioPageProps) {
       );
 
       const url = URL.createObjectURL(wavBlob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `vidnoria-studio-audio.${audioFormat === 'mp3' ? 'mp3' : audioFormat}`;
-      a.click();
-      URL.revokeObjectURL(url);
-
+      const ext = audioFormat === 'mp3' ? 'mp3' : audioFormat;
+      const fname = `vidnoria-studio-audio.${ext}`;
+      setCountdownDownloadUrl(url);
+      setCountdownFileName(fname);
+      setCountdownFormatLabel(
+        lang === 'tr'
+          ? `Ses / Müzik (${ext.toUpperCase()} - %${audioVolume})`
+          : lang === 'ar'
+            ? `صوت / موسيقى (${ext.toUpperCase()} - %${audioVolume})`
+            : `Audio (${ext.toUpperCase()} - ${audioVolume}%)`
+      );
+      setShowCountdown(true);
       setIsProcessing(false);
       setStatusMessage(
         lang === 'tr'
-          ? `✅ Ses başarıyla %${audioVolume} ses seviyesiyle ${audioFormat.toUpperCase()} formatında indirildi!`
-          : `✅ Audio downloaded as ${audioFormat.toUpperCase()}!`
+          ? `✅ Ses hazırlandı! İndirme ekranı açıldı.`
+          : `✅ Audio ready! Download screen opened.`
       );
     } catch (e) {
       console.error(e);
@@ -1918,6 +1942,20 @@ export default function StudioPage({ params }: StudioPageProps) {
         <div className="container-custom pt-12">
           <AdSlot slotId="studio-bottom-banner" format="horizontal" label="Stüdyo Alt Banner (728×90)" />
         </div>
+
+        {/* High-CTR Countdown Ad Modal for Studio Downloads */}
+        {countdownDownloadUrl && (
+          <DownloadCountdownModal
+            isOpen={showCountdown}
+            onClose={() => setShowCountdown(false)}
+            downloadUrl={countdownDownloadUrl}
+            fileName={countdownFileName}
+            formatLabel={countdownFormatLabel}
+            lang={lang}
+            initialSeconds={10}
+            slotId="studio-download-countdown-ad"
+          />
+        )}
       </div>
     </div>
   );

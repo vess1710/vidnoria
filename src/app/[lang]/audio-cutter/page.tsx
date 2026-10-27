@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { Locale } from '@/lib/i18n';
 import AdSlot from '@/components/ads/AdSlot';
+import DownloadCountdownModal from '@/components/download/DownloadCountdownModal';
 import { convertFileClient } from '@/lib/client-api';
 
 interface AudioCutterPageProps {
@@ -85,6 +86,7 @@ export default function AudioCutterPage({ params }: AudioCutterPageProps) {
   const [playing, setPlaying] = useState(false);
   const [resultUrl, setResultUrl] = useState<string | null>(null);
   const [resultName, setResultName] = useState<string>('');
+  const [showCountdown, setShowCountdown] = useState(false);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
   const audioCtxRef = useRef<AudioContext | null>(null);
@@ -481,14 +483,14 @@ export default function AudioCutterPage({ params }: AudioCutterPageProps) {
                 <CheckCircle2 className="w-10 h-10 text-emerald-500 mx-auto mb-2" />
                 <h3 className="text-base font-bold text-emerald-500 mb-1">{t.ready}</h3>
                 <p className="text-xs text-muted-foreground mb-4">{resultName}</p>
-                <a
-                  href={resultUrl}
-                  download={resultName}
-                  className="gradient-bg text-white font-bold px-8 py-3.5 rounded-xl inline-flex items-center gap-2 shadow-lg hover:scale-105 transition-transform"
+                <button
+                  type="button"
+                  onClick={() => setShowCountdown(true)}
+                  className="gradient-bg text-white font-bold px-8 py-3.5 rounded-xl inline-flex items-center gap-2 shadow-lg hover:scale-105 transition-transform cursor-pointer"
                 >
                   <Download className="w-5 h-5" />
                   <span>{t.downloadBtn} (.{exportFormat.toUpperCase()})</span>
-                </a>
+                </button>
               </div>
             )}
 
@@ -516,6 +518,20 @@ export default function AudioCutterPage({ params }: AudioCutterPageProps) {
       </div>
 
       <AdSlot slotId="home-mid-banner" format="horizontal" />
+
+      {/* High-CTR Countdown Ad Modal */}
+      {resultUrl && (
+        <DownloadCountdownModal
+          isOpen={showCountdown}
+          onClose={() => setShowCountdown(false)}
+          downloadUrl={resultUrl}
+          fileName={resultName}
+          formatLabel={`Ses (${exportFormat.toUpperCase()})`}
+          lang={lang}
+          initialSeconds={10}
+          slotId="audio-cutter-countdown-ad"
+        />
+      )}
     </div>
   );
 }

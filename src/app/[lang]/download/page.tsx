@@ -560,6 +560,7 @@ export default function DownloadPage({ params }: DownloadPageProps) {
           downloadUrl={job.downloadUrl}
           formatLabel={`${selectedFormat?.label || ''} (${selectedFormat?.format.toUpperCase() || 'MP4'})`}
           lang={lang}
+          initialSeconds={10}
         />
       )}
     </div>
