@@ -329,6 +329,20 @@ export default function DownloadPage({ params }: DownloadPageProps) {
                   </a>
                 )}
 
+                <Link
+                  href={`/${lang}/studio`}
+                  className="w-full py-2.5 px-4 rounded-xl border border-amber-500/30 bg-amber-500/10 text-amber-500 hover:bg-amber-500 hover:text-white text-xs font-bold flex items-center justify-center gap-2 transition-all shadow-sm"
+                >
+                  <Scissors className="w-4 h-4" />
+                  <span>
+                    {lang === 'tr'
+                      ? '✂️ İndirilen Videoyu Stüdyoda Kırp / Düzenle'
+                      : lang === 'ar'
+                      ? '✂️ قص وتعديل الفيديو في الاستوديو'
+                      : '✂️ Trim & Edit Video in Studio'}
+                  </span>
+                </Link>
+
                 <button
                   onClick={() => setShowQr(!showQr)}
                   className="w-full py-2.5 px-4 rounded-xl border border-secondary/30 bg-secondary/10 text-secondary hover:bg-secondary hover:text-white text-xs font-bold flex items-center justify-center gap-2 transition-all"

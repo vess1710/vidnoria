@@ -44,15 +44,17 @@ export default function Header() {
   const videoConvLabel = lang === 'tr' ? 'Video/Ses Çevirici' : lang === 'ar' ? 'محول الفيديو' : 'Video Converter';
   const imageConvLabel = lang === 'tr' ? 'Resim Çevirici' : lang === 'ar' ? 'محول الصور' : 'Image Converter';
   const audioCutterLabel = lang === 'tr' ? 'MP3 Kesici' : lang === 'ar' ? 'قص الصوت' : 'MP3 Cutter';
+  const studioLabel = lang === 'tr' ? 'Medya Stüdyosu ✨' : lang === 'ar' ? 'استوديو الوسائط ✨' : 'Media Studio ✨';
 
   const navItems = [
-    { href: `/${lang}`, label: t('nav.home') },
-    { href: `/${lang}/video-converter`, label: videoConvLabel },
-    { href: `/${lang}/image-converter`, label: imageConvLabel },
-    { href: `/${lang}/audio-cutter`, label: audioCutterLabel },
-    { href: `/${lang}#platforms`, label: t('nav.supportedPlatforms') },
-    { href: `/${lang}/blog`, label: t('nav.blog') },
-    { href: `/${lang}/faq`, label: t('nav.faq') },
+    { href: `/${lang}`, label: t('nav.home'), highlight: false },
+    { href: `/${lang}/studio`, label: studioLabel, highlight: true },
+    { href: `/${lang}/video-converter`, label: videoConvLabel, highlight: false },
+    { href: `/${lang}/image-converter`, label: imageConvLabel, highlight: false },
+    { href: `/${lang}/audio-cutter`, label: audioCutterLabel, highlight: false },
+    { href: `/${lang}#platforms`, label: t('nav.supportedPlatforms'), highlight: false },
+    { href: `/${lang}/blog`, label: t('nav.blog'), highlight: false },
+    { href: `/${lang}/faq`, label: t('nav.faq'), highlight: false },
   ];
 
   const themeOptions = [
@@ -100,7 +102,11 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-3.5 py-2 text-sm font-medium text-foreground/80 hover:text-foreground rounded-lg hover:bg-accent transition-colors"
+                className={`px-3 py-2 text-sm font-medium rounded-lg transition-all ${
+                  item.highlight
+                    ? 'text-amber-500 font-bold bg-amber-500/10 border border-amber-500/20 hover:bg-amber-500 hover:text-white'
+                    : 'text-foreground/80 hover:text-foreground hover:bg-accent'
+                }`}
               >
                 {item.label}
               </Link>
@@ -205,7 +211,11 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block px-4 py-2.5 text-sm font-medium text-foreground/80 hover:text-foreground rounded-lg hover:bg-accent transition-colors"
+                className={`block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors ${
+                  item.highlight
+                    ? 'text-amber-500 font-bold bg-amber-500/10'
+                    : 'text-foreground/80 hover:text-foreground hover:bg-accent'
+                }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.label}

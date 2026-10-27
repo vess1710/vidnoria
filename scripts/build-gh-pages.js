@@ -33,86 +33,29 @@ try {
   movedProxy = moveIfExists(proxyFile, tmpProxyFile);
 
   const outDir = path.join(rootDir, 'out');
+  const exportDir = path.join(rootDir, '.next-export');
+  const nextDir = path.join(rootDir, '.next');
 
-  // Pre-create out directory and all known route directories to prevent Windows EPERM race condition
-  fs.mkdirSync(outDir, { recursive: true });
-  const locales = ['tr', 'en', 'ar'];
-  const baseRoutes = [
-    'audio-cutter',
-    'video-converter',
-    'image-converter',
-    'contact',
-    'cookies',
-    'copyright',
-    'disclaimer',
-    'download',
-    'faq',
-    'privacy',
-    'terms',
-    'blog',
-    'blog/copyright-and-legal-downloads',
-    'blog/how-to-download-tiktok-videos-without-watermark',
-    'blog/instagram-video-download-guide',
-    'blog/save-instagram-reels-with-audio-guide',
-    'blog/youtube-video-download-guide',
-    'blog/capcut-sablonu-filigransiz-video-indirme',
-    'blog/pinterest-video-ve-gif-indirme-rehberi',
-    'blog/instagram-hikaye-story-indirme-rehberi',
-    'blog/twitter-x-video-ve-gif-indirme-kolay-yol',
-  ];
-  const platforms = [
-    'youtube-video-downloader',
-    'instagram-video-downloader',
-    'tiktok-video-downloader',
-    'facebook-video-downloader',
-    'twitter-video-downloader',
-    'pinterest-video-downloader',
-    'reddit-video-downloader',
-    'threads-video-downloader',
-    'capcut-video-downloader',
-    'snapchat-video-downloader',
-    'youtube-video-indir',
-    'youtube-mp3-indir',
-    'youtube-shorts-indir',
-    'instagram-video-indir',
-    'instagram-reels-indir',
-    'tiktok-video-indir',
-    'facebook-video-indir',
-    'twitter-video-indir',
-    'pinterest-video-indir',
-    'reddit-video-indir',
-    'threads-video-indir',
-    'capcut-video-indir',
-    'snapchat-video-indir',
-  ];
+  // Clean previous build outputs
+  if (fs.existsSync(outDir)) fs.rmSync(outDir, { recursive: true, force: true });
+  if (fs.existsSync(exportDir)) fs.rmSync(exportDir, { recursive: true, force: true });
+  if (fs.existsSync(nextDir)) fs.rmSync(nextDir, { recursive: true, force: true });
 
-  for (const locale of locales) {
-    fs.mkdirSync(path.join(outDir, locale), { recursive: true });
-    for (const r of baseRoutes) {
-      fs.mkdirSync(path.join(outDir, locale, r), { recursive: true });
-    }
-    for (const p of platforms) {
-      fs.mkdirSync(path.join(outDir, locale, p), { recursive: true });
-    }
-  }
-  fs.mkdirSync(path.join(outDir, 'admin'), { recursive: true });
-  fs.mkdirSync(path.join(outDir, 'admin', 'dashboard'), { recursive: true });
-
-  const npxCmd = process.platform === 'win32' ? 'npx.cmd' : 'npx';
-  execSync(`${npxCmd} next build --webpack`, {
+  const nextBin = path.join(rootDir, 'node_modules', 'next', 'dist', 'bin', 'next');
+  execSync(`"${process.execPath}" "${nextBin}" build --webpack`, {
     cwd: rootDir,
     stdio: 'inherit',
-    env: {
-      ...process.env,
+    env: Object.assign({}, process.env, {
       STATIC_EXPORT: 'true',
-    },
+    }),
   });
 
-  // Ensure .nojekyll and CNAME exist in out/
-  if (fs.existsSync(outDir)) {
-    fs.writeFileSync(path.join(outDir, '.nojekyll'), '');
-    fs.writeFileSync(path.join(outDir, 'CNAME'), 'vidnoria.com\n');
-    console.log('[gh-pages] Static export ready in ./out with .nojekyll and CNAME (vidnoria.com)');
+  // Ensure .nojekyll and CNAME exist in build output
+  const targetDir = fs.existsSync(exportDir) ? exportDir : outDir;
+  if (fs.existsSync(targetDir)) {
+    fs.writeFileSync(path.join(targetDir, '.nojekyll'), '');
+    fs.writeFileSync(path.join(targetDir, 'CNAME'), 'vidnoria.com\n');
+    console.log(`[gh-pages] Static export ready in ${targetDir} with .nojekyll and CNAME (vidnoria.com)`);
   }
 } finally {
   if (movedApi) moveIfExists(tmpApiDir, apiDir);

@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { Search, Clipboard, Loader2, AlertCircle, History, Trash2, Film, Image as ImageIcon, Share2, Scissors } from 'lucide-react';
+import { Search, Clipboard, Loader2, AlertCircle, History, Trash2, Film, Image as ImageIcon, Share2, Scissors, Sparkles } from 'lucide-react';
 import { useI18n } from '@/lib/i18n/context';
 import { analyzeUrlClient } from '@/lib/client-api';
 
@@ -152,6 +152,24 @@ export default function HeroSection() {
           </p>
 
           <div className="max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            {/* Mode Switcher: Link Downloader vs Drag & Drop Media Studio */}
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <div className="inline-flex items-center p-1 bg-muted/60 backdrop-blur rounded-2xl border border-border shadow-inner">
+                <span className="px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold bg-primary text-white shadow-sm flex items-center gap-1.5 cursor-default">
+                  <Search className="w-3.5 h-3.5" />
+                  {lang === 'tr' ? 'Link ile İndir' : lang === 'ar' ? 'تحميل عبر الرابط' : 'Paste Link Downloader'}
+                </span>
+                <Link
+                  href={`/${lang}/studio`}
+                  className="px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold text-muted-foreground hover:text-foreground hover:bg-card/60 transition-all flex items-center gap-1.5 group"
+                >
+                  <Sparkles className="w-3.5 h-3.5 text-amber-500 group-hover:scale-110 transition-transform" />
+                  <span>{lang === 'tr' ? 'Medya Stüdyosu' : lang === 'ar' ? 'استوديو الوسائط' : 'Media Studio'}</span>
+                  <span className="px-1.5 py-0.5 text-[10px] uppercase font-bold bg-gradient-to-r from-amber-500 to-rose-500 text-white rounded-md tracking-wider">YENİ</span>
+                </Link>
+              </div>
+            </div>
+
             <div className={`glass-card p-2 flex flex-col sm:flex-row gap-2 ${error ? 'ring-2 ring-destructive/50' : ''}`}>
               <div className="flex-1 flex items-center gap-2 bg-background/50 rounded-xl px-4">
                 <Search className="w-5 h-5 text-muted-foreground shrink-0" />
@@ -202,8 +220,15 @@ export default function HeroSection() {
               </div>
             )}
 
-            {/* Quick Tool Pills: Video Converter & Image Converter */}
+            {/* Quick Tool Pills: Studio, Video Converter & Image Converter */}
             <div className="flex flex-wrap items-center justify-center gap-2.5 mt-5">
+              <Link
+                href={`/${lang}/studio`}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-amber-500/15 via-rose-500/15 to-purple-500/15 text-foreground border border-amber-500/30 hover:border-amber-500 hover:shadow-md transition-all shadow-sm"
+              >
+                <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                <span>{lang === 'tr' ? 'Medya Stüdyosu ✨ (Video & Fotoğraf Düzenle)' : lang === 'ar' ? 'استوديو الوسائط ✨' : 'Media Studio ✨ (Edit Video & Photo)'}</span>
+              </Link>
               <Link
                 href={`/${lang}/video-converter`}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all shadow-sm"

@@ -14,9 +14,11 @@ export default function Footer() {
   const videoConvLabel = lang === 'tr' ? 'Video & Ses Dönüştürücü' : lang === 'ar' ? 'محول الفيديو والصوت' : 'Video & Audio Converter';
   const imageConvLabel = lang === 'tr' ? 'Resim Uzantı Dönüştürücü' : lang === 'ar' ? 'محول صيغ الصور' : 'Image Format Converter';
   const audioCutterLabel = lang === 'tr' ? 'MP3 Kesici & Zil Sesi Yapıcı' : lang === 'ar' ? 'قص الصوت وصانع النغمات' : 'MP3 Cutter & Ringtone Maker';
+  const studioLabel = lang === 'tr' ? 'Medya Stüdyosu ✨ (Video & Fotoğraf Düzenle)' : lang === 'ar' ? 'استوديو الوسائط ✨' : 'Media Studio ✨';
 
   const quickLinks = [
     { href: `/${lang}`, label: t('nav.home') },
+    { href: `/${lang}/studio`, label: studioLabel },
     { href: `/${lang}/video-converter`, label: videoConvLabel },
     { href: `/${lang}/image-converter`, label: imageConvLabel },
     { href: `/${lang}/audio-cutter`, label: audioCutterLabel },

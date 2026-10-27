@@ -11,6 +11,7 @@ export const INDEXABLE_STATIC_PAGES = [
   '/video-converter',
   '/image-converter',
   '/audio-cutter',
+  '/studio',
   '/blog',
   '/faq',
   '/contact',

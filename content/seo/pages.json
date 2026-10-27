@@ -83,6 +83,46 @@
       },
       "canonicalPath": "/video-converter"
     },
+    "studio": {
+      "title": {
+        "tr": "Vidnoria Medya Stüdyosu - Ücretsiz Online Video Kırpıcı, HEIC & Fotoğraf Düzenleyici",
+        "en": "Vidnoria Media Studio - Free Online Video Trimmer, HEIC & Photo Editor",
+        "ar": "استوديو فيدنوريا للوسائط - قص الفيديو وتعديل الصور وتحويل HEIC مجاناً"
+      },
+      "description": {
+        "tr": "Fotoğraf ve videolarınızı sürükleyip bırakarak tarayıcınızda saniyeler içinde düzenleyin. Video kırpma (trim), videodan ses (MP3) çıkarma, iPhone HEIC fotoğrafları JPG'ye çevirme, boyutlandırma ve filtreler. %100 gizli ve ücretsiz.",
+        "en": "Drag and drop photos and videos to edit in seconds right inside your browser. Trim videos, extract MP3 audio, convert iPhone HEIC to JPG, resize, apply filters, and convert formats. 100% private and free.",
+        "ar": "اسحب وأفلت الصور ومقاطع الفيديو لتعديلها في ثوانٍ داخل المتصفح. قص الفيديو، استخراج صوت MP3، تحويل صور iPhone HEIC إلى JPG، وتغيير الحجم مجاناً بدون برامج."
+      },
+      "keywords": {
+        "tr": [
+          "online video kırpıcı",
+          "heic to jpg dönüştürücü",
+          "videodan ses çıkarma mp3",
+          "reels video boyutlandırma",
+          "filigransız video kesme",
+          "fotoğraf sıkıştırma kb düşürme",
+          "online fotoğraf düzenleyici"
+        ],
+        "en": [
+          "online video trimmer",
+          "heic to jpg converter",
+          "extract audio from video",
+          "reels video resizer",
+          "crop video online free",
+          "image compressor kb",
+          "free online photo editor"
+        ],
+        "ar": [
+          "قص الفيديو أونلاين",
+          "تحويل HEIC إلى JPG",
+          "استخراج الصوت من الفيديو",
+          "تعديل حجم الفيديو",
+          "تعديل الصور مجانا"
+        ]
+      },
+      "canonicalPath": "/studio"
+    },
     "image-converter": {
       "title": {
         "tr": "Ücretsiz Resim Format Dönüştürücü (JPG, PNG, WebP) | Vidnoria",
