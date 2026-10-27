@@ -1,5 +1,5 @@
-:HL["/_next/static/css/79ca8654397f7ad3.css","style"]
+:HL["/_next/static/css/e064ec6c82faa4d8.css","style"]
 3:[["children",{"s":"__PAGE__","h":160}]]
-2:[["children",{"s":{"n":"platform","t":"d","k":"reddit-video-indir","s":["audio-cutter","blog","contact","cookies","copyright","disclaimer","download","faq","image-converter","privacy","terms","video-converter"]},"h":64,"c":"$Q3"}]]
+2:[["children",{"s":{"n":"platform","t":"d","k":"reddit-video-indir","s":["audio-cutter","blog","contact","cookies","copyright","disclaimer","download","faq","image-converter","privacy","studio","terms","video-converter"]},"h":64,"c":"$Q3"}]]
 1:[["children",{"s":{"n":"lang","t":"d","k":"tr","s":["_not-found","_global-error","admin","ads.txt","favicon.ico","robots.txt","sitemap.xml"]},"c":"$Q2"}]]
-0:{"b":"DrQn5jJHbyeIpMKGbNQ7y","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"nfLVawWjMI2sohNhm2nJ3","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
