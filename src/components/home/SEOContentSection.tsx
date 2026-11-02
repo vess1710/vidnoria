@@ -380,6 +380,96 @@ export default function SEOContentSection() {
           </div>
         </div>
 
+        {/* Plain-language glossary: explains technical terms for non-technical users */}
+        <div className="glass-card p-6 md:p-8 rounded-3xl">
+          <div className="text-center md:text-start mb-6">
+            <span className="text-xs font-bold text-primary tracking-wider uppercase mb-1 block">Teknik Terimler Sade Dille</span>
+            <h3 className="text-xl sm:text-2xl font-black text-foreground">Bu Terimler Sizin İçin Ne Anlama Geliyor?</h3>
+            <p className="text-sm text-muted-foreground mt-1">
+              Teknik bilginiz olmasa da doğru formatı seçebilmeniz için en sık geçen kavramların kısa açıklamaları:
+            </p>
+          </div>
+          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="p-4 rounded-2xl bg-card/60 border border-border">
+              <dt className="font-bold text-foreground text-sm mb-1">FFmpeg</dt>
+              <dd className="text-xs text-muted-foreground leading-relaxed">
+                Video ve ses dosyalarını birleştiren, kesen ve başka formata çeviren açık kaynaklı araçtır. MP3, M4A veya WebM çıktısı almanızı sağlayan motor budur.
+              </dd>
+            </div>
+            <div className="p-4 rounded-2xl bg-card/60 border border-border">
+              <dt className="font-bold text-foreground text-sm mb-1">HLS ve DASH</dt>
+              <dd className="text-xs text-muted-foreground leading-relaxed">
+                Platformların videoyu küçük parçalar halinde yayınlama yöntemleridir. Vidnoria bu parçaları tek bir MP4 dosyasında birleştirir; siz tek dosya indirirsiniz.
+              </dd>
+            </div>
+            <div className="p-4 rounded-2xl bg-card/60 border border-border">
+              <dt className="font-bold text-foreground text-sm mb-1">kbps (bit hızı)</dt>
+              <dd className="text-xs text-muted-foreground leading-relaxed">
+                Sesin saniyede ne kadar veriyle kodlandığını gösterir. Sayı yükseldikçe ses detayı artar, dosya büyür. Telefon hoparlörü için 128 kbps yeterlidir; kulaklık ve müzik arşivi için 320 kbps önerilir.
+              </dd>
+            </div>
+            <div className="p-4 rounded-2xl bg-card/60 border border-border">
+              <dt className="font-bold text-foreground text-sm mb-1">1080p, 2K, 4K</dt>
+              <dd className="text-xs text-muted-foreground leading-relaxed">
+                Görüntünün çözünürlüğüdür. Telefonda 1080p genellikle fazlasıyla keskindir; 4K büyük ekran ve montaj için anlamlıdır ancak dosya boyutu birkaç kat büyüktür. Seçenekler, videonun kaynağında bulunan çözünürlüklerle sınırlıdır.
+              </dd>
+            </div>
+            <div className="p-4 rounded-2xl bg-card/60 border border-border">
+              <dt className="font-bold text-foreground text-sm mb-1">MP4, WebM, MOV, M4A</dt>
+              <dd className="text-xs text-muted-foreground leading-relaxed">
+                MP4 her cihazda açılan en uyumlu video formatıdır. WebM web için hafif, MOV Apple cihazlar için pratiktir. MP3 ve M4A ise yalnızca ses içindir; M4A aynı boyutta biraz daha iyi kalite sunar.
+              </dd>
+            </div>
+            <div className="p-4 rounded-2xl bg-card/60 border border-border">
+              <dt className="font-bold text-foreground text-sm mb-1">Filigran (watermark)</dt>
+              <dd className="text-xs text-muted-foreground leading-relaxed">
+                Videonun köşesinde görünen platform logosudur. Mümkün olduğunda logosuz kaynak dosya sunulur; videoyu paylaşırken içerik sahibinin haklarına saygı göstermeyi unutmayın.
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        {/* Practical scenarios: long-tail search intents explained with concrete use cases */}
+        <div className="glass-card p-6 md:p-8 rounded-3xl">
+          <div className="text-center md:text-start mb-6">
+            <span className="text-xs font-bold text-primary tracking-wider uppercase mb-1 block">Kullanım Senaryoları</span>
+            <h3 className="text-xl sm:text-2xl font-black text-foreground">Vidnoria Hangi İhtiyaçlar İçin Kullanılır?</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="p-4 rounded-2xl bg-card/60 border border-border">
+              <h4 className="font-bold text-foreground text-sm mb-1.5">Ders ve Konferans Kayıtları</h4>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Uzun bir dersin yalnızca ses kaydını MP3 olarak indirip yolda dinleyebilir, <strong>ses dosyası indirme</strong> ile mobil veri harcamadan çevrimdışı çalışabilirsiniz.
+              </p>
+            </div>
+            <div className="p-4 rounded-2xl bg-card/60 border border-border">
+              <h4 className="font-bold text-foreground text-sm mb-1.5">İçerik Üreticileri</h4>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Kendi paylaşımlarınızı yedekleyin, Medya Stüdyosu ile kırpın, 9:16 dikey formata getirin veya <strong>online video dönüştürücü</strong> ile MP4, WebM ya da GIF çıktısı alın.
+              </p>
+            </div>
+            <div className="p-4 rounded-2xl bg-card/60 border border-border">
+              <h4 className="font-bold text-foreground text-sm mb-1.5">Fotoğraf ve Ses Düzenleme</h4>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                iPhone HEIC fotoğraflarını JPG&apos;ye çevirin, parlaklık ve kontrastı canlı önizlemeyle ayarlayın, kısık sesli kayıtları %300&apos;e kadar yükseltin. Dosyalarınız tarayıcınızda işlenir.
+              </p>
+            </div>
+          </div>
+          <p className="text-xs text-muted-foreground leading-relaxed mt-5">
+            Vidnoria, bir <strong>sosyal medya video indirici</strong> olarak YouTube, Instagram, TikTok, Facebook ve X bağlantılarını destekler. Yalnızca kendi içeriğiniz veya indirilmesine izin verilen içerikler için kullanın.
+          </p>
+          <div className="mt-5 text-center md:text-start">
+            <button
+              type="button"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="inline-flex items-center gap-2 gradient-bg text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:opacity-90 transition-all text-sm"
+            >
+              <span>Bağlantıyı Yapıştır ve Hemen Başla</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+
         {/* Troubleshooting & Real User Support Guide */}
         <div className="glass-card p-6 md:p-8 rounded-3xl">
           <div className="text-center md:text-start mb-6">
