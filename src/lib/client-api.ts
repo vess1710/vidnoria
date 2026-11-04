@@ -314,8 +314,11 @@ export async function startDownloadClient(
   mediaInfo: MediaInfo,
   selectedFormat: FormatOption
 ): Promise<{ success: boolean; job?: DownloadJob; error?: string; baseUrl?: string }> {
-  for (const force of [false, true]) {
-    const baseUrl = await getApiBaseUrl(force);
+  // Retry through brief tunnel drops (HTTP 530 / network blips) instead of failing instantly.
+  const attempts = [false, true, true, true];
+  for (let i = 0; i < attempts.length; i++) {
+    if (i > 1) await new Promise((r) => setTimeout(r, 2000));
+    const baseUrl = await getApiBaseUrl(attempts[i]);
     try {
       const res = await fetch(`${baseUrl}/api/download`, {
         method: 'POST',
